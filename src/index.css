@@ -1,0 +1,161 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* === 日式暖色主題的設計變數 === */
+@theme {
+  --color-paper: #f7f1e6;        /* 生成り：溫暖米白背景 */
+  --color-card: #fffdf8;         /* 卡片：近白暖色 */
+  --color-ink: #3a322c;          /* 墨色：偏暖的深褐文字 */
+  --color-ink-soft: #9b8e7e;     /* 淡墨：次要文字 */
+  --color-vermilion: #cf4f3e;    /* 朱色：主要強調色 */
+  --color-indigo: #3c5a72;       /* 藍：沉穩日式藍 */
+  --color-matcha: #8a9a5b;       /* 抹茶綠 */
+  --color-sakura: #d98c9d;       /* 櫻粉 */
+  --color-line: #ebe1d0;         /* 邊線：淺米色 */
+
+  --font-display: "Zen Kaku Gothic New", "Noto Sans TC", sans-serif;
+  --font-body: "Zen Kaku Gothic New", "Noto Sans TC", sans-serif;
+
+  /* 統一圓角系統：比之前再方一點點 */
+  --radius-card: 1rem;     /* 16px：卡片與大型容器 */
+  --radius-box: 0.75rem;   /* 12px：圖片、內層方塊 */
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  overflow-x: hidden; /* 防止側邊筆記在邊界造成水平捲動 */
+  /* 暖色漸層：上方柔光、右下角一抹朱色暈染 */
+  background-color: #f7f1e6;
+  background-image:
+    radial-gradient(120% 80% at 50% -10%, #fffdf6 0%, rgba(247, 241, 230, 0) 55%),
+    radial-gradient(90% 60% at 100% 105%, rgba(207, 79, 62, 0.06), rgba(247, 241, 230, 0) 50%);
+  background-attachment: fixed;
+}
+
+/* 細緻紙張顆粒感（極淡） */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* 暖色卡片（統一圓角，比之前再方一點點） */
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  box-shadow:
+    0 1px 2px rgba(58, 50, 44, 0.04),
+    0 18px 40px -28px rgba(58, 50, 44, 0.35);
+}
+
+/* 圓圓的藥丸按鈕 */
+.btn-round {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 9999px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 500;
+  border: 1.5px solid var(--color-line);
+  background: var(--color-card);
+  color: var(--color-ink);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-round:hover {
+  border-color: var(--color-vermilion);
+  color: var(--color-vermilion);
+  transform: translateY(-1px);
+}
+.btn-round.is-active {
+  background: var(--color-vermilion);
+  border-color: var(--color-vermilion);
+  color: #fff;
+}
+
+/* 載入時由下往上淡入 */
+.fade-up { animation: fadeUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* 跑馬燈：橫向捲動容器（捲動由 JS 驅動），左右淡出邊緣 */
+.marquee {
+  overflow-x: hidden;
+  overflow-y: visible;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+}
+
+/* === 側邊手記：往下滑時從主區塊往外拉出的小筆記 === */
+/* 窄螢幕預設：內嵌顯示在區塊下方，文字永遠看得到 */
+.sidenote {
+  position: relative;
+  margin: 0.85rem 0 0.1rem;
+  padding: 0.85rem 1rem 0.85rem 1.05rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-left: 3px solid var(--note-accent, var(--color-vermilion));
+  border-radius: var(--radius-box);
+  box-shadow: 0 12px 28px -22px rgba(58, 50, 44, 0.5);
+}
+.sidenote__text {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+.sidenote__text b { font-weight: 900; color: var(--note-accent, var(--color-vermilion)); font-style: normal; }
+.sidenote__pin { display: none; }
+
+/* 寬螢幕：化為左右邊界的便利貼，捲入時從主區塊「往外拉」出現 */
+@media (min-width: 1560px) {
+  .sidenote {
+    position: absolute;
+    top: 1.9rem;
+    width: 224px;
+    margin: 0;
+    opacity: 0;
+    z-index: 5;
+    transition: transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.6s ease;
+  }
+  .sidenote__pin {
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 40px;
+    height: 15px;
+    margin-left: -20px;
+    border-radius: 3px;
+    background: var(--note-accent, var(--color-vermilion));
+    opacity: 0.5;
+    transform: rotate(-4deg);
+  }
+  /* 起點：縮在卡片邊緣、透明；終點：往外拉到邊界、淡入並帶一點傾斜 */
+  .sidenote--right { left: 100%; margin-left: 30px; transform: translateX(-44px) rotate(2.2deg); }
+  .sidenote--left  { right: 100%; margin-right: 30px; transform: translateX(44px) rotate(-2.2deg); }
+  .sidenote.is-in.sidenote--right { opacity: 1; transform: translateX(0) rotate(2.2deg); }
+  .sidenote.is-in.sidenote--left  { opacity: 1; transform: translateX(0) rotate(-2.2deg); }
+}
+
+/* 地圖：淺色系協調 + 圓潤提示框 */
+.leaflet-container { background: #eee6d6; font-family: var(--font-body); }
+.leaflet-tooltip {
+  border-radius: 12px !important;
+  border: 1px solid var(--color-line) !important;
+  box-shadow: 0 8px 24px -12px rgba(58, 50, 44, 0.4) !important;
+  font-family: var(--font-body) !important;
+  color: var(--color-ink) !important;
+}

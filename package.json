@@ -1,0 +1,30 @@
+{
+  "name": "my-google-reviews",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "login": "node scraper/login.mjs",
+    "scrape": "node scraper/scrape.mjs",
+    "parse": "node scraper/parse.mjs",
+    "geocode": "node scraper/geocode.mjs",
+    "resolve:coords": "node scraper/resolve-coords.mjs",
+    "build:data": "node scraper/build-data.mjs"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "playwright": "^1.60.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
+  }
+}
