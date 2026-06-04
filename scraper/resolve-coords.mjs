@@ -1,23 +1,27 @@
-// Build step (network): turn each review's captured Share permalink
-// (review-urls.json, written by scrape.mjs) into ACCURATE Google coordinates.
+// Build step (browser): turn each review's captured Share permalink
+// (review-urls.json) into ACCURATE Google coordinates.
 //
-// The maps.app.goo.gl short links redirect to a full Google Maps URL that embeds
-// the place's real coordinates (…/@lat,lng,zoom/… or …!3dlat!4dlng…). We follow the
-// redirect and parse those out — far more precise than geocoding the address text.
+// The maps.app.goo.gl links are Firebase Dynamic Links that resolve CLIENT-SIDE to
+// a /maps/reviews/@lat,lng,17z/… URL — a plain fetch can't follow them. So we open
+// each in a headless browser and read the @lat,lng the map settles on. Far more
+// precise than geocoding the address, and (being its own headless browser) this
+// needs NO login and doesn't disturb your Chrome. Several tabs run in parallel.
 //
-// Results are written into geocode-cache.json with approx:false, so build-data.mjs
-// picks them up with no further changes. Links that won't resolve keep whatever
+// Results go into geocode-cache.json with approx:false + fromLink:true, so
+// build-data.mjs picks them up unchanged. Unresolved links keep whatever
 // geocode.mjs already produced (Nominatim / city fallback). Cached + resumable.
 //
-// Run with:  npm run resolve:coords   (after scrape, before build:data)
+// Run:  npm run resolve:coords   (after scrape, before build:data)
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { chromium } from 'playwright'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const OUT = path.join(__dirname, 'output')
 const URLS = path.join(OUT, 'review-urls.json')
 const CACHE = path.join(OUT, 'geocode-cache.json')
+const CONCURRENCY = 4
 
 if (!fs.existsSync(URLS)) {
   console.error('❌ No review-urls.json found — run `npm run scrape` first.')
@@ -26,59 +30,47 @@ if (!fs.existsSync(URLS)) {
 const reviewUrls = JSON.parse(fs.readFileSync(URLS, 'utf8'))
 const cache = fs.existsSync(CACHE) ? JSON.parse(fs.readFileSync(CACHE, 'utf8')) : {}
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
+const coordsFromUrl = (u) => {
+  const m = u.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/) || u.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/)
+  return m ? [parseFloat(m[1]), parseFloat(m[2])] : null
+}
 
-// Pull lat/lng out of a resolved Google Maps URL. Prefer the !3d!4d data params
-// (the place's true marker) over the @lat,lng viewport centre.
-function coordsFromUrl(u) {
-  let m = u.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/)
-  if (m) return [parseFloat(m[1]), parseFloat(m[2])]
-  m = u.match(/[@?&](?:ll|q)=(-?\d+\.\d+),(-?\d+\.\d+)/)
-  if (m) return [parseFloat(m[1]), parseFloat(m[2])]
-  m = u.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/)
-  if (m) return [parseFloat(m[1]), parseFloat(m[2])]
+// open one link and poll the URL until the map settles on @lat,lng (up to ~9s)
+async function resolveOn(page, link) {
+  await page.goto(link, { waitUntil: 'commit', timeout: 15000 }).catch(() => {})
+  for (let i = 0; i < 22; i++) {
+    await page.waitForTimeout(400)
+    const c = coordsFromUrl(page.url())
+    if (c) return c
+  }
   return null
 }
 
-async function resolve(shortUrl) {
-  // Follow redirects; hl=en + a CONSENT cookie dodge the EU consent interstitial.
-  const headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36',
-    Cookie: 'CONSENT=YES+',
+// resume: skip links we've already pinned from a link on a previous run
+const todo = Object.keys(reviewUrls).filter((id) => reviewUrls[id] && !(cache[id] && cache[id].fromLink))
+const already = Object.values(cache).filter((v) => v.fromLink).length
+console.log(`resolving ${todo.length} share links → coordinates (${CONCURRENCY} parallel headless tabs)…`)
+if (already) console.log(`   (${already} already resolved on a previous run — skipping)`)
+
+const browser = await chromium.launch({ headless: true })
+let resolved = 0, kept = 0, done = 0
+let cursor = 0
+function save() { fs.writeFileSync(CACHE, JSON.stringify(cache, null, 2)) }
+
+async function worker(n) {
+  const page = await browser.newPage()
+  while (cursor < todo.length) {
+    const id = todo[cursor++]
+    const coord = await resolveOn(page, reviewUrls[id]).catch(() => null)
+    if (coord) { cache[id] = { lat: coord[0], lng: coord[1], approx: false, fromLink: true }; resolved++ }
+    else kept++
+    done++
+    if (done % 10 === 0) { save(); console.log(`   …${done}/${todo.length}  (resolved ${resolved}, kept-fallback ${kept})`) }
   }
-  try {
-    const res = await fetch(shortUrl, { headers, redirect: 'follow' })
-    // coords may live in the final URL or in the returned HTML body
-    let coord = coordsFromUrl(res.url || '')
-    if (!coord) {
-      const body = await res.text()
-      coord = coordsFromUrl(body)
-    }
-    return coord
-  } catch (e) {
-    return null
-  }
+  await page.close().catch(() => {})
 }
 
-const ids = Object.keys(reviewUrls).filter((id) => reviewUrls[id])
-console.log(`resolving ${ids.length} share links → coordinates…`)
-let resolved = 0, kept = 0, done = 0
-for (const id of ids) {
-  // skip ones we've already pinned accurately on a previous run
-  if (cache[id] && cache[id].approx === false && cache[id].fromLink) { done++; continue }
-  const coord = await resolve(reviewUrls[id])
-  if (coord) {
-    cache[id] = { lat: coord[0], lng: coord[1], approx: false, fromLink: true }
-    resolved++
-  } else {
-    kept++ // leave any existing geocode.mjs value in place
-  }
-  done++
-  if (done % 20 === 0) {
-    fs.writeFileSync(CACHE, JSON.stringify(cache, null, 2))
-    console.log(`   …${done}/${ids.length}  (resolved ${resolved}, kept-fallback ${kept})`)
-  }
-  await sleep(400)
-}
-fs.writeFileSync(CACHE, JSON.stringify(cache, null, 2))
+await Promise.all(Array.from({ length: CONCURRENCY }, (_, i) => worker(i)))
+save()
+await browser.close().catch(() => {})
 console.log(`✅ done: ${resolved} resolved from links, ${kept} kept existing → geocode-cache.json`)

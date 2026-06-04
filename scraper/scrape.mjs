@@ -49,8 +49,10 @@ async function harvestWhileScrolling(page, { anchor, harvest, label, onBatch, ma
       if (item && item.key != null && !acc.has(item.key)) { acc.set(item.key, item); added++; fresh.push(item) }
     }
     // Optional per-step hook: interact with the cards while they're still on screen
-    // (e.g. open each new review's Share dialog) BEFORE we scroll them out of view.
-    if (onBatch && fresh.length) { try { await onBatch(fresh) } catch (e) { console.log('   onBatch error:', e.message) } }
+    // (e.g. open each visible review's Share dialog) BEFORE we scroll them away.
+    // Gets ALL currently-visible items (not just new ones) so failed captures can
+    // be retried as cards re-render across scroll steps.
+    if (onBatch) { try { await onBatch(batch, fresh) } catch (e) { console.log('   onBatch error:', e.message) } }
     // Advance the virtualized feed. `scrollBy` on a guessed container proved
     // unreliable, so we (1) pull the LAST rendered card into view — this makes
     // the native scroller move and forces the next batch to render — and
@@ -101,37 +103,60 @@ const stats = await page.evaluate(() => {
 // review) but the only way to a real per-review permalink. Resumable: we load any
 // previously-captured links and skip those ids, and persist as we go.
 const reviewUrls = fsExists(URLS_FILE) ? JSON.parse(await fs.readFile(URLS_FILE, 'utf8')) : {}
-let urlCaptured = 0, urlMissed = 0, urlLogged = 0
+const urlAttempts = new Map()           // id -> attempt count (this run), for bounded retries
+const MAX_ATTEMPTS = 3
+let urlCaptured = 0, urlLogged = 0
 async function saveUrls() { await fs.writeFile(URLS_FILE, JSON.stringify(reviewUrls, null, 2)) }
+const haveUrl = (id) => typeof reviewUrls[id] === 'string' && reviewUrls[id]
 
+// The live Share modal: the VISIBLE role=dialog containing a COPY LINK button.
+// (The page keeps several role=dialog nodes around, so we must filter — reading a
+// bare [role="dialog"] returns a stale/wrong one and yields duplicate links.)
+const shareModal = () =>
+  page.locator('[role="dialog"]:visible').filter({ has: page.locator('button[jsaction*=".copy"]') }).last()
+async function closeShareModal() {
+  const m = shareModal()
+  if (await m.count().catch(() => 0)) {
+    await m.locator('button[jsaction="modal.close"]').first().click({ timeout: 2000 }).catch(() => {})
+    await m.waitFor({ state: 'detached', timeout: 2500 }).catch(() => {})
+  }
+}
+
+// Open ONE review's Share dialog and read its maps.app.goo.gl permalink. Returns
+// true on success. Failures are retried on later passes (the card re-renders as the
+// virtualized feed scrolls) up to MAX_ATTEMPTS; we never permanently mark a miss.
 async function captureShareLink(id) {
-  if (reviewUrls[id]) return // already have it (resume)
-  const card = page.locator(`[data-review-id="${id}"]`).first()
-  const shareBtn = card.getByRole('button', { name: /share|分享/i }).first()
-  if (!(await shareBtn.count().catch(() => 0))) { reviewUrls[id] = null; urlMissed++; return }
+  if (haveUrl(id)) return true
+  const n = (urlAttempts.get(id) || 0) + 1
+  urlAttempts.set(id, n)
+  if (n > MAX_ATTEMPTS) return false
+
+  // The card container is the div.jftiEf carrying the id (its action buttons also
+  // carry the same id, so we anchor on the card div to find the right Share button).
+  const shareBtn = page.locator(`div.jftiEf[data-review-id="${id}"] button[jsaction*="review.share"]`).first()
+  if (!(await shareBtn.count().catch(() => 0))) return false
+
+  await closeShareModal()
   await shareBtn.scrollIntoViewIfNeeded().catch(() => {})
   await shareBtn.click({ timeout: 4000 }).catch(() => {})
-  // The share dialog exposes the link in a text input; fall back to scraping any
-  // maps.app.goo.gl text in the dialog if the input shape differs.
-  let link = null
-  const input = page.locator('[role="dialog"] input, [role="dialog"] textarea').first()
-  if (await input.count().catch(() => 0)) {
-    await input.waitFor({ state: 'visible', timeout: 4000 }).catch(() => {})
-    link = (await input.inputValue().catch(() => '')) || null
+
+  const m = shareModal()
+  await m.waitFor({ state: 'visible', timeout: 4000 }).catch(() => {})
+  let link = (await m.locator('input').first().inputValue().catch(() => '')) || null
+  if (!link) { // fall back to scraping any maps link from the modal text
+    const txt = (await m.innerText().catch(() => '')) || ''
+    const mm = txt.match(/https?:\/\/(?:maps\.app\.goo\.gl|goo\.gl\/maps|www\.google\.com\/maps)\/\S+/)
+    if (mm) link = mm[0]
   }
-  if (!link) {
-    const dlg = page.locator('[role="dialog"]').first()
-    const txt = (await dlg.innerText().catch(() => '')) || ''
-    const m = txt.match(/https?:\/\/(?:maps\.app\.goo\.gl|goo\.gl\/maps|www\.google\.com\/maps)\/\S+/)
-    if (m) link = m[0]
-  }
-  await page.keyboard.press('Escape').catch(() => {})
-  await page.waitForTimeout(250)
+  await closeShareModal()
+
   if (link && /^https?:\/\//.test(link)) {
     reviewUrls[id] = link.trim()
     urlCaptured++
-    if (urlLogged < 5) { console.log(`   🔗 share link: ${link.trim()}`); urlLogged++ }
-  } else { reviewUrls[id] = null; urlMissed++ }
+    if (urlLogged < 5) { console.log(`   🔗 share link #${urlCaptured}: ${link.trim()}`); urlLogged++ }
+    return true
+  }
+  return false
 }
 
 // ---- reviews ---------------------------------------------------------------
@@ -142,10 +167,14 @@ await page.waitForSelector('[data-review-id]', { timeout: 15000 }).catch(() => {
 const reviews = await harvestWhileScrolling(page, {
   label: 'reviews',
   anchor: '[data-review-id]',
-  onBatch: async (fresh) => {
-    for (const item of fresh) {
-      await captureShareLink(item.id)
-      if ((urlCaptured + urlMissed) % 10 === 0) await saveUrls()
+  onBatch: async (batch) => {
+    // batch has ~10 nested nodes per review (same id repeated) — visit each once
+    const ids = [...new Set(batch.map((it) => it.id))]
+    for (const id of ids) {
+      if (haveUrl(id)) continue
+      const before = urlCaptured
+      await captureShareLink(id)
+      if (urlCaptured > before && urlCaptured % 10 === 0) await saveUrls()
     }
   },
   harvest: () => {
@@ -212,7 +241,7 @@ await fs.writeFile(path.join(OUT_DIR, 'stats.json'), JSON.stringify(stats, null,
 const urlOk = Object.values(reviewUrls).filter(Boolean).length
 console.log('\n✅ Done!')
 console.log(`   reviews: ${reviews.length}  |  photos: ${photos.count}  |  total photo views: ${photos.total}`)
-console.log(`   share links: ${urlOk} captured (${urlMissed} missed) → review-urls.json`)
+console.log(`   share links: ${urlOk}/${reviews.length} captured → review-urls.json`)
 console.log(`   level: ${stats.level}  points: ${stats.points}`)
 console.log('   saved → scraper/output/reviews-raw.json, photos-raw.json, stats.json, review-urls.json')
 console.log('\nTell Claude it finished so it can build the real src/data.json.\n')

@@ -12,7 +12,8 @@
     "parse": "node scraper/parse.mjs",
     "geocode": "node scraper/geocode.mjs",
     "resolve:coords": "node scraper/resolve-coords.mjs",
-    "build:data": "node scraper/build-data.mjs"
+    "build:data": "node scraper/build-data.mjs",
+    "update:numbers": "node scraper/build-data.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
