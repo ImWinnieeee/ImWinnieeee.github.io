@@ -1,6 +1,7 @@
 import data from './data.json'
 import { formatViews } from './lib.js'
 import StatsOverview from './components/StatsOverview.jsx'
+import TotalViews from './components/TotalViews.jsx'
 import TopPhotos from './components/TopPhotos.jsx'
 import MostViewed from './components/MostViewed.jsx'
 import TopReacted from './components/TopReacted.jsx'
@@ -18,7 +19,7 @@ const NAV = [
 ]
 
 export default function App() {
-  const { profile, stats, topPhotos, mostViewed, mostReacted, ownerReplies, reviews } = data
+  const { profile, stats, topPhotos, mostViewed, mostReacted, ownerReplies, reviews, favorites } = data
 
   return (
     <div className="min-h-full">
@@ -32,11 +33,16 @@ export default function App() {
 
       {/* Header */}
       <header className="max-w-5xl mx-auto px-4 pt-12 pb-4">
-        <div className="text-3xl tracking-widest mb-3">🍣 🍝 🍜 🍰 🧋</div>
-        <h1 className="font-display text-4xl md:text-5xl font-black tracking-tight leading-tight">
-          {profile.name}
-        </h1>
-        <div className="h-1.5 w-16 rounded-full bg-[var(--color-vermilion)] my-3" />
+        <div className="flex items-start justify-between gap-6">
+          <div>
+            <div className="text-3xl tracking-widest mb-3">🍣 🍝 🍜 🍰 🧋</div>
+            <h1 className="font-display text-4xl md:text-5xl font-black tracking-tight leading-tight">
+              {profile.name}
+            </h1>
+            <div className="h-1.5 w-16 rounded-full bg-[var(--color-vermilion)] my-3" />
+          </div>
+          <TotalViews photoViews={stats.totalPhotoViews} reviewViews={stats.totalReviewViews} />
+        </div>
         <p className="text-[var(--color-ink-soft)]">
           {profile.level} · {formatViews(stats.totalPhotoViews)} photo views across{' '}
           {new Set(reviews.map((r) => r.country)).size} countries · Updated from {stats.dateFrom} to {stats.dateTo}
@@ -96,7 +102,7 @@ export default function App() {
 
         {/* 5. Favorite categories */}
         <section id="categories" className="relative scroll-mt-6">
-          <Categories reviews={reviews} />
+          <Categories favorites={favorites} />
           <SideNote side="right" accent="var(--color-vermilion)">
             One of the best feelings is recommending a restaurant to my friends — they try it and love it too! 🍽️
           </SideNote>

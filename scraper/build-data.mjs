@@ -154,7 +154,7 @@ const topPhotos = [...photos.items]
   .sort((a, b) => b.views - a.views)
   .filter((p) => { const k = big(p.url); if (seen.has(k)) return false; seen.add(k); return true })
   .slice(0, 15)
-  .map((p, i) => ({ id: 'ph' + i, url: big(p.url), link: p.url.replace(/=w\d+.*$/, '=w1600'), views: p.views }))
+  .map((p, i) => ({ id: 'ph' + i, url: big(p.url), link: p.url.replace(/=w\d+.*$/, '=w1600'), views: p.views ?? 0 }))
 
 // ---- all reviews for the map (+ favorites) ----
 const CITY = {
@@ -166,6 +166,8 @@ const CITY = {
   Florence: [43.7696, 11.2558], Venice: [45.4408, 12.3155], Milan: [45.4642, 9.19],
   Italy: [42.5, 12.5], Bangkok: [13.7563, 100.5018], Thailand: [13.75, 100.5],
 }
+// per-store Google rating + review count scraped by scrape.mjs ({ [id]: {rating, reviews, title} })
+const storeRatings = fs.existsSync(path.join(OUT, 'store-ratings.json')) ? L('store-ratings.json') : {}
 const jitter = (id) => { let h = 0; for (const c of id) h = (h * 31 + c.charCodeAt(0)) >>> 0; return [((h % 1000) / 1000 - 0.5) * 0.04, (((h >> 10) % 1000) / 1000 - 0.5) * 0.04] }
 const blurb = (t) => { const s = zhClean(t).replace(/^我是台灣.*?(到訪|來訪|份到訪)\s*/, ''); return s.slice(0, 22) }
 
@@ -178,26 +180,97 @@ const reviews = parsed.map((r) => {
   // only attach a deep-link when we have a real per-review permalink — a bare
   // place-name search isn't worth making the map pins clickable for
   const url = URL_OVERRIDE[r.place] || reviewUrls[r.id] || null
+  const gr = storeRatings[r.id] || {}
   return {
     id: r.id, place: disp(r.place), category: fixCat(r.place, r.category), country: r.country,
     region: r.region, rating: r.rating, date: r.date, blurb: blurb(r.text),
     photoCount: r.photoCount, lat: +lat.toFixed(5), lng: +lng.toFixed(5),
+    googleRating: gr.rating ?? null, googleReviews: gr.reviews ?? null,
     ...(url ? { url } : {}),
   }
 })
 
-const photoCount = new Set(photos.items.filter((p) => p.url).map((p) => big(p.url))).size
+// ---- favorites: 5 curated picks per category (NO ranking order) -------------
+// Each store carries its LIVE Google Maps rating + review count, scraped straight
+// off Maps by place-ratings.mjs (`npm run scrape:ratings` → place-ratings.json).
+const placeRatings = fs.existsSync(path.join(OUT, 'place-ratings.json')) ? L('place-ratings.json') : []
+const ratingByName = Object.fromEntries(placeRatings.map((p) => [p.name, p]))
+// [category, scrape-key (matches place-ratings.json .name), display name]
+const FAV_LIST = [
+  ['Taiwanese & Chinese', '醇涎坊古早味鍋燒意麵', '醇涎坊 古早味鍋燒意麵'],
+  ['Taiwanese & Chinese', '秦味館', '秦味館 Qin Wei Guan'],
+  ['Taiwanese & Chinese', '犁園湯包館', '犁園湯包館 Li Yuan'],
+  ['Taiwanese & Chinese', '長白小館', '長白小館'],
+  ['Taiwanese & Chinese', '寶杏堂 手切滷肉飯 溫補羊肉湯', '寶杏堂 手切滷肉飯'],
+  ['Japanese', '肉料理荒川', '肉料理荒川 Arakawa'],
+  ['Japanese', '河村食堂', '河村食堂 Kawamura'],
+  ['Japanese', 'どろまみれ 四谷本店', 'どろまみれ 四谷本店'],
+  ['Japanese', '寶來軒', '寶來軒 Bao Lai Xuan'],
+  ['Japanese', '壽壽木 炸豬排', '壽壽木 とんかつ'],
+  ['Italian', '培皮諾小館', 'PEPPINO 培皮諾小館'],
+  ['Italian', 'Trattoria Zaza', 'Trattoria ZàZà'],
+  ['Italian', '千層吧', '千層吧 The Lasagna Bar'],
+  ['Italian', 'Ristorante "Dallo Zio" San Marco', 'Ristorante "Dallo Zio"'],
+  ['Italian', 'La Mole', 'La Mole'],
+  ['Dessert', 'VERO ~ Gelateria Cremeria', 'VERO Gelateria Cremeria'],
+  ['Dessert', 'Regoli Pasticceria', 'Regoli Pasticceria'],
+  ['Dessert', 'CREM 奶油甜點專賣店', 'CREM 奶油甜點'],
+  ['Dessert', '中村藤吉平等院店', '中村藤吉 平等院店'],
+  ['Dessert', 'David la Gelateria', 'David la Gelateria'],
+  ['Drinks', '坪林手', '坪林手 Pina tshiu'],
+  ['Drinks', '60+ Tea Shop 中山店', '60+ Tea Shop 中山店'],
+  ['Drinks', 'Karun Thai Tea Central wOrld ชาไทยการัน', 'Karun Thai Tea (CentralwOrld)'],
+  ['Drinks', 'Barista Ray', 'Barista Ray'],
+  ['Drinks', 'MILK SHOP LUCK 酪 秋葉原店 ミルクショップ酪 秋葉原店', 'Milk Shop 酪 (Akihabara)'],
+  ['Other', '印度料理 Mumbai', '印度料理 Mumbai 九段'],
+  ['Other', 'イタリアンバル 食堂チャコ', '食堂チャコ'],
+  ['Other', '通庵 熟成咖哩', '通庵 熟成咖哩'],
+  ['Other', '鐵 F.f 小餐廳 (無菜單1F)', '鐵 F.f 小餐廳'],
+  ['Other', 'HI MATE!', 'HI MATE!'],
+]
+const favorites = FAV_LIST.map(([category, key, display]) => {
+  const g = ratingByName[key] || {}
+  if (g.rating == null) console.log(`   ⚠️  no Google rating for favorite: ${key}`)
+  return { category, name: display, googleRating: g.rating ?? null, googleReviews: g.reviews ?? null, url: g.matchedUrl || null }
+})
+
+// Prefer Google's own header count ("1,674 photos" = photos + videos) — it's the
+// authoritative total. The desktop grid only renders a subset of tiles, so the
+// harvested-tile count undershoots; fall back to it only if the header is missing.
+let photoCount = photos.headerCount ?? new Set(photos.items.filter((p) => p.url).map((p) => big(p.url))).size
+
+// Guard: a partial scrape can leave photos-raw.json with only `total` and no
+// `items`. Don't clobber a previously-built topPhotos/photoCount in that case —
+// keep whatever the existing src/data.json already has.
+let topPhotosOut = topPhotos
+if (topPhotosOut.length === 0 && fs.existsSync(path.join(SRC, 'data.json'))) {
+  const prev = JSON.parse(fs.readFileSync(path.join(SRC, 'data.json'), 'utf8'))
+  if (prev.topPhotos && prev.topPhotos.length) {
+    topPhotosOut = prev.topPhotos
+    if (photos.headerCount == null) photoCount = prev.stats?.photoCount || photoCount
+    console.log('   ⚠️  photos-raw.json had no items — kept previous topPhotos' + (photos.headerCount == null ? '/photoCount' : ''))
+  }
+}
 const allDates = parsed.map((r) => r.date).filter(Boolean).sort()
 const dateFrom = allDates[0] ? allDates[0].slice(0, 7) : ''
 const dateTo = allDates[allDates.length - 1] ? allDates[allDates.length - 1].slice(0, 7) : ''
+
+// Review views aren't exposed on Google desktop. Winnie read the GRAND total
+// (photo + review) off her phone as 11.72M when the photo total was 9,155,461.
+// We keep the review-views slice CONSTANT at the difference, so the headline =
+// this fixed slice + the live photo total, which keeps climbing as photos rack
+// up views. (Re-deriving it from a fixed grand total each scrape would instead
+// pin the headline and cancel out real photo growth — not what we want.)
+const totalReviewViews = 11720000 - 9155461 // = 2,564,539, fixed
 
 const data = {
   profile: { name: "Winnie's Food Map", level: 'Local Guide · Level 8', points: 16991, profileUrl: PROFILE_URL },
   stats: {
     totalReviews: parsed.length, ratingsOnly: 21, totalPhotoViews: photos.total || 9140043,
-    photoCount, points: 16991, level: 8, dateFrom, dateTo, lastUpdated: '2026-06-04', isMockData: false,
+    totalReviewViews, photoCount, points: 16991, level: 8, dateFrom, dateTo,
+    lastUpdated: '2026-06-04', isMockData: false,
   },
-  topPhotos, mostViewed, mostReacted, ownerReplies, reviews,
+  topPhotos: topPhotosOut, mostViewed, mostReacted, ownerReplies, reviews, favorites,
 }
 
 fs.writeFileSync(path.join(SRC, 'data.json'), JSON.stringify(data, null, 2))

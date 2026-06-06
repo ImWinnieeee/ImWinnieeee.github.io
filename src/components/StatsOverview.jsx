@@ -23,7 +23,7 @@ export default function StatsOverview({ stats }) {
         accent="var(--color-vermilion)" emoji="👀" delay={0} />
       <StatCard label="Total Reviews" value={formatInt(stats.totalReviews)} sub="restaurants reviewed"
         accent="var(--color-indigo)" emoji="📝" delay={80} />
-      <StatCard label="Photos Shared" value={formatInt(stats.photoCount)} sub="photos uploaded"
+      <StatCard label="Photos Shared" value={formatInt(stats.photoCount)} sub="photos & videos uploaded"
         accent="var(--color-sakura)" emoji="📷" delay={160} />
       <StatCard label="Local Guide" value={`Lv. ${stats.level}`} sub={`${formatInt(stats.points)} points`}
         accent="var(--color-matcha)" emoji="🏅" delay={240} />

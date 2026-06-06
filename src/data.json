@@ -8,8 +8,9 @@
   "stats": {
     "totalReviews": 380,
     "ratingsOnly": 21,
-    "totalPhotoViews": 9155461,
-    "photoCount": 1343,
+    "totalPhotoViews": 9174842,
+    "totalReviewViews": 2564539,
+    "photoCount": 1674,
     "points": 16991,
     "level": 8,
     "dateFrom": "2018-06",
@@ -20,92 +21,92 @@
   "topPhotos": [
     {
       "id": "ph0",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvK4VcEbpiggIeVQJ_hexx4N7bx5_da0Z7BvpZvaIPviW_MlTHwWHTwD0V_NB9e41qe_q_G-l_egC-GfjeeWEkUbJyV40xwmOMBofFfbCch5cwR4t2gs-AJgfRTA1KLSGtRfaC-=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvK4VcEbpiggIeVQJ_hexx4N7bx5_da0Z7BvpZvaIPviW_MlTHwWHTwD0V_NB9e41qe_q_G-l_egC-GfjeeWEkUbJyV40xwmOMBofFfbCch5cwR4t2gs-AJgfRTA1KLSGtRfaC-=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsHe14UDrCOwZHTc8ngQ4gWQgeABjmby5MON6N209LzeJJB9w5XjEcJnBt4D5wAMLX5z06xOcvg4S2jXM6_q82McaE6rnxxZ7I-rHOnw5VjElIs8hypO8jmANAr9mNuwwq4h2Qy=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsHe14UDrCOwZHTc8ngQ4gWQgeABjmby5MON6N209LzeJJB9w5XjEcJnBt4D5wAMLX5z06xOcvg4S2jXM6_q82McaE6rnxxZ7I-rHOnw5VjElIs8hypO8jmANAr9mNuwwq4h2Qy=w1600",
       "views": 185150
     },
     {
       "id": "ph1",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtMrL-eJe7V5404w-IriAO7-XX1kr8e3-PUSxoe0UzjGyJWNAXHQij-GMRtwf_MffyRluIn3aEOMy4MaqKXIuwg0KxoNA-2_UeUHGHpy73BQR8fVGdjtjEdy7Lroz0sm8iDvhIufg=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtMrL-eJe7V5404w-IriAO7-XX1kr8e3-PUSxoe0UzjGyJWNAXHQij-GMRtwf_MffyRluIn3aEOMy4MaqKXIuwg0KxoNA-2_UeUHGHpy73BQR8fVGdjtjEdy7Lroz0sm8iDvhIufg=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtTs6KcjBlDonJi2NdwB2uWFnBZpE-3vW-Jl024RxivDj_QpJdnVIfEYF3hmpfPrJfP0LwGuoi_s2BOycSrm391gRdUfksNmGKFNQ7IxU0fHDNLoVQsmI0_moO6UqsYmtVku3VXaw=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtTs6KcjBlDonJi2NdwB2uWFnBZpE-3vW-Jl024RxivDj_QpJdnVIfEYF3hmpfPrJfP0LwGuoi_s2BOycSrm391gRdUfksNmGKFNQ7IxU0fHDNLoVQsmI0_moO6UqsYmtVku3VXaw=w1600",
       "views": 162142
     },
     {
       "id": "ph2",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsf4aaaYEooObyoM1cNkDw98m0iyPTYFLlpCBQTMNvkESQI9vGeX7dMM7CLLtRu0cjE9MGSTvaPA3FwCR5Oh1Bkw-gQ5kdashOz6BVItR1iqbWIFV-vs7p8503K0BOt-qfX5Svs=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsf4aaaYEooObyoM1cNkDw98m0iyPTYFLlpCBQTMNvkESQI9vGeX7dMM7CLLtRu0cjE9MGSTvaPA3FwCR5Oh1Bkw-gQ5kdashOz6BVItR1iqbWIFV-vs7p8503K0BOt-qfX5Svs=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsBCbd-U2vxqDHeMFlGlJ4F_scgY_We0YBPeSnq6D4nrMk-_LFsjW6Yn4Xpw-b8iVlMStwiaETbrc_-BChoyxtpgxWEVVuRhN47CbfvUM6FRdQQ6ivxjGkpvDVIBlFh09E76eGd=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsBCbd-U2vxqDHeMFlGlJ4F_scgY_We0YBPeSnq6D4nrMk-_LFsjW6Yn4Xpw-b8iVlMStwiaETbrc_-BChoyxtpgxWEVVuRhN47CbfvUM6FRdQQ6ivxjGkpvDVIBlFh09E76eGd=w1600",
       "views": 111969
     },
     {
       "id": "ph3",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuDROajI1KSR_Qse60l0_YbB20W67XXuK7thorxBrw6Sl5frsw0XBY_e5qsJrQQUvAR6MX0pxCzqmw-rWM4YG0djDyg1tlKH5baZ3MHhW9GueuW6w-klqw2iUxeN21Y0fjze9qZGcBT9N4=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuDROajI1KSR_Qse60l0_YbB20W67XXuK7thorxBrw6Sl5frsw0XBY_e5qsJrQQUvAR6MX0pxCzqmw-rWM4YG0djDyg1tlKH5baZ3MHhW9GueuW6w-klqw2iUxeN21Y0fjze9qZGcBT9N4=w1600",
-      "views": 82488
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsqbJLaFZpK1cLJA-MR2Ts9aH7Ihz7JsOJunCCmNcI8fkPaJa8rnLMdZzOSxEScQXHboqLAGSXZJleUXuU4Kk4kdknMXaV47FKbL7UTIzXtDQOn2LVBvDXrykj-GyOxLCXIpdtklfswjpQ=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsqbJLaFZpK1cLJA-MR2Ts9aH7Ihz7JsOJunCCmNcI8fkPaJa8rnLMdZzOSxEScQXHboqLAGSXZJleUXuU4Kk4kdknMXaV47FKbL7UTIzXtDQOn2LVBvDXrykj-GyOxLCXIpdtklfswjpQ=w1600",
+      "views": 83376
     },
     {
       "id": "ph4",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtol8jtbrNlZTQTwlmHViEj42q-PpTyauDIaVqPhmMx5nUb5aGaFOWIimwpbWNicqM4Kc8aj8IiToBUto_yCE8wg2wBgoRdHnrx5BswDb23bvt7umCf_INH3jICxX4oP5aP6SjIZHnKXKQK=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtol8jtbrNlZTQTwlmHViEj42q-PpTyauDIaVqPhmMx5nUb5aGaFOWIimwpbWNicqM4Kc8aj8IiToBUto_yCE8wg2wBgoRdHnrx5BswDb23bvt7umCf_INH3jICxX4oP5aP6SjIZHnKXKQK=w1600",
-      "views": 78868
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOslLF-9ZkGpQCUfrzaPfUW4urLWVF_mCAILlxCQckzaSWgaS0-PNJ6NZ5TCLtW-GR4EWeTWCovnk1JV9Mv1CJEl02si7tRPEy_PJAXk3BvP26gO5RaoBYhqKmOUng_-iTYeRwH0Kx1TN_z9=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOslLF-9ZkGpQCUfrzaPfUW4urLWVF_mCAILlxCQckzaSWgaS0-PNJ6NZ5TCLtW-GR4EWeTWCovnk1JV9Mv1CJEl02si7tRPEy_PJAXk3BvP26gO5RaoBYhqKmOUng_-iTYeRwH0Kx1TN_z9=w1600",
+      "views": 79701
     },
     {
       "id": "ph5",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvK-QVrs-jqrDaT0ff2mfy7oHnWAO-u_aZYxWChIdakwrj6cPk8dDsyhV6UxjW1HmqO4FFAQ38_bACrMyi7lKdQLZbD4ag2UJUMlATyS5cwCuoMB0bp_NYzKUFdAKHDKI1UpvukHUATiI82=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvK-QVrs-jqrDaT0ff2mfy7oHnWAO-u_aZYxWChIdakwrj6cPk8dDsyhV6UxjW1HmqO4FFAQ38_bACrMyi7lKdQLZbD4ag2UJUMlATyS5cwCuoMB0bp_NYzKUFdAKHDKI1UpvukHUATiI82=w1600",
-      "views": 72079
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOugr84pxiUov0iRR-Z63WSIivDvGWlUuAPI4XP6wQhbItO3VjhAFdLnBw1DNRCgM3qaUXC3ZNtAh22usNT4G7sd-27aT1Qlyh5FrKwWPinfqr1g_wYZZyDHIe4vKaUILPtnetBqK9kAxJpv=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOugr84pxiUov0iRR-Z63WSIivDvGWlUuAPI4XP6wQhbItO3VjhAFdLnBw1DNRCgM3qaUXC3ZNtAh22usNT4G7sd-27aT1Qlyh5FrKwWPinfqr1g_wYZZyDHIe4vKaUILPtnetBqK9kAxJpv=w1600",
+      "views": 72939
     },
     {
       "id": "ph6",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOv-_vmxAfRACeDGtnu2pvmjYv6VVxLS9vqqc9DManPGqMrC-w-2UAejLOSd9JYetQwwb87cNFshCkhjH0RAQFnfm9rAFsfEIfaz33vWZsCk9Qf45r9IfONGwP8IBUxi6jA7cR9oww=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOv-_vmxAfRACeDGtnu2pvmjYv6VVxLS9vqqc9DManPGqMrC-w-2UAejLOSd9JYetQwwb87cNFshCkhjH0RAQFnfm9rAFsfEIfaz33vWZsCk9Qf45r9IfONGwP8IBUxi6jA7cR9oww=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsOKtzj_4cwU_jpr1DdeX3mIFnQ3lgBo7HkJ_YKwKDVajSnQUDOSBJmWl1nSupU7lzts4xN61GHUS83CCVW4C41wxAodqJ96sXoHWB3kib9qMUWS5qFfOXz-34wSEdHElMQGBILFw=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsOKtzj_4cwU_jpr1DdeX3mIFnQ3lgBo7HkJ_YKwKDVajSnQUDOSBJmWl1nSupU7lzts4xN61GHUS83CCVW4C41wxAodqJ96sXoHWB3kib9qMUWS5qFfOXz-34wSEdHElMQGBILFw=w1600",
       "views": 62588
     },
     {
       "id": "ph7",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsNvi3LHoy2aaxB_WLxjOI541kDMMozmE8ReMG7IqtL5EgBciGse-bejXGPuYqhffUrtkVYjKhJ-WZ69tRdJs1SxDsI2vNq6gQ_vWAc83ke5qEsE30A01p2mUYSvhrW5vJjX10=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsNvi3LHoy2aaxB_WLxjOI541kDMMozmE8ReMG7IqtL5EgBciGse-bejXGPuYqhffUrtkVYjKhJ-WZ69tRdJs1SxDsI2vNq6gQ_vWAc83ke5qEsE30A01p2mUYSvhrW5vJjX10=w1600",
-      "views": 57295
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtHQFQFcMamq63Aa7CNHY0-LqIYoErIpGbAHj0HZfJOvkvb1fNmB4ZPyZ7s0lrNptc6rms9lLymAhyYatIte4HcxAROq4lQM9VnNlWR6en5lvPlvwsuD34NFEmBiuAWoGv1fVY=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtHQFQFcMamq63Aa7CNHY0-LqIYoErIpGbAHj0HZfJOvkvb1fNmB4ZPyZ7s0lrNptc6rms9lLymAhyYatIte4HcxAROq4lQM9VnNlWR6en5lvPlvwsuD34NFEmBiuAWoGv1fVY=w1600",
+      "views": 57889
     },
     {
       "id": "ph8",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvQedv1LEnz0R7SK_Wl8KuWe7xkpYTBBno-5D9Ydfb_jwrgGVh3kVHWeXjv-Y4YdfJHBk3VdDcqyrD-WAzTB3mgI-YpauIZ4yrG1U2P6ZuSONtKZJdbM0fqsUmbuneh0PqqPfXG=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvQedv1LEnz0R7SK_Wl8KuWe7xkpYTBBno-5D9Ydfb_jwrgGVh3kVHWeXjv-Y4YdfJHBk3VdDcqyrD-WAzTB3mgI-YpauIZ4yrG1U2P6ZuSONtKZJdbM0fqsUmbuneh0PqqPfXG=w1600",
-      "views": 54597
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsiScCOp68M8WFCa0nfIlGhYS-yocVrvxnQdCo6cQ9vv0veuuXQP3BgK8SGayF550d4F_W88N5Q4T9Ih7hLyvPaN4liHguqJBznXzD7Ltcee_zXRXUNylx80MXu-sfBn0PieGoWcGAU8DRz=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsiScCOp68M8WFCa0nfIlGhYS-yocVrvxnQdCo6cQ9vv0veuuXQP3BgK8SGayF550d4F_W88N5Q4T9Ih7hLyvPaN4liHguqJBznXzD7Ltcee_zXRXUNylx80MXu-sfBn0PieGoWcGAU8DRz=w1600",
+      "views": 55150
     },
     {
       "id": "ph9",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOud_nt2JR_bEPnL0l17XloJPr5mX5PbRqTP7F8iyFAcXdWGOQz8X2cXH8tEQKMkKJOw-D_01Xg7A0MHzq3lJLMEwdOnNMDsOJI89JlutGnaF88UgLLuOBBqwl399AnAF4pyc2NniWQS4yZA=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOud_nt2JR_bEPnL0l17XloJPr5mX5PbRqTP7F8iyFAcXdWGOQz8X2cXH8tEQKMkKJOw-D_01Xg7A0MHzq3lJLMEwdOnNMDsOJI89JlutGnaF88UgLLuOBBqwl399AnAF4pyc2NniWQS4yZA=w1600",
-      "views": 54558
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuNhG_9Q7LAbrRR7w5LLHKyJrQ8JQptYWoZstdzttksgoAWeaUR7dpxLfmStd1sKcAVkz74EtrYyrNqfqdW-8JcXOX-5vXGXE3MnuoDh5buhlEdelk0bKvvYYuLRxlsqK0WKp3x=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuNhG_9Q7LAbrRR7w5LLHKyJrQ8JQptYWoZstdzttksgoAWeaUR7dpxLfmStd1sKcAVkz74EtrYyrNqfqdW-8JcXOX-5vXGXE3MnuoDh5buhlEdelk0bKvvYYuLRxlsqK0WKp3x=w1600",
+      "views": 54597
     },
     {
       "id": "ph10",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOs_t6kFOjeibteQnjD6-biqur0jEHhfo9OXJClLaqT751CrKsbkLhfNf82Lr6iZkGCmzE_1WWAqCRYpbnxVZAZ9lf2R3lCoBD88c8GZCakWlhBQP38qS-JmoyW0nfV2vSrXxYuy1Q=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOs_t6kFOjeibteQnjD6-biqur0jEHhfo9OXJClLaqT751CrKsbkLhfNf82Lr6iZkGCmzE_1WWAqCRYpbnxVZAZ9lf2R3lCoBD88c8GZCakWlhBQP38qS-JmoyW0nfV2vSrXxYuy1Q=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOt0CiVKdFQAmPCzYBWpyi-35LNONopuy6wPdIYnhvKN-poIunHc6PvWOP_F1NQXneA2IZnqmbUuZ7vQjRs4BcvPzaOy6S57uuWcf0iJCl2UoDsmbzXP01DdSvYFqL2cyk2HBz07Vw=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOt0CiVKdFQAmPCzYBWpyi-35LNONopuy6wPdIYnhvKN-poIunHc6PvWOP_F1NQXneA2IZnqmbUuZ7vQjRs4BcvPzaOy6S57uuWcf0iJCl2UoDsmbzXP01DdSvYFqL2cyk2HBz07Vw=w1600",
       "views": 49751
     },
     {
       "id": "ph11",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvRJlWsUaFKGVL7XQ7v0taf-2lfxG9NG2LpLIA97j4FVKGss1FLSxrlnExgF0SOjGmbQ_UblFNg-Oi_KBFA9r7Vv2qF0SlHNpGgN_-FLpLzeTALRBgNRKXtEshFCm6ta57UYQFDgx-hfdE=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvRJlWsUaFKGVL7XQ7v0taf-2lfxG9NG2LpLIA97j4FVKGss1FLSxrlnExgF0SOjGmbQ_UblFNg-Oi_KBFA9r7Vv2qF0SlHNpGgN_-FLpLzeTALRBgNRKXtEshFCm6ta57UYQFDgx-hfdE=w1600",
-      "views": 45122
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvrvz-Tl-wCuGoXDJzrpoC_66yzYnd2I6NDX5tf3GUAkCp-PNZAgOcERzsOhdXOn4CYuddsswNRa_STzxl_MSsQAFatu5WEPDmBjictaTo4aOTJ4Eq-QjqglwWE9XiRh-jvwWgbkvt-cWA=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvrvz-Tl-wCuGoXDJzrpoC_66yzYnd2I6NDX5tf3GUAkCp-PNZAgOcERzsOhdXOn4CYuddsswNRa_STzxl_MSsQAFatu5WEPDmBjictaTo4aOTJ4Eq-QjqglwWE9XiRh-jvwWgbkvt-cWA=w1600",
+      "views": 45580
     },
     {
       "id": "ph12",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOs3wWMnMJ8FlIb-Qeub6bKDuqTqsarQ_R4lhyir-DYMdg4d3WPuZ0kZccSSZiqikGDmGABg0Oh62yuW8uehStC6295QuEIHV9BRGBJf7Fm5phyKcDWV07SRbckF2e_s6hTKwQi5M_8mIX-d=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOs3wWMnMJ8FlIb-Qeub6bKDuqTqsarQ_R4lhyir-DYMdg4d3WPuZ0kZccSSZiqikGDmGABg0Oh62yuW8uehStC6295QuEIHV9BRGBJf7Fm5phyKcDWV07SRbckF2e_s6hTKwQi5M_8mIX-d=w1600",
-      "views": 43560
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOt-VtCdqOnXVbgYVJ73c1cu1dVEbbJTCMXh7dUZAWFImWsrY_1BR1AyE9hcV0mwmEHaRsqh7TXqoFkTSherjJo4RohAXmHs9DgBzNkzEJpEbS0cJ0FxifL1GtN8qe-gqMpY7gonEXfN-G4O=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOt-VtCdqOnXVbgYVJ73c1cu1dVEbbJTCMXh7dUZAWFImWsrY_1BR1AyE9hcV0mwmEHaRsqh7TXqoFkTSherjJo4RohAXmHs9DgBzNkzEJpEbS0cJ0FxifL1GtN8qe-gqMpY7gonEXfN-G4O=w1600",
+      "views": 44005
     },
     {
       "id": "ph13",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsiDSNdrZMPp2ICO-wzmwowllyNOA81ybmKwcvixCIxUYGXgjTmHYR5Z6rXwK5PahhMUmlLGyBOWV-odYe1VwUcwduyYvZk8_vBgxTaZxWfPj_YvhGQWXxiT5XlXfLquq-q5OIW75FMqgVK=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsiDSNdrZMPp2ICO-wzmwowllyNOA81ybmKwcvixCIxUYGXgjTmHYR5Z6rXwK5PahhMUmlLGyBOWV-odYe1VwUcwduyYvZk8_vBgxTaZxWfPj_YvhGQWXxiT5XlXfLquq-q5OIW75FMqgVK=w1600",
-      "views": 42113
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuB-sBTKfnFPQIoGNC5xf5u006GThlGEMFI0vMlPbOzt7oU8pypRutwkuLxsnZteSKTvid07rLnYoo1pCykcUDFci0DNPSumBKx0ui1KY3lfvCGKJF2SZPYOZw0Hk_nBWaQZ8FqQBzrTk16=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuB-sBTKfnFPQIoGNC5xf5u006GThlGEMFI0vMlPbOzt7oU8pypRutwkuLxsnZteSKTvid07rLnYoo1pCykcUDFci0DNPSumBKx0ui1KY3lfvCGKJF2SZPYOZw0Hk_nBWaQZ8FqQBzrTk16=w1600",
+      "views": 42560
     },
     {
       "id": "ph14",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOu8tdQDqY7-UQb2tCcQ6CWNx7APx2X-yCxM9hxO16n23DtzAR-iX1uGeExClslmgTo49KKZAac9xULgB55EUChgZSJvxHilvOxlHPK31knt18j2JIVbY3r2qI5TzQPNU42EClkV=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOu8tdQDqY7-UQb2tCcQ6CWNx7APx2X-yCxM9hxO16n23DtzAR-iX1uGeExClslmgTo49KKZAac9xULgB55EUChgZSJvxHilvOxlHPK31knt18j2JIVbY3r2qI5TzQPNU42EClkV=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsV7SsDfmizgdggH_k0h9SR7sACSNdDOWlYc8qeBzVMPZ-EDGSjiExFfvefe4l05cJWZRzpuLrlzbHf6LyUBOLKMpE0BuP8WxnmX1g3ymGDHQy8gHwOazOrLA49Sfjj5wKZxP2g=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsV7SsDfmizgdggH_k0h9SR7sACSNdDOWlYc8qeBzVMPZ-EDGSjiExFfvefe4l05cJWZRzpuLrlzbHf6LyUBOLKMpE0BuP8WxnmX1g3ymGDHQy8gHwOazOrLA49Sfjj5wKZxP2g=w1600",
       "views": 41956
     }
   ],
@@ -424,6 +425,8 @@
       "photoCount": 2,
       "lat": 35.00582,
       "lng": 135.76951,
+      "googleRating": 3,
+      "googleReviews": 137,
       "url": "https://maps.app.goo.gl/tjaadKWscxbnqpi37"
     },
     {
@@ -438,6 +441,8 @@
       "photoCount": 1,
       "lat": 35.00578,
       "lng": 135.76942,
+      "googleRating": 3.8,
+      "googleReviews": 85,
       "url": "https://maps.app.goo.gl/SWvwCq1etvA8ARtc7"
     },
     {
@@ -452,6 +457,8 @@
       "photoCount": 3,
       "lat": 35.00854,
       "lng": 135.76705,
+      "googleRating": 4.2,
+      "googleReviews": 1459,
       "url": "https://maps.app.goo.gl/YqXMLKzUqu5UG1rw7"
     },
     {
@@ -466,6 +473,8 @@
       "photoCount": 2,
       "lat": 35.00861,
       "lng": 135.7673,
+      "googleRating": 4.3,
+      "googleReviews": 635,
       "url": "https://maps.app.goo.gl/xCD3YXYQDevEmT4n9"
     },
     {
@@ -480,6 +489,8 @@
       "photoCount": 0,
       "lat": 35.00744,
       "lng": 135.76119,
+      "googleRating": 4.4,
+      "googleReviews": 994,
       "url": "https://maps.app.goo.gl/iZXJd51MfLg51uXz6"
     },
     {
@@ -494,6 +505,8 @@
       "photoCount": 3,
       "lat": 35.00605,
       "lng": 135.75872,
+      "googleRating": 4.2,
+      "googleReviews": 1496,
       "url": "https://maps.app.goo.gl/tzJZcLuYwVxvkY7p6"
     },
     {
@@ -508,6 +521,8 @@
       "photoCount": 0,
       "lat": 35.00978,
       "lng": 135.75935,
+      "googleRating": 4.3,
+      "googleReviews": 1917,
       "url": "https://maps.app.goo.gl/abgEmhHrwyWiJmBc8"
     },
     {
@@ -522,6 +537,8 @@
       "photoCount": 0,
       "lat": 35.01417,
       "lng": 135.76746,
+      "googleRating": 4.5,
+      "googleReviews": 177,
       "url": "https://maps.app.goo.gl/41vVbgCWMA5AQtVY6"
     },
     {
@@ -536,6 +553,8 @@
       "photoCount": 2,
       "lat": 35.02828,
       "lng": 135.75456,
+      "googleRating": 4.4,
+      "googleReviews": 354,
       "url": "https://maps.app.goo.gl/kK7V9wPQxAfJUzJL9"
     },
     {
@@ -550,6 +569,8 @@
       "photoCount": 0,
       "lat": 35.01149,
       "lng": 135.75581,
+      "googleRating": 4.8,
+      "googleReviews": 1200,
       "url": "https://maps.app.goo.gl/kcV4AiZp82Hu5DaR9"
     },
     {
@@ -564,6 +585,8 @@
       "photoCount": 1,
       "lat": 34.98604,
       "lng": 135.759,
+      "googleRating": 4.3,
+      "googleReviews": 682,
       "url": "https://maps.app.goo.gl/bmKrqryhaehzhK617"
     },
     {
@@ -578,6 +601,8 @@
       "photoCount": 4,
       "lat": 34.96769,
       "lng": 135.77414,
+      "googleRating": 4.2,
+      "googleReviews": 340,
       "url": "https://maps.app.goo.gl/g4g5HTW6N9NtoCJV9"
     },
     {
@@ -592,6 +617,8 @@
       "photoCount": 0,
       "lat": 35.00133,
       "lng": 135.76696,
+      "googleRating": 4.4,
+      "googleReviews": 3842,
       "url": "https://maps.app.goo.gl/oNTkyB3syciq613P7"
     },
     {
@@ -606,6 +633,8 @@
       "photoCount": 1,
       "lat": 35.00898,
       "lng": 135.75791,
+      "googleRating": 4.2,
+      "googleReviews": 1072,
       "url": "https://maps.app.goo.gl/fphx5jn4gxPMzqNi8"
     },
     {
@@ -620,6 +649,8 @@
       "photoCount": 1,
       "lat": 35.00922,
       "lng": 135.75522,
+      "googleRating": 4.1,
+      "googleReviews": 963,
       "url": "https://maps.app.goo.gl/2hpnrRDfeZHCU9JEA"
     },
     {
@@ -634,6 +665,8 @@
       "photoCount": 0,
       "lat": 35.02008,
       "lng": 135.74813,
+      "googleRating": 4.3,
+      "googleReviews": 468,
       "url": "https://maps.app.goo.gl/52VYVjr4wTWUieZC6"
     },
     {
@@ -648,6 +681,8 @@
       "photoCount": 0,
       "lat": 25.05885,
       "lng": 121.54643,
+      "googleRating": 4.6,
+      "googleReviews": 66,
       "url": "https://maps.app.goo.gl/L99VXALPry45aYKM8"
     },
     {
@@ -662,6 +697,8 @@
       "photoCount": 4,
       "lat": 25.01307,
       "lng": 121.53512,
+      "googleRating": 3.6,
+      "googleReviews": 949,
       "url": "https://maps.app.goo.gl/JxGQWv9s4ftxtnQCA"
     },
     {
@@ -676,6 +713,8 @@
       "photoCount": 1,
       "lat": 25.01565,
       "lng": 121.5325,
+      "googleRating": 4.9,
+      "googleReviews": 204,
       "url": "https://maps.app.goo.gl/7yExktLxLfd4DDGk8"
     },
     {
@@ -690,6 +729,8 @@
       "photoCount": 2,
       "lat": 24.15526,
       "lng": 120.66437,
+      "googleRating": 4.9,
+      "googleReviews": 3251,
       "url": "https://maps.app.goo.gl/5ymEx28o9aSRQmX46"
     },
     {
@@ -704,6 +745,8 @@
       "photoCount": 0,
       "lat": 25.03285,
       "lng": 121.52878,
+      "googleRating": 3.8,
+      "googleReviews": 4247,
       "url": "https://maps.app.goo.gl/hqBLPPfY18L8JgEZ8"
     },
     {
@@ -718,6 +761,8 @@
       "photoCount": 1,
       "lat": 25.05699,
       "lng": 121.5618,
+      "googleRating": 4.6,
+      "googleReviews": 801,
       "url": "https://maps.app.goo.gl/U73oP5EaFCuHe1L3A"
     },
     {
@@ -732,6 +777,8 @@
       "photoCount": 0,
       "lat": 25.05746,
       "lng": 121.54533,
+      "googleRating": 4.1,
+      "googleReviews": 2627,
       "url": "https://maps.app.goo.gl/ghN9HDZJzLAVCtvd9"
     },
     {
@@ -746,6 +793,8 @@
       "photoCount": 1,
       "lat": 25.02725,
       "lng": 121.55159,
+      "googleRating": 4.3,
+      "googleReviews": 1819,
       "url": "https://maps.app.goo.gl/aecBa1mAqhCk6X5e7"
     },
     {
@@ -760,6 +809,8 @@
       "photoCount": 0,
       "lat": 25.08284,
       "lng": 121.52062,
+      "googleRating": 4.5,
+      "googleReviews": 1074,
       "url": "https://maps.app.goo.gl/f7MU6LkMnMnNjFic8"
     },
     {
@@ -774,6 +825,8 @@
       "photoCount": 2,
       "lat": 25.02994,
       "lng": 121.51641,
+      "googleRating": 4.2,
+      "googleReviews": 1358,
       "url": "https://maps.app.goo.gl/wATVwKNKDh8PfdD18"
     },
     {
@@ -788,6 +841,8 @@
       "photoCount": 1,
       "lat": 25.02548,
       "lng": 121.54948,
+      "googleRating": 4.6,
+      "googleReviews": 568,
       "url": "https://maps.app.goo.gl/YPg3reCruRZDSvpVA"
     },
     {
@@ -802,6 +857,8 @@
       "photoCount": 0,
       "lat": 25.02578,
       "lng": 121.54685,
+      "googleRating": 4,
+      "googleReviews": 1153,
       "url": "https://maps.app.goo.gl/otdc4rYQyLmVSvA47"
     },
     {
@@ -816,6 +873,8 @@
       "photoCount": 0,
       "lat": 41.89021,
       "lng": 12.49223,
+      "googleRating": 4.8,
+      "googleReviews": 494756,
       "url": "https://maps.app.goo.gl/j6iTTnmew9a6wfd46"
     },
     {
@@ -830,6 +889,8 @@
       "photoCount": 0,
       "lat": 41.90341,
       "lng": 12.49422,
+      "googleRating": 4.8,
+      "googleReviews": 2025,
       "url": "https://maps.app.goo.gl/4gSvgYA2vQruNRn8A"
     },
     {
@@ -844,6 +905,8 @@
       "photoCount": 3,
       "lat": 41.89916,
       "lng": 12.47971,
+      "googleRating": 4.8,
+      "googleReviews": 20164,
       "url": "https://maps.app.goo.gl/nB4HwYmxoDsPaBat7"
     },
     {
@@ -858,6 +921,8 @@
       "photoCount": 3,
       "lat": 43.77463,
       "lng": 11.24939,
+      "googleRating": 4.7,
+      "googleReviews": 31688,
       "url": "https://maps.app.goo.gl/zfPqDnT9EvgBTvbh6"
     },
     {
@@ -872,6 +937,8 @@
       "photoCount": 0,
       "lat": 43.77314,
       "lng": 11.25596,
+      "googleRating": 4.8,
+      "googleReviews": 109099,
       "url": "https://maps.app.goo.gl/vqQ91QxHJXjKngAq6"
     },
     {
@@ -886,6 +953,8 @@
       "photoCount": 3,
       "lat": 41.90093,
       "lng": 12.48331,
+      "googleRating": 4.7,
+      "googleReviews": 508565,
       "url": "https://maps.app.goo.gl/kmKUY476nfu2mZZw8"
     },
     {
@@ -900,6 +969,8 @@
       "photoCount": 1,
       "lat": 41.90256,
       "lng": 12.46332,
+      "googleRating": 4.7,
+      "googleReviews": 241,
       "url": "https://maps.app.goo.gl/GkWcpzxSnd32x1uL9"
     },
     {
@@ -914,6 +985,8 @@
       "photoCount": 1,
       "lat": 45.4674,
       "lng": 9.18955,
+      "googleRating": 4.7,
+      "googleReviews": 34044,
       "url": "https://maps.app.goo.gl/dss5g7kaT38mr5Qv5"
     },
     {
@@ -928,6 +1001,8 @@
       "photoCount": 3,
       "lat": 41.89897,
       "lng": 12.47309,
+      "googleRating": 4.8,
+      "googleReviews": 14266,
       "url": "https://maps.app.goo.gl/qvNxLrej4in2yeos9"
     },
     {
@@ -942,6 +1017,8 @@
       "photoCount": 3,
       "lat": 43.77286,
       "lng": 11.25578,
+      "googleRating": 4.8,
+      "googleReviews": 7870,
       "url": "https://maps.app.goo.gl/V8Ydc33BRBqoQf7x5"
     },
     {
@@ -956,6 +1033,8 @@
       "photoCount": 1,
       "lat": 41.89861,
       "lng": 12.47687,
+      "googleRating": 4.8,
+      "googleReviews": 279667,
       "url": "https://maps.app.goo.gl/pWcpRZiwqSHmMdXU8"
     },
     {
@@ -970,6 +1049,8 @@
       "photoCount": 1,
       "lat": 41.90217,
       "lng": 12.45394,
+      "googleRating": 4.8,
+      "googleReviews": 177638,
       "url": "https://maps.app.goo.gl/3DiPSpemyEGSeJRx8"
     },
     {
@@ -984,6 +1065,8 @@
       "photoCount": 3,
       "lat": 41.90649,
       "lng": 12.45364,
+      "googleRating": 4.6,
+      "googleReviews": 204708,
       "url": "https://maps.app.goo.gl/4N5TEfAxwhPZub3W6"
     },
     {
@@ -998,6 +1081,8 @@
       "photoCount": 2,
       "lat": 45.4641,
       "lng": 9.19193,
+      "googleRating": 4.8,
+      "googleReviews": 202463,
       "url": "https://maps.app.goo.gl/dRQWiwPTpkuMEo4RA"
     },
     {
@@ -1012,6 +1097,8 @@
       "photoCount": 2,
       "lat": 45.48195,
       "lng": 9.21331,
+      "googleRating": 4,
+      "googleReviews": 5883,
       "url": "https://maps.app.goo.gl/UWJKmpMX84yi6Kcw6"
     },
     {
@@ -1026,6 +1113,8 @@
       "photoCount": 1,
       "lat": 45.48179,
       "lng": 9.20328,
+      "googleRating": 4.3,
+      "googleReviews": 9494,
       "url": "https://maps.app.goo.gl/3tLWkuANLW4FF1NU7"
     },
     {
@@ -1040,6 +1129,8 @@
       "photoCount": 0,
       "lat": 45.4757,
       "lng": 9.18385,
+      "googleRating": 4.7,
+      "googleReviews": 3127,
       "url": "https://maps.app.goo.gl/gDv41PT8DTzjbw2DA"
     },
     {
@@ -1054,6 +1145,8 @@
       "photoCount": 3,
       "lat": 45.46882,
       "lng": 9.18033,
+      "googleRating": 4.6,
+      "googleReviews": 1085,
       "url": "https://maps.app.goo.gl/gBHupXuGmTsh2pMd9"
     },
     {
@@ -1068,6 +1161,8 @@
       "photoCount": 3,
       "lat": 45.466,
       "lng": 9.19178,
+      "googleRating": 4.3,
+      "googleReviews": 3832,
       "url": "https://maps.app.goo.gl/cvUMFrhXCBr2ZEmP6"
     },
     {
@@ -1082,6 +1177,8 @@
       "photoCount": 0,
       "lat": 45.49,
       "lng": 9.20389,
+      "googleRating": 4.8,
+      "googleReviews": 5268,
       "url": "https://maps.app.goo.gl/3TS8f9NadDP1aBMD8"
     },
     {
@@ -1096,6 +1193,8 @@
       "photoCount": 1,
       "lat": 45.4663,
       "lng": 9.18732,
+      "googleRating": 4.4,
+      "googleReviews": 22,
       "url": "https://maps.app.goo.gl/bnS9dZj12naugoxh6"
     },
     {
@@ -1110,6 +1209,8 @@
       "photoCount": 1,
       "lat": 45.47914,
       "lng": 9.20257,
+      "googleRating": 4.4,
+      "googleReviews": 2971,
       "url": "https://maps.app.goo.gl/BXsnAXBrUDTifREB6"
     },
     {
@@ -1124,6 +1225,8 @@
       "photoCount": 1,
       "lat": 45.48285,
       "lng": 9.20925,
+      "googleRating": 4.2,
+      "googleReviews": 1698,
       "url": "https://maps.app.goo.gl/6Y6Fa9oscxPL4zoq9"
     },
     {
@@ -1138,6 +1241,8 @@
       "photoCount": 0,
       "lat": 41.90132,
       "lng": 12.49579,
+      "googleRating": 4.9,
+      "googleReviews": 1990,
       "url": "https://maps.app.goo.gl/6rRHGRVoHZNAQXwKA"
     },
     {
@@ -1152,6 +1257,8 @@
       "photoCount": 0,
       "lat": 41.90913,
       "lng": 12.45337,
+      "googleRating": 4.7,
+      "googleReviews": 286,
       "url": "https://maps.app.goo.gl/mwZct4Ch5i1EpFUK7"
     },
     {
@@ -1166,6 +1273,8 @@
       "photoCount": 3,
       "lat": 41.90909,
       "lng": 12.45334,
+      "googleRating": 4.9,
+      "googleReviews": 285,
       "url": "https://maps.app.goo.gl/T2Pns7E4qd9ZZY6G6"
     },
     {
@@ -1180,6 +1289,8 @@
       "photoCount": 1,
       "lat": 41.8991,
       "lng": 12.49923,
+      "googleRating": 4.7,
+      "googleReviews": 835,
       "url": "https://maps.app.goo.gl/1RUWGvdJiHAqjPg86"
     },
     {
@@ -1194,6 +1305,8 @@
       "photoCount": 2,
       "lat": 41.89827,
       "lng": 12.47543,
+      "googleRating": 4.1,
+      "googleReviews": 12811,
       "url": "https://maps.app.goo.gl/mj4df2wkgzCucZWm8"
     },
     {
@@ -1208,6 +1321,8 @@
       "photoCount": 2,
       "lat": 41.89919,
       "lng": 12.47128,
+      "googleRating": 4.6,
+      "googleReviews": 1493,
       "url": "https://maps.app.goo.gl/GjSV6dygyLFq1Lbv5"
     },
     {
@@ -1222,6 +1337,8 @@
       "photoCount": 0,
       "lat": 41.90082,
       "lng": 12.48184,
+      "googleRating": 4.6,
+      "googleReviews": 3397,
       "url": "https://maps.app.goo.gl/H4ukDy7ZZ3QpXywk6"
     },
     {
@@ -1236,6 +1353,8 @@
       "photoCount": 1,
       "lat": 41.90102,
       "lng": 12.4772,
+      "googleRating": 4.4,
+      "googleReviews": 28207,
       "url": "https://maps.app.goo.gl/dQ9tWcQM8kBuU4MS9"
     },
     {
@@ -1250,6 +1369,8 @@
       "photoCount": 4,
       "lat": 41.90654,
       "lng": 12.48086,
+      "googleRating": 4.3,
+      "googleReviews": 7504,
       "url": "https://maps.app.goo.gl/ptZfXCkMh9NWW5L88"
     },
     {
@@ -1264,6 +1385,8 @@
       "photoCount": 3,
       "lat": 41.8995,
       "lng": 12.47739,
+      "googleRating": 4.4,
+      "googleReviews": 5522,
       "url": "https://maps.app.goo.gl/h8JeU6mNxutLFgQ69"
     },
     {
@@ -1278,6 +1401,8 @@
       "photoCount": 0,
       "lat": 41.90129,
       "lng": 12.50158,
+      "googleRating": 3.4,
+      "googleReviews": 1179,
       "url": "https://maps.app.goo.gl/R1kwjhNbuuUU2Exc7"
     },
     {
@@ -1292,6 +1417,8 @@
       "photoCount": 1,
       "lat": 40.85318,
       "lng": 14.27031,
+      "googleRating": 4.8,
+      "googleReviews": 256,
       "url": "https://maps.app.goo.gl/gHzzWmh47u8epkvM9"
     },
     {
@@ -1306,6 +1433,8 @@
       "photoCount": 2,
       "lat": 41.89785,
       "lng": 12.49678,
+      "googleRating": 4.4,
+      "googleReviews": 1385,
       "url": "https://maps.app.goo.gl/gEKZhte1vHyk83sY9"
     },
     {
@@ -1320,6 +1449,8 @@
       "photoCount": 1,
       "lat": 41.89434,
       "lng": 12.4908,
+      "googleRating": 4.9,
+      "googleReviews": 3223,
       "url": "https://maps.app.goo.gl/xxBcxKm6uRPsXqB96"
     },
     {
@@ -1334,6 +1465,8 @@
       "photoCount": 2,
       "lat": 41.89362,
       "lng": 12.48856,
+      "googleRating": 4.4,
+      "googleReviews": 1304,
       "url": "https://maps.app.goo.gl/1gA1YpVgyH7Sph2x9"
     },
     {
@@ -1348,6 +1481,8 @@
       "photoCount": 0,
       "lat": 41.90645,
       "lng": 12.48094,
+      "googleRating": 4.3,
+      "googleReviews": 4733,
       "url": "https://maps.app.goo.gl/DHjHtUJuz1wSfHMc7"
     },
     {
@@ -1362,6 +1497,8 @@
       "photoCount": 1,
       "lat": 41.90011,
       "lng": 12.49532,
+      "googleRating": 4.6,
+      "googleReviews": 2221,
       "url": "https://maps.app.goo.gl/24BqhepzoFi8GBwi7"
     },
     {
@@ -1376,6 +1513,8 @@
       "photoCount": 1,
       "lat": 41.88267,
       "lng": 12.48644,
+      "googleRating": 4.7,
+      "googleReviews": 620,
       "url": "https://maps.app.goo.gl/MrqrHhSbHuG5St9Q8"
     },
     {
@@ -1390,6 +1529,8 @@
       "photoCount": 0,
       "lat": 41.89482,
       "lng": 12.50095,
+      "googleRating": 4.5,
+      "googleReviews": 6304,
       "url": "https://maps.app.goo.gl/1qGg1jX8wmgCRkNJ9"
     },
     {
@@ -1404,6 +1545,8 @@
       "photoCount": 3,
       "lat": 41.89485,
       "lng": 12.50113,
+      "googleRating": 4.6,
+      "googleReviews": 235,
       "url": "https://maps.app.goo.gl/3b4mTPUVZrobudeNA"
     },
     {
@@ -1418,6 +1561,8 @@
       "photoCount": 0,
       "lat": 41.89332,
       "lng": 12.48919,
+      "googleRating": 4.8,
+      "googleReviews": 50156,
       "url": "https://maps.app.goo.gl/wnyXtoayMoE5SMWK7"
     },
     {
@@ -1432,6 +1577,8 @@
       "photoCount": 1,
       "lat": 41.8963,
       "lng": 12.49404,
+      "googleRating": 4.7,
+      "googleReviews": 5504,
       "url": "https://maps.app.goo.gl/n9qhLVqHkYL9LombA"
     },
     {
@@ -1446,6 +1593,8 @@
       "photoCount": 2,
       "lat": 43.77744,
       "lng": 11.25898,
+      "googleRating": 4.3,
+      "googleReviews": 1590,
       "url": "https://maps.app.goo.gl/iiiSbsiKQ7fcgrEZA"
     },
     {
@@ -1460,6 +1609,8 @@
       "photoCount": 1,
       "lat": 43.77596,
       "lng": 11.24679,
+      "googleRating": 4.7,
+      "googleReviews": 13137,
       "url": "https://maps.app.goo.gl/9hwYtUq8afkTVtR69"
     },
     {
@@ -1474,6 +1625,8 @@
       "photoCount": 3,
       "lat": 43.76811,
       "lng": 11.25987,
+      "googleRating": 4.4,
+      "googleReviews": 1125,
       "url": "https://maps.app.goo.gl/6pTd2yzSReEeTiie9"
     },
     {
@@ -1488,6 +1641,8 @@
       "photoCount": 0,
       "lat": 43.77635,
       "lng": 11.25445,
+      "googleRating": 4.5,
+      "googleReviews": 32974,
       "url": "https://maps.app.goo.gl/dM5ECe5gpRCNGerj9"
     },
     {
@@ -1502,6 +1657,8 @@
       "photoCount": 3,
       "lat": 43.77342,
       "lng": 11.25753,
+      "googleRating": 5,
+      "googleReviews": 37,
       "url": "https://maps.app.goo.gl/cxW5HhWgef6woVno7?g_st=il"
     },
     {
@@ -1516,6 +1673,8 @@
       "photoCount": 3,
       "lat": 43.77152,
       "lng": 11.26142,
+      "googleRating": 4.5,
+      "googleReviews": 518,
       "url": "https://maps.app.goo.gl/8p3Nk9JoowzuUDux5"
     },
     {
@@ -1530,6 +1689,8 @@
       "photoCount": 0,
       "lat": 41.90638,
       "lng": 12.45619,
+      "googleRating": 4,
+      "googleReviews": 881,
       "url": "https://maps.app.goo.gl/6pMG6pW8W9tRWxmr7"
     },
     {
@@ -1544,6 +1705,8 @@
       "photoCount": 3,
       "lat": 43.77396,
       "lng": 11.25643,
+      "googleRating": 4.7,
+      "googleReviews": 2894,
       "url": "https://maps.app.goo.gl/7JUn61w5243kkzxN8"
     },
     {
@@ -1558,6 +1721,8 @@
       "photoCount": 0,
       "lat": 43.77529,
       "lng": 11.2511,
+      "googleRating": 4.6,
+      "googleReviews": 593,
       "url": "https://maps.app.goo.gl/NehhCmiBMB32T2dc9"
     },
     {
@@ -1572,6 +1737,8 @@
       "photoCount": 2,
       "lat": 43.77438,
       "lng": 11.25495,
+      "googleRating": 4.6,
+      "googleReviews": 9380,
       "url": "https://maps.app.goo.gl/4jVvT55XbBTbGxeu5"
     },
     {
@@ -1586,6 +1753,8 @@
       "photoCount": 2,
       "lat": 43.76992,
       "lng": 11.25475,
+      "googleRating": 4.8,
+      "googleReviews": 774,
       "url": "https://maps.app.goo.gl/rABC9bg4GxEKxSk59"
     },
     {
@@ -1600,6 +1769,8 @@
       "photoCount": 3,
       "lat": 43.77012,
       "lng": 11.25454,
+      "googleRating": 4.6,
+      "googleReviews": 1360,
       "url": "https://maps.app.goo.gl/kTHktGh6kpdeULsP7"
     },
     {
@@ -1614,6 +1785,8 @@
       "photoCount": 2,
       "lat": 43.77155,
       "lng": 11.25549,
+      "googleRating": 4.8,
+      "googleReviews": 1156,
       "url": "https://maps.app.goo.gl/j4xkNhofDihxD7GeA"
     },
     {
@@ -1628,6 +1801,8 @@
       "photoCount": 0,
       "lat": 43.78223,
       "lng": 11.25649,
+      "googleRating": 4.7,
+      "googleReviews": 3352,
       "url": "https://maps.app.goo.gl/xXZ115MRJdzn3D3P8"
     },
     {
@@ -1642,6 +1817,8 @@
       "photoCount": 2,
       "lat": 43.77628,
       "lng": 11.25329,
+      "googleRating": 4.4,
+      "googleReviews": 3513,
       "url": "https://maps.app.goo.gl/ovpkByp7HqYVfbgx5"
     },
     {
@@ -1656,6 +1833,8 @@
       "photoCount": 2,
       "lat": 45.43773,
       "lng": 12.33741,
+      "googleRating": 4.6,
+      "googleReviews": 8931,
       "url": "https://maps.app.goo.gl/jFTYGqZgoGsMx4c68"
     },
     {
@@ -1670,6 +1849,8 @@
       "photoCount": 0,
       "lat": 45.44063,
       "lng": 12.33879,
+      "googleRating": 4.6,
+      "googleReviews": 74,
       "url": "https://maps.app.goo.gl/Z4YGNngNRB4WAX4F8"
     },
     {
@@ -1684,6 +1865,8 @@
       "photoCount": 0,
       "lat": 45.43555,
       "lng": 12.33875,
+      "googleRating": 4.5,
+      "googleReviews": 2260,
       "url": "https://maps.app.goo.gl/oGqS73cBMjN69XVXA"
     },
     {
@@ -1698,6 +1881,8 @@
       "photoCount": 0,
       "lat": 45.43619,
       "lng": 12.33843,
+      "googleRating": 4.5,
+      "googleReviews": 1185,
       "url": "https://maps.app.goo.gl/un2cAgQZcBt77Y339"
     },
     {
@@ -1712,6 +1897,8 @@
       "photoCount": 3,
       "lat": 45.43835,
       "lng": 12.33389,
+      "googleRating": 4.4,
+      "googleReviews": 3606,
       "url": "https://maps.app.goo.gl/7wZd5Fa3EDA4DSJG9"
     },
     {
@@ -1726,6 +1913,8 @@
       "photoCount": 2,
       "lat": 45.43722,
       "lng": 12.33101,
+      "googleRating": 4.7,
+      "googleReviews": 924,
       "url": "https://maps.app.goo.gl/EA2guwfgF1eP9Jy68"
     },
     {
@@ -1740,6 +1929,8 @@
       "photoCount": 4,
       "lat": 45.43726,
       "lng": 12.33122,
+      "googleRating": 4.7,
+      "googleReviews": 711,
       "url": "https://maps.app.goo.gl/iYGVkNS8CjzKnfyQ6"
     },
     {
@@ -1754,6 +1945,8 @@
       "photoCount": 2,
       "lat": 45.43731,
       "lng": 12.33135,
+      "googleRating": 4.3,
+      "googleReviews": 1999,
       "url": "https://maps.app.goo.gl/s8tHDivrR2qhz3xe7"
     },
     {
@@ -1768,6 +1961,8 @@
       "photoCount": 2,
       "lat": 45.43899,
       "lng": 12.33717,
+      "googleRating": 4.6,
+      "googleReviews": 1882,
       "url": "https://maps.app.goo.gl/FqbACM38zbjx3pxz6"
     },
     {
@@ -1782,6 +1977,8 @@
       "photoCount": 3,
       "lat": 45.43417,
       "lng": 12.33847,
+      "googleRating": 4.7,
+      "googleReviews": 193828,
       "url": "https://maps.app.goo.gl/q4PHDgo88X2Pppu18"
     },
     {
@@ -1796,6 +1993,8 @@
       "photoCount": 2,
       "lat": 34.68454,
       "lng": 135.83877,
+      "googleRating": 4.3,
+      "googleReviews": 593,
       "url": "https://maps.app.goo.gl/NdB6DJepshjhWt677"
     },
     {
@@ -1810,6 +2009,8 @@
       "photoCount": 1,
       "lat": 34.70314,
       "lng": 135.49543,
+      "googleRating": 4.6,
+      "googleReviews": 5466,
       "url": "https://maps.app.goo.gl/RiY985mpgWzNW5TE8"
     },
     {
@@ -1824,6 +2025,8 @@
       "photoCount": 1,
       "lat": 34.66678,
       "lng": 135.50181,
+      "googleRating": 4.8,
+      "googleReviews": 2380,
       "url": "https://maps.app.goo.gl/NVBaZgQnQRdPAxEd8"
     },
     {
@@ -1838,6 +2041,8 @@
       "photoCount": 2,
       "lat": 34.89151,
       "lng": 135.80661,
+      "googleRating": 4.3,
+      "googleReviews": 2275,
       "url": "https://maps.app.goo.gl/g9eurJcYBnLCoaTAA"
     },
     {
@@ -1852,6 +2057,8 @@
       "photoCount": 1,
       "lat": 34.88951,
       "lng": 135.8018,
+      "googleRating": 4.4,
+      "googleReviews": 5330,
       "url": "https://maps.app.goo.gl/vQHse75jTENSewh29"
     },
     {
@@ -1866,6 +2073,8 @@
       "photoCount": 0,
       "lat": 34.89088,
       "lng": 135.8035,
+      "googleRating": 4.6,
+      "googleReviews": 495,
       "url": "https://maps.app.goo.gl/q9yEtfCW8rrFhrdS7"
     },
     {
@@ -1880,6 +2089,8 @@
       "photoCount": 1,
       "lat": 34.69416,
       "lng": 135.19252,
+      "googleRating": 4.8,
+      "googleReviews": 2177,
       "url": "https://maps.app.goo.gl/sYS9vbdGpBoKHrnc8"
     },
     {
@@ -1894,6 +2105,8 @@
       "photoCount": 0,
       "lat": 34.66107,
       "lng": 135.50031,
+      "googleRating": 4.7,
+      "googleReviews": 264,
       "url": "https://maps.app.goo.gl/QjhckkURUtc5qiNV6"
     },
     {
@@ -1908,6 +2121,8 @@
       "photoCount": 1,
       "lat": 34.68726,
       "lng": 135.19318,
+      "googleRating": 4.2,
+      "googleReviews": 3251,
       "url": "https://maps.app.goo.gl/CdprDHKwFaMu3fWs7"
     },
     {
@@ -1922,6 +2137,8 @@
       "photoCount": 2,
       "lat": 34.68263,
       "lng": 135.1867,
+      "googleRating": 4.2,
+      "googleReviews": 11472,
       "url": "https://maps.app.goo.gl/2U3kBQysw9WzygwA7"
     },
     {
@@ -1936,6 +2153,8 @@
       "photoCount": 4,
       "lat": 34.69983,
       "lng": 135.19023,
+      "googleRating": 4.4,
+      "googleReviews": 4076,
       "url": "https://maps.app.goo.gl/7a1bPj75pKi6QS7F6"
     },
     {
@@ -1950,6 +2169,8 @@
       "photoCount": 0,
       "lat": 34.66447,
       "lng": 135.51863,
+      "googleRating": 3.7,
+      "googleReviews": 607,
       "url": "https://maps.app.goo.gl/VLcj5z3yMDgqWUJt7"
     },
     {
@@ -1964,6 +2185,8 @@
       "photoCount": 1,
       "lat": 34.66559,
       "lng": 135.50454,
+      "googleRating": 4.2,
+      "googleReviews": 3696,
       "url": "https://maps.app.goo.gl/HE6aNoWWAuJe5v2X6"
     },
     {
@@ -1978,6 +2201,8 @@
       "photoCount": 3,
       "lat": 34.66641,
       "lng": 135.50257,
+      "googleRating": 4.4,
+      "googleReviews": 134,
       "url": "https://maps.app.goo.gl/Xqi3HxXPKos2FLmB7"
     },
     {
@@ -1992,6 +2217,8 @@
       "photoCount": 0,
       "lat": 34.66629,
       "lng": 135.50563,
+      "googleRating": 4.8,
+      "googleReviews": 1865,
       "url": "https://maps.app.goo.gl/VHfGAnGzsVxHbrVx9"
     },
     {
@@ -2006,6 +2233,8 @@
       "photoCount": 1,
       "lat": 24.97351,
       "lng": 121.53137,
+      "googleRating": 4.3,
+      "googleReviews": 4930,
       "url": "https://maps.app.goo.gl/VnG4WgqjU5LhJ9PUA"
     },
     {
@@ -2020,6 +2249,8 @@
       "photoCount": 0,
       "lat": 24.98312,
       "lng": 121.56393,
+      "googleRating": 4.4,
+      "googleReviews": 539,
       "url": "https://maps.app.goo.gl/pHraVUiJPv7sdLct8"
     },
     {
@@ -2034,6 +2265,8 @@
       "photoCount": 3,
       "lat": 25.03294,
       "lng": 121.52916,
+      "googleRating": 4.6,
+      "googleReviews": 311,
       "url": "https://maps.app.goo.gl/yU8Ad58adCkv6tkR9"
     },
     {
@@ -2048,6 +2281,8 @@
       "photoCount": 2,
       "lat": 25.04318,
       "lng": 121.56294,
+      "googleRating": 4.8,
+      "googleReviews": 251,
       "url": "https://maps.app.goo.gl/Gp9d4hMEJeYoQ5oNA"
     },
     {
@@ -2062,6 +2297,8 @@
       "photoCount": 3,
       "lat": 25.03293,
       "lng": 121.53042,
+      "googleRating": 4.1,
+      "googleReviews": 391,
       "url": "https://maps.app.goo.gl/8H58JBAixgDSC69Q7"
     },
     {
@@ -2076,6 +2313,8 @@
       "photoCount": 3,
       "lat": 25.0342,
       "lng": 121.55141,
+      "googleRating": 4.7,
+      "googleReviews": 498,
       "url": "https://maps.app.goo.gl/Dg9Ds2AMnKA3GbCk8"
     },
     {
@@ -2090,6 +2329,8 @@
       "photoCount": 1,
       "lat": 25.02879,
       "lng": 121.52747,
+      "googleRating": 4.5,
+      "googleReviews": 1055,
       "url": "https://maps.app.goo.gl/4dH5UoYB1Lnh3BxJ8"
     },
     {
@@ -2104,6 +2345,8 @@
       "photoCount": 0,
       "lat": 25.042,
       "lng": 121.5264,
+      "googleRating": 4.2,
+      "googleReviews": 2922,
       "url": "https://maps.app.goo.gl/bPbm7E78hnRMF2sUA"
     },
     {
@@ -2118,6 +2361,8 @@
       "photoCount": 4,
       "lat": 25.04244,
       "lng": 121.55273,
+      "googleRating": 4.3,
+      "googleReviews": 3052,
       "url": "https://maps.app.goo.gl/X3apJS2CY7yMa9Hg8"
     },
     {
@@ -2132,6 +2377,8 @@
       "photoCount": 1,
       "lat": 25.04069,
       "lng": 121.55352,
+      "googleRating": 4.4,
+      "googleReviews": 1906,
       "url": "https://maps.app.goo.gl/eoCNpnWNgNbjHTuy7"
     },
     {
@@ -2146,6 +2393,8 @@
       "photoCount": 2,
       "lat": 25.05225,
       "lng": 121.55808,
+      "googleRating": 4.3,
+      "googleReviews": 122,
       "url": "https://maps.app.goo.gl/W4F4SphC99rwpx1P8"
     },
     {
@@ -2160,6 +2409,8 @@
       "photoCount": 3,
       "lat": 25.02591,
       "lng": 121.55251,
+      "googleRating": 4.2,
+      "googleReviews": 590,
       "url": "https://maps.app.goo.gl/N2a6DyxbyfxvVBTU9"
     },
     {
@@ -2174,6 +2425,8 @@
       "photoCount": 4,
       "lat": 25.02735,
       "lng": 121.55158,
+      "googleRating": 4.2,
+      "googleReviews": 1057,
       "url": "https://maps.app.goo.gl/RTJEpr32GE7bpq1P7"
     },
     {
@@ -2188,6 +2441,8 @@
       "photoCount": 0,
       "lat": 25.05461,
       "lng": 121.55031,
+      "googleRating": 4.7,
+      "googleReviews": 1298,
       "url": "https://maps.app.goo.gl/1w3PbcNAZW3T1GJG7"
     },
     {
@@ -2202,6 +2457,8 @@
       "photoCount": 0,
       "lat": 25.02658,
       "lng": 121.55187,
+      "googleRating": 4.5,
+      "googleReviews": 568,
       "url": "https://maps.app.goo.gl/sLszEqSeo8bvbjTNA"
     },
     {
@@ -2216,6 +2473,8 @@
       "photoCount": 0,
       "lat": 25.01389,
       "lng": 121.53341,
+      "googleRating": 4.5,
+      "googleReviews": 863,
       "url": "https://maps.app.goo.gl/RL1Qb5cFq9CXuyoC8"
     },
     {
@@ -2230,6 +2489,8 @@
       "photoCount": 0,
       "lat": 25.02215,
       "lng": 121.55045,
+      "googleRating": 4.6,
+      "googleReviews": 455,
       "url": "https://maps.app.goo.gl/axU44u4J5p3Kjgix9"
     },
     {
@@ -2244,6 +2505,8 @@
       "photoCount": 2,
       "lat": 25.03967,
       "lng": 121.56536,
+      "googleRating": 4.5,
+      "googleReviews": 21,
       "url": "https://maps.app.goo.gl/VkVsnb1Giu3L5aWy7"
     },
     {
@@ -2258,6 +2521,8 @@
       "photoCount": 1,
       "lat": 25.04192,
       "lng": 121.57029,
+      "googleRating": 4.6,
+      "googleReviews": 8418,
       "url": "https://maps.app.goo.gl/rJTPKEfuqUqXxyt4A"
     },
     {
@@ -2272,6 +2537,8 @@
       "photoCount": 3,
       "lat": 25.0305,
       "lng": 121.52055,
+      "googleRating": 4.4,
+      "googleReviews": 926,
       "url": "https://maps.app.goo.gl/rhyPwfaXnyLRkwpL7"
     },
     {
@@ -2286,6 +2553,8 @@
       "photoCount": 0,
       "lat": 24.98346,
       "lng": 121.55248,
+      "googleRating": 2.5,
+      "googleReviews": 59,
       "url": "https://maps.app.goo.gl/zw67cMngXpyapocs6"
     },
     {
@@ -2300,6 +2569,8 @@
       "photoCount": 3,
       "lat": 25.04102,
       "lng": 121.54744,
+      "googleRating": 4.3,
+      "googleReviews": 3219,
       "url": "https://maps.app.goo.gl/Ye2zQNQwsfqHQJaH6"
     },
     {
@@ -2314,6 +2585,8 @@
       "photoCount": 1,
       "lat": 25.03823,
       "lng": 121.54984,
+      "googleRating": 4.3,
+      "googleReviews": 3691,
       "url": "https://maps.app.goo.gl/tgHGZgxPPJbAJVyP8"
     },
     {
@@ -2328,6 +2601,8 @@
       "photoCount": 1,
       "lat": 25.03999,
       "lng": 121.55141,
+      "googleRating": 4.4,
+      "googleReviews": 2622,
       "url": "https://maps.app.goo.gl/Z8KeTZQ8qPMLAyTf7"
     },
     {
@@ -2342,6 +2617,8 @@
       "photoCount": 0,
       "lat": 25.04719,
       "lng": 121.54612,
+      "googleRating": 4.2,
+      "googleReviews": 1951,
       "url": "https://maps.app.goo.gl/La36WiGv48d2z2Gy9"
     },
     {
@@ -2356,6 +2633,8 @@
       "photoCount": 0,
       "lat": 25.04592,
       "lng": 121.54522,
+      "googleRating": 4.4,
+      "googleReviews": 994,
       "url": "https://maps.app.goo.gl/AS1M77zNm9f3ci7R9"
     },
     {
@@ -2370,6 +2649,8 @@
       "photoCount": 1,
       "lat": 25.02792,
       "lng": 121.54998,
+      "googleRating": 4.6,
+      "googleReviews": 130,
       "url": "https://maps.app.goo.gl/vRpj6dSSWQ1wo7Jc9"
     },
     {
@@ -2384,6 +2665,8 @@
       "photoCount": 1,
       "lat": 25.05373,
       "lng": 121.53116,
+      "googleRating": 4.3,
+      "googleReviews": 5636,
       "url": "https://maps.app.goo.gl/mJRAASn4QZrZmSHC6"
     },
     {
@@ -2398,6 +2681,8 @@
       "photoCount": 0,
       "lat": 25.03979,
       "lng": 121.55237,
+      "googleRating": 4.5,
+      "googleReviews": 2947,
       "url": "https://maps.app.goo.gl/FZ1cs9zsL5ALVDXa6"
     },
     {
@@ -2412,6 +2697,8 @@
       "photoCount": 0,
       "lat": 25.05597,
       "lng": 121.54527,
+      "googleRating": 4.4,
+      "googleReviews": 1333,
       "url": "https://maps.app.goo.gl/CBHEVja3PzDY4P2T9"
     },
     {
@@ -2426,6 +2713,8 @@
       "photoCount": 2,
       "lat": 25.08287,
       "lng": 121.59653,
+      "googleRating": 4.8,
+      "googleReviews": 1788,
       "url": "https://maps.app.goo.gl/4CWG6KAPk3ty8jbw7"
     },
     {
@@ -2440,6 +2729,8 @@
       "photoCount": 1,
       "lat": 25.10267,
       "lng": 121.58852,
+      "googleRating": 4.4,
+      "googleReviews": 128,
       "url": "https://maps.app.goo.gl/izDAJ2E1GzRJnNJM8"
     },
     {
@@ -2454,6 +2745,8 @@
       "photoCount": 0,
       "lat": 25.05028,
       "lng": 121.54479,
+      "googleRating": 4.2,
+      "googleReviews": 3935,
       "url": "https://maps.app.goo.gl/UtkbTDajLiRLdzC97"
     },
     {
@@ -2467,7 +2760,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 25.02314,
-      "lng": 121.5171
+      "lng": 121.5171,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnTUNBM2NDUjlRRRAB",
@@ -2481,6 +2776,8 @@
       "photoCount": 1,
       "lat": 24.99819,
       "lng": 121.57398,
+      "googleRating": 3.8,
+      "googleReviews": 189,
       "url": "https://maps.app.goo.gl/ynzzmLUpqwfNBA2m7"
     },
     {
@@ -2495,6 +2792,8 @@
       "photoCount": 1,
       "lat": 23.002,
       "lng": 120.20581,
+      "googleRating": 4.5,
+      "googleReviews": 3305,
       "url": "https://maps.app.goo.gl/bEaFv99ztdYto48k7"
     },
     {
@@ -2509,6 +2808,8 @@
       "photoCount": 3,
       "lat": 35.69838,
       "lng": 139.77244,
+      "googleRating": 4.6,
+      "googleReviews": 295,
       "url": "https://maps.app.goo.gl/22NNDeaao8Gp59aA6"
     },
     {
@@ -2523,6 +2824,8 @@
       "photoCount": 0,
       "lat": 35.66076,
       "lng": 139.74024,
+      "googleRating": 4.2,
+      "googleReviews": 294,
       "url": "https://maps.app.goo.gl/EUahcwwyAyXSPy749"
     },
     {
@@ -2537,6 +2840,8 @@
       "photoCount": 0,
       "lat": 35.7293,
       "lng": 139.71287,
+      "googleRating": 4,
+      "googleReviews": 2842,
       "url": "https://maps.app.goo.gl/t3n7WR3u2h3JQ5cA7"
     },
     {
@@ -2551,6 +2856,8 @@
       "photoCount": 1,
       "lat": 35.72983,
       "lng": 139.71661,
+      "googleRating": 3.6,
+      "googleReviews": 175,
       "url": "https://maps.app.goo.gl/EPf6ixrz3L8LACXZ8"
     },
     {
@@ -2565,6 +2872,8 @@
       "photoCount": 0,
       "lat": 35.68987,
       "lng": 139.69921,
+      "googleRating": 4.2,
+      "googleReviews": 152,
       "url": "https://maps.app.goo.gl/xwuh4wEmqNWUF9P76"
     },
     {
@@ -2579,6 +2888,8 @@
       "photoCount": 0,
       "lat": 35.68915,
       "lng": 139.69927,
+      "googleRating": 3.8,
+      "googleReviews": 240,
       "url": "https://maps.app.goo.gl/bfDF7wbLnzzckLJT7"
     },
     {
@@ -2593,6 +2904,8 @@
       "photoCount": 3,
       "lat": 35.6819,
       "lng": 139.7685,
+      "googleRating": 3.9,
+      "googleReviews": 39,
       "url": "https://maps.app.goo.gl/Q9dndPnHLkai81HS9"
     },
     {
@@ -2607,6 +2920,8 @@
       "photoCount": 0,
       "lat": 35.69852,
       "lng": 139.77336,
+      "googleRating": 4.5,
+      "googleReviews": 450,
       "url": "https://maps.app.goo.gl/r9mBsiDVgK7YBZeE7"
     },
     {
@@ -2621,6 +2936,8 @@
       "photoCount": 1,
       "lat": 35.73118,
       "lng": 139.71265,
+      "googleRating": 4.3,
+      "googleReviews": 866,
       "url": "https://maps.app.goo.gl/t1AAMqEHpvQ16GjS8"
     },
     {
@@ -2635,6 +2952,8 @@
       "photoCount": 1,
       "lat": 35.74616,
       "lng": 139.64598,
+      "googleRating": 4.1,
+      "googleReviews": 249,
       "url": "https://maps.app.goo.gl/fjNnAy8QHxBW87EF7"
     },
     {
@@ -2649,6 +2968,8 @@
       "photoCount": 0,
       "lat": 35.69072,
       "lng": 139.72253,
+      "googleRating": 4.4,
+      "googleReviews": 497,
       "url": "https://maps.app.goo.gl/Nm2VyEYGhpknegUT7"
     },
     {
@@ -2663,6 +2984,8 @@
       "photoCount": 0,
       "lat": 35.66164,
       "lng": 139.74037,
+      "googleRating": 4.8,
+      "googleReviews": 4757,
       "url": "https://maps.app.goo.gl/WQFU3HVeZjfp2QuQA"
     },
     {
@@ -2677,6 +3000,8 @@
       "photoCount": 0,
       "lat": 35.65922,
       "lng": 139.70069,
+      "googleRating": 4.2,
+      "googleReviews": 113,
       "url": "https://maps.app.goo.gl/weZvTDq1qvMECs7c8"
     },
     {
@@ -2691,6 +3016,8 @@
       "photoCount": 1,
       "lat": 35.67006,
       "lng": 139.70378,
+      "googleRating": 4.1,
+      "googleReviews": 1364,
       "url": "https://maps.app.goo.gl/KYrb2hAmebz4tvtu6"
     },
     {
@@ -2705,6 +3032,8 @@
       "photoCount": 2,
       "lat": 35.64926,
       "lng": 139.69259,
+      "googleRating": 4.5,
+      "googleReviews": 13570,
       "url": "https://maps.app.goo.gl/Wx7QMr3HehDUM6Eq8"
     },
     {
@@ -2719,6 +3048,8 @@
       "photoCount": 0,
       "lat": 35.66001,
       "lng": 139.69882,
+      "googleRating": 4.4,
+      "googleReviews": 1665,
       "url": "https://maps.app.goo.gl/2K9SLU5nrY7z8Egi9"
     },
     {
@@ -2733,6 +3064,8 @@
       "photoCount": 2,
       "lat": 35.68256,
       "lng": 139.76809,
+      "googleRating": 4.5,
+      "googleReviews": 1504,
       "url": "https://maps.app.goo.gl/paZFknkh7ofjQEL8A"
     },
     {
@@ -2747,6 +3080,8 @@
       "photoCount": 2,
       "lat": 35.70398,
       "lng": 139.7727,
+      "googleRating": 4.3,
+      "googleReviews": 1241,
       "url": "https://maps.app.goo.gl/nGmp4ZPWLpn77bkL7"
     },
     {
@@ -2761,6 +3096,8 @@
       "photoCount": 1,
       "lat": 35.70838,
       "lng": 139.77525,
+      "googleRating": 4.5,
+      "googleReviews": 13473,
       "url": "https://maps.app.goo.gl/Nt5MdqN77U9nC9Tb6"
     },
     {
@@ -2775,6 +3112,8 @@
       "photoCount": 1,
       "lat": 35.6831,
       "lng": 139.6868,
+      "googleRating": 4.5,
+      "googleReviews": 880,
       "url": "https://maps.app.goo.gl/7qRzGj9KD9iwDUaR8"
     },
     {
@@ -2789,6 +3128,8 @@
       "photoCount": 3,
       "lat": 35.67301,
       "lng": 139.7038,
+      "googleRating": 4.4,
+      "googleReviews": 5182,
       "url": "https://maps.app.goo.gl/XXFXiC5QLdUUCA6BA"
     },
     {
@@ -2803,6 +3144,8 @@
       "photoCount": 3,
       "lat": 25.04307,
       "lng": 121.55951,
+      "googleRating": 4,
+      "googleReviews": 1534,
       "url": "https://maps.app.goo.gl/Pj8m9ZSEkjFw4cXg8"
     },
     {
@@ -2817,6 +3160,8 @@
       "photoCount": 0,
       "lat": 25.04456,
       "lng": 121.54705,
+      "googleRating": 4.7,
+      "googleReviews": 297,
       "url": "https://maps.app.goo.gl/G8aMhgSaaH8nRC7r7"
     },
     {
@@ -2831,6 +3176,8 @@
       "photoCount": 1,
       "lat": 25.05762,
       "lng": 121.52323,
+      "googleRating": 4.5,
+      "googleReviews": 1537,
       "url": "https://maps.app.goo.gl/ZhvKnVopKupjpWz56"
     },
     {
@@ -2845,6 +3192,8 @@
       "photoCount": 1,
       "lat": 24.98374,
       "lng": 121.53617,
+      "googleRating": 4.3,
+      "googleReviews": 369,
       "url": "https://maps.app.goo.gl/p8iudT6rnTH667TG7"
     },
     {
@@ -2859,6 +3208,8 @@
       "photoCount": 4,
       "lat": 25.04055,
       "lng": 121.55413,
+      "googleRating": 4.5,
+      "googleReviews": 186,
       "url": "https://maps.app.goo.gl/LPJR9okZpnB5UWJu6"
     },
     {
@@ -2873,6 +3224,8 @@
       "photoCount": 1,
       "lat": 25.04007,
       "lng": 121.53576,
+      "googleRating": 4.6,
+      "googleReviews": 1701,
       "url": "https://maps.app.goo.gl/VjsbPiWU2MhLJLKY7"
     },
     {
@@ -2887,6 +3240,8 @@
       "photoCount": 3,
       "lat": 25.04985,
       "lng": 121.57539,
+      "googleRating": 4.4,
+      "googleReviews": 8088,
       "url": "https://maps.app.goo.gl/r75qaKh1i6o2dkU36"
     },
     {
@@ -2901,6 +3256,8 @@
       "photoCount": 3,
       "lat": 25.05689,
       "lng": 121.51211,
+      "googleRating": 3.8,
+      "googleReviews": 2451,
       "url": "https://maps.app.goo.gl/PkWDGXUYhxGoVfg39"
     },
     {
@@ -2915,6 +3272,8 @@
       "photoCount": 1,
       "lat": 25.0523,
       "lng": 121.55415,
+      "googleRating": 4.7,
+      "googleReviews": 1670,
       "url": "https://maps.app.goo.gl/GBH69z5MbhwpBZAv8"
     },
     {
@@ -2929,6 +3288,8 @@
       "photoCount": 2,
       "lat": 24.99533,
       "lng": 121.54634,
+      "googleRating": 4.1,
+      "googleReviews": 699,
       "url": "https://maps.app.goo.gl/X8Sqk5iy6xrFsNK16"
     },
     {
@@ -2943,6 +3304,8 @@
       "photoCount": 1,
       "lat": 25.04249,
       "lng": 121.56572,
+      "googleRating": 4.2,
+      "googleReviews": 1128,
       "url": "https://maps.app.goo.gl/CmPg26szne3W8JGR8"
     },
     {
@@ -2957,6 +3320,8 @@
       "photoCount": 4,
       "lat": 22.99386,
       "lng": 120.19776,
+      "googleRating": 4.5,
+      "googleReviews": 1797,
       "url": "https://maps.app.goo.gl/2pNNXb3sGJmzxADb9"
     },
     {
@@ -2971,6 +3336,8 @@
       "photoCount": 1,
       "lat": 25.0516,
       "lng": 121.51123,
+      "googleRating": 4.8,
+      "googleReviews": 2461,
       "url": "https://maps.app.goo.gl/dwodtRN5JpUhEnBM7"
     },
     {
@@ -2985,6 +3352,8 @@
       "photoCount": 4,
       "lat": 22.9953,
       "lng": 120.19624,
+      "googleRating": 4.6,
+      "googleReviews": 3126,
       "url": "https://maps.app.goo.gl/ydzUKgskLagHruXV7"
     },
     {
@@ -2999,6 +3368,8 @@
       "photoCount": 1,
       "lat": 25.03885,
       "lng": 121.54189,
+      "googleRating": 4.1,
+      "googleReviews": 233,
       "url": "https://maps.app.goo.gl/2Cp1BpuNkDHC4MUX8"
     },
     {
@@ -3013,6 +3384,8 @@
       "photoCount": 0,
       "lat": 25.03331,
       "lng": 121.52941,
+      "googleRating": 4.2,
+      "googleReviews": 2256,
       "url": "https://maps.app.goo.gl/q76y2dNvNeJUSDwY6"
     },
     {
@@ -3027,6 +3400,8 @@
       "photoCount": 2,
       "lat": 25.04145,
       "lng": 121.5409,
+      "googleRating": 4.3,
+      "googleReviews": 1719,
       "url": "https://maps.app.goo.gl/eK2EjfjKtCSSBXxa9"
     },
     {
@@ -3041,6 +3416,8 @@
       "photoCount": 1,
       "lat": 25.04536,
       "lng": 121.50635,
+      "googleRating": 3.8,
+      "googleReviews": 6261,
       "url": "https://maps.app.goo.gl/TaD4whifdDK47FWG7"
     },
     {
@@ -3055,6 +3432,8 @@
       "photoCount": 3,
       "lat": 25.04019,
       "lng": 121.55708,
+      "googleRating": 4.1,
+      "googleReviews": 3231,
       "url": "https://maps.app.goo.gl/2PmKnfMPu7V8Jiss8"
     },
     {
@@ -3069,6 +3448,8 @@
       "photoCount": 0,
       "lat": 25.04268,
       "lng": 121.55507,
+      "googleRating": 4.7,
+      "googleReviews": 2005,
       "url": "https://maps.app.goo.gl/cRZ4pxHMXPRGLJXQ9"
     },
     {
@@ -3083,6 +3464,8 @@
       "photoCount": 3,
       "lat": 25.04469,
       "lng": 121.55448,
+      "googleRating": 4.4,
+      "googleReviews": 803,
       "url": "https://maps.app.goo.gl/eajip5pik1qrkxb6A"
     },
     {
@@ -3097,6 +3480,8 @@
       "photoCount": 3,
       "lat": 25.03389,
       "lng": 121.55915,
+      "googleRating": 4.7,
+      "googleReviews": 4087,
       "url": "https://maps.app.goo.gl/pJHxhw93bTUmtCybA"
     },
     {
@@ -3111,6 +3496,8 @@
       "photoCount": 3,
       "lat": 25.03238,
       "lng": 121.54485,
+      "googleRating": 4.5,
+      "googleReviews": 628,
       "url": "https://maps.app.goo.gl/TG9sCdu3bJtskSVJ6"
     },
     {
@@ -3125,6 +3512,8 @@
       "photoCount": 0,
       "lat": 25.0421,
       "lng": 121.55316,
+      "googleRating": 4.6,
+      "googleReviews": 3958,
       "url": "https://maps.app.goo.gl/sWfyQbDgxHgRUa9C8"
     },
     {
@@ -3139,6 +3528,8 @@
       "photoCount": 2,
       "lat": 25.03611,
       "lng": 121.56707,
+      "googleRating": 3.3,
+      "googleReviews": 403,
       "url": "https://maps.app.goo.gl/BBiBCLTLBs7n66MQ7"
     },
     {
@@ -3153,6 +3544,8 @@
       "photoCount": 3,
       "lat": 13.74556,
       "lng": 100.54079,
+      "googleRating": 4.2,
+      "googleReviews": 130,
       "url": "https://maps.app.goo.gl/3c3mGR6TSyaUBj8z8"
     },
     {
@@ -3167,6 +3560,8 @@
       "photoCount": 3,
       "lat": 13.74593,
       "lng": 100.53443,
+      "googleRating": 4.2,
+      "googleReviews": 1213,
       "url": "https://maps.app.goo.gl/hSaPCQ5ZcrKSzVAc9"
     },
     {
@@ -3181,6 +3576,8 @@
       "photoCount": 3,
       "lat": 13.73737,
       "lng": 100.5606,
+      "googleRating": 4.1,
+      "googleReviews": 672,
       "url": "https://maps.app.goo.gl/VAvcZJjUqHdAZ3Kj9"
     },
     {
@@ -3195,6 +3592,8 @@
       "photoCount": 2,
       "lat": 13.73803,
       "lng": 100.56049,
+      "googleRating": 4.1,
+      "googleReviews": 417,
       "url": "https://maps.app.goo.gl/6HpNFk25mGe3VdDq7"
     },
     {
@@ -3209,6 +3608,8 @@
       "photoCount": 3,
       "lat": 13.73972,
       "lng": 100.56033,
+      "googleRating": 4.3,
+      "googleReviews": 624,
       "url": "https://maps.app.goo.gl/oZLAcWEqyxwmAPAy8"
     },
     {
@@ -3223,6 +3624,8 @@
       "photoCount": 3,
       "lat": 13.73841,
       "lng": 100.55875,
+      "googleRating": 4.9,
+      "googleReviews": 1579,
       "url": "https://maps.app.goo.gl/9BcconT7hSbpp1TF6"
     },
     {
@@ -3237,6 +3640,8 @@
       "photoCount": 3,
       "lat": 13.74647,
       "lng": 100.49079,
+      "googleRating": 4.7,
+      "googleReviews": 2428,
       "url": "https://maps.app.goo.gl/Ky2ubSzHWd1hLruH6"
     },
     {
@@ -3251,6 +3656,8 @@
       "photoCount": 1,
       "lat": 25.0582,
       "lng": 121.53631,
+      "googleRating": 4.9,
+      "googleReviews": 2481,
       "url": "https://maps.app.goo.gl/pC4Do5qYRynpwzSq9"
     },
     {
@@ -3265,6 +3672,8 @@
       "photoCount": 0,
       "lat": 25.03996,
       "lng": 121.55673,
+      "googleRating": 4.4,
+      "googleReviews": 1348,
       "url": "https://maps.app.goo.gl/whChkC4MY2p6g4eY7"
     },
     {
@@ -3279,6 +3688,8 @@
       "photoCount": 2,
       "lat": 25.11437,
       "lng": 121.53221,
+      "googleRating": 4.5,
+      "googleReviews": 1732,
       "url": "https://maps.app.goo.gl/EAAdZoo26dxfFrv59"
     },
     {
@@ -3293,6 +3704,8 @@
       "photoCount": 2,
       "lat": 25.02854,
       "lng": 121.54615,
+      "googleRating": 4.2,
+      "googleReviews": 937,
       "url": "https://maps.app.goo.gl/tnb3pFQCMt54vggbA"
     },
     {
@@ -3307,6 +3720,8 @@
       "photoCount": 2,
       "lat": 25.03887,
       "lng": 121.54507,
+      "googleRating": 4.4,
+      "googleReviews": 5038,
       "url": "https://maps.app.goo.gl/xwcguRm87rq7z5Fm9"
     },
     {
@@ -3321,6 +3736,8 @@
       "photoCount": 2,
       "lat": 25.02547,
       "lng": 121.54612,
+      "googleRating": 4.3,
+      "googleReviews": 1153,
       "url": "https://maps.app.goo.gl/J9eznqEYN659vLT9A"
     },
     {
@@ -3335,6 +3752,8 @@
       "photoCount": 1,
       "lat": 25.02289,
       "lng": 121.55533,
+      "googleRating": 3.9,
+      "googleReviews": 319,
       "url": "https://maps.app.goo.gl/KxKHGJ4HiEykatYf9"
     },
     {
@@ -3349,6 +3768,8 @@
       "photoCount": 1,
       "lat": 25.0149,
       "lng": 121.53364,
+      "googleRating": 4.6,
+      "googleReviews": 1813,
       "url": "https://maps.app.goo.gl/TS7aXusDEpQoczFJ9"
     },
     {
@@ -3363,6 +3784,8 @@
       "photoCount": 0,
       "lat": 25.0523,
       "lng": 121.5211,
+      "googleRating": 4.3,
+      "googleReviews": 4059,
       "url": "https://maps.app.goo.gl/hVN15drDXSSSBbsR8"
     },
     {
@@ -3377,6 +3800,8 @@
       "photoCount": 1,
       "lat": 25.05192,
       "lng": 121.51994,
+      "googleRating": 4.3,
+      "googleReviews": 4255,
       "url": "https://maps.app.goo.gl/ESJx8779thV4U8eW9"
     },
     {
@@ -3391,6 +3816,8 @@
       "photoCount": 3,
       "lat": 25.0218,
       "lng": 121.52626,
+      "googleRating": 4.6,
+      "googleReviews": 1442,
       "url": "https://maps.app.goo.gl/14oU9p6KLVoi13Pf7"
     },
     {
@@ -3405,6 +3832,8 @@
       "photoCount": 4,
       "lat": 25.0523,
       "lng": 121.5199,
+      "googleRating": 4.2,
+      "googleReviews": 1839,
       "url": "https://maps.app.goo.gl/xS5rCrZs4gkR8Yk48"
     },
     {
@@ -3419,6 +3848,8 @@
       "photoCount": 1,
       "lat": 25.05359,
       "lng": 121.52238,
+      "googleRating": 5,
+      "googleReviews": 8218,
       "url": "https://maps.app.goo.gl/91xyWUkrS6eicY4QA"
     },
     {
@@ -3433,6 +3864,8 @@
       "photoCount": 2,
       "lat": 25.03405,
       "lng": 121.56496,
+      "googleRating": 4.3,
+      "googleReviews": 877,
       "url": "https://maps.app.goo.gl/gapzGzUsaWP6iygJ9"
     },
     {
@@ -3447,6 +3880,8 @@
       "photoCount": 1,
       "lat": 25.00028,
       "lng": 121.55529,
+      "googleRating": 4.2,
+      "googleReviews": 162,
       "url": "https://maps.app.goo.gl/v1auJXAKj2BT9JJg7"
     },
     {
@@ -3461,6 +3896,8 @@
       "photoCount": 1,
       "lat": 25.03687,
       "lng": 121.56795,
+      "googleRating": 4.4,
+      "googleReviews": 4406,
       "url": "https://maps.app.goo.gl/vy5Wi6pNUqeTtvaKA"
     },
     {
@@ -3475,6 +3912,8 @@
       "photoCount": 4,
       "lat": 25.02226,
       "lng": 121.55053,
+      "googleRating": 4.3,
+      "googleReviews": 579,
       "url": "https://maps.app.goo.gl/kG48tRMxCdLs7ASQ9"
     },
     {
@@ -3489,6 +3928,8 @@
       "photoCount": 3,
       "lat": 23.47802,
       "lng": 120.453,
+      "googleRating": 4.3,
+      "googleReviews": 2157,
       "url": "https://maps.app.goo.gl/NJFDmEEyzcKLqPjn9"
     },
     {
@@ -3503,6 +3944,8 @@
       "photoCount": 4,
       "lat": 25.01694,
       "lng": 121.53044,
+      "googleRating": 4.4,
+      "googleReviews": 528,
       "url": "https://maps.app.goo.gl/MyDUbUtH2oP6FbaU6"
     },
     {
@@ -3517,6 +3960,8 @@
       "photoCount": 0,
       "lat": 25.04281,
       "lng": 121.56332,
+      "googleRating": 4.2,
+      "googleReviews": 530,
       "url": "https://maps.app.goo.gl/yY7VYqRsGundH1mx6"
     },
     {
@@ -3531,6 +3976,8 @@
       "photoCount": 0,
       "lat": 25.03437,
       "lng": 121.56637,
+      "googleRating": 4.6,
+      "googleReviews": 1223,
       "url": "https://maps.app.goo.gl/4L1MVQZgPsThexAy6"
     },
     {
@@ -3545,6 +3992,8 @@
       "photoCount": 1,
       "lat": 25.0811,
       "lng": 121.57173,
+      "googleRating": 4.4,
+      "googleReviews": 913,
       "url": "https://maps.app.goo.gl/USqQ9UVr1qrhuewu6"
     },
     {
@@ -3559,6 +4008,8 @@
       "photoCount": 3,
       "lat": 22.99457,
       "lng": 120.20019,
+      "googleRating": 4.7,
+      "googleReviews": 979,
       "url": "https://maps.app.goo.gl/72aKU2zpv9n87trF7"
     },
     {
@@ -3573,6 +4024,8 @@
       "photoCount": 3,
       "lat": 23.00142,
       "lng": 120.20331,
+      "googleRating": 4.6,
+      "googleReviews": 587,
       "url": "https://maps.app.goo.gl/65WpNSgdaF4S4xrj8"
     },
     {
@@ -3587,6 +4040,8 @@
       "photoCount": 3,
       "lat": 22.99901,
       "lng": 120.20367,
+      "googleRating": 4.1,
+      "googleReviews": 6214,
       "url": "https://maps.app.goo.gl/sxsymCrknChfhkNH7"
     },
     {
@@ -3601,6 +4056,8 @@
       "photoCount": 3,
       "lat": 22.62539,
       "lng": 120.28229,
+      "googleRating": 4.5,
+      "googleReviews": 1223,
       "url": "https://maps.app.goo.gl/z6r3FY1JLRZi6neh6"
     },
     {
@@ -3615,6 +4072,8 @@
       "photoCount": 2,
       "lat": 25.11199,
       "lng": 121.52719,
+      "googleRating": 4.4,
+      "googleReviews": 243,
       "url": "https://maps.app.goo.gl/HgfCtPURGWt9xABj6"
     },
     {
@@ -3629,6 +4088,8 @@
       "photoCount": 3,
       "lat": 35.66512,
       "lng": 139.77104,
+      "googleRating": 4.5,
+      "googleReviews": 690,
       "url": "https://maps.app.goo.gl/6WVjgK8rCGJbNiyK7"
     },
     {
@@ -3643,6 +4104,8 @@
       "photoCount": 3,
       "lat": 35.67081,
       "lng": 139.76661,
+      "googleRating": 4,
+      "googleReviews": 386,
       "url": "https://maps.app.goo.gl/nkKdNU77NFFFis3F6"
     },
     {
@@ -3657,6 +4120,8 @@
       "photoCount": 3,
       "lat": 25.05173,
       "lng": 121.51852,
+      "googleRating": 4.2,
+      "googleReviews": 2461,
       "url": "https://maps.app.goo.gl/CdomrLPEkeka3Nof9"
     },
     {
@@ -3671,6 +4136,8 @@
       "photoCount": 4,
       "lat": 35.32275,
       "lng": 139.55304,
+      "googleRating": 4.1,
+      "googleReviews": 345,
       "url": "https://maps.app.goo.gl/JoQUmHXJDmqvA6YZ8"
     },
     {
@@ -3685,6 +4152,8 @@
       "photoCount": 4,
       "lat": 35.32059,
       "lng": 139.55182,
+      "googleRating": 4.3,
+      "googleReviews": 705,
       "url": "https://maps.app.goo.gl/JTbsuF6nhm4qKfrR7"
     },
     {
@@ -3699,6 +4168,8 @@
       "photoCount": 1,
       "lat": 35.30767,
       "lng": 139.48254,
+      "googleRating": 4.3,
+      "googleReviews": 2481,
       "url": "https://maps.app.goo.gl/ZrjbdNCgr2w46k7UA"
     },
     {
@@ -3713,6 +4184,8 @@
       "photoCount": 4,
       "lat": 35.67239,
       "lng": 139.76813,
+      "googleRating": 3.7,
+      "googleReviews": 1792,
       "url": "https://maps.app.goo.gl/9uf7W5bCngKkRzu3A"
     },
     {
@@ -3727,6 +4200,8 @@
       "photoCount": 4,
       "lat": 35.77372,
       "lng": 140.38999,
+      "googleRating": 4.2,
+      "googleReviews": 444,
       "url": "https://maps.app.goo.gl/4to12ZrQUkAe4RnJ9"
     },
     {
@@ -3741,6 +4216,8 @@
       "photoCount": 3,
       "lat": 35.67143,
       "lng": 139.75978,
+      "googleRating": 4.4,
+      "googleReviews": 672,
       "url": "https://maps.app.goo.gl/16VhuvUPvptPGbJ27"
     },
     {
@@ -3755,6 +4232,8 @@
       "photoCount": 4,
       "lat": 25.04373,
       "lng": 121.55474,
+      "googleRating": 4.8,
+      "googleReviews": 614,
       "url": "https://maps.app.goo.gl/drP43VfwynVBnM6j9"
     },
     {
@@ -3769,6 +4248,8 @@
       "photoCount": 3,
       "lat": 25.03027,
       "lng": 121.55336,
+      "googleRating": 4.7,
+      "googleReviews": 397,
       "url": "https://maps.app.goo.gl/a4oVFXGcfjn3Ave88"
     },
     {
@@ -3783,6 +4264,8 @@
       "photoCount": 0,
       "lat": 25.06168,
       "lng": 121.53829,
+      "googleRating": 4.6,
+      "googleReviews": 1233,
       "url": "https://maps.app.goo.gl/rFfJPbZeHSXaJJvd6"
     },
     {
@@ -3797,6 +4280,8 @@
       "photoCount": 1,
       "lat": 25.02996,
       "lng": 121.54319,
+      "googleRating": 4.6,
+      "googleReviews": 506,
       "url": "https://maps.app.goo.gl/WByuKS1MuDuakNJd6"
     },
     {
@@ -3811,6 +4296,8 @@
       "photoCount": 3,
       "lat": 23.47661,
       "lng": 120.45743,
+      "googleRating": 4.2,
+      "googleReviews": 12332,
       "url": "https://maps.app.goo.gl/CQQo2RJvChANiMkD7"
     },
     {
@@ -3825,6 +4312,8 @@
       "photoCount": 1,
       "lat": 23.47737,
       "lng": 120.45937,
+      "googleRating": 4.7,
+      "googleReviews": 100,
       "url": "https://maps.app.goo.gl/75VoyfEnCbzPkqUz9"
     },
     {
@@ -3839,6 +4328,8 @@
       "photoCount": 4,
       "lat": 23.48109,
       "lng": 120.46751,
+      "googleRating": 4.3,
+      "googleReviews": 5797,
       "url": "https://maps.app.goo.gl/isWnXzT9CShrnx3o7"
     },
     {
@@ -3853,6 +4344,8 @@
       "photoCount": 4,
       "lat": 23.48419,
       "lng": 120.46223,
+      "googleRating": 4.8,
+      "googleReviews": 174,
       "url": "https://maps.app.goo.gl/2322n6mRRwLSKk1v9"
     },
     {
@@ -3867,6 +4360,8 @@
       "photoCount": 3,
       "lat": 25.00219,
       "lng": 121.56813,
+      "googleRating": 4,
+      "googleReviews": 97,
       "url": "https://maps.app.goo.gl/ArVbCbUhwzo9tuV99"
     },
     {
@@ -3881,6 +4376,8 @@
       "photoCount": 4,
       "lat": 24.98285,
       "lng": 121.54182,
+      "googleRating": 3.8,
+      "googleReviews": 145,
       "url": "https://maps.app.goo.gl/tktDDG1qPyhBzzB86"
     },
     {
@@ -3895,6 +4392,8 @@
       "photoCount": 0,
       "lat": 24.98486,
       "lng": 121.54167,
+      "googleRating": 4.7,
+      "googleReviews": 390,
       "url": "https://maps.app.goo.gl/m7UEuvsNdnCQetBDA"
     },
     {
@@ -3909,6 +4408,8 @@
       "photoCount": 1,
       "lat": 24.97806,
       "lng": 121.54648,
+      "googleRating": 4.2,
+      "googleReviews": 637,
       "url": "https://maps.app.goo.gl/ypAN5m6BS2Yvtnsw8"
     },
     {
@@ -3923,6 +4424,8 @@
       "photoCount": 3,
       "lat": 25.04066,
       "lng": 121.55501,
+      "googleRating": 4.2,
+      "googleReviews": 1730,
       "url": "https://maps.app.goo.gl/vGSzQMHFnf4tmsvj7"
     },
     {
@@ -3937,6 +4440,8 @@
       "photoCount": 3,
       "lat": 25.08395,
       "lng": 121.56762,
+      "googleRating": 4.6,
+      "googleReviews": 1643,
       "url": "https://maps.app.goo.gl/DF8LJP4pkNxbkQuU8"
     },
     {
@@ -3951,6 +4456,8 @@
       "photoCount": 3,
       "lat": 25.02204,
       "lng": 121.55018,
+      "googleRating": 4.4,
+      "googleReviews": 537,
       "url": "https://maps.app.goo.gl/Kmag52LXvTxG9jNC8"
     },
     {
@@ -3965,6 +4472,8 @@
       "photoCount": 0,
       "lat": 25.04144,
       "lng": 121.54214,
+      "googleRating": 3.2,
+      "googleReviews": 33,
       "url": "https://maps.app.goo.gl/K6HFAPF4w2DCmJj46"
     },
     {
@@ -3979,6 +4488,8 @@
       "photoCount": 2,
       "lat": 25.00056,
       "lng": 121.55565,
+      "googleRating": 4.7,
+      "googleReviews": 195,
       "url": "https://maps.app.goo.gl/kcZAkLaqmYkXKkwr8"
     },
     {
@@ -3993,6 +4504,8 @@
       "photoCount": 2,
       "lat": 25.05092,
       "lng": 121.54464,
+      "googleRating": 4.4,
+      "googleReviews": 1155,
       "url": "https://maps.app.goo.gl/AERXB55Aor795y7H8"
     },
     {
@@ -4007,6 +4520,8 @@
       "photoCount": 1,
       "lat": 25.04345,
       "lng": 121.52409,
+      "googleRating": 4.2,
+      "googleReviews": 364,
       "url": "https://maps.app.goo.gl/wvMWdyMhBWHv3R6Y7"
     },
     {
@@ -4021,6 +4536,8 @@
       "photoCount": 3,
       "lat": 25.02483,
       "lng": 121.52172,
+      "googleRating": 4.5,
+      "googleReviews": 2504,
       "url": "https://maps.app.goo.gl/JCKZXrq8sLWdK8B49"
     },
     {
@@ -4035,6 +4552,8 @@
       "photoCount": 1,
       "lat": 25.02751,
       "lng": 121.546,
+      "googleRating": 4.2,
+      "googleReviews": 101,
       "url": "https://maps.app.goo.gl/FVVx4dmb37Etadc48"
     },
     {
@@ -4049,6 +4568,8 @@
       "photoCount": 1,
       "lat": 25.03126,
       "lng": 121.5273,
+      "googleRating": 4.8,
+      "googleReviews": 158,
       "url": "https://maps.app.goo.gl/taJEQaSbwGeCGQBp7"
     },
     {
@@ -4063,6 +4584,8 @@
       "photoCount": 0,
       "lat": 25.02624,
       "lng": 121.54729,
+      "googleRating": 4.6,
+      "googleReviews": 859,
       "url": "https://maps.app.goo.gl/G2bKdzsD5AWXTHz47"
     },
     {
@@ -4077,6 +4600,8 @@
       "photoCount": 1,
       "lat": 25.03859,
       "lng": 121.5569,
+      "googleRating": 4.5,
+      "googleReviews": 599,
       "url": "https://maps.app.goo.gl/iKhzHKetd93tB4A27"
     },
     {
@@ -4091,6 +4616,8 @@
       "photoCount": 0,
       "lat": 25.05587,
       "lng": 121.5252,
+      "googleRating": 4.5,
+      "googleReviews": 669,
       "url": "https://maps.app.goo.gl/gHUdzE8BvfDe9eSn9"
     },
     {
@@ -4105,6 +4632,8 @@
       "photoCount": 0,
       "lat": 24.99948,
       "lng": 121.55659,
+      "googleRating": 4.4,
+      "googleReviews": 1155,
       "url": "https://maps.app.goo.gl/XTzR66mhv4dV9vmt5"
     },
     {
@@ -4119,6 +4648,8 @@
       "photoCount": 3,
       "lat": 25.03038,
       "lng": 121.55387,
+      "googleRating": 4.5,
+      "googleReviews": 140,
       "url": "https://maps.app.goo.gl/ZTkBWxutPiKJbkiv6"
     },
     {
@@ -4133,6 +4664,8 @@
       "photoCount": 2,
       "lat": 24.97992,
       "lng": 121.54922,
+      "googleRating": 4.5,
+      "googleReviews": 1405,
       "url": "https://maps.app.goo.gl/BccRtiogJWF75rWf6"
     },
     {
@@ -4147,6 +4680,8 @@
       "photoCount": 2,
       "lat": 25.05359,
       "lng": 121.52213,
+      "googleRating": 4.9,
+      "googleReviews": 747,
       "url": "https://maps.app.goo.gl/aRPAXyFaXeMWX4fy7"
     },
     {
@@ -4161,6 +4696,8 @@
       "photoCount": 1,
       "lat": 25.05622,
       "lng": 121.52032,
+      "googleRating": 4.1,
+      "googleReviews": 735,
       "url": "https://maps.app.goo.gl/vQnvcXaLL1vKuvGp7"
     },
     {
@@ -4175,6 +4712,8 @@
       "photoCount": 2,
       "lat": 25.03075,
       "lng": 121.52945,
+      "googleRating": 3.9,
+      "googleReviews": 4201,
       "url": "https://maps.app.goo.gl/DFTJBmgcey6GJsYK8"
     },
     {
@@ -4189,6 +4728,8 @@
       "photoCount": 2,
       "lat": 24.97688,
       "lng": 121.54584,
+      "googleRating": 4.3,
+      "googleReviews": 506,
       "url": "https://maps.app.goo.gl/rwAtyCqTToEeU35Q6"
     },
     {
@@ -4203,6 +4744,8 @@
       "photoCount": 3,
       "lat": 25.05294,
       "lng": 121.5455,
+      "googleRating": 4.7,
+      "googleReviews": 2080,
       "url": "https://maps.app.goo.gl/psQaFy7kv9Fbb2KCA"
     },
     {
@@ -4217,6 +4760,8 @@
       "photoCount": 3,
       "lat": 25.0006,
       "lng": 121.55552,
+      "googleRating": 4.6,
+      "googleReviews": 322,
       "url": "https://maps.app.goo.gl/FMof8WiPXsnBav3UA"
     },
     {
@@ -4231,6 +4776,8 @@
       "photoCount": 0,
       "lat": 25.05215,
       "lng": 121.55468,
+      "googleRating": 4.6,
+      "googleReviews": 788,
       "url": "https://maps.app.goo.gl/sj48jfNXfxgneLxu9"
     },
     {
@@ -4245,6 +4792,8 @@
       "photoCount": 0,
       "lat": 24.90006,
       "lng": 120.98724,
+      "googleRating": 4.6,
+      "googleReviews": 274,
       "url": "https://maps.app.goo.gl/1Y9Aed4wqjdgYbKJA"
     },
     {
@@ -4259,6 +4808,8 @@
       "photoCount": 2,
       "lat": 25.03061,
       "lng": 121.55454,
+      "googleRating": 4.4,
+      "googleReviews": 394,
       "url": "https://maps.app.goo.gl/edyzx4k9Hi2v1eXp8"
     },
     {
@@ -4273,6 +4824,8 @@
       "photoCount": 1,
       "lat": 25.06757,
       "lng": 121.36501,
+      "googleRating": 4.9,
+      "googleReviews": 144,
       "url": "https://maps.app.goo.gl/CNV4DVEzXAQbr4TT7"
     },
     {
@@ -4287,6 +4840,8 @@
       "photoCount": 2,
       "lat": 25.0157,
       "lng": 121.53278,
+      "googleRating": 4.7,
+      "googleReviews": 593,
       "url": "https://maps.app.goo.gl/Y7vkjfaEh9UQ3kgh8"
     },
     {
@@ -4301,6 +4856,8 @@
       "photoCount": 1,
       "lat": 24.99877,
       "lng": 121.55796,
+      "googleRating": 3.9,
+      "googleReviews": 77,
       "url": "https://maps.app.goo.gl/3mUXb4TETaEbCxCcA"
     },
     {
@@ -4315,6 +4872,8 @@
       "photoCount": 1,
       "lat": 25.00102,
       "lng": 121.54016,
+      "googleRating": 4.6,
+      "googleReviews": 2502,
       "url": "https://maps.app.goo.gl/heiW9cfYXSNm5xQn9"
     },
     {
@@ -4329,6 +4888,8 @@
       "photoCount": 0,
       "lat": 24.13752,
       "lng": 120.68404,
+      "googleRating": 4.5,
+      "googleReviews": 1099,
       "url": "https://maps.app.goo.gl/ALcJWMb2sNoxqJPJ9"
     },
     {
@@ -4343,6 +4904,8 @@
       "photoCount": 1,
       "lat": 25.02661,
       "lng": 121.54382,
+      "googleRating": null,
+      "googleReviews": null,
       "url": "https://maps.app.goo.gl/vY9Gxb2K63rTmJuf6"
     },
     {
@@ -4357,6 +4920,8 @@
       "photoCount": 3,
       "lat": 24.14992,
       "lng": 120.66608,
+      "googleRating": 4.3,
+      "googleReviews": 1640,
       "url": "https://maps.app.goo.gl/VZYejBur2CTarnSA6"
     },
     {
@@ -4371,6 +4936,8 @@
       "photoCount": 3,
       "lat": 24.15077,
       "lng": 120.66688,
+      "googleRating": 4.7,
+      "googleReviews": 2359,
       "url": "https://maps.app.goo.gl/SSGSebtacVh8NkGT6"
     },
     {
@@ -4385,6 +4952,8 @@
       "photoCount": 0,
       "lat": 24.15574,
       "lng": 120.66326,
+      "googleRating": 4.2,
+      "googleReviews": 2555,
       "url": "https://maps.app.goo.gl/U3jzWveCEck9CGgN6"
     },
     {
@@ -4399,6 +4968,8 @@
       "photoCount": 3,
       "lat": 24.13668,
       "lng": 120.68036,
+      "googleRating": 4.6,
+      "googleReviews": 842,
       "url": "https://maps.app.goo.gl/2hfSBCki8ZAFKr736"
     },
     {
@@ -4413,6 +4984,8 @@
       "photoCount": 2,
       "lat": 25.00584,
       "lng": 121.45548,
+      "googleRating": 4.8,
+      "googleReviews": 103,
       "url": "https://maps.app.goo.gl/PyA6tDWdGrNYh9Tu6"
     },
     {
@@ -4427,6 +5000,8 @@
       "photoCount": 1,
       "lat": 25.12911,
       "lng": 121.5103,
+      "googleRating": 4.8,
+      "googleReviews": 269,
       "url": "https://maps.app.goo.gl/yGYNJbb91kzR8uTV7"
     },
     {
@@ -4441,6 +5016,8 @@
       "photoCount": 2,
       "lat": 22.97729,
       "lng": 120.19511,
+      "googleRating": 4.5,
+      "googleReviews": 3211,
       "url": "https://maps.app.goo.gl/8JmpNUFPHbCxyWTD6"
     },
     {
@@ -4455,6 +5032,8 @@
       "photoCount": 1,
       "lat": 35.00386,
       "lng": 135.76675,
+      "googleRating": 4.3,
+      "googleReviews": 1474,
       "url": "https://maps.app.goo.gl/t7eUMCG8DsNFwc426"
     },
     {
@@ -4469,6 +5048,8 @@
       "photoCount": 1,
       "lat": 35.00359,
       "lng": 135.7654,
+      "googleRating": 4.5,
+      "googleReviews": 849,
       "url": "https://maps.app.goo.gl/K3PmVEqeENghTPef7"
     },
     {
@@ -4483,6 +5064,8 @@
       "photoCount": 3,
       "lat": 35.00505,
       "lng": 135.76479,
+      "googleRating": 4.3,
+      "googleReviews": 197,
       "url": "https://maps.app.goo.gl/zGRFqnJnVZdyR9ur8"
     },
     {
@@ -4497,6 +5080,8 @@
       "photoCount": 2,
       "lat": 35.00505,
       "lng": 135.76471,
+      "googleRating": 4,
+      "googleReviews": 343,
       "url": "https://maps.app.goo.gl/QUzZxzUCktJF28iy8"
     },
     {
@@ -4511,6 +5096,8 @@
       "photoCount": 1,
       "lat": 35.00476,
       "lng": 135.76507,
+      "googleRating": 4.4,
+      "googleReviews": 4011,
       "url": "https://maps.app.goo.gl/wYqxeCy58RHEbeR4A"
     },
     {
@@ -4525,6 +5112,8 @@
       "photoCount": 1,
       "lat": 24.99988,
       "lng": 121.55589,
+      "googleRating": 4.3,
+      "googleReviews": 131,
       "url": "https://maps.app.goo.gl/5cTbVvQT8PzcbTJA9"
     },
     {
@@ -4538,7 +5127,9 @@
       "blurb": "Response from the owne",
       "photoCount": 0,
       "lat": 25.02406,
-      "lng": 121.57274
+      "lng": 121.57274,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNoOHVEdXdBRRAB",
@@ -4552,6 +5143,8 @@
       "photoCount": 1,
       "lat": 25.01041,
       "lng": 121.51479,
+      "googleRating": 3.7,
+      "googleReviews": 64,
       "url": "https://maps.app.goo.gl/ToZSz6szr71ubqHP8"
     },
     {
@@ -4566,6 +5159,8 @@
       "photoCount": 1,
       "lat": 24.98405,
       "lng": 121.54096,
+      "googleRating": 4.7,
+      "googleReviews": 41,
       "url": "https://maps.app.goo.gl/bCVq2fG93Se1iSB37"
     },
     {
@@ -4580,6 +5175,8 @@
       "photoCount": 3,
       "lat": 22.97748,
       "lng": 120.2214,
+      "googleRating": 5,
+      "googleReviews": 76,
       "url": "https://maps.app.goo.gl/uTuhWA47ZfSYqcZ16"
     },
     {
@@ -4594,6 +5191,8 @@
       "photoCount": 3,
       "lat": 22.99187,
       "lng": 120.2009,
+      "googleRating": 4.4,
+      "googleReviews": 323,
       "url": "https://maps.app.goo.gl/tgHHrvKVowJPVyUbA"
     },
     {
@@ -4608,6 +5207,8 @@
       "photoCount": 3,
       "lat": 22.99462,
       "lng": 120.2033,
+      "googleRating": 4.5,
+      "googleReviews": 874,
       "url": "https://maps.app.goo.gl/3MxmTFsdP7w37FfY8"
     },
     {
@@ -4622,6 +5223,8 @@
       "photoCount": 2,
       "lat": 25.05852,
       "lng": 121.53964,
+      "googleRating": 4.4,
+      "googleReviews": 1440,
       "url": "https://maps.app.goo.gl/tzGn75DDXpzUMkYr9"
     },
     {
@@ -4636,6 +5239,8 @@
       "photoCount": 2,
       "lat": 25.0313,
       "lng": 121.53017,
+      "googleRating": 4.3,
+      "googleReviews": 1417,
       "url": "https://maps.app.goo.gl/NKjL2gnzeP8eXqew5"
     },
     {
@@ -4650,6 +5255,8 @@
       "photoCount": 0,
       "lat": 25.03461,
       "lng": 121.52655,
+      "googleRating": 4.5,
+      "googleReviews": 756,
       "url": "https://maps.app.goo.gl/261Aug9ZJiWouXfMA"
     },
     {
@@ -4664,6 +5271,8 @@
       "photoCount": 1,
       "lat": 24.97431,
       "lng": 121.53755,
+      "googleRating": 3.8,
+      "googleReviews": 145,
       "url": "https://maps.app.goo.gl/15oNyvdsGdU7wr6H8"
     },
     {
@@ -4678,6 +5287,8 @@
       "photoCount": 3,
       "lat": 25.0223,
       "lng": 121.5422,
+      "googleRating": 4.9,
+      "googleReviews": 512,
       "url": "https://maps.app.goo.gl/EY5fDTicjUkVLodR8"
     },
     {
@@ -4692,6 +5303,8 @@
       "photoCount": 2,
       "lat": 25.02852,
       "lng": 121.54155,
+      "googleRating": 4.8,
+      "googleReviews": 762,
       "url": "https://maps.app.goo.gl/eKFPcFNc9bDJN9M68"
     },
     {
@@ -4706,6 +5319,8 @@
       "photoCount": 4,
       "lat": 25.05372,
       "lng": 121.5497,
+      "googleRating": 4.5,
+      "googleReviews": 2614,
       "url": "https://maps.app.goo.gl/mGEuD1qCQ17Tr4Ev8"
     },
     {
@@ -4719,7 +5334,9 @@
       "blurb": "",
       "photoCount": 1,
       "lat": 25.02802,
-      "lng": 121.55494
+      "lng": 121.55494,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURleXJuTTl3RRAB",
@@ -4733,6 +5350,8 @@
       "photoCount": 3,
       "lat": 25.02434,
       "lng": 121.52788,
+      "googleRating": 4.6,
+      "googleReviews": 5471,
       "url": "https://maps.app.goo.gl/aYVq82BFZNW2dWP29"
     },
     {
@@ -4747,6 +5366,8 @@
       "photoCount": 1,
       "lat": 24.98332,
       "lng": 121.53708,
+      "googleRating": 4.8,
+      "googleReviews": 7791,
       "url": "https://maps.app.goo.gl/i8Tb4aP8SxgKxFhk9"
     },
     {
@@ -4761,6 +5382,8 @@
       "photoCount": 1,
       "lat": 25.03685,
       "lng": 121.56778,
+      "googleRating": 4.9,
+      "googleReviews": 2994,
       "url": "https://maps.app.goo.gl/FAwhPkuN1xseNHuY8"
     },
     {
@@ -4775,6 +5398,8 @@
       "photoCount": 2,
       "lat": 22.63072,
       "lng": 120.31474,
+      "googleRating": 4.4,
+      "googleReviews": 1007,
       "url": "https://maps.app.goo.gl/eV7C42AmaWWozVLT7"
     },
     {
@@ -4789,6 +5414,8 @@
       "photoCount": 1,
       "lat": 22.63274,
       "lng": 120.3015,
+      "googleRating": 4.2,
+      "googleReviews": 828,
       "url": "https://maps.app.goo.gl/W3X3kVzaH78784zW7"
     },
     {
@@ -4803,6 +5430,8 @@
       "photoCount": 1,
       "lat": 22.63283,
       "lng": 120.30295,
+      "googleRating": 4.1,
+      "googleReviews": 947,
       "url": "https://maps.app.goo.gl/KSYrRXSB7Dvp1fii6"
     },
     {
@@ -4817,6 +5446,8 @@
       "photoCount": 1,
       "lat": 22.6326,
       "lng": 120.30112,
+      "googleRating": 3.3,
+      "googleReviews": 604,
       "url": "https://maps.app.goo.gl/bJRWkKjtFSkooYCN7"
     },
     {
@@ -4831,6 +5462,8 @@
       "photoCount": 1,
       "lat": 22.9811,
       "lng": 120.21639,
+      "googleRating": 4.2,
+      "googleReviews": 1791,
       "url": "https://maps.app.goo.gl/JUgWHNWsrBiWkUKJ7"
     },
     {
@@ -4845,6 +5478,8 @@
       "photoCount": 1,
       "lat": 25.07689,
       "lng": 121.58015,
+      "googleRating": 4.3,
+      "googleReviews": 886,
       "url": "https://maps.app.goo.gl/R19VXL2keADzEnQCA"
     },
     {
@@ -4859,6 +5494,8 @@
       "photoCount": 1,
       "lat": 25.07646,
       "lng": 121.57913,
+      "googleRating": 4.3,
+      "googleReviews": 1571,
       "url": "https://maps.app.goo.gl/cRT1Tg4ssBd1R35u8"
     },
     {
@@ -4873,6 +5510,8 @@
       "photoCount": 3,
       "lat": 25.03321,
       "lng": 121.52733,
+      "googleRating": 4.6,
+      "googleReviews": 1158,
       "url": "https://maps.app.goo.gl/8EnykwLCiV1eo6aM9"
     },
     {
@@ -4887,6 +5526,8 @@
       "photoCount": 1,
       "lat": 24.988,
       "lng": 121.57453,
+      "googleRating": 4.1,
+      "googleReviews": 183,
       "url": "https://maps.app.goo.gl/mpxfFRq8FHmPh3MM9"
     },
     {
@@ -4901,6 +5542,8 @@
       "photoCount": 3,
       "lat": 22.99083,
       "lng": 120.23297,
+      "googleRating": 4.3,
+      "googleReviews": 953,
       "url": "https://maps.app.goo.gl/8wYR8rrtAP2v6k529"
     },
     {
@@ -4915,6 +5558,8 @@
       "photoCount": 2,
       "lat": 24.98793,
       "lng": 121.57476,
+      "googleRating": 4.7,
+      "googleReviews": 1159,
       "url": "https://maps.app.goo.gl/HbCRXkXrrEPzDSEX9"
     },
     {
@@ -4929,6 +5574,8 @@
       "photoCount": 0,
       "lat": 24.87358,
       "lng": 121.28438,
+      "googleRating": 5,
+      "googleReviews": 50,
       "url": "https://maps.app.goo.gl/PdnERbbDGZtKauw19"
     },
     {
@@ -4943,6 +5590,8 @@
       "photoCount": 0,
       "lat": 25.00045,
       "lng": 121.5559,
+      "googleRating": 3.8,
+      "googleReviews": 642,
       "url": "https://maps.app.goo.gl/qNHJ4Ni9VRJkzUX7A"
     },
     {
@@ -4957,6 +5606,8 @@
       "photoCount": 0,
       "lat": 25.00317,
       "lng": 121.55052,
+      "googleRating": 4.9,
+      "googleReviews": 2999,
       "url": "https://maps.app.goo.gl/d1pp9QSCqKz9Vhci7"
     },
     {
@@ -4971,6 +5622,8 @@
       "photoCount": 1,
       "lat": 25.02659,
       "lng": 121.53966,
+      "googleRating": 4.3,
+      "googleReviews": 4232,
       "url": "https://maps.app.goo.gl/EFL1khYRGpdFwppT6"
     },
     {
@@ -4985,6 +5638,8 @@
       "photoCount": 1,
       "lat": 25.04178,
       "lng": 121.54793,
+      "googleRating": 4.2,
+      "googleReviews": 6821,
       "url": "https://maps.app.goo.gl/XgDjpkxaBsk4qVfW9"
     },
     {
@@ -4999,6 +5654,8 @@
       "photoCount": 0,
       "lat": 25.04869,
       "lng": 121.5639,
+      "googleRating": 4.5,
+      "googleReviews": 702,
       "url": "https://maps.app.goo.gl/vX1eQqSYqRHSE2iQ8"
     },
     {
@@ -5013,6 +5670,8 @@
       "photoCount": 3,
       "lat": 25.06204,
       "lng": 121.53342,
+      "googleRating": 4.1,
+      "googleReviews": 4911,
       "url": "https://maps.app.goo.gl/eH9YxXqhWkzLQSBi6"
     },
     {
@@ -5027,6 +5686,8 @@
       "photoCount": 1,
       "lat": 25.05234,
       "lng": 121.55522,
+      "googleRating": 4.7,
+      "googleReviews": 1115,
       "url": "https://maps.app.goo.gl/b3RwbQHr4qdL8Wm56"
     },
     {
@@ -5041,6 +5702,8 @@
       "photoCount": 2,
       "lat": 25.02035,
       "lng": 121.53374,
+      "googleRating": 4.7,
+      "googleReviews": 444,
       "url": "https://maps.app.goo.gl/iXjdvyTnNdgEfhCQ6"
     },
     {
@@ -5055,6 +5718,8 @@
       "photoCount": 1,
       "lat": 25.02003,
       "lng": 121.53347,
+      "googleRating": 4.2,
+      "googleReviews": 1728,
       "url": "https://maps.app.goo.gl/xc2ZqDsB3jdhsA718"
     },
     {
@@ -5069,6 +5734,8 @@
       "photoCount": 0,
       "lat": 25.01565,
       "lng": 121.53223,
+      "googleRating": 4.4,
+      "googleReviews": 992,
       "url": "https://maps.app.goo.gl/KLcY4G69TLWLvPRy5"
     },
     {
@@ -5083,6 +5750,8 @@
       "photoCount": 2,
       "lat": 24.99537,
       "lng": 121.31078,
+      "googleRating": 4.7,
+      "googleReviews": 526,
       "url": "https://maps.app.goo.gl/HNHAxojuiRiVc2XV8"
     },
     {
@@ -5097,6 +5766,8 @@
       "photoCount": 1,
       "lat": 25.04276,
       "lng": 121.53052,
+      "googleRating": 4.8,
+      "googleReviews": 171,
       "url": "https://maps.app.goo.gl/k1BFaGgeWw4aRDjCA"
     },
     {
@@ -5111,6 +5782,8 @@
       "photoCount": 1,
       "lat": 25.02667,
       "lng": 121.5397,
+      "googleRating": 4.4,
+      "googleReviews": 2410,
       "url": "https://maps.app.goo.gl/5uQeqbCDjBqwUTuH6"
     },
     {
@@ -5125,6 +5798,8 @@
       "photoCount": 2,
       "lat": 25.04346,
       "lng": 121.54653,
+      "googleRating": 4.4,
+      "googleReviews": 2439,
       "url": "https://maps.app.goo.gl/SGSrwXvMMF5G6bRV8"
     },
     {
@@ -5138,7 +5813,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 25.04846,
-      "lng": 121.5537
+      "lng": 121.5537,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNtMzVia3pBRRAB",
@@ -5151,7 +5828,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 25.0059,
-      "lng": 121.46356
+      "lng": 121.46356,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNHcklxeVBBEAE",
@@ -5165,6 +5844,8 @@
       "photoCount": 0,
       "lat": 25.04548,
       "lng": 121.53113,
+      "googleRating": 5,
+      "googleReviews": 5244,
       "url": "https://maps.app.goo.gl/gTzbojDKV9NpbmoU9"
     },
     {
@@ -5179,6 +5860,8 @@
       "photoCount": 1,
       "lat": 25.02661,
       "lng": 121.54382,
+      "googleRating": null,
+      "googleReviews": null,
       "url": "https://maps.app.goo.gl/gserQJ6H7XBuY5PP6"
     },
     {
@@ -5193,6 +5876,8 @@
       "photoCount": 0,
       "lat": 25.0706,
       "lng": 121.5193,
+      "googleRating": 4.6,
+      "googleReviews": 1201,
       "url": "https://maps.app.goo.gl/KbxNSJeanyaowo5w9"
     },
     {
@@ -5207,6 +5892,8 @@
       "photoCount": 0,
       "lat": 25.0479,
       "lng": 121.55636,
+      "googleRating": 3.5,
+      "googleReviews": 107,
       "url": "https://maps.app.goo.gl/ZcAUNFeuZFYK1k2c9"
     },
     {
@@ -5221,6 +5908,8 @@
       "photoCount": 1,
       "lat": 25.0002,
       "lng": 121.55631,
+      "googleRating": 4.4,
+      "googleReviews": 2036,
       "url": "https://maps.app.goo.gl/GVbQo4jg2R6XdwrZ9"
     },
     {
@@ -5235,6 +5924,8 @@
       "photoCount": 1,
       "lat": 25.02491,
       "lng": 121.54648,
+      "googleRating": 3.9,
+      "googleReviews": 807,
       "url": "https://maps.app.goo.gl/AtW8xJgb4KW9EdXs8"
     },
     {
@@ -5249,6 +5940,8 @@
       "photoCount": 2,
       "lat": 25.02435,
       "lng": 121.54679,
+      "googleRating": 4.6,
+      "googleReviews": 1774,
       "url": "https://maps.app.goo.gl/veCst5r31D7aMWN77"
     },
     {
@@ -5263,6 +5956,8 @@
       "photoCount": 1,
       "lat": 25.02971,
       "lng": 121.55316,
+      "googleRating": 4.4,
+      "googleReviews": 2571,
       "url": "https://maps.app.goo.gl/TbBSqMmiaWopgmW49"
     },
     {
@@ -5277,6 +5972,8 @@
       "photoCount": 1,
       "lat": 25.0243,
       "lng": 121.52931,
+      "googleRating": 4.7,
+      "googleReviews": 891,
       "url": "https://maps.app.goo.gl/u7EUboZJ4yUq1xN86"
     },
     {
@@ -5291,6 +5988,8 @@
       "photoCount": 2,
       "lat": 25.03176,
       "lng": 121.5529,
+      "googleRating": 4.4,
+      "googleReviews": 1652,
       "url": "https://maps.app.goo.gl/NTs2rr61ZHGa14pY8"
     },
     {
@@ -5305,6 +6004,8 @@
       "photoCount": 0,
       "lat": 24.98324,
       "lng": 121.5404,
+      "googleRating": 4.2,
+      "googleReviews": 2056,
       "url": "https://maps.app.goo.gl/ZGkQD4rknkVMu5DN8"
     },
     {
@@ -5319,6 +6020,8 @@
       "photoCount": 0,
       "lat": 25.03024,
       "lng": 121.55819,
+      "googleRating": 4.9,
+      "googleReviews": 266,
       "url": "https://maps.app.goo.gl/UyESog7Sz1DjdDK29"
     },
     {
@@ -5332,7 +6035,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 24.16742,
-      "lng": 120.62572
+      "lng": 120.62572,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNLMnBySkRBEAE",
@@ -5346,6 +6051,8 @@
       "photoCount": 1,
       "lat": 24.1472,
       "lng": 120.6841,
+      "googleRating": 4.3,
+      "googleReviews": 2467,
       "url": "https://maps.app.goo.gl/sR8RRcqdAh19UgrTA"
     },
     {
@@ -5360,6 +6067,8 @@
       "photoCount": 1,
       "lat": 25.02463,
       "lng": 121.55173,
+      "googleRating": 4.8,
+      "googleReviews": 3802,
       "url": "https://maps.app.goo.gl/d29GTXdLAhw7GhLv8"
     },
     {
@@ -5374,6 +6083,8 @@
       "photoCount": 2,
       "lat": 25.01348,
       "lng": 121.53435,
+      "googleRating": 3.7,
+      "googleReviews": 1180,
       "url": "https://maps.app.goo.gl/dZrRnoUHSpaLpouA6"
     },
     {
@@ -5388,6 +6099,8 @@
       "photoCount": 0,
       "lat": 24.14443,
       "lng": 120.66296,
+      "googleRating": 4.6,
+      "googleReviews": 2919,
       "url": "https://maps.app.goo.gl/zuaoKrZegivVDm8z6"
     },
     {
@@ -5402,6 +6115,8 @@
       "photoCount": 1,
       "lat": 25.04264,
       "lng": 121.55745,
+      "googleRating": 4.5,
+      "googleReviews": 8534,
       "url": "https://maps.app.goo.gl/wq2L7pjf3tHL7yUL8"
     },
     {
@@ -5415,7 +6130,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 25.03174,
-      "lng": 121.58018
+      "lng": 121.58018,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUN5eG9IdEZnEAE",
@@ -5429,6 +6146,8 @@
       "photoCount": 1,
       "lat": 25.04365,
       "lng": 121.569,
+      "googleRating": 4.3,
+      "googleReviews": 150,
       "url": "https://maps.app.goo.gl/y3sUhuGiQTu8mRPC8"
     },
     {
@@ -5443,6 +6162,8 @@
       "photoCount": 0,
       "lat": 25.05156,
       "lng": 121.52169,
+      "googleRating": 4.6,
+      "googleReviews": 3575,
       "url": "https://maps.app.goo.gl/d1MsrM7ZJXmQNFZH9"
     },
     {
@@ -5457,6 +6178,8 @@
       "photoCount": 0,
       "lat": 24.99016,
       "lng": 121.54056,
+      "googleRating": 4.9,
+      "googleReviews": 4690,
       "url": "https://maps.app.goo.gl/9yUuaxonJbHbE8wD6"
     },
     {
@@ -5470,7 +6193,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 25.04658,
-      "lng": 121.5353
+      "lng": 121.5353,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURjNXR1djVBRRAB",
@@ -5483,7 +6208,9 @@
       "blurb": "Response from the owne",
       "photoCount": 0,
       "lat": 25.02174,
-      "lng": 121.55682
+      "lng": 121.55682,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURjckxISlB3EAE",
@@ -5497,6 +6224,8 @@
       "photoCount": 0,
       "lat": 25.03533,
       "lng": 121.55121,
+      "googleRating": 4.9,
+      "googleReviews": 33,
       "url": "https://maps.app.goo.gl/GnapFy5c5T8gyqcS9"
     },
     {
@@ -5511,6 +6240,8 @@
       "photoCount": 1,
       "lat": 25.04539,
       "lng": 121.50846,
+      "googleRating": 4.3,
+      "googleReviews": 1397,
       "url": "https://maps.app.goo.gl/C5Av2zTUgj3oExvp9"
     },
     {
@@ -5525,6 +6256,8 @@
       "photoCount": 0,
       "lat": 25.01941,
       "lng": 121.5299,
+      "googleRating": 4.5,
+      "googleReviews": 893,
       "url": "https://maps.app.goo.gl/cfwjj1jUdDBcUzxAA"
     },
     {
@@ -5538,7 +6271,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 23.69416,
-      "lng": 120.96608
+      "lng": 120.96608,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNZN09pTzZnRRAB",
@@ -5551,7 +6286,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 25.05166,
-      "lng": 121.51454
+      "lng": 121.51454,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNZLU0zZ2FBEAE",
@@ -5564,7 +6301,9 @@
       "blurb": "Response from the owne",
       "photoCount": 0,
       "lat": 25.02094,
-      "lng": 121.55354
+      "lng": 121.55354,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURvNTdQc1dnEAE",
@@ -5577,7 +6316,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 25.0387,
-      "lng": 121.56954
+      "lng": 121.56954,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURvNTdHem1nRRAB",
@@ -5590,7 +6331,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 25.02142,
-      "lng": 121.5809
+      "lng": 121.5809,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNvbzdhc2d3RRAB",
@@ -5604,6 +6347,8 @@
       "photoCount": 0,
       "lat": 25.03914,
       "lng": 121.55744,
+      "googleRating": 4.2,
+      "googleReviews": 11276,
       "url": "https://maps.app.goo.gl/PjtzAaj6SSJHY9Gy9"
     },
     {
@@ -5617,7 +6362,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 35.61984,
-      "lng": 137.94448
+      "lng": 137.94448,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURJNzlpT1FBEAE",
@@ -5630,7 +6377,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 35.61392,
-      "lng": 138.0184
+      "lng": 138.0184,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUN3djV5U1J3EAE",
@@ -5643,7 +6392,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 23.706,
-      "lng": 120.97836
+      "lng": 120.97836,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUR3cE96YTFBRRAB",
@@ -5657,6 +6408,8 @@
       "photoCount": 0,
       "lat": 25.02661,
       "lng": 121.54382,
+      "googleRating": null,
+      "googleReviews": null,
       "url": "https://maps.app.goo.gl/4pZcNPh7YyLPEFUc8"
     },
     {
@@ -5670,7 +6423,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 25.03682,
-      "lng": 121.54058
+      "lng": 121.54058,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUN3cExiOFZnEAE",
@@ -5683,7 +6438,9 @@
       "blurb": "",
       "photoCount": 0,
       "lat": 23.6956,
-      "lng": 120.938
+      "lng": 120.938,
+      "googleRating": null,
+      "googleReviews": null
     },
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUN3cExiODVnRRAB",
@@ -5697,6 +6454,8 @@
       "photoCount": 0,
       "lat": 25.02189,
       "lng": 121.55071,
+      "googleRating": 4.5,
+      "googleReviews": 2502,
       "url": "https://maps.app.goo.gl/zh9LLCMToP4v9pp59"
     },
     {
@@ -5711,7 +6470,221 @@
       "photoCount": 0,
       "lat": 24.14163,
       "lng": 120.68528,
+      "googleRating": 4.5,
+      "googleReviews": 2034,
       "url": "https://maps.app.goo.gl/wgZMqgA633aZamah6"
+    }
+  ],
+  "favorites": [
+    {
+      "category": "Taiwanese & Chinese",
+      "name": "醇涎坊 古早味鍋燒意麵",
+      "googleRating": 4.2,
+      "googleReviews": 6764,
+      "url": "https://www.google.com/maps/search/%E9%86%87%E6%B6%8E%E5%9D%8A%E5%8F%A4%E6%97%A9%E5%91%B3%E9%8D%8B%E7%87%92%E6%84%8F%E9%BA%B5%20%E5%8F%B0%E5%8D%97?hl=en"
+    },
+    {
+      "category": "Taiwanese & Chinese",
+      "name": "秦味館 Qin Wei Guan",
+      "googleRating": 4.6,
+      "googleReviews": 3958,
+      "url": "https://www.google.com/maps/search/%E7%A7%A6%E5%91%B3%E9%A4%A8%20%E5%8F%B0%E5%8C%97?hl=en"
+    },
+    {
+      "category": "Taiwanese & Chinese",
+      "name": "犁園湯包館 Li Yuan",
+      "googleRating": 4.2,
+      "googleReviews": 3935,
+      "url": "https://www.google.com/maps/search/%E7%8A%81%E5%9C%92%E6%B9%AF%E5%8C%85%E9%A4%A8%20%E5%8F%B0%E5%8C%97?hl=en"
+    },
+    {
+      "category": "Taiwanese & Chinese",
+      "name": "長白小館",
+      "googleRating": 4.2,
+      "googleReviews": 1730,
+      "url": "https://www.google.com/maps/search/%E9%95%B7%E7%99%BD%E5%B0%8F%E9%A4%A8%20%E5%8F%B0%E5%8C%97?hl=en"
+    },
+    {
+      "category": "Taiwanese & Chinese",
+      "name": "寶杏堂 手切滷肉飯",
+      "googleRating": 4.5,
+      "googleReviews": 990,
+      "url": "https://www.google.com/maps/search/%E5%AF%B6%E6%9D%8F%E5%A0%82%20%E6%89%8B%E5%88%87%E6%BB%B7%E8%82%89%E9%A3%AF%20%E6%BA%AB%E8%A3%9C%E7%BE%8A%E8%82%89%E6%B9%AF%20%E5%8F%B0%E5%8C%97?hl=en"
+    },
+    {
+      "category": "Japanese",
+      "name": "肉料理荒川 Arakawa",
+      "googleRating": 4.8,
+      "googleReviews": 680,
+      "url": "https://www.google.com/maps/search/%E8%82%89%E6%96%99%E7%90%86%E8%8D%92%E5%B7%9D%20%E4%BA%AC%E9%83%BD?hl=en"
+    },
+    {
+      "category": "Japanese",
+      "name": "河村食堂 Kawamura",
+      "googleRating": 4.4,
+      "googleReviews": 354,
+      "url": "https://www.google.com/maps/search/%E6%B2%B3%E6%9D%91%E9%A3%9F%E5%A0%82%20%E4%BA%AC%E9%83%BD?hl=en"
+    },
+    {
+      "category": "Japanese",
+      "name": "どろまみれ 四谷本店",
+      "googleRating": 4.4,
+      "googleReviews": 497,
+      "url": "https://www.google.com/maps/search/%E3%81%A9%E3%82%8D%E3%81%BE%E3%81%BF%E3%82%8C%20%E5%9B%9B%E8%B0%B7%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC?hl=en"
+    },
+    {
+      "category": "Japanese",
+      "name": "寶來軒 Bao Lai Xuan",
+      "googleRating": 4.5,
+      "googleReviews": 3305,
+      "url": "https://www.google.com/maps/search/%E5%AF%B6%E4%BE%86%E8%BB%92%20%E5%8F%B0%E5%8D%97?hl=en"
+    },
+    {
+      "category": "Japanese",
+      "name": "壽壽木 とんかつ",
+      "googleRating": 4.5,
+      "googleReviews": 1504,
+      "url": "https://www.google.com/maps/search/%E3%81%99%E3%81%9A%E3%81%8D%20%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%20%E6%9D%B1%E4%BA%AC?hl=en"
+    },
+    {
+      "category": "Italian",
+      "name": "PEPPINO 培皮諾小館",
+      "googleRating": 4.6,
+      "googleReviews": 1701,
+      "url": "https://www.google.com/maps/search/%E5%9F%B9%E7%9A%AE%E8%AB%BE%E5%B0%8F%E9%A4%A8%20Peppino%20%E5%8F%B0%E5%8C%97?hl=en"
+    },
+    {
+      "category": "Italian",
+      "name": "Trattoria ZàZà",
+      "googleRating": 4.5,
+      "googleReviews": 32974,
+      "url": "https://www.google.com/maps/search/Trattoria%20ZaZa%20Firenze?hl=en"
+    },
+    {
+      "category": "Italian",
+      "name": "千層吧 The Lasagna Bar",
+      "googleRating": 4.6,
+      "googleReviews": 801,
+      "url": "https://www.google.com/maps/place/The+Lasagna+Bar/@25.0569869,121.5257525,14z/data=!4m10!1m2!2m1!1z5Y2D5bGk5ZCnIOWPsOWMlw!3m6!1s0x3442abee50fd1aab:0xf81ec21a7a67dcc3!8m2!3d25.0569869!4d121.5618014!15sChDljYPlsaTlkKcg5Y-w5YyXWhQiEuWNgyDlsaQg5ZCnIOWPsOWMl5IBEml0YWxpYW5fcmVzdGF1cmFudOABAA!16s%2Fg%2F11mb22bh61?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "category": "Italian",
+      "name": "Ristorante \"Dallo Zio\"",
+      "googleRating": 4.5,
+      "googleReviews": 2260,
+      "url": "https://www.google.com/maps/search/Ristorante%20Dallo%20Zio%20San%20Marco%20Venezia?hl=en"
+    },
+    {
+      "category": "Italian",
+      "name": "La Mole",
+      "googleRating": 4.6,
+      "googleReviews": 1233,
+      "url": "https://www.google.com/maps/search/La%20Mole%20%E5%8F%B0%E5%8C%97?hl=en"
+    },
+    {
+      "category": "Dessert",
+      "name": "VERO Gelateria Cremeria",
+      "googleRating": 4.7,
+      "googleReviews": 3127,
+      "url": "https://www.google.com/maps/search/VERO%20Gelateria%20Cremeria%20Milano?hl=en"
+    },
+    {
+      "category": "Dessert",
+      "name": "Regoli Pasticceria",
+      "googleRating": 4.5,
+      "googleReviews": 6303,
+      "url": "https://www.google.com/maps/search/Regoli%20Pasticceria%20Roma?hl=en"
+    },
+    {
+      "category": "Dessert",
+      "name": "CREM 奶油甜點",
+      "googleRating": 4.8,
+      "googleReviews": 251,
+      "url": "https://www.google.com/maps/search/CREM%20%E5%A5%B6%E6%B2%B9%E7%94%9C%E9%BB%9E%E5%B0%88%E8%B3%A3%E5%BA%97%20%E5%8F%B0%E5%8C%97?hl=en"
+    },
+    {
+      "category": "Dessert",
+      "name": "中村藤吉 平等院店",
+      "googleRating": 4.3,
+      "googleReviews": 2275,
+      "url": "https://www.google.com/maps/search/%E4%B8%AD%E6%9D%91%E8%97%A4%E5%90%89%20%E5%B9%B3%E7%AD%89%E9%99%A2%E5%BA%97%20%E5%AE%87%E6%B2%BB?hl=en"
+    },
+    {
+      "category": "Dessert",
+      "name": "David la Gelateria",
+      "googleRating": 4.5,
+      "googleReviews": 518,
+      "url": "https://www.google.com/maps/search/David%20la%20Gelateria%20Firenze?hl=en"
+    },
+    {
+      "category": "Drinks",
+      "name": "坪林手 Pina tshiu",
+      "googleRating": 4.2,
+      "googleReviews": 589,
+      "url": "https://www.google.com/maps/place/Pina+tshiu/@25.0433429,121.5405025,15z/data=!4m10!1m2!2m1!1z5Z2q5p6X5omLIOWPsOWMlw!3m6!1s0x3442abeb7c2b7cd9:0x1033d171c4e9b34f!8m2!3d25.0304661!4d121.5606826!15sChDlnarmnpfmiYsg5Y-w5YyXWhQiEuWdqiDmnpcg5omLIOWPsOWMl5IBGGljZV9jcmVhbV9hbmRfZHJpbmtfc2hvcOABAA!16s%2Fg%2F11jg5w_p6r?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "category": "Drinks",
+      "name": "60+ Tea Shop 中山店",
+      "googleRating": 4.5,
+      "googleReviews": 516,
+      "url": "https://www.google.com/maps/search/60%2B%20Tea%20Shop%20%E4%B8%AD%E5%B1%B1%E5%BA%97%20%E5%8F%B0%E5%8C%97?hl=en"
+    },
+    {
+      "category": "Drinks",
+      "name": "Karun Thai Tea (CentralwOrld)",
+      "googleRating": 4,
+      "googleReviews": 388,
+      "url": "https://www.google.com/maps/search/Karun%20Thai%20Tea%20CentralwOrld%20Bangkok?hl=en"
+    },
+    {
+      "category": "Drinks",
+      "name": "Barista Ray",
+      "googleRating": 4.5,
+      "googleReviews": 1232,
+      "url": "https://www.google.com/maps/search/Barista%20Ray%20%E5%8F%B0%E5%8D%97?hl=en"
+    },
+    {
+      "category": "Drinks",
+      "name": "Milk Shop 酪 (Akihabara)",
+      "googleRating": 4.5,
+      "googleReviews": 450,
+      "url": "https://www.google.com/maps/search/%E3%83%9F%E3%83%AB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%E9%85%AA%20%E7%A7%8B%E8%91%89%E5%8E%9F%E5%BA%97?hl=en"
+    },
+    {
+      "category": "Other",
+      "name": "印度料理 Mumbai 九段",
+      "googleRating": 4,
+      "googleReviews": 447,
+      "url": "https://www.google.com/maps/search/%E5%8D%B0%E5%BA%A6%E6%96%99%E7%90%86%20Mumbai%20%E4%B9%9D%E6%AE%B5%20%E6%9D%B1%E4%BA%AC?hl=en"
+    },
+    {
+      "category": "Other",
+      "name": "食堂チャコ",
+      "googleRating": 4.7,
+      "googleReviews": 264,
+      "url": "https://www.google.com/maps/search/%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%90%E3%83%AB%20%E9%A3%9F%E5%A0%82%E3%83%81%E3%83%A3%E3%82%B3%20%E5%A4%A7%E9%98%AA?hl=en"
+    },
+    {
+      "category": "Other",
+      "name": "通庵 熟成咖哩",
+      "googleRating": 4.4,
+      "googleReviews": 2571,
+      "url": "https://www.google.com/maps/place/Tong'an+Japanese+Curry/@25.0436658,121.5381991,15z/data=!4m10!1m2!2m1!1z6YCa5bq1IOeGn-aIkOWSluWTqSDlj7DljJc!3m6!1s0x3442ab07b3bf3069:0xae384ec50d29157!8m2!3d25.0297109!4d121.5531647!15sChrpgJrlurUg54af5oiQ5ZKW5ZOpIOWPsOWMl1oeIhzpgJog5bq1IOeGn-aIkCDlkpblk6kg5Y-w5YyXkgEZamFwYW5lc2VfY3VycnlfcmVzdGF1cmFudOABAA!16s%2Fg%2F11fmp_m50q?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "category": "Other",
+      "name": "鐵 F.f 小餐廳",
+      "googleRating": 4.7,
+      "googleReviews": 431,
+      "url": "https://www.google.com/maps/place/%E9%90%B5F.f+Teppanyaki%E5%8F%B0%E4%B8%AD%E5%8D%9A%E9%A4%A8%E5%BA%97/@24.1563363,120.6593142,17z/data=!4m10!1m2!2m1!1z6ZC1IEYuZiDlsI_ppJDlu7Mg5Y-w5Lit!3m6!1s0x34693d6eabeec12b:0x2690624eb37e88f!8m2!3d24.1563363!4d120.6638203!15sChjpkLUgRi5mIOWwj-mkkOW7syDlj7DkuK1aGiIY6ZC1IGZmIOWwjyDppJDlu7Mg5Y-w5LitkgEXdGVwcGFuX2dyaWxsX3Jlc3RhdXJhbnSaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnM1TTFkdVVsWlVla0l3VlVaa1VGbFVaRFpYYkVaM1QxaFJNbUZGUlJBQuABAPoBBQioBBAj!16s%2Fg%2F11y1fvrvlk?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "category": "Other",
+      "name": "HI MATE!",
+      "googleRating": 4.5,
+      "googleReviews": 1074,
+      "url": "https://www.google.com/maps/search/HI%20MATE!%20%E5%8F%B0%E5%8C%97?hl=en"
     }
   ]
 }

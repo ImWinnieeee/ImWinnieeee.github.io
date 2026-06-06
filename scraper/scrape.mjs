@@ -46,7 +46,13 @@ async function harvestWhileScrolling(page, { anchor, harvest, label, onBatch, ma
     let added = 0
     const fresh = []
     for (const item of batch) {
-      if (item && item.key != null && !acc.has(item.key)) { acc.set(item.key, item); added++; fresh.push(item) }
+      if (!item || item.key == null) continue
+      const existing = acc.get(item.key)
+      if (!existing) { acc.set(item.key, item); added++; fresh.push(item) }
+      // A tile may first render before its view-count overlay loads. If we cached
+      // a view-less entry, upgrade it once the count appears (doesn't count as
+      // "added", so the stable-step counter still converges).
+      else if (existing.views == null && item.views != null) acc.set(item.key, item)
     }
     // Optional per-step hook: interact with the cards while they're still on screen
     // (e.g. open each visible review's Share dialog) BEFORE we scroll them away.
@@ -69,6 +75,50 @@ async function harvestWhileScrolling(page, { anchor, harvest, label, onBatch, ma
   }
   console.log(`   ✅ ${label}: ${acc.size} total`)
   return [...acc.values()]
+}
+
+// Read a STORE's aggregate Google rating + total review count off the place page
+// (NOT Winnie's own stars). Runs in the page. Multilingual: en / 繁中 / 日本語 /
+// ไทย / italiano. The header block ".F7nice" holds both; aria-labels are backup.
+function extractStoreRating() {
+  const out = { rating: null, reviews: null, title: null }
+  const parseCount = (s) => {
+    if (!s) return null
+    const m = s.replace(/[,、]/g, '').match(/([\d]+(?:\.\d+)?[KkMm]?)/)
+    if (!m) return null
+    const v = m[1]
+    if (/[Kk]$/.test(v)) return Math.round(parseFloat(v) * 1e3)
+    if (/[Mm]$/.test(v)) return Math.round(parseFloat(v) * 1e6)
+    return parseInt(v, 10)
+  }
+  const f7 = document.querySelector('.F7nice')
+  if (f7) {
+    const txt = f7.innerText || ''
+    const rm = txt.match(/(\d+[.,]\d)/)
+    if (rm) out.rating = parseFloat(rm[1].replace(',', '.'))
+    const aria = [...f7.querySelectorAll('[aria-label]')].map((n) => n.getAttribute('aria-label'))
+    const cAria = aria.find((a) => /review|則|クチコミ|รีวิว|recension/i.test(a || ''))
+    const paren = txt.match(/\(([\d.,]+[KkMm]?)\)/)
+    if (cAria) out.reviews = parseCount(cAria)
+    else if (paren) out.reviews = parseCount(paren[1])
+  }
+  if (out.rating == null) {
+    for (const el of document.querySelectorAll('[aria-label]')) {
+      const a = el.getAttribute('aria-label') || ''
+      const m = a.match(/^(\d+[.,]\d)\s*(stars?|顆星|つ星|ดาว|stelle)/i)
+      if (m) { out.rating = parseFloat(m[1].replace(',', '.')); break }
+    }
+  }
+  if (out.reviews == null) {
+    for (const el of document.querySelectorAll('[aria-label]')) {
+      const a = el.getAttribute('aria-label') || ''
+      const m = a.match(/([\d.,]+[KkMm]?)\s*(reviews?|則評論|件のクチコミ|クチコミ|รีวิว|recensioni)/i)
+      if (m) { out.reviews = parseCount(m[1]); break }
+    }
+  }
+  const h1 = document.querySelector('h1')
+  if (h1) out.title = h1.innerText.trim()
+  return out
 }
 
 // ---- connect ---------------------------------------------------------------
@@ -204,43 +254,118 @@ const photoItems = await harvestWhileScrolling(page, {
   label: 'photos',
   anchor: 'a[href*="/photo"], [aria-label*="views"]',
   harvest: () => {
-    const out = []
-    for (const el of document.querySelectorAll('[aria-label]')) {
-      const al = el.getAttribute('aria-label') || ''
-      const m = al.match(/·\s*([\d,]+)\s*views?/i)
-      if (!m) continue
-      let url = ''
-      const im = el.querySelector('img')
-      if (im && im.src) url = im.src
-      if (!url) {
-        const bg = el.querySelector('[style*="background-image"]')
-        const sm = bg && (bg.getAttribute('style') || '').match(/url\("?(.*?)"?\)/)
-        if (sm) url = sm[1]
-      }
-      out.push({ key: url || al, views: parseInt(m[1].replace(/,/g, '')), label: al, url })
+    // Capture EVERY photo tile, WITH or WITHOUT a view count. Today's uploads have
+    // no "· N views" text yet — we still record the url and set views:null; a later
+    // run fills the number in (see the upgrade in harvestWhileScrolling). Grid tiles
+    // are links to the photo viewer (`a[href*="/photo"]`), which naturally excludes
+    // the profile avatar and other UI images, so the count == real total photos.
+    const byUrl = new Map()
+    const imgUrl = (root) => {
+      const im = root.querySelector('img')
+      if (im && im.src && im.src.includes('googleusercontent')) return im.src
+      const bg = root.querySelector('[style*="background-image"]')
+      const sm = bg && (bg.getAttribute('style') || '').match(/url\("?(.*?)"?\)/)
+      if (sm && sm[1].includes('googleusercontent')) return sm[1]
+      return ''
     }
-    return out
+    const viewsOf = (root) => {
+      const labels = [root.getAttribute('aria-label') || '',
+        ...[...root.querySelectorAll('[aria-label]')].map((n) => n.getAttribute('aria-label') || '')]
+      for (const al of labels) {
+        const m = al.match(/·\s*([\d,]+)\s*views?/i)
+        if (m) return { views: parseInt(m[1].replace(/,/g, '')), label: al }
+      }
+      return { views: null, label: labels.find(Boolean) || '' }
+    }
+    const consider = (root) => {
+      const url = imgUrl(root)
+      if (!url) return
+      const { views, label } = viewsOf(root)
+      const prev = byUrl.get(url)
+      // keep whichever entry actually carries a view count
+      if (!prev || (prev.views == null && views != null)) byUrl.set(url, { key: url, url, views, label })
+    }
+    for (const a of document.querySelectorAll('a[href*="/photo"]')) consider(a)
+    // safety net: pick up any view-bearing tile the anchor selector missed
+    for (const el of document.querySelectorAll('[aria-label*="view" i]')) consider(el)
+    return [...byUrl.values()]
   },
 })
-// grand total photo views (its own aria-label like "9,140,043 views")
-const totalPhotoViews = await page.evaluate(() => {
+// Google's own header stats: grand total views ("9,140,043 views") and the
+// authoritative photo+video count ("1,674 photos"). We trust the header count
+// over the harvested tile count (the desktop grid only renders a subset).
+const headerStats = await page.evaluate(() => {
+  let views = null, count = null
   for (const el of document.querySelectorAll('[aria-label]')) {
-    const m = (el.getAttribute('aria-label') || '').match(/^([\d,]+) views$/i)
-    if (m) return parseInt(m[1].replace(/,/g, ''))
+    const a = el.getAttribute('aria-label') || ''
+    let m = a.match(/^([\d,]+)\s+views$/i); if (m && views == null) views = parseInt(m[1].replace(/,/g, ''))
+    m = a.match(/^([\d,]+)\s+photos$/i); if (m && count == null) count = parseInt(m[1].replace(/,/g, ''))
   }
-  return null
+  return { views, count }
 })
+const totalPhotoViews = headerStats.views
+const photoHeaderCount = headerStats.count
+
+// ---- per-store Google rating + review count --------------------------------
+// For EVERY reviewed store, read the STORE's AGGREGATE Google rating + total
+// review count (NOT Winnie's own review). A review's Share permalink only opens
+// her personal review page (no store rating), but it redirects to a URL that
+// embeds the store's CID (…!1s0x<cell>:0x<CID>…). We extract that CID and open
+// the STORE's own page (…?cid=<decimal>), which DOES show the rating + count.
+// Resumable: skip ids already captured, persist as we go.
+const RATINGS_FILE = path.join(OUT_DIR, 'store-ratings.json')
+const storeRatings = fsExists(RATINGS_FILE) ? JSON.parse(await fs.readFile(RATINGS_FILE, 'utf8')) : {}
+const saveRatings = () => fs.writeFile(RATINGS_FILE, JSON.stringify(storeRatings, null, 2))
+const resolveCid = async (shortUrl) => {
+  try {
+    const res = await fetch(shortUrl, { redirect: 'follow', headers: { 'User-Agent': 'Mozilla/5.0' } })
+    const finalUrl = res.url || ''
+    try { await res.body?.cancel?.() } catch {}
+    const m = finalUrl.match(/!1s0x[0-9a-f]+:0x([0-9a-f]+)/i)
+    return m ? m[1] : null
+  } catch { return null }
+}
+
+console.log('\n📂 Store ratings — opening each STORE page (via CID) for its Google rating + review count…')
+let rDone = 0, rOk = 0
+for (const rv of reviews) {
+  const id = rv.id
+  if (storeRatings[id] && storeRatings[id].rating != null) { rOk++; continue }
+  if (!reviewUrls[id]) continue
+  const cidHex = await resolveCid(reviewUrls[id])
+  if (!cidHex) { storeRatings[id] = { rating: null, reviews: null, error: 'no-cid' }; continue }
+  const cid = BigInt('0x' + cidHex).toString()
+  try {
+    await page.goto(`https://www.google.com/maps?cid=${cid}&hl=en`, { waitUntil: 'domcontentloaded' })
+    await page.waitForSelector('.F7nice', { timeout: 12000 }).catch(() => {})
+    await page.waitForTimeout(700)
+    const d = await page.evaluate(extractStoreRating)
+    storeRatings[id] = { rating: d.rating, reviews: d.reviews, title: d.title, cid }
+    if (d.rating != null) rOk++
+  } catch (e) {
+    storeRatings[id] = { rating: null, reviews: null, error: e.message, cid }
+  }
+  if (++rDone % 10 === 0) { console.log(`   …ratings ${rDone}/${reviews.length} (ok ${rOk})`); await saveRatings() }
+}
+await saveRatings()
+console.log(`   ✅ store ratings: ${rOk}/${reviews.length} captured → store-ratings.json`)
 
 // ---- save ------------------------------------------------------------------
 await saveUrls()
-const photos = { total: totalPhotoViews, count: photoItems.length, items: photoItems }
+const photos = { total: totalPhotoViews, headerCount: photoHeaderCount, count: photoItems.length, items: photoItems }
 await fs.writeFile(path.join(OUT_DIR, 'reviews-raw.json'), JSON.stringify(reviews, null, 2))
 await fs.writeFile(path.join(OUT_DIR, 'photos-raw.json'), JSON.stringify(photos, null, 2))
 await fs.writeFile(path.join(OUT_DIR, 'stats.json'), JSON.stringify(stats, null, 2))
 
 const urlOk = Object.values(reviewUrls).filter(Boolean).length
+const photosWithViews = photoItems.filter((p) => p.views != null).length
 console.log('\n✅ Done!')
-console.log(`   reviews: ${reviews.length}  |  photos: ${photos.count}  |  total photo views: ${photos.total}`)
+console.log(`   reviews: ${reviews.length}  |  photos: ${photos.count} (${photosWithViews} with views, ${photos.count - photosWithViews} no views yet)  |  total photo views: ${photos.total}`)
+if (photos.count === 0) {
+  console.log('\n   ⚠️  0 photos captured but the page reports ' + (photos.total ?? '—') + ' total views.')
+  console.log('      The photo grid probably did not render this run — DO NOT build, or you will')
+  console.log('      overwrite the good photo data with 0. Re-run `npm run scrape`.')
+}
 console.log(`   share links: ${urlOk}/${reviews.length} captured → review-urls.json`)
 console.log(`   level: ${stats.level}  points: ${stats.points}`)
 console.log('   saved → scraper/output/reviews-raw.json, photos-raw.json, stats.json, review-urls.json')
