@@ -1,4 +1,4 @@
-import { FAVORITE_CARDS, formatInt } from '../lib.js'
+import { FAVORITE_CARDS, COUNTRY_META, formatInt } from '../lib.js'
 
 // Feature 5: my favorite places by category — 5 per category, NO ranking order.
 // Each shows the store's LIVE Google rating + review count (scraped off Google
@@ -26,7 +26,10 @@ export default function Categories({ favorites }) {
                 {items.map((f) => {
                   const inner = (
                     <div className="flex items-baseline justify-between gap-2">
-                      <span className="font-medium truncate">{f.name}</span>
+                      <span className="font-medium truncate">
+                        {COUNTRY_META[f.country]?.flag && <span className="mr-1">{COUNTRY_META[f.country].flag}</span>}
+                        {f.name}
+                      </span>
                       {f.googleRating != null ? (
                         <span className="shrink-0 text-xs whitespace-nowrap flex items-baseline gap-1">
                           <span className="font-bold" style={{ color: card.color }}>★ {f.googleRating}</span>

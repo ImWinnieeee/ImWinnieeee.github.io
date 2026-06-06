@@ -19,7 +19,7 @@ const NAV = [
 ]
 
 export default function App() {
-  const { profile, stats, topPhotos, mostViewed, mostReacted, ownerReplies, reviews, favorites } = data
+  const { profile, stats, topPhotos, topVideos, mostViewed, mostReacted, ownerReplies, reviews, favorites } = data
 
   return (
     <div className="min-h-full">
@@ -41,7 +41,7 @@ export default function App() {
             </h1>
             <div className="h-1.5 w-16 rounded-full bg-[var(--color-vermilion)] my-3" />
           </div>
-          <TotalViews photoViews={stats.totalPhotoViews} reviewViews={stats.totalReviewViews} />
+          <TotalViews photoViews={stats.totalPhotoViews} reviewViews={stats.totalReviewViews} anchor={stats.viewsAnchor} />
         </div>
         <p className="text-[var(--color-ink-soft)]">
           {profile.level} · {formatViews(stats.totalPhotoViews)} photo views across{' '}
@@ -67,7 +67,7 @@ export default function App() {
 
         {/* 2. Hero: most viewed photos (9M+ views) */}
         <section id="photos" className="relative scroll-mt-6">
-          <TopPhotos photos={topPhotos} totalViews={stats.totalPhotoViews} />
+          <TopPhotos photos={topPhotos} videos={topVideos} totalViews={stats.totalPhotoViews} />
           <SideNote side="right" accent="var(--color-vermilion)">
             It makes me feel <b>AWESOME</b> to see so many of my pictures get so many views! I'm sharing useful pics! 📸
           </SideNote>

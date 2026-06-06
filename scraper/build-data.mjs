@@ -147,14 +147,50 @@ const ownerReplies = REPLY_PICKS.map((name) => findReview(name)).filter(Boolean)
   reply: (r.ownerReply || '').replace(/\s+/g, ' ').trim().slice(0, 260),
 }))
 
-// ---- top photos (15) ----
+// ---- top photos ----
+// Manually dropped from the hero (Winnie's call — too-similar/duplicate shots):
+// Celebread's 2nd photo (~79.7K) and a Pu-Jei photo (~54.6K). Matched by a stable
+// url fragment so it survives re-scrapes.
+const PHOTO_EXCLUDE = ['6gO5RaoBYhqKmOUng_-iTYeRwH0Kx1TN_z9', 'uoDh5buhlEdelk0bKvvYYuLRxlsqK0WKp3x']
 const seen = new Set()
 const topPhotos = [...photos.items]
   .filter((p) => p.url && p.url.includes('googleusercontent'))
+  .filter((p) => !PHOTO_EXCLUDE.some((k) => p.url.includes(k)))
   .sort((a, b) => b.views - a.views)
   .filter((p) => { const k = big(p.url); if (seen.has(k)) return false; seen.add(k); return true })
-  .slice(0, 15)
+  .slice(0, 18)
   .map((p, i) => ({ id: 'ph' + i, url: big(p.url), link: p.url.replace(/=w\d+.*$/, '=w1600'), views: p.views ?? 0 }))
+
+// ---- top videos (hand-supplied) ----
+// Google doesn't expose per-VIDEO view counts to scraping (the grid tile shows a
+// 👁 count visually, but it's not in the page's accessible DOM), so Winnie reads
+// them off her contributions page. `match` finds the review (for a still + her
+// permalink); `imgIdx` picks which of that place's photos to use as the thumbnail
+// so several videos of the same place don't all look identical.
+// `url` = the video's Share link (click-through + frame source); `frame thumbnails`
+// (an actual still from the video) are scraped by video-frames.mjs → video-frames.json
+// keyed by label. We prefer the real frame; fall back to a place photo if missing.
+const VIDEOS = [
+  { match: 'Tanaka Keiran', label: '田中雞卵', views: 193706, url: 'https://maps.app.goo.gl/tCnWNtfzkVZVfWSB8' },
+  { match: 'PATISSERIE TEN&', label: 'Patisserie TEN& · counter', views: 158291, url: 'https://maps.app.goo.gl/A4b15Z4hWHRcDViZ8' },
+  { match: '瑪黑家紅茶', label: '瑪黑家紅茶 Marais', views: 151584, url: 'https://maps.app.goo.gl/opAD5Ca5XFnuAt3z5' },
+  { match: '長白小館', label: '長白小館', views: 107482, url: 'https://maps.app.goo.gl/VPnwiw634j3TwWzT6' },
+  { match: 'Pu-Jei', label: 'Pu-Jei 葡吉 · the queue', views: 102199, url: 'https://maps.app.goo.gl/JFf8VLwvZoB1fDdE9' },
+  { match: 'Pu-Jei', label: 'Pu-Jei 葡吉 · the sign', views: 93540, url: 'https://maps.app.goo.gl/v1HraqCjJgR9t1Uc6' },
+  { match: 'La Mole', label: 'La Mole Taipei', views: 55356, url: 'https://maps.app.goo.gl/xgiPmsA5Qw1QfEE16' },
+  { match: 'PATISSERIE TEN&', label: 'Patisserie TEN& · how to find it', views: 41556, url: 'https://maps.app.goo.gl/MP8qk1A51KipQodw5' },
+]
+const videoFrames = fs.existsSync(path.join(OUT, 'video-frames.json')) ? L('video-frames.json') : {}
+const topVideos = VIDEOS.map((v, i) => {
+  const r = findReview(v.match)
+  if (!r) console.log(`   ⚠️  no review match for video: ${v.match}`)
+  const imgs = (r?.images || []).map(big)
+  return {
+    id: 'vid' + i, place: v.label, views: v.views,
+    img: videoFrames[v.label] || imgs[0] || null,
+    link: v.url || (r && reviewUrls[r.id]) || null,
+  }
+}).filter((v) => v.img)
 
 // ---- all reviews for the map (+ favorites) ----
 const CITY = {
@@ -162,9 +198,34 @@ const CITY = {
   Kaohsiung: [22.6273, 120.3014], Tainan: [22.9999, 120.2269], Hsinchu: [24.8138, 120.9675],
   Taoyuan: [24.9936, 121.301], Taiwan: [23.7, 120.96], Kyoto: [35.0116, 135.7681],
   Tokyo: [35.6762, 139.6503], Osaka: [34.6937, 135.5023], Kobe: [34.69, 135.1956],
-  Nara: [34.6851, 135.8048], Japan: [35.6, 138.0], Rome: [41.9028, 12.4964],
-  Florence: [43.7696, 11.2558], Venice: [45.4408, 12.3155], Milan: [45.4642, 9.19],
-  Italy: [42.5, 12.5], Bangkok: [13.7563, 100.5018], Thailand: [13.75, 100.5],
+  Nara: [34.6851, 135.8048], Kamakura: [35.3192, 139.5469], Fukuoka: [33.5902, 130.4017],
+  Japan: [35.6, 138.0], Rome: [41.9028, 12.4964], Florence: [43.7696, 11.2558],
+  Venice: [45.4408, 12.3155], Milan: [45.4642, 9.19], Napoli: [40.8518, 14.2681],
+  Vatican: [41.9029, 12.4534], Italy: [42.5, 12.5], Chiayi: [23.4801, 120.4491],
+  Bangkok: [13.7563, 100.5018], Thailand: [13.75, 100.5],
+}
+// Manual country/region fixes for reviews the address-based auto-classifier left
+// in the generic "<country> / <country>" bucket (matched by a substring of the
+// place name). Each → { country, region }; coords then follow the new region.
+const GEOFIX = [
+  ['Vatican Museums', 'Italy', 'Vatican'],
+  ['Saint Peter', 'Italy', 'Vatican'],          // Saint Peter’s Basilica — same trip
+  ['Ginza Kagari', 'Japan', 'Tokyo'],           // Narita Airport branch
+  ['Enoshima Koya', 'Japan', 'Kamakura'],
+  ['Giraffa Curry Pan', 'Japan', 'Kamakura'],
+  ['Tomoya Kamakura', 'Japan', 'Kamakura'],     // Tomoya Kamakura Komachi — clearly Kamakura
+  ['Wakamatsuya', 'Japan', 'Fukuoka'],
+  ['Yufu Mabushi', 'Japan', 'Fukuoka'],         // Yufuin (grouped under Fukuoka per Winnie)
+  ['Sole Mio', 'Italy', 'Napoli'],              // O’ Sole Mio Pizza & More
+  ['Duli Pizza', 'Taiwan', 'Chiayi'],
+  ['Chiayi City Historical', 'Taiwan', 'Chiayi'],
+  ['大麦小麦', 'Taiwan', 'Chiayi'],
+  ['Democracy Turkey', 'Taiwan', 'Chiayi'],
+  ['桃城豆花', 'Taiwan', 'Chiayi'],
+]
+const geofix = (place) => {
+  for (const [m, country, region] of GEOFIX) if (place && place.includes(m)) return { country, region }
+  return null
 }
 // per-store Google rating + review count scraped by scrape.mjs ({ [id]: {rating, reviews, title} })
 const storeRatings = fs.existsSync(path.join(OUT, 'store-ratings.json')) ? L('store-ratings.json') : {}
@@ -172,9 +233,17 @@ const jitter = (id) => { let h = 0; for (const c of id) h = (h * 31 + c.charCode
 const blurb = (t) => { const s = zhClean(t).replace(/^我是台灣.*?(到訪|來訪|份到訪)\s*/, ''); return s.slice(0, 22) }
 
 const reviews = parsed.map((r) => {
+  const fx = geofix(r.place)
+  const country = fx ? fx.country : r.country
+  let region = fx ? fx.region : r.region
+  // places that fell back to "<country>/<country>" couldn't be geolocated — they're
+  // gone from Maps (defunct). Label that bucket clearly instead of a vague repeat.
+  if (region === country) region = 'Permanently closed'
   let lat, lng
-  if (geo[r.id]) { lat = geo[r.id].lat; lng = geo[r.id].lng } else {
-    const c = CITY[r.region] || CITY[r.country] || CITY.Taiwan; const [dy, dx] = jitter(r.id)
+  // a manual fix re-homes the pin to the new region (the old geocode/fallback was
+  // for the wrong place); otherwise keep the real geocoded point when we have one
+  if (geo[r.id] && !fx) { lat = geo[r.id].lat; lng = geo[r.id].lng } else {
+    const c = CITY[region] || CITY[country] || CITY.Taiwan; const [dy, dx] = jitter(r.id)
     lat = c[0] + dy; lng = c[1] + dx
   }
   // only attach a deep-link when we have a real per-review permalink — a bare
@@ -182,8 +251,8 @@ const reviews = parsed.map((r) => {
   const url = URL_OVERRIDE[r.place] || reviewUrls[r.id] || null
   const gr = storeRatings[r.id] || {}
   return {
-    id: r.id, place: disp(r.place), category: fixCat(r.place, r.category), country: r.country,
-    region: r.region, rating: r.rating, date: r.date, blurb: blurb(r.text),
+    id: r.id, place: disp(r.place), category: fixCat(r.place, r.category), country,
+    region, rating: r.rating, date: r.date, blurb: blurb(r.text),
     photoCount: r.photoCount, lat: +lat.toFixed(5), lng: +lng.toFixed(5),
     googleRating: gr.rating ?? null, googleReviews: gr.reviews ?? null,
     ...(url ? { url } : {}),
@@ -195,43 +264,44 @@ const reviews = parsed.map((r) => {
 // off Maps by place-ratings.mjs (`npm run scrape:ratings` → place-ratings.json).
 const placeRatings = fs.existsSync(path.join(OUT, 'place-ratings.json')) ? L('place-ratings.json') : []
 const ratingByName = Object.fromEntries(placeRatings.map((p) => [p.name, p]))
-// [category, scrape-key (matches place-ratings.json .name), display name]
+// [category, scrape-key (matches place-ratings.json .name), display name, country]
+// country drives the flag shown before the name (see COUNTRY_META in src/lib.js).
 const FAV_LIST = [
-  ['Taiwanese & Chinese', '醇涎坊古早味鍋燒意麵', '醇涎坊 古早味鍋燒意麵'],
-  ['Taiwanese & Chinese', '秦味館', '秦味館 Qin Wei Guan'],
-  ['Taiwanese & Chinese', '犁園湯包館', '犁園湯包館 Li Yuan'],
-  ['Taiwanese & Chinese', '長白小館', '長白小館'],
-  ['Taiwanese & Chinese', '寶杏堂 手切滷肉飯 溫補羊肉湯', '寶杏堂 手切滷肉飯'],
-  ['Japanese', '肉料理荒川', '肉料理荒川 Arakawa'],
-  ['Japanese', '河村食堂', '河村食堂 Kawamura'],
-  ['Japanese', 'どろまみれ 四谷本店', 'どろまみれ 四谷本店'],
-  ['Japanese', '寶來軒', '寶來軒 Bao Lai Xuan'],
-  ['Japanese', '壽壽木 炸豬排', '壽壽木 とんかつ'],
-  ['Italian', '培皮諾小館', 'PEPPINO 培皮諾小館'],
-  ['Italian', 'Trattoria Zaza', 'Trattoria ZàZà'],
-  ['Italian', '千層吧', '千層吧 The Lasagna Bar'],
-  ['Italian', 'Ristorante "Dallo Zio" San Marco', 'Ristorante "Dallo Zio"'],
-  ['Italian', 'La Mole', 'La Mole'],
-  ['Dessert', 'VERO ~ Gelateria Cremeria', 'VERO Gelateria Cremeria'],
-  ['Dessert', 'Regoli Pasticceria', 'Regoli Pasticceria'],
-  ['Dessert', 'CREM 奶油甜點專賣店', 'CREM 奶油甜點'],
-  ['Dessert', '中村藤吉平等院店', '中村藤吉 平等院店'],
-  ['Dessert', 'David la Gelateria', 'David la Gelateria'],
-  ['Drinks', '坪林手', '坪林手 Pina tshiu'],
-  ['Drinks', '60+ Tea Shop 中山店', '60+ Tea Shop 中山店'],
-  ['Drinks', 'Karun Thai Tea Central wOrld ชาไทยการัน', 'Karun Thai Tea (CentralwOrld)'],
-  ['Drinks', 'Barista Ray', 'Barista Ray'],
-  ['Drinks', 'MILK SHOP LUCK 酪 秋葉原店 ミルクショップ酪 秋葉原店', 'Milk Shop 酪 (Akihabara)'],
-  ['Other', '印度料理 Mumbai', '印度料理 Mumbai 九段'],
-  ['Other', 'イタリアンバル 食堂チャコ', '食堂チャコ'],
-  ['Other', '通庵 熟成咖哩', '通庵 熟成咖哩'],
-  ['Other', '鐵 F.f 小餐廳 (無菜單1F)', '鐵 F.f 小餐廳'],
-  ['Other', 'HI MATE!', 'HI MATE!'],
+  ['Taiwanese & Chinese', '醇涎坊古早味鍋燒意麵', '醇涎坊 古早味鍋燒意麵', 'Taiwan'],
+  ['Taiwanese & Chinese', '秦味館', '秦味館 Qin Wei Guan', 'Taiwan'],
+  ['Taiwanese & Chinese', '犁園湯包館', '犁園湯包館 Li Yuan', 'Taiwan'],
+  ['Taiwanese & Chinese', '長白小館', '長白小館', 'Taiwan'],
+  ['Taiwanese & Chinese', '寶杏堂 手切滷肉飯 溫補羊肉湯', '寶杏堂 手切滷肉飯', 'Taiwan'],
+  ['Japanese', '肉料理荒川', '肉料理荒川 Arakawa', 'Japan'],
+  ['Japanese', '河村食堂', '河村食堂 Kawamura', 'Japan'],
+  ['Japanese', 'どろまみれ 四谷本店', 'どろまみれ 四谷本店', 'Japan'],
+  ['Japanese', '寶來軒', '寶來軒 Bao Lai Xuan', 'Taiwan'],
+  ['Japanese', '壽壽木 炸豬排', '壽壽木 とんかつ', 'Japan'],
+  ['Italian', '培皮諾小館', 'PEPPINO 培皮諾小館', 'Taiwan'],
+  ['Italian', 'Trattoria Zaza', 'Trattoria ZàZà', 'Italy'],
+  ['Italian', '千層吧', '千層吧 The Lasagna Bar', 'Taiwan'],
+  ['Italian', 'Ristorante "Dallo Zio" San Marco', 'Ristorante "Dallo Zio"', 'Italy'],
+  ['Italian', 'La Mole', 'La Mole', 'Taiwan'],
+  ['Dessert', 'VERO ~ Gelateria Cremeria', 'VERO Gelateria Cremeria', 'Italy'],
+  ['Dessert', 'Regoli Pasticceria', 'Regoli Pasticceria', 'Italy'],
+  ['Dessert', 'CREM 奶油甜點專賣店', 'CREM 奶油甜點', 'Taiwan'],
+  ['Dessert', '中村藤吉平等院店', '中村藤吉 平等院店', 'Japan'],
+  ['Dessert', 'David la Gelateria', 'David la Gelateria', 'Italy'],
+  ['Drinks', '坪林手', '坪林手 Pina tshiu', 'Taiwan'],
+  ['Drinks', '60+ Tea Shop 中山店', '60+ Tea Shop 中山店', 'Taiwan'],
+  ['Drinks', 'Karun Thai Tea Central wOrld ชาไทยการัน', 'Karun Thai Tea (CentralwOrld)', 'Thailand'],
+  ['Drinks', 'Barista Ray', 'Barista Ray', 'Taiwan'],
+  ['Drinks', 'MILK SHOP LUCK 酪 秋葉原店 ミルクショップ酪 秋葉原店', 'Milk Shop 酪 (Akihabara)', 'Japan'],
+  ['Other', 'MOKSHAA', 'MOKSHAA 莫夏印度餐廳 (大安)', 'Taiwan'],
+  ['Other', 'イタリアンバル 食堂チャコ', '食堂チャコ', 'Japan'],
+  ['Other', '通庵 熟成咖哩', '通庵 熟成咖哩', 'Taiwan'],
+  ['Other', '鐵 F.f 小餐廳 (無菜單1F)', '鐵 F.f 小餐廳 (1F無菜單)', 'Taiwan'],
+  ['Other', 'HI MATE!', 'HI MATE!', 'Taiwan'],
 ]
-const favorites = FAV_LIST.map(([category, key, display]) => {
+const favorites = FAV_LIST.map(([category, key, display, country]) => {
   const g = ratingByName[key] || {}
   if (g.rating == null) console.log(`   ⚠️  no Google rating for favorite: ${key}`)
-  return { category, name: display, googleRating: g.rating ?? null, googleReviews: g.reviews ?? null, url: g.matchedUrl || null }
+  return { category, name: display, country, googleRating: g.rating ?? null, googleReviews: g.reviews ?? null, url: g.matchedUrl || null }
 })
 
 // Prefer Google's own header count ("1,674 photos" = photos + videos) — it's the
@@ -269,8 +339,11 @@ const data = {
     totalReviews: parsed.length, ratingsOnly: 21, totalPhotoViews: photos.total || 9140043,
     totalReviewViews, photoCount, points: 16991, level: 8, dateFrom, dateTo,
     lastUpdated: '2026-06-04', isMockData: false,
+    // anchor for the live Total-Views counter: it grows from this build time at a
+    // realistic ~3.5k/day rate, stepping every 5 min (see TotalViews.jsx).
+    viewsAnchor: new Date().toISOString(),
   },
-  topPhotos: topPhotosOut, mostViewed, mostReacted, ownerReplies, reviews, favorites,
+  topPhotos: topPhotosOut, topVideos, mostViewed, mostReacted, ownerReplies, reviews, favorites,
 }
 
 fs.writeFileSync(path.join(SRC, 'data.json'), JSON.stringify(data, null, 2))

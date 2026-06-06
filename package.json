@@ -12,6 +12,7 @@
     "scrape:ratings": "node scraper/place-ratings.mjs",
     "scrape:ratings:all": "node scraper/store-ratings.mjs",
     "scrape:photos": "node scraper/photos.mjs",
+    "scrape:videoframes": "node scraper/video-frames.mjs",
     "parse": "node scraper/parse.mjs",
     "geocode": "node scraper/geocode.mjs",
     "resolve:coords": "node scraper/resolve-coords.mjs",

@@ -49,11 +49,12 @@ const PLACES = [
   { name: 'Karun Thai Tea Central wOrld ชาไทยการัน', category: 'Drinks', q: 'Karun Thai Tea CentralwOrld Bangkok' },
   { name: 'Barista Ray', category: 'Drinks', q: 'Barista Ray 台南' },
   { name: 'MILK SHOP LUCK 酪 秋葉原店 ミルクショップ酪 秋葉原店', category: 'Drinks', q: 'ミルクショップ酪 秋葉原店' },
-  // Other
-  { name: '印度料理 Mumbai', category: 'Other', q: '印度料理 Mumbai 九段 東京' },
+  // Other — `url` (a place share link) is used directly when search by name would
+  // hit the wrong branch; otherwise `q` is searched.
+  { name: 'MOKSHAA', category: 'Other', url: 'https://maps.app.goo.gl/xhqPTzG9SoeHQSik8' },
   { name: 'イタリアンバル 食堂チャコ', category: 'Other', q: 'イタリアンバル 食堂チャコ 大阪' },
   { name: '通庵 熟成咖哩', category: 'Other', q: '通庵 熟成咖哩 台北' },
-  { name: '鐵 F.f 小餐廳 (無菜單1F)', category: 'Other', q: '鐵 F.f 小餐廳 台中' },
+  { name: '鐵 F.f 小餐廳 (無菜單1F)', category: 'Other', url: 'https://maps.app.goo.gl/c81VEZxJMVmUq8Db9' },
   { name: 'HI MATE!', category: 'Other', q: 'HI MATE! 台北' },
 ]
 
@@ -132,7 +133,8 @@ await page.bringToFront()
 const out = []
 for (let i = 0; i < PLACES.length; i++) {
   const p = PLACES[i]
-  const url = `https://www.google.com/maps/search/${encodeURIComponent(p.q)}?hl=en`
+  // direct place link if given (avoids wrong-branch matches), else a name search
+  const url = p.url || `https://www.google.com/maps/search/${encodeURIComponent(p.q)}?hl=en`
   let rec = { name: p.name, category: p.category, rating: null, reviews: null, title: null, matchedUrl: null }
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded' })
@@ -141,7 +143,7 @@ for (let i = 0; i < PLACES.length; i++) {
     await page.waitForTimeout(1500)
 
     // If we landed on a results LIST (no place panel yet), click the first card.
-    if (!(await page.locator('.F7nice').count().catch(() => 0))) {
+    if (!p.url && !(await page.locator('.F7nice').count().catch(() => 0))) {
       const first = page.locator('[role="article"]').first()
       if (await first.count().catch(() => 0)) {
         await first.click({ timeout: 4000 }).catch(() => {})

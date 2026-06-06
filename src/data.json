@@ -16,7 +16,8 @@
     "dateFrom": "2018-06",
     "dateTo": "2026-06",
     "lastUpdated": "2026-06-04",
-    "isMockData": false
+    "isMockData": false,
+    "viewsAnchor": "2026-06-06T17:27:11.769Z"
   },
   "topPhotos": [
     {
@@ -45,69 +46,145 @@
     },
     {
       "id": "ph4",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOslLF-9ZkGpQCUfrzaPfUW4urLWVF_mCAILlxCQckzaSWgaS0-PNJ6NZ5TCLtW-GR4EWeTWCovnk1JV9Mv1CJEl02si7tRPEy_PJAXk3BvP26gO5RaoBYhqKmOUng_-iTYeRwH0Kx1TN_z9=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOslLF-9ZkGpQCUfrzaPfUW4urLWVF_mCAILlxCQckzaSWgaS0-PNJ6NZ5TCLtW-GR4EWeTWCovnk1JV9Mv1CJEl02si7tRPEy_PJAXk3BvP26gO5RaoBYhqKmOUng_-iTYeRwH0Kx1TN_z9=w1600",
-      "views": 79701
-    },
-    {
-      "id": "ph5",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOugr84pxiUov0iRR-Z63WSIivDvGWlUuAPI4XP6wQhbItO3VjhAFdLnBw1DNRCgM3qaUXC3ZNtAh22usNT4G7sd-27aT1Qlyh5FrKwWPinfqr1g_wYZZyDHIe4vKaUILPtnetBqK9kAxJpv=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOugr84pxiUov0iRR-Z63WSIivDvGWlUuAPI4XP6wQhbItO3VjhAFdLnBw1DNRCgM3qaUXC3ZNtAh22usNT4G7sd-27aT1Qlyh5FrKwWPinfqr1g_wYZZyDHIe4vKaUILPtnetBqK9kAxJpv=w1600",
       "views": 72939
     },
     {
-      "id": "ph6",
+      "id": "ph5",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsOKtzj_4cwU_jpr1DdeX3mIFnQ3lgBo7HkJ_YKwKDVajSnQUDOSBJmWl1nSupU7lzts4xN61GHUS83CCVW4C41wxAodqJ96sXoHWB3kib9qMUWS5qFfOXz-34wSEdHElMQGBILFw=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsOKtzj_4cwU_jpr1DdeX3mIFnQ3lgBo7HkJ_YKwKDVajSnQUDOSBJmWl1nSupU7lzts4xN61GHUS83CCVW4C41wxAodqJ96sXoHWB3kib9qMUWS5qFfOXz-34wSEdHElMQGBILFw=w1600",
       "views": 62588
     },
     {
-      "id": "ph7",
+      "id": "ph6",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtHQFQFcMamq63Aa7CNHY0-LqIYoErIpGbAHj0HZfJOvkvb1fNmB4ZPyZ7s0lrNptc6rms9lLymAhyYatIte4HcxAROq4lQM9VnNlWR6en5lvPlvwsuD34NFEmBiuAWoGv1fVY=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtHQFQFcMamq63Aa7CNHY0-LqIYoErIpGbAHj0HZfJOvkvb1fNmB4ZPyZ7s0lrNptc6rms9lLymAhyYatIte4HcxAROq4lQM9VnNlWR6en5lvPlvwsuD34NFEmBiuAWoGv1fVY=w1600",
       "views": 57889
     },
     {
-      "id": "ph8",
+      "id": "ph7",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsiScCOp68M8WFCa0nfIlGhYS-yocVrvxnQdCo6cQ9vv0veuuXQP3BgK8SGayF550d4F_W88N5Q4T9Ih7hLyvPaN4liHguqJBznXzD7Ltcee_zXRXUNylx80MXu-sfBn0PieGoWcGAU8DRz=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsiScCOp68M8WFCa0nfIlGhYS-yocVrvxnQdCo6cQ9vv0veuuXQP3BgK8SGayF550d4F_W88N5Q4T9Ih7hLyvPaN4liHguqJBznXzD7Ltcee_zXRXUNylx80MXu-sfBn0PieGoWcGAU8DRz=w1600",
       "views": 55150
     },
     {
-      "id": "ph9",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuNhG_9Q7LAbrRR7w5LLHKyJrQ8JQptYWoZstdzttksgoAWeaUR7dpxLfmStd1sKcAVkz74EtrYyrNqfqdW-8JcXOX-5vXGXE3MnuoDh5buhlEdelk0bKvvYYuLRxlsqK0WKp3x=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuNhG_9Q7LAbrRR7w5LLHKyJrQ8JQptYWoZstdzttksgoAWeaUR7dpxLfmStd1sKcAVkz74EtrYyrNqfqdW-8JcXOX-5vXGXE3MnuoDh5buhlEdelk0bKvvYYuLRxlsqK0WKp3x=w1600",
-      "views": 54597
-    },
-    {
-      "id": "ph10",
+      "id": "ph8",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOt0CiVKdFQAmPCzYBWpyi-35LNONopuy6wPdIYnhvKN-poIunHc6PvWOP_F1NQXneA2IZnqmbUuZ7vQjRs4BcvPzaOy6S57uuWcf0iJCl2UoDsmbzXP01DdSvYFqL2cyk2HBz07Vw=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOt0CiVKdFQAmPCzYBWpyi-35LNONopuy6wPdIYnhvKN-poIunHc6PvWOP_F1NQXneA2IZnqmbUuZ7vQjRs4BcvPzaOy6S57uuWcf0iJCl2UoDsmbzXP01DdSvYFqL2cyk2HBz07Vw=w1600",
       "views": 49751
     },
     {
-      "id": "ph11",
+      "id": "ph9",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvrvz-Tl-wCuGoXDJzrpoC_66yzYnd2I6NDX5tf3GUAkCp-PNZAgOcERzsOhdXOn4CYuddsswNRa_STzxl_MSsQAFatu5WEPDmBjictaTo4aOTJ4Eq-QjqglwWE9XiRh-jvwWgbkvt-cWA=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvrvz-Tl-wCuGoXDJzrpoC_66yzYnd2I6NDX5tf3GUAkCp-PNZAgOcERzsOhdXOn4CYuddsswNRa_STzxl_MSsQAFatu5WEPDmBjictaTo4aOTJ4Eq-QjqglwWE9XiRh-jvwWgbkvt-cWA=w1600",
       "views": 45580
     },
     {
-      "id": "ph12",
+      "id": "ph10",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOt-VtCdqOnXVbgYVJ73c1cu1dVEbbJTCMXh7dUZAWFImWsrY_1BR1AyE9hcV0mwmEHaRsqh7TXqoFkTSherjJo4RohAXmHs9DgBzNkzEJpEbS0cJ0FxifL1GtN8qe-gqMpY7gonEXfN-G4O=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOt-VtCdqOnXVbgYVJ73c1cu1dVEbbJTCMXh7dUZAWFImWsrY_1BR1AyE9hcV0mwmEHaRsqh7TXqoFkTSherjJo4RohAXmHs9DgBzNkzEJpEbS0cJ0FxifL1GtN8qe-gqMpY7gonEXfN-G4O=w1600",
       "views": 44005
     },
     {
-      "id": "ph13",
+      "id": "ph11",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuB-sBTKfnFPQIoGNC5xf5u006GThlGEMFI0vMlPbOzt7oU8pypRutwkuLxsnZteSKTvid07rLnYoo1pCykcUDFci0DNPSumBKx0ui1KY3lfvCGKJF2SZPYOZw0Hk_nBWaQZ8FqQBzrTk16=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuB-sBTKfnFPQIoGNC5xf5u006GThlGEMFI0vMlPbOzt7oU8pypRutwkuLxsnZteSKTvid07rLnYoo1pCykcUDFci0DNPSumBKx0ui1KY3lfvCGKJF2SZPYOZw0Hk_nBWaQZ8FqQBzrTk16=w1600",
       "views": 42560
     },
     {
-      "id": "ph14",
+      "id": "ph12",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsV7SsDfmizgdggH_k0h9SR7sACSNdDOWlYc8qeBzVMPZ-EDGSjiExFfvefe4l05cJWZRzpuLrlzbHf6LyUBOLKMpE0BuP8WxnmX1g3ymGDHQy8gHwOazOrLA49Sfjj5wKZxP2g=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsV7SsDfmizgdggH_k0h9SR7sACSNdDOWlYc8qeBzVMPZ-EDGSjiExFfvefe4l05cJWZRzpuLrlzbHf6LyUBOLKMpE0BuP8WxnmX1g3ymGDHQy8gHwOazOrLA49Sfjj5wKZxP2g=w1600",
       "views": 41956
+    },
+    {
+      "id": "ph13",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtutIY6xsz8hoBjOhAPmHKfojC6uaLhCLVH5Ft7nvxyJ3i8RiL83RbY8ryCXKt3hu-W12O3FzNrP1B6rI-RT-QnUhPSySKD831ks48I5db2jr2bRtDvAsZonVqYnXQYwn7zFDWNQ0o9FkU=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtutIY6xsz8hoBjOhAPmHKfojC6uaLhCLVH5Ft7nvxyJ3i8RiL83RbY8ryCXKt3hu-W12O3FzNrP1B6rI-RT-QnUhPSySKD831ks48I5db2jr2bRtDvAsZonVqYnXQYwn7zFDWNQ0o9FkU=w1600",
+      "views": 39600
+    },
+    {
+      "id": "ph14",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOs1sfumKeKq8gNLM0nptHpe4wIKsl93bJ77y7aUzhHUZWBM44devSkPIXKSS-QS6kRCIIQwKmTJk0BIEGg6ZNeAXi-xR8o63uV-NyMfHpti70fk67lo10fmbn2wY3-dqJ9k7Mcr=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOs1sfumKeKq8gNLM0nptHpe4wIKsl93bJ77y7aUzhHUZWBM44devSkPIXKSS-QS6kRCIIQwKmTJk0BIEGg6ZNeAXi-xR8o63uV-NyMfHpti70fk67lo10fmbn2wY3-dqJ9k7Mcr=w1600",
+      "views": 39516
+    },
+    {
+      "id": "ph15",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtziyPoiijababQ8N3JbjCy4fiM8we3qAyRkykqJ5eubjQlTKtXUYQb_vdeNb_PEqc3W0Ua3He6czzHkglzBSuQNqGFjfy3HH8szLm5x2QQ41gvKCbDWtUZixe4b3VhK7BAjvzEwxr_lgIe=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtziyPoiijababQ8N3JbjCy4fiM8we3qAyRkykqJ5eubjQlTKtXUYQb_vdeNb_PEqc3W0Ua3He6czzHkglzBSuQNqGFjfy3HH8szLm5x2QQ41gvKCbDWtUZixe4b3VhK7BAjvzEwxr_lgIe=w1600",
+      "views": 39029
+    },
+    {
+      "id": "ph16",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsFL9m9krHwrZqhIeqeH4JNr0F62kmtVx1rbtQ4-LEEwCV1FuUgfnLfjT-vKntDIJfztq9B2e-mZ6uA8KkH_LqbZFQNWpPHi8K7eL5zohUdizOaC_RaVnJyLOoCqiwBHb__d9Xg=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsFL9m9krHwrZqhIeqeH4JNr0F62kmtVx1rbtQ4-LEEwCV1FuUgfnLfjT-vKntDIJfztq9B2e-mZ6uA8KkH_LqbZFQNWpPHi8K7eL5zohUdizOaC_RaVnJyLOoCqiwBHb__d9Xg=w1600",
+      "views": 38737
+    },
+    {
+      "id": "ph17",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvCaJdxa3XsU-Q19e4TyZmL_5MDTDZz_dp-WUNH3IiJa0L9zN0eiN_zegt0ywVxjnYOGO-Lx1jbeNwfsAmqrpmIpCzlcwYLNM1hix83mghCyex-y1EuDjI0m3tahKS9nGVlVVSr=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvCaJdxa3XsU-Q19e4TyZmL_5MDTDZz_dp-WUNH3IiJa0L9zN0eiN_zegt0ywVxjnYOGO-Lx1jbeNwfsAmqrpmIpCzlcwYLNM1hix83mghCyex-y1EuDjI0m3tahKS9nGVlVVSr=w1600",
+      "views": 37381
+    }
+  ],
+  "topVideos": [
+    {
+      "id": "vid0",
+      "place": "田中雞卵",
+      "views": 193706,
+      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn1fonBXWFhYazON79mT30kI0tJ68W-Ut0ddPE6qzxv813GQU3Ob9bMKAZCtUl0peYMScih0f0RBeTv5x-bRmcM5F0hefw-0tDU8VhdpOQaXZYcsglzBYeEO-27mPIaK5qtoD4_o4g=w600",
+      "link": "https://maps.app.goo.gl/tCnWNtfzkVZVfWSB8"
+    },
+    {
+      "id": "vid1",
+      "place": "Patisserie TEN& · counter",
+      "views": 158291,
+      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn05ccse7NumrYrQ0Yu3D2IHqv7Kfu-rmO7zpWPveigbL_sxgBfjZ72DodZHI-FIZGVNcr8DV3ZsWHuVau8wvmlAIBCyBOfxSaHoZmUDSrM8QsMUV3SxZeMHc2iOEM-uh9llVH9S=w600",
+      "link": "https://maps.app.goo.gl/A4b15Z4hWHRcDViZ8"
+    },
+    {
+      "id": "vid2",
+      "place": "瑪黑家紅茶 Marais",
+      "views": 151584,
+      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn3xb6FSpHNf-NAfqudD0CiPckUJ01XE8fFKznRYUgsVlOcYdFyAFksxQub77K08Ol4oVTgrfllNcqe9lDtghdlbtLF8vj4XX7rq7UBCGdcKw04g2QclrzlI0lIKvtgvLHq7tw2o=w600",
+      "link": "https://maps.app.goo.gl/opAD5Ca5XFnuAt3z5"
+    },
+    {
+      "id": "vid3",
+      "place": "長白小館",
+      "views": 107482,
+      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn0ONuucyQW926v6xu-Iwk1zTp_YJPgXjb6wWs3qHni-QsHZ8wzylmLRpDVULdrFXknLQVelZHMUH-IKgIIQHrI6nwAzxNrlEIV7hcilnR_E_TKQJfnEQZy-CHHOTPMfRjS5J6fx=w600",
+      "link": "https://maps.app.goo.gl/VPnwiw634j3TwWzT6"
+    },
+    {
+      "id": "vid4",
+      "place": "Pu-Jei 葡吉 · the queue",
+      "views": 102199,
+      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn0MsqAosxbFL-VKHiktPV2nPIYI_4cpjUlwH1W1An-9s10Noabyudq4A2E0N5McJPddqgyg19_af7BdqpKCQfFBmQz36mS6gXKpnLN1Oqv0Rwpg4pXZ0Pk20QJpb3xUY1Ohvn8Umg=w600",
+      "link": "https://maps.app.goo.gl/JFf8VLwvZoB1fDdE9"
+    },
+    {
+      "id": "vid5",
+      "place": "Pu-Jei 葡吉 · the sign",
+      "views": 93540,
+      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn0i9EuRUx1mfBBCvii6S-aHC8_LTVOnhy4iuJvoSqC4TvsMcOA94Aq-YYUUBt9_wF0rdhGdckIA-ACfX1Dwdf95cD89XY6WFGNqxpDNfZsS7-LP7DQevl-EKr4y_vOk3fX6id2o=w600",
+      "link": "https://maps.app.goo.gl/v1HraqCjJgR9t1Uc6"
+    },
+    {
+      "id": "vid6",
+      "place": "La Mole Taipei",
+      "views": 55356,
+      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn2lBKQP94HEhGntdCmoN5V8pfpR1BxdkWPr-qWM_N4G984CxjiFVq1r8czraDsNipJiAJ6UlbCSx5pXOMQW7G-F5ijuFUo45fYWVbmvOWlYlgP5ESQgeR60w1BSLpWO0tn0KvkH=w600",
+      "link": "https://maps.app.goo.gl/xgiPmsA5Qw1QfEE16"
+    },
+    {
+      "id": "vid7",
+      "place": "Patisserie TEN& · how to find it",
+      "views": 41556,
+      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn3BBPn-OAcjhttj6hZBH0nHPubwM4sV5Xpaqbv-YIMKO5bwV9m28sOzZZOq-WtlNIkVHhSOtMgy5FZecSlGMnuygYebHSyZ1x-a6gIGJil1jHnoIWanhCJXrDXvxusoP8I7SoUPgg=w600",
+      "link": "https://maps.app.goo.gl/MP8qk1A51KipQodw5"
     }
   ],
   "mostViewed": [
@@ -1041,14 +1118,14 @@
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21SQ1IyUmtNVFZaVTFkVGFVWkdhRVpaYlRCUWEwRRAB",
       "place": "Saint Peter’s Basilica",
       "category": "Attraction",
-      "country": "Taiwan",
-      "region": "Taiwan",
+      "country": "Italy",
+      "region": "Vatican",
       "rating": 5,
       "date": "2026-04-04",
       "blurb": "🎫12/14線上買了2/24的梵蒂岡博物館",
       "photoCount": 1,
-      "lat": 41.90217,
-      "lng": 12.45394,
+      "lat": 41.92106,
+      "lng": 12.39952,
       "googleRating": 4.8,
       "googleReviews": 177638,
       "url": "https://maps.app.goo.gl/3DiPSpemyEGSeJRx8"
@@ -1057,14 +1134,14 @@
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2kxcmEzSTJibUpwUVV0U2NUQllWRTlQTkRNdFptYxAB",
       "place": "Vatican Museums",
       "category": "Attraction",
-      "country": "Taiwan",
-      "region": "Taiwan",
+      "country": "Italy",
+      "region": "Vatican",
       "rating": 5,
       "date": "2026-04-04",
       "blurb": "⏰早上7:30爬聖彼得（無預約）、線上買票預",
       "photoCount": 3,
-      "lat": 41.90649,
-      "lng": 12.45364,
+      "lat": 41.89378,
+      "lng": 12.47112,
       "googleRating": 4.6,
       "googleReviews": 204708,
       "url": "https://maps.app.goo.gl/4N5TEfAxwhPZub3W6"
@@ -1410,13 +1487,13 @@
       "place": "O’ Sole Mio Pizza & More",
       "category": "Italian",
       "country": "Italy",
-      "region": "Italy",
+      "region": "Napoli",
       "rating": 5,
       "date": "2026-03-05",
       "blurb": "離拿波里火車站走路3分鐘內就可以到的披薩店\ud83c",
       "photoCount": 1,
-      "lat": 40.85318,
-      "lng": 14.27031,
+      "lat": 40.84568,
+      "lng": 14.22746,
       "googleRating": 4.8,
       "googleReviews": 256,
       "url": "https://maps.app.goo.gl/gHzzWmh47u8epkvM9"
@@ -3921,13 +3998,13 @@
       "place": "桃城豆花-光華路",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Chiayi",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "豆花&優格都值得一吃！！ 😍豆花：還蠻綿密",
       "photoCount": 3,
-      "lat": 23.47802,
-      "lng": 120.453,
+      "lat": 23.48194,
+      "lng": 120.41758,
       "googleRating": 4.3,
       "googleReviews": 2157,
       "url": "https://maps.app.goo.gl/NJFDmEEyzcKLqPjn9"
@@ -4129,13 +4206,13 @@
       "place": "Tomoya Kamakura Komachi",
       "category": "Japanese",
       "country": "Japan",
-      "region": "Japan",
+      "region": "Kamakura",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "類似台灣的車輪餅那樣，每一種口味有對應的運勢",
       "photoCount": 4,
-      "lat": 35.32275,
-      "lng": 139.55304,
+      "lat": 35.31836,
+      "lng": 139.56006,
       "googleRating": 4.1,
       "googleReviews": 345,
       "url": "https://maps.app.goo.gl/JoQUmHXJDmqvA6YZ8"
@@ -4145,13 +4222,13 @@
       "place": "Giraffa Curry Pan",
       "category": "Italian",
       "country": "Japan",
-      "region": "Japan",
+      "region": "Kamakura",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "各大網紅推薦的咖哩麵包，真的不錯🧡 在小町",
       "photoCount": 4,
-      "lat": 35.32059,
-      "lng": 139.55182,
+      "lat": 35.31736,
+      "lng": 139.50662,
       "googleRating": 4.3,
       "googleReviews": 705,
       "url": "https://maps.app.goo.gl/JTbsuF6nhm4qKfrR7"
@@ -4161,13 +4238,13 @@
       "place": "Enoshima Koya",
       "category": "Japanese",
       "country": "Japan",
-      "region": "Japan",
+      "region": "Kamakura",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "看老辣妹推薦來的，很讚的海鮮料理店！ 一月中",
       "photoCount": 1,
-      "lat": 35.30767,
-      "lng": 139.48254,
+      "lat": 35.33208,
+      "lng": 139.48934,
       "googleRating": 4.3,
       "googleReviews": 2481,
       "url": "https://maps.app.goo.gl/ZrjbdNCgr2w46k7UA"
@@ -4193,13 +4270,13 @@
       "place": "Ginza Kagari (Narita Airport)",
       "category": "Japanese",
       "country": "Japan",
-      "region": "Japan",
+      "region": "Tokyo",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "位在二航廈，所有檢查之後、登機之前的food",
       "photoCount": 4,
-      "lat": 35.77372,
-      "lng": 140.38999,
+      "lat": 35.68936,
+      "lng": 139.66338,
       "googleRating": 4.2,
       "googleReviews": 444,
       "url": "https://maps.app.goo.gl/4to12ZrQUkAe4RnJ9"
@@ -4289,13 +4366,13 @@
       "place": "Democracy Turkey Rice",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Chiayi",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "實惠好吃！ 火雞飯的炸油蔥真的非常香，很下飯",
       "photoCount": 3,
-      "lat": 23.47661,
-      "lng": 120.45743,
+      "lat": 23.46122,
+      "lng": 120.41362,
       "googleRating": 4.2,
       "googleReviews": 12332,
       "url": "https://maps.app.goo.gl/CQQo2RJvChANiMkD7"
@@ -4305,13 +4382,13 @@
       "place": "大麦小麦日式酒食（公休及模式詳見IG）",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Chiayi",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "非常棒！！飲料跟烤串都非常優雅細緻的一間店，",
       "photoCount": 1,
-      "lat": 23.47737,
-      "lng": 120.45937,
+      "lat": 23.48766,
+      "lng": 120.4459,
       "googleRating": 4.7,
       "googleReviews": 100,
       "url": "https://maps.app.goo.gl/75VoyfEnCbzPkqUz9"
@@ -4321,13 +4398,13 @@
       "place": "Chiayi City Historical Relic Museum",
       "category": "Attraction",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Chiayi",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "意外地可以逛很久的地方，2小時沒有問題，整個",
       "photoCount": 4,
-      "lat": 23.48109,
-      "lng": 120.46751,
+      "lat": 23.48806,
+      "lng": 120.4403,
       "googleRating": 4.3,
       "googleReviews": 5797,
       "url": "https://maps.app.goo.gl/isWnXzT9CShrnx3o7"
@@ -4337,13 +4414,13 @@
       "place": "獨立披薩 Duli Pizza (不提供訂位）",
       "category": "Italian",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Chiayi",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "Google maps上隨便點點看到的好店，",
       "photoCount": 4,
-      "lat": 23.48419,
-      "lng": 120.46223,
+      "lat": 23.49782,
+      "lng": 120.43522,
       "googleRating": 4.8,
       "googleReviews": 174,
       "url": "https://maps.app.goo.gl/2322n6mRRwLSKk1v9"
@@ -4897,7 +4974,7 @@
       "place": "",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Permanently closed",
       "rating": 5,
       "date": "2024-06-03",
       "blurb": "人極多，但南北館加起來混一天不是問題，很大很",
@@ -5853,7 +5930,7 @@
       "place": "",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Permanently closed",
       "rating": 5,
       "date": "2022-06-04",
       "blurb": "仙草凍鮮奶很好喝！仙草凍量滿多的～ 而且是老",
@@ -6265,7 +6342,7 @@
       "place": "",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Permanently closed",
       "rating": 5,
       "date": "2019-06-05",
       "blurb": "",
@@ -6356,13 +6433,13 @@
       "place": "Wakamatsuya",
       "category": "Japanese",
       "country": "Japan",
-      "region": "Japan",
+      "region": "Fukuoka",
       "rating": 5,
       "date": "2019-06-05",
       "blurb": "",
       "photoCount": 0,
-      "lat": 35.61984,
-      "lng": 137.94448,
+      "lat": 33.61004,
+      "lng": 130.34618,
       "googleRating": null,
       "googleReviews": null
     },
@@ -6371,13 +6448,13 @@
       "place": "Yufu Mabushi \"Shin\" Yufuin Ekimae Branch",
       "category": "Japanese",
       "country": "Japan",
-      "region": "Japan",
+      "region": "Fukuoka",
       "rating": 5,
       "date": "2019-06-05",
       "blurb": "",
       "photoCount": 0,
-      "lat": 35.61392,
-      "lng": 138.0184,
+      "lat": 33.60412,
+      "lng": 130.4201,
       "googleRating": null,
       "googleReviews": null
     },
@@ -6386,7 +6463,7 @@
       "place": "流口水異式料理",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Permanently closed",
       "rating": 5,
       "date": "2019-06-05",
       "blurb": "",
@@ -6401,7 +6478,7 @@
       "place": "",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Permanently closed",
       "rating": 5,
       "date": "2019-06-05",
       "blurb": "咖哩豬排份量很足、咖哩超下飯，有沙拉有湯飯飲",
@@ -6432,7 +6509,7 @@
       "place": "",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
-      "region": "Taiwan",
+      "region": "Permanently closed",
       "rating": 5,
       "date": "2019-06-05",
       "blurb": "",
@@ -6479,6 +6556,7 @@
     {
       "category": "Taiwanese & Chinese",
       "name": "醇涎坊 古早味鍋燒意麵",
+      "country": "Taiwan",
       "googleRating": 4.2,
       "googleReviews": 6764,
       "url": "https://www.google.com/maps/search/%E9%86%87%E6%B6%8E%E5%9D%8A%E5%8F%A4%E6%97%A9%E5%91%B3%E9%8D%8B%E7%87%92%E6%84%8F%E9%BA%B5%20%E5%8F%B0%E5%8D%97?hl=en"
@@ -6486,6 +6564,7 @@
     {
       "category": "Taiwanese & Chinese",
       "name": "秦味館 Qin Wei Guan",
+      "country": "Taiwan",
       "googleRating": 4.6,
       "googleReviews": 3958,
       "url": "https://www.google.com/maps/search/%E7%A7%A6%E5%91%B3%E9%A4%A8%20%E5%8F%B0%E5%8C%97?hl=en"
@@ -6493,6 +6572,7 @@
     {
       "category": "Taiwanese & Chinese",
       "name": "犁園湯包館 Li Yuan",
+      "country": "Taiwan",
       "googleRating": 4.2,
       "googleReviews": 3935,
       "url": "https://www.google.com/maps/search/%E7%8A%81%E5%9C%92%E6%B9%AF%E5%8C%85%E9%A4%A8%20%E5%8F%B0%E5%8C%97?hl=en"
@@ -6500,6 +6580,7 @@
     {
       "category": "Taiwanese & Chinese",
       "name": "長白小館",
+      "country": "Taiwan",
       "googleRating": 4.2,
       "googleReviews": 1730,
       "url": "https://www.google.com/maps/search/%E9%95%B7%E7%99%BD%E5%B0%8F%E9%A4%A8%20%E5%8F%B0%E5%8C%97?hl=en"
@@ -6507,6 +6588,7 @@
     {
       "category": "Taiwanese & Chinese",
       "name": "寶杏堂 手切滷肉飯",
+      "country": "Taiwan",
       "googleRating": 4.5,
       "googleReviews": 990,
       "url": "https://www.google.com/maps/search/%E5%AF%B6%E6%9D%8F%E5%A0%82%20%E6%89%8B%E5%88%87%E6%BB%B7%E8%82%89%E9%A3%AF%20%E6%BA%AB%E8%A3%9C%E7%BE%8A%E8%82%89%E6%B9%AF%20%E5%8F%B0%E5%8C%97?hl=en"
@@ -6514,6 +6596,7 @@
     {
       "category": "Japanese",
       "name": "肉料理荒川 Arakawa",
+      "country": "Japan",
       "googleRating": 4.8,
       "googleReviews": 680,
       "url": "https://www.google.com/maps/search/%E8%82%89%E6%96%99%E7%90%86%E8%8D%92%E5%B7%9D%20%E4%BA%AC%E9%83%BD?hl=en"
@@ -6521,6 +6604,7 @@
     {
       "category": "Japanese",
       "name": "河村食堂 Kawamura",
+      "country": "Japan",
       "googleRating": 4.4,
       "googleReviews": 354,
       "url": "https://www.google.com/maps/search/%E6%B2%B3%E6%9D%91%E9%A3%9F%E5%A0%82%20%E4%BA%AC%E9%83%BD?hl=en"
@@ -6528,6 +6612,7 @@
     {
       "category": "Japanese",
       "name": "どろまみれ 四谷本店",
+      "country": "Japan",
       "googleRating": 4.4,
       "googleReviews": 497,
       "url": "https://www.google.com/maps/search/%E3%81%A9%E3%82%8D%E3%81%BE%E3%81%BF%E3%82%8C%20%E5%9B%9B%E8%B0%B7%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC?hl=en"
@@ -6535,6 +6620,7 @@
     {
       "category": "Japanese",
       "name": "寶來軒 Bao Lai Xuan",
+      "country": "Taiwan",
       "googleRating": 4.5,
       "googleReviews": 3305,
       "url": "https://www.google.com/maps/search/%E5%AF%B6%E4%BE%86%E8%BB%92%20%E5%8F%B0%E5%8D%97?hl=en"
@@ -6542,6 +6628,7 @@
     {
       "category": "Japanese",
       "name": "壽壽木 とんかつ",
+      "country": "Japan",
       "googleRating": 4.5,
       "googleReviews": 1504,
       "url": "https://www.google.com/maps/search/%E3%81%99%E3%81%9A%E3%81%8D%20%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%20%E6%9D%B1%E4%BA%AC?hl=en"
@@ -6549,6 +6636,7 @@
     {
       "category": "Italian",
       "name": "PEPPINO 培皮諾小館",
+      "country": "Taiwan",
       "googleRating": 4.6,
       "googleReviews": 1701,
       "url": "https://www.google.com/maps/search/%E5%9F%B9%E7%9A%AE%E8%AB%BE%E5%B0%8F%E9%A4%A8%20Peppino%20%E5%8F%B0%E5%8C%97?hl=en"
@@ -6556,6 +6644,7 @@
     {
       "category": "Italian",
       "name": "Trattoria ZàZà",
+      "country": "Italy",
       "googleRating": 4.5,
       "googleReviews": 32974,
       "url": "https://www.google.com/maps/search/Trattoria%20ZaZa%20Firenze?hl=en"
@@ -6563,6 +6652,7 @@
     {
       "category": "Italian",
       "name": "千層吧 The Lasagna Bar",
+      "country": "Taiwan",
       "googleRating": 4.6,
       "googleReviews": 801,
       "url": "https://www.google.com/maps/place/The+Lasagna+Bar/@25.0569869,121.5257525,14z/data=!4m10!1m2!2m1!1z5Y2D5bGk5ZCnIOWPsOWMlw!3m6!1s0x3442abee50fd1aab:0xf81ec21a7a67dcc3!8m2!3d25.0569869!4d121.5618014!15sChDljYPlsaTlkKcg5Y-w5YyXWhQiEuWNgyDlsaQg5ZCnIOWPsOWMl5IBEml0YWxpYW5fcmVzdGF1cmFudOABAA!16s%2Fg%2F11mb22bh61?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
@@ -6570,6 +6660,7 @@
     {
       "category": "Italian",
       "name": "Ristorante \"Dallo Zio\"",
+      "country": "Italy",
       "googleRating": 4.5,
       "googleReviews": 2260,
       "url": "https://www.google.com/maps/search/Ristorante%20Dallo%20Zio%20San%20Marco%20Venezia?hl=en"
@@ -6577,6 +6668,7 @@
     {
       "category": "Italian",
       "name": "La Mole",
+      "country": "Taiwan",
       "googleRating": 4.6,
       "googleReviews": 1233,
       "url": "https://www.google.com/maps/search/La%20Mole%20%E5%8F%B0%E5%8C%97?hl=en"
@@ -6584,6 +6676,7 @@
     {
       "category": "Dessert",
       "name": "VERO Gelateria Cremeria",
+      "country": "Italy",
       "googleRating": 4.7,
       "googleReviews": 3127,
       "url": "https://www.google.com/maps/search/VERO%20Gelateria%20Cremeria%20Milano?hl=en"
@@ -6591,6 +6684,7 @@
     {
       "category": "Dessert",
       "name": "Regoli Pasticceria",
+      "country": "Italy",
       "googleRating": 4.5,
       "googleReviews": 6303,
       "url": "https://www.google.com/maps/search/Regoli%20Pasticceria%20Roma?hl=en"
@@ -6598,6 +6692,7 @@
     {
       "category": "Dessert",
       "name": "CREM 奶油甜點",
+      "country": "Taiwan",
       "googleRating": 4.8,
       "googleReviews": 251,
       "url": "https://www.google.com/maps/search/CREM%20%E5%A5%B6%E6%B2%B9%E7%94%9C%E9%BB%9E%E5%B0%88%E8%B3%A3%E5%BA%97%20%E5%8F%B0%E5%8C%97?hl=en"
@@ -6605,6 +6700,7 @@
     {
       "category": "Dessert",
       "name": "中村藤吉 平等院店",
+      "country": "Japan",
       "googleRating": 4.3,
       "googleReviews": 2275,
       "url": "https://www.google.com/maps/search/%E4%B8%AD%E6%9D%91%E8%97%A4%E5%90%89%20%E5%B9%B3%E7%AD%89%E9%99%A2%E5%BA%97%20%E5%AE%87%E6%B2%BB?hl=en"
@@ -6612,6 +6708,7 @@
     {
       "category": "Dessert",
       "name": "David la Gelateria",
+      "country": "Italy",
       "googleRating": 4.5,
       "googleReviews": 518,
       "url": "https://www.google.com/maps/search/David%20la%20Gelateria%20Firenze?hl=en"
@@ -6619,6 +6716,7 @@
     {
       "category": "Drinks",
       "name": "坪林手 Pina tshiu",
+      "country": "Taiwan",
       "googleRating": 4.2,
       "googleReviews": 589,
       "url": "https://www.google.com/maps/place/Pina+tshiu/@25.0433429,121.5405025,15z/data=!4m10!1m2!2m1!1z5Z2q5p6X5omLIOWPsOWMlw!3m6!1s0x3442abeb7c2b7cd9:0x1033d171c4e9b34f!8m2!3d25.0304661!4d121.5606826!15sChDlnarmnpfmiYsg5Y-w5YyXWhQiEuWdqiDmnpcg5omLIOWPsOWMl5IBGGljZV9jcmVhbV9hbmRfZHJpbmtfc2hvcOABAA!16s%2Fg%2F11jg5w_p6r?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
@@ -6626,6 +6724,7 @@
     {
       "category": "Drinks",
       "name": "60+ Tea Shop 中山店",
+      "country": "Taiwan",
       "googleRating": 4.5,
       "googleReviews": 516,
       "url": "https://www.google.com/maps/search/60%2B%20Tea%20Shop%20%E4%B8%AD%E5%B1%B1%E5%BA%97%20%E5%8F%B0%E5%8C%97?hl=en"
@@ -6633,6 +6732,7 @@
     {
       "category": "Drinks",
       "name": "Karun Thai Tea (CentralwOrld)",
+      "country": "Thailand",
       "googleRating": 4,
       "googleReviews": 388,
       "url": "https://www.google.com/maps/search/Karun%20Thai%20Tea%20CentralwOrld%20Bangkok?hl=en"
@@ -6640,6 +6740,7 @@
     {
       "category": "Drinks",
       "name": "Barista Ray",
+      "country": "Taiwan",
       "googleRating": 4.5,
       "googleReviews": 1232,
       "url": "https://www.google.com/maps/search/Barista%20Ray%20%E5%8F%B0%E5%8D%97?hl=en"
@@ -6647,20 +6748,23 @@
     {
       "category": "Drinks",
       "name": "Milk Shop 酪 (Akihabara)",
+      "country": "Japan",
       "googleRating": 4.5,
       "googleReviews": 450,
       "url": "https://www.google.com/maps/search/%E3%83%9F%E3%83%AB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%E9%85%AA%20%E7%A7%8B%E8%91%89%E5%8E%9F%E5%BA%97?hl=en"
     },
     {
       "category": "Other",
-      "name": "印度料理 Mumbai 九段",
-      "googleRating": 4,
-      "googleReviews": 447,
-      "url": "https://www.google.com/maps/search/%E5%8D%B0%E5%BA%A6%E6%96%99%E7%90%86%20Mumbai%20%E4%B9%9D%E6%AE%B5%20%E6%9D%B1%E4%BA%AC?hl=en"
+      "name": "MOKSHAA 莫夏印度餐廳 (大安)",
+      "country": "Taiwan",
+      "googleRating": 4.7,
+      "googleReviews": 870,
+      "url": "https://maps.app.goo.gl/xhqPTzG9SoeHQSik8"
     },
     {
       "category": "Other",
       "name": "食堂チャコ",
+      "country": "Japan",
       "googleRating": 4.7,
       "googleReviews": 264,
       "url": "https://www.google.com/maps/search/%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%90%E3%83%AB%20%E9%A3%9F%E5%A0%82%E3%83%81%E3%83%A3%E3%82%B3%20%E5%A4%A7%E9%98%AA?hl=en"
@@ -6668,20 +6772,23 @@
     {
       "category": "Other",
       "name": "通庵 熟成咖哩",
+      "country": "Taiwan",
       "googleRating": 4.4,
       "googleReviews": 2571,
       "url": "https://www.google.com/maps/place/Tong'an+Japanese+Curry/@25.0436658,121.5381991,15z/data=!4m10!1m2!2m1!1z6YCa5bq1IOeGn-aIkOWSluWTqSDlj7DljJc!3m6!1s0x3442ab07b3bf3069:0xae384ec50d29157!8m2!3d25.0297109!4d121.5531647!15sChrpgJrlurUg54af5oiQ5ZKW5ZOpIOWPsOWMl1oeIhzpgJog5bq1IOeGn-aIkCDlkpblk6kg5Y-w5YyXkgEZamFwYW5lc2VfY3VycnlfcmVzdGF1cmFudOABAA!16s%2Fg%2F11fmp_m50q?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       "category": "Other",
-      "name": "鐵 F.f 小餐廳",
-      "googleRating": 4.7,
-      "googleReviews": 431,
-      "url": "https://www.google.com/maps/place/%E9%90%B5F.f+Teppanyaki%E5%8F%B0%E4%B8%AD%E5%8D%9A%E9%A4%A8%E5%BA%97/@24.1563363,120.6593142,17z/data=!4m10!1m2!2m1!1z6ZC1IEYuZiDlsI_ppJDlu7Mg5Y-w5Lit!3m6!1s0x34693d6eabeec12b:0x2690624eb37e88f!8m2!3d24.1563363!4d120.6638203!15sChjpkLUgRi5mIOWwj-mkkOW7syDlj7DkuK1aGiIY6ZC1IGZmIOWwjyDppJDlu7Mg5Y-w5LitkgEXdGVwcGFuX2dyaWxsX3Jlc3RhdXJhbnSaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnM1TTFkdVVsWlVla0l3VlVaa1VGbFVaRFpYYkVaM1QxaFJNbUZGUlJBQuABAPoBBQioBBAj!16s%2Fg%2F11y1fvrvlk?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+      "name": "鐵 F.f 小餐廳 (1F無菜單)",
+      "country": "Taiwan",
+      "googleRating": 4.9,
+      "googleReviews": 36,
+      "url": "https://maps.app.goo.gl/c81VEZxJMVmUq8Db9"
     },
     {
       "category": "Other",
       "name": "HI MATE!",
+      "country": "Taiwan",
       "googleRating": 4.5,
       "googleReviews": 1074,
       "url": "https://www.google.com/maps/search/HI%20MATE!%20%E5%8F%B0%E5%8C%97?hl=en"

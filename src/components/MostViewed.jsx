@@ -38,7 +38,7 @@ export default function MostViewed({ reviews }) {
         <h2 className="font-display text-2xl font-bold flex items-center gap-2">
           <span className="text-2xl">👀</span> Most Viewed Reviews
         </h2>
-        <p className="text-sm text-[var(--color-ink-soft)] mt-1">The reviews people opened the most — hover to pause.</p>
+        <p className="text-sm text-[var(--color-ink-soft)] mt-1">The reviews people read the most, they are reading my words!</p>
       </div>
       <Marquee items={reviews} duration={55} renderItem={(r, i) => <Card r={r} i={i} />} />
     </div>

@@ -44,7 +44,7 @@ export default function TopReacted({ reviews }) {
         <h2 className="font-display text-2xl font-bold flex items-center gap-2">
           <span className="text-2xl">❤️</span> Most Reacted Reviews
         </h2>
-        <p className="text-sm text-[var(--color-ink-soft)] mt-1">The reviews others reacted to the most.</p>
+        <p className="text-sm text-[var(--color-ink-soft)] mt-1">People are sending their actual feedbacks with this reactions, these are rare and shows how my informative reviews help others</p>
       </div>
       <Marquee items={reviews} renderItem={(r, i) => <Card r={r} i={i} />} />
     </div>
