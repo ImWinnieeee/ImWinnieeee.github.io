@@ -14,6 +14,16 @@ const SRC = path.join(__dirname, '..', 'src')
 const L = (f) => JSON.parse(fs.readFileSync(path.join(OUT, f), 'utf8'))
 
 const parsed = L('reviews-parsed.json')
+// Guard: if the reviews scrape came back empty (e.g. Google changed the reviews-tab
+// DOM and the selector found 0 cards), ABORT instead of overwriting src/data.json
+// with an empty site (no reviews → no map, favorites, most-viewed, etc.). The last
+// good data.json is left untouched. Re-run the scrape once the selector is fixed.
+if (!Array.isArray(parsed) || parsed.length === 0) {
+  console.error('\n❌ reviews-parsed.json is EMPTY — refusing to build (would wipe reviews/map/favorites).')
+  console.error('   The reviews scrape likely failed (DOM change?). src/data.json left unchanged.')
+  console.error('   Fix scraper/scrape.mjs reviews selector, then re-run `npm run scrape` → build:data.\n')
+  process.exit(1)
+}
 const photos = L('photos-raw.json')
 const geo = fs.existsSync(path.join(OUT, 'geocode-cache.json')) ? L('geocode-cache.json') : {}
 // per-review Share permalinks captured by scrape.mjs ({ [reviewId]: url|null })
@@ -161,32 +171,42 @@ const topPhotos = [...photos.items]
   .slice(0, 18)
   .map((p, i) => ({ id: 'ph' + i, url: big(p.url), link: p.url.replace(/=w\d+.*$/, '=w1600'), views: p.views ?? 0 }))
 
-// ---- top videos (hand-supplied) ----
-// Google doesn't expose per-VIDEO view counts to scraping (the grid tile shows a
-// 👁 count visually, but it's not in the page's accessible DOM), so Winnie reads
-// them off her contributions page. `match` finds the review (for a still + her
-// permalink); `imgIdx` picks which of that place's photos to use as the thumbnail
-// so several videos of the same place don't all look identical.
-// `url` = the video's Share link (click-through + frame source); `frame thumbnails`
-// (an actual still from the video) are scraped by video-frames.mjs → video-frames.json
-// keyed by label. We prefer the real frame; fall back to a place photo if missing.
+// ---- top videos ----
+// Per-VIDEO view counts ARE scrapable from the photo grid's visual 👁 badge (a
+// video tile = one showing a duration like "0:07"); video-views.mjs harvests them
+// keyed by each video's stable googleusercontent photo id → output/video-views.json.
+// Each entry below is pinned to that id via `gpsId`, so `views` auto-updates on
+// every scrape; the baked-in number is just a fallback if the live scrape misses.
+// `match` finds the review (for a still + her permalink); `url` = the video's Share
+// link (click-through); thumbnails are real video stills scraped by video-frames.mjs
+// → video-frames.json keyed by `label` (we fall back to a place photo if missing).
 const VIDEOS = [
-  { match: 'Tanaka Keiran', label: '田中雞卵', views: 193706, url: 'https://maps.app.goo.gl/tCnWNtfzkVZVfWSB8' },
-  { match: 'PATISSERIE TEN&', label: 'Patisserie TEN& · counter', views: 158291, url: 'https://maps.app.goo.gl/A4b15Z4hWHRcDViZ8' },
-  { match: '瑪黑家紅茶', label: '瑪黑家紅茶 Marais', views: 151584, url: 'https://maps.app.goo.gl/opAD5Ca5XFnuAt3z5' },
-  { match: '長白小館', label: '長白小館', views: 107482, url: 'https://maps.app.goo.gl/VPnwiw634j3TwWzT6' },
-  { match: 'Pu-Jei', label: 'Pu-Jei 葡吉 · the queue', views: 102199, url: 'https://maps.app.goo.gl/JFf8VLwvZoB1fDdE9' },
-  { match: 'Pu-Jei', label: 'Pu-Jei 葡吉 · the sign', views: 93540, url: 'https://maps.app.goo.gl/v1HraqCjJgR9t1Uc6' },
-  { match: 'La Mole', label: 'La Mole Taipei', views: 55356, url: 'https://maps.app.goo.gl/xgiPmsA5Qw1QfEE16' },
-  { match: 'PATISSERIE TEN&', label: 'Patisserie TEN& · how to find it', views: 41556, url: 'https://maps.app.goo.gl/MP8qk1A51KipQodw5' },
+  { match: 'Tanaka Keiran', label: '田中雞卵', views: 195738, gpsId: 'ACgwaOuENoYztoiV1MF8n7f7nzFY', url: 'https://maps.app.goo.gl/tCnWNtfzkVZVfWSB8' },
+  { match: 'PATISSERIE TEN&', label: 'Patisserie TEN& · counter', views: 158291, gpsId: 'ACgwaOsxjBNzbsUesnyMAF4AAghe', url: 'https://maps.app.goo.gl/A4b15Z4hWHRcDViZ8' },
+  { match: '瑪黑家紅茶', label: '瑪黑家紅茶 Marais', views: 151584, gpsId: 'ACgwaOunYAMAQ9E6qM9a8haABXFv', url: 'https://maps.app.goo.gl/opAD5Ca5XFnuAt3z5' },
+  { match: '長白小館', label: '長白小館', views: 107482, gpsId: 'ACgwaOvADcQ0WmKRhhdqb_ls10rC', url: 'https://maps.app.goo.gl/VPnwiw634j3TwWzT6' },
+  { match: 'Pu-Jei', label: 'Pu-Jei 葡吉 · the queue', views: 102199, gpsId: 'ACgwaOvIn1s5Efg0ofdDvtuLePXA', url: 'https://maps.app.goo.gl/JFf8VLwvZoB1fDdE9' },
+  { match: 'Pu-Jei', label: 'Pu-Jei 葡吉 · the sign', views: 93540, gpsId: 'ACgwaOtnxifcqvNrccb4KebIjvPV', url: 'https://maps.app.goo.gl/v1HraqCjJgR9t1Uc6' },
+  { match: 'La Mole', label: 'La Mole Taipei', views: 55356, gpsId: 'ACgwaOsPRA5JyTZcWItw7FLd4-3w', url: 'https://maps.app.goo.gl/xgiPmsA5Qw1QfEE16' },
+  { match: 'PATISSERIE TEN&', label: 'Patisserie TEN& · how to find it', views: 41556, gpsId: 'ACgwaOtjNhca4l3MCb1zEEoWddo-', url: 'https://maps.app.goo.gl/MP8qk1A51KipQodw5' },
 ]
 const videoFrames = fs.existsSync(path.join(OUT, 'video-frames.json')) ? L('video-frames.json') : {}
+// live view counts scraped from the grid; match a video's gpsId to a scraped tile
+// id (prefix match — the stored gpsId is a stable leading slice of the full id).
+const videoViews = fs.existsSync(path.join(OUT, 'video-views.json')) ? L('video-views.json').items || [] : []
+const liveViews = (gpsId) => {
+  if (!gpsId) return null
+  const hit = videoViews.find((v) => v.id && v.id.startsWith(gpsId))
+  return hit ? hit.views : null
+}
 const topVideos = VIDEOS.map((v, i) => {
   const r = findReview(v.match)
   if (!r) console.log(`   ⚠️  no review match for video: ${v.match}`)
   const imgs = (r?.images || []).map(big)
+  const live = liveViews(v.gpsId)
+  if (live == null) console.log(`   ⚠️  no live view count for video "${v.label}" — using baked-in ${v.views}`)
   return {
-    id: 'vid' + i, place: v.label, views: v.views,
+    id: 'vid' + i, place: v.label, views: live ?? v.views,
     img: videoFrames[v.label] || imgs[0] || null,
     link: v.url || (r && reviewUrls[r.id]) || null,
   }
@@ -338,10 +358,10 @@ const data = {
   stats: {
     totalReviews: parsed.length, ratingsOnly: 21, totalPhotoViews: photos.total || 9140043,
     totalReviewViews, photoCount, points: 16991, level: 8, dateFrom, dateTo,
-    lastUpdated: '2026-06-04', isMockData: false,
-    // anchor for the live Total-Views counter: it grows from this build time at a
-    // realistic ~3.5k/day rate, stepping every 5 min (see TotalViews.jsx).
-    viewsAnchor: new Date().toISOString(),
+    isMockData: false,
+    // when this data was last (re)built — i.e. the last `npm run refresh` (or any
+    // future automated update). Shown under the Total Views headline.
+    updatedAt: new Date().toISOString(),
   },
   topPhotos: topPhotosOut, topVideos, mostViewed, mostReacted, ownerReplies, reviews, favorites,
 }

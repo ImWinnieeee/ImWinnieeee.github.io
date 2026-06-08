@@ -7,8 +7,8 @@ eaten, and the businesses that personally wrote back to me.
 Built as an AI-assisted side project — the whole thing (scraper → data pipeline →
 React site) was designed and coded with Claude.
 
-- **380 reviews** across Taiwan, Japan, Italy & Thailand
-- **9.14 million photo views**
+- **386 reviews** across Taiwan, Japan, Italy & Thailand
+- **9.2 million photo views** (11.8M including review views)
 - Local Guide **Level 8** · 16,991 points
 
 ---
@@ -56,7 +56,8 @@ are gathered with a small Playwright scraper and a few build steps. The flow:
             │            time — so we accumulate by id across scroll steps)
             ▼
    scraper/output/reviews-raw.json   ← place, address, stars, text, photos, owner replies
-   scraper/output/photos-raw.json    ← every photo's view count (+ the 9.14M total)
+   scraper/output/photos-raw.json    ← every photo's view count (+ the multi-million total)
+   scraper/output/video-views.json   ← per-video view counts (from the grid 👁 badge)
    scraper/output/stats.json         ← level, points
             │
             ▼
@@ -80,26 +81,65 @@ are gathered with a small Playwright scraper and a few build steps. The flow:
         src/data.json   →  the React app renders this
 ```
 
-To refresh after writing new Google reviews:
+### 🔄 Refreshing the site (the one command to remember)
+
+After writing new Google reviews / uploading photos, refresh everything with **one**
+command:
 
 ```bash
-npm run login     # only if the saved Chrome session expired
-npm run scrape
-npm run parse
-npm run geocode
-npm run build:data
+npm run login     # ONLY the first time, or if the saved Chrome session expired —
+                  # leave that Chrome window open
+npm run refresh   # scrape → parse → build:data → build  (all four steps, in order)
+```
+
+`npm run refresh` is just shorthand for:
+
+```bash
+npm run scrape       # 1. harvest reviews, photos, photo + VIDEO view counts, store ratings
+npm run parse        # 2. raw reviews → structured records
+npm run build:data   # 3. assemble src/data.json (the numbers update HERE)
+npm run build        # 4. rebuild dist/ (the deployed static site)
+```
+
+The steps are chained with `&&`, so if one fails (e.g. Chrome isn't open) the rest
+**stop** — it never overwrites good data with a half-finished scrape. The numbers on
+the site only change after step 3; step 4 is only needed if you serve the built
+`dist/` (the `npm run dev` server picks up `src/data.json` directly).
+
+> **What updates automatically:** photo view counts (per-photo + the multi-million
+> total), total photo/video count, total reviews, per-video view counts, Google
+> store ratings, and the photos + reviews headline number. The review-views slice
+> is a fixed constant (see below), so that headline grows only as photo/video views do.
+
+**Optional / occasional steps** (not in `refresh`):
+
+```bash
+npm run geocode             # only when new reviews need map pins resolved (Nominatim)
+npm run scrape:videoviews   # re-grab ONLY the video view counts (a quick grid sweep)
+npm run scrape:videoframes  # re-grab the video still thumbnails
 ```
 
 ### Hand-supplied numbers
-Two things are **not** scrapable from Google's desktop web and were entered by hand
+Two things are **not** scrapable from Google's desktop web and are entered by hand
 into `scraper/output/views_and_reactions.csv`:
 
 - **per-review view counts** (Google only shows these in the mobile app)
 - **per-review reaction counts** (likewise mobile-only)
 
 `build:data` matches those rows to the scraped reviews by store name to build the
-"Most Viewed" and "Most Reacted" sections. Everything else — photo views, totals,
-text, photos, owner replies, the map — is scraped automatically.
+"Most Viewed" and "Most Reacted" sections. Everything else — photo views, **per-video
+view counts** (read from the grid's 👁 badge), totals, text, photos, owner replies,
+store ratings, the map — is scraped automatically.
+
+> **Per-video views used to be hand-typed**, but Google does expose them in the photo
+> grid (a video tile = one with a duration like `0:07`; its count sits in a `.HtPsUd`
+> badge). `scrape.mjs` now harvests them → `video-views.json`, and `build-data.mjs`
+> pins each featured video to its photo id so the count auto-updates.
+
+> ⚠️ **If a refresh ever shows 0 photos/videos:** Google occasionally changes the
+> grid's HTML. The scraper currently expects tiles as `div.WY21Hc` / `button.xUc6Hf`
+> with a `.HtPsUd` view badge. If that changes, update the selectors in
+> `scraper/scrape.mjs` (and `photos.mjs` / `video-views.mjs`).
 
 ---
 
@@ -125,9 +165,12 @@ playwithai/
 │       └── Marquee.jsx        # reusable auto-scroll (pauses on hover)
 └── scraper/
     ├── login.mjs              # open real Chrome for a one-time Google login
-    ├── scrape.mjs             # harvest reviews + photos
+    ├── scrape.mjs             # harvest reviews + photos + per-video view counts + store ratings
     ├── parse.mjs              # raw → structured + category
     ├── geocode.mjs            # addresses → lat/lng
+    ├── photos.mjs             # re-harvest ONLY the photo grid (npm run scrape:photos)
+    ├── video-views.mjs        # re-harvest ONLY video view counts (npm run scrape:videoviews)
+    ├── video-frames.mjs       # grab a still thumbnail from each featured video
     ├── build-data.mjs         # assemble src/data.json (+ English translations)
     └── output/               # intermediate JSON, screenshots, the manual CSV
 ```

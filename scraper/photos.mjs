@@ -75,6 +75,10 @@ async function harvestPhotos(page, { anchor, harvest, maxPasses = 10, stepWheel 
   return [...acc.values()]
 }
 
+// Grid tiles are `button.xUc6Hf` inside `div.WY21Hc`; the view count is in a
+// visual badge `.HtPsUd` (photos also carry "· N views" in an aria-label). A tile
+// with a duration ("0:07") is a VIDEO — we skip those here so photos-raw stays
+// photos-only (video view counts are harvested by scrape.mjs / video-views.mjs).
 const photoHarvest = () => {
   const byUrl = new Map()
   const imgUrl = (root) => {
@@ -86,23 +90,22 @@ const photoHarvest = () => {
     return ''
   }
   const viewsOf = (root) => {
+    const badge = root.querySelector('.HtPsUd')
+    if (badge) { const n = parseInt(badge.textContent.replace(/[^\d]/g, '')); if (!isNaN(n)) return n }
     const labels = [root.getAttribute('aria-label') || '',
       ...[...root.querySelectorAll('[aria-label]')].map((n) => n.getAttribute('aria-label') || '')]
-    for (const al of labels) {
-      const m = al.match(/·\s*([\d,]+)\s*views?/i)
-      if (m) return { views: parseInt(m[1].replace(/,/g, '')), label: al }
-    }
-    return { views: null, label: labels.find(Boolean) || '' }
+    for (const al of labels) { const m = al.match(/·\s*([\d,]+)\s*views?/i); if (m) return parseInt(m[1].replace(/,/g, '')) }
+    return null
   }
   const consider = (root) => {
     const url = imgUrl(root)
     if (!url) return
-    const { views, label } = viewsOf(root)
+    if (/\b\d+:\d{2}\b/.test(root.innerText || '')) return // skip videos
+    const views = viewsOf(root)
     const prev = byUrl.get(url)
-    if (!prev || (prev.views == null && views != null)) byUrl.set(url, { key: url, url, views, label })
+    if (!prev || (prev.views == null && views != null)) byUrl.set(url, { key: url, url, views })
   }
-  for (const a of document.querySelectorAll('a[href*="/photo"]')) consider(a)
-  for (const el of document.querySelectorAll('[aria-label*="view" i]')) consider(el)
+  for (const el of document.querySelectorAll('div.WY21Hc, button.xUc6Hf')) consider(el)
   return [...byUrl.values()]
 }
 
@@ -123,7 +126,7 @@ await page.waitForTimeout(3000)
 console.log('\n📂 Photos — multi-pass harvest (down/up, lazy-load aware)…')
 await openTab(page, 'photos')
 await page.waitForTimeout(2500)
-const photoItems = await harvestPhotos(page, { anchor: 'a[href*="/photo"], [aria-label*="views"]', harvest: photoHarvest })
+const photoItems = await harvestPhotos(page, { anchor: 'div.WY21Hc, button.xUc6Hf', harvest: photoHarvest })
 
 // Google's own header stats: "9,174,842 views" and "1,674 photos". The photo
 // COUNT here is authoritative (photos + videos) — the desktop grid only renders

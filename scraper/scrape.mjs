@@ -213,7 +213,20 @@ async function captureShareLink(id) {
 console.log('\n📂 Reviews — harvesting while scrolling (will take a few minutes for 359)…')
 console.log('   (also capturing each review\'s Share permalink — this makes it slower)')
 await openTab(page, 'reviews')
-await page.waitForSelector('[data-review-id]', { timeout: 15000 }).catch(() => {})
+// Wait until the review cards actually render. The contributions page sometimes
+// hasn't finished loading when we get here (then [data-review-id] is briefly 0,
+// the harvest scrolls past empty, and we'd "find" 0 reviews). Poll + re-open the
+// tab a few times before giving up, so a slow load doesn't yield an empty scrape.
+let reviewCardCount = 0
+for (let attempt = 0; attempt < 6; attempt++) {
+  await page.waitForSelector('[data-review-id]', { timeout: 8000 }).catch(() => {})
+  reviewCardCount = await page.evaluate(() => document.querySelectorAll('[data-review-id]').length)
+  if (reviewCardCount > 0) break
+  console.log(`   …reviews not rendered yet (attempt ${attempt + 1}/6) — waiting & re-opening tab`)
+  await page.waitForTimeout(2500)
+  await openTab(page, 'reviews')
+}
+console.log(`   reviews tab ready: ${reviewCardCount} [data-review-id] nodes visible`)
 const reviews = await harvestWhileScrolling(page, {
   label: 'reviews',
   anchor: '[data-review-id]',
@@ -246,19 +259,21 @@ const reviews = await harvestWhileScrolling(page, {
   },
 })
 
-// ---- photos ----------------------------------------------------------------
-console.log('\n📂 Photos — harvesting while scrolling…')
+// ---- photos (+ video view counts in the same sweep) ------------------------
+// The grid no longer uses `a[href*="/photo"]` anchors — each tile is a
+// `button.xUc6Hf` inside `div.WY21Hc`, and the view count lives in a VISUAL badge
+//   <div class="WqkvRc …"><span>👁</span><div class="HtPsUd">25</div></div>
+// (photos also expose "· N views" in an aria-label; videos do NOT — their count is
+// ONLY in .HtPsUd, which is why videos used to come back view-less). A tile is a
+// VIDEO iff it shows a duration ("0:07"). We harvest every tile once, then split:
+// photos → photos-raw.json, videos → video-views.json (keyed by photo id).
+console.log('\n📂 Photos + video views — harvesting while scrolling…')
 await openTab(page, 'photos')
 await page.waitForTimeout(2500)
-const photoItems = await harvestWhileScrolling(page, {
+const gridItems = await harvestWhileScrolling(page, {
   label: 'photos',
-  anchor: 'a[href*="/photo"], [aria-label*="views"]',
+  anchor: 'div.WY21Hc',
   harvest: () => {
-    // Capture EVERY photo tile, WITH or WITHOUT a view count. Today's uploads have
-    // no "· N views" text yet — we still record the url and set views:null; a later
-    // run fills the number in (see the upgrade in harvestWhileScrolling). Grid tiles
-    // are links to the photo viewer (`a[href*="/photo"]`), which naturally excludes
-    // the profile avatar and other UI images, so the count == real total photos.
     const byUrl = new Map()
     const imgUrl = (root) => {
       const im = root.querySelector('img')
@@ -269,28 +284,30 @@ const photoItems = await harvestWhileScrolling(page, {
       return ''
     }
     const viewsOf = (root) => {
+      // prefer the visual .HtPsUd badge (works for BOTH photos and videos)
+      const badge = root.querySelector('.HtPsUd')
+      if (badge) { const n = parseInt(badge.textContent.replace(/[^\d]/g, '')); if (!isNaN(n)) return n }
+      // fall back to a photo's "· N views" aria-label
       const labels = [root.getAttribute('aria-label') || '',
         ...[...root.querySelectorAll('[aria-label]')].map((n) => n.getAttribute('aria-label') || '')]
-      for (const al of labels) {
-        const m = al.match(/·\s*([\d,]+)\s*views?/i)
-        if (m) return { views: parseInt(m[1].replace(/,/g, '')), label: al }
-      }
-      return { views: null, label: labels.find(Boolean) || '' }
+      for (const al of labels) { const m = al.match(/·\s*([\d,]+)\s*views?/i); if (m) return parseInt(m[1].replace(/,/g, '')) }
+      return null
     }
     const consider = (root) => {
       const url = imgUrl(root)
       if (!url) return
-      const { views, label } = viewsOf(root)
+      const views = viewsOf(root)
+      const video = /\b\d+:\d{2}\b/.test(root.innerText || '') // duration overlay → it's a video
       const prev = byUrl.get(url)
-      // keep whichever entry actually carries a view count
-      if (!prev || (prev.views == null && views != null)) byUrl.set(url, { key: url, url, views, label })
+      if (!prev || (prev.views == null && views != null)) byUrl.set(url, { key: url, url, views, video })
     }
-    for (const a of document.querySelectorAll('a[href*="/photo"]')) consider(a)
-    // safety net: pick up any view-bearing tile the anchor selector missed
-    for (const el of document.querySelectorAll('[aria-label*="view" i]')) consider(el)
+    // div.WY21Hc is the tile container; button.xUc6Hf is a safety net for markup drift
+    for (const el of document.querySelectorAll('div.WY21Hc, button.xUc6Hf')) consider(el)
     return [...byUrl.values()]
   },
 })
+const photoItems = gridItems.filter((t) => !t.video)
+const videoItems = gridItems.filter((t) => t.video)
 // Google's own header stats: grand total views ("9,140,043 views") and the
 // authoritative photo+video count ("1,674 photos"). We trust the header count
 // over the harvested tile count (the desktop grid only renders a subset).
@@ -353,14 +370,30 @@ console.log(`   ✅ store ratings: ${rOk}/${reviews.length} captured → store-r
 // ---- save ------------------------------------------------------------------
 await saveUrls()
 const photos = { total: totalPhotoViews, headerCount: photoHeaderCount, count: photoItems.length, items: photoItems }
-await fs.writeFile(path.join(OUT_DIR, 'reviews-raw.json'), JSON.stringify(reviews, null, 2))
+// GUARD: never overwrite reviews-raw.json with an empty harvest (a slow page load
+// or a DOM change can yield 0 cards). Preserve the previous file and fail the run
+// so the refresh chain stops before build:data — better a stale scrape than a
+// wiped site. Photo data still saves below (it scraped fine).
+const reviewsEmpty = reviews.length === 0
+if (reviewsEmpty) {
+  console.log('\n   ⚠️  0 reviews harvested — NOT overwriting reviews-raw.json (keeping the previous one).')
+  console.log('      The Reviews tab likely failed to render this run. Re-run `npm run scrape`.')
+} else {
+  await fs.writeFile(path.join(OUT_DIR, 'reviews-raw.json'), JSON.stringify(reviews, null, 2))
+}
 await fs.writeFile(path.join(OUT_DIR, 'photos-raw.json'), JSON.stringify(photos, null, 2))
 await fs.writeFile(path.join(OUT_DIR, 'stats.json'), JSON.stringify(stats, null, 2))
+// per-video view counts (keyed by photo id) for build-data's featured videos
+const videoViews = videoItems
+  .map((t) => ({ id: (t.url.split('/').pop().match(/^[A-Za-z0-9_-]+/) || [])[0], views: t.views }))
+  .filter((v) => v.id && v.views != null)
+  .sort((a, b) => b.views - a.views)
+await fs.writeFile(path.join(OUT_DIR, 'video-views.json'), JSON.stringify({ count: videoViews.length, items: videoViews }, null, 2))
 
 const urlOk = Object.values(reviewUrls).filter(Boolean).length
 const photosWithViews = photoItems.filter((p) => p.views != null).length
 console.log('\n✅ Done!')
-console.log(`   reviews: ${reviews.length}  |  photos: ${photos.count} (${photosWithViews} with views, ${photos.count - photosWithViews} no views yet)  |  total photo views: ${photos.total}`)
+console.log(`   reviews: ${reviews.length}  |  photos: ${photos.count} (${photosWithViews} with views)  |  videos: ${videoViews.length}  |  total photo views: ${photos.total}`)
 if (photos.count === 0) {
   console.log('\n   ⚠️  0 photos captured but the page reports ' + (photos.total ?? '—') + ' total views.')
   console.log('      The photo grid probably did not render this run — DO NOT build, or you will')
@@ -368,7 +401,9 @@ if (photos.count === 0) {
 }
 console.log(`   share links: ${urlOk}/${reviews.length} captured → review-urls.json`)
 console.log(`   level: ${stats.level}  points: ${stats.points}`)
-console.log('   saved → scraper/output/reviews-raw.json, photos-raw.json, stats.json, review-urls.json')
+console.log('   saved → scraper/output/' + (reviewsEmpty ? '(reviews kept) ' : 'reviews-raw.json, ') + 'photos-raw.json, video-views.json, stats.json, review-urls.json')
 console.log('\nTell Claude it finished so it can build the real src/data.json.\n')
 
 await browser.close()
+// non-zero exit on an empty reviews harvest so `npm run refresh` halts before build:data
+if (reviewsEmpty) process.exit(1)

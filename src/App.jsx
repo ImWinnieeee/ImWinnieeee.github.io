@@ -41,7 +41,7 @@ export default function App() {
             </h1>
             <div className="h-1.5 w-16 rounded-full bg-[var(--color-vermilion)] my-3" />
           </div>
-          <TotalViews photoViews={stats.totalPhotoViews} reviewViews={stats.totalReviewViews} anchor={stats.viewsAnchor} />
+          <TotalViews photoViews={stats.totalPhotoViews} reviewViews={stats.totalReviewViews} updatedAt={stats.updatedAt} />
         </div>
         <p className="text-[var(--color-ink-soft)]">
           {profile.level} · {formatViews(stats.totalPhotoViews)} photo views across{' '}
