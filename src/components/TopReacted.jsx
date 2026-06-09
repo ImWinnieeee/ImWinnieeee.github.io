@@ -28,7 +28,7 @@ function Card({ r, i }) {
       </div>
       {r.why && (
         <p className="text-[11px] mt-2 leading-snug rounded-lg bg-[var(--color-paper)] px-2 py-1.5">
-          <span className="font-semibold text-[var(--color-vermilion)]">💡 Why it helped: </span>
+          <span className="font-semibold text-[var(--color-vermilion)]">🔍 Why it helped: </span>
           <span className="text-[var(--color-ink)]">{r.why}</span>
         </p>
       )}
@@ -41,10 +41,10 @@ export default function TopReacted({ reviews }) {
   return (
     <div>
       <div className="mb-4">
-        <h2 className="font-display text-2xl font-bold flex items-center gap-2">
-          <span className="text-2xl">❤️</span> Most Reacted Reviews
+        <h2 className="font-display text-3xl font-bold flex items-center gap-2">
+          <span className="text-3xl">❤️</span> Most Reacted Reviews
         </h2>
-        <p className="text-sm text-[var(--color-ink-soft)] mt-1">People are sending their actual feedbacks with this reactions, these are rare and shows how my informative reviews help others</p>
+        <p className="text-lg md:text-xl font-semibold text-[var(--color-ink)]/85 mt-2">People are actually ‘telling’ me they really like my reviews 🫶</p>
       </div>
       <Marquee items={reviews} renderItem={(r, i) => <Card r={r} i={i} />} />
     </div>

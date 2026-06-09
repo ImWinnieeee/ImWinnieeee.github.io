@@ -5,10 +5,10 @@ import { CATEGORY_META, COUNTRY_META } from '../lib.js'
 export default function OwnerReplies({ replies }) {
   return (
     <div className="card p-6 h-full">
-      <h2 className="font-display text-2xl font-bold flex items-center gap-2">
-        <span className="text-2xl">💬</span> Businesses Replied To
+      <h2 className="font-display text-3xl font-bold flex items-center gap-2">
+        <span className="text-3xl">💬</span> Businesses Replied To
       </h2>
-      <p className="text-sm text-[var(--color-ink-soft)] mt-1 mb-4">Owners who wrote back — in their own words.</p>
+      <p className="text-lg md:text-xl font-semibold text-[var(--color-ink)]/85 mt-2 mb-4">Even the owners write back to thank me for providing useful info to foodies and travelers! 💬</p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3.5">
         {replies.map((r) => {

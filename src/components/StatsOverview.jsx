@@ -5,13 +5,13 @@ function StatCard({ label, value, sub, accent, emoji, delay }) {
   return (
     <div className="card p-5 fade-up relative" style={{ animationDelay: `${delay}ms` }}>
       <div className="flex items-center justify-between">
-        <div className="text-sm text-[var(--color-ink-soft)]">{label}</div>
-        <div className="text-xl">{emoji}</div>
+        <div className="font-display text-xl font-bold text-[var(--color-ink)]">{label}</div>
+        <div className="text-2xl">{emoji}</div>
       </div>
       <div className="mt-2 font-display text-4xl font-black tracking-tight" style={{ color: accent }}>
         {value}
       </div>
-      {sub && <div className="mt-1 text-xs text-[var(--color-ink-soft)]">{sub}</div>}
+      {sub && <div className="mt-1 text-base font-medium text-[var(--color-ink)]/85">{sub}</div>}
     </div>
   )
 }

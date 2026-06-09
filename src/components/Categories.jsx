@@ -6,12 +6,12 @@ import { FAVORITE_CARDS, COUNTRY_META, formatInt } from '../lib.js'
 export default function Categories({ favorites }) {
   return (
     <div>
-      <h2 className="font-display text-2xl font-bold mb-1 flex items-center gap-2">
-        <span>🍽️</span> My Top Favorites
+      <h2 className="font-display text-3xl font-bold mb-1.5 flex items-center gap-2">
+        <span className="text-3xl">🍽️</span> My Top Favorites
       </h2>
-      <p className="text-sm text-[var(--color-ink-soft)] mb-5">
-        Five places I love in each category — in no particular order. Each shows the spot’s rating and review
-        count straight from Google Maps.
+      <p className="text-lg md:text-xl font-semibold text-[var(--color-ink)]/85 mb-5">
+        I’m always the one who picks the restaurant when we eat out with friends. I love hunting down new
+        places and trying new food, and this is the pocket list I give to my friends. 🍽️
       </p>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {FAVORITE_CARDS.map((card) => {
@@ -20,7 +20,7 @@ export default function Categories({ favorites }) {
             <div key={card.label} className="card p-6" style={{ borderTop: `3px solid ${card.color}` }}>
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-2xl">{card.emoji}</span>
-                <h3 className="font-display text-lg font-bold" style={{ color: card.color }}>{card.label}</h3>
+                <h3 className="font-display text-xl font-bold" style={{ color: card.color }}>{card.label}</h3>
               </div>
               <ul className="space-y-3">
                 {items.map((f) => {

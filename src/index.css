@@ -88,13 +88,19 @@ body {
   to { opacity: 1; transform: none; }
 }
 
-/* 跑馬燈：橫向捲動容器（捲動由 JS 驅動），左右淡出邊緣 */
+/* 跑馬燈：橫向捲動容器（自動慢飄 + 手指可直接滑），左右淡出邊緣 */
 .marquee {
-  overflow-x: hidden;
+  overflow-x: auto;            /* 開放橫向捲動，手機才能用手指滑 */
   overflow-y: visible;
+  touch-action: pan-x;         /* 只接手橫向手勢，直向交給頁面捲動 */
+  -webkit-overflow-scrolling: touch; /* iOS 慣性滑動 */
+  scrollbar-width: none;       /* Firefox：藏起捲軸 */
+  -ms-overflow-style: none;
   -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
 }
+/* Chrome / Safari：藏起捲軸 */
+.marquee::-webkit-scrollbar { display: none; }
 
 /* === 側邊手記：往下滑時從主區塊往外拉出的小筆記 === */
 /* 窄螢幕預設：內嵌顯示在區塊下方，文字永遠看得到 */

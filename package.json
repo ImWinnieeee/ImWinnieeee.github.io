@@ -19,7 +19,8 @@
     "geocode": "node scraper/geocode.mjs",
     "resolve:coords": "node scraper/resolve-coords.mjs",
     "build:data": "node scraper/build-data.mjs",
-    "update:numbers": "node scraper/build-data.mjs"
+    "update:numbers": "node scraper/build-data.mjs",
+    "update:site": "bash scraper/update.sh"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

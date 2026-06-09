@@ -8,7 +8,7 @@ import TopReacted from './components/TopReacted.jsx'
 import OwnerReplies from './components/OwnerReplies.jsx'
 import MapView from './components/MapView.jsx'
 import Categories from './components/Categories.jsx'
-import SideNote from './components/SideNote.jsx'
+import BackToTop from './components/BackToTop.jsx'
 
 const NAV = [
   { id: 'photos', label: 'Photos' },
@@ -24,6 +24,7 @@ export default function App() {
   return (
     <div className="min-h-full">
       <div className="grain" />
+      <BackToTop />
 
       {stats.isMockData && (
         <div className="bg-[var(--color-vermilion)]/10 text-[var(--color-vermilion)] text-center text-sm py-2 px-4">
@@ -43,7 +44,7 @@ export default function App() {
           </div>
           <TotalViews photoViews={stats.totalPhotoViews} reviewViews={stats.totalReviewViews} updatedAt={stats.updatedAt} />
         </div>
-        <p className="text-[var(--color-ink-soft)]">
+        <p className="text-base font-medium text-[var(--color-ink)]/85">
           {profile.level} · {formatViews(stats.totalPhotoViews)} photo views across{' '}
           {new Set(reviews.map((r) => r.country)).size} countries · Updated from {stats.dateFrom} to {stats.dateTo}
         </p>
@@ -66,46 +67,31 @@ export default function App() {
         <StatsOverview stats={stats} />
 
         {/* 2. Hero: most viewed photos (9M+ views) */}
-        <section id="photos" className="relative scroll-mt-6">
+        <section id="photos" className="scroll-mt-6">
           <TopPhotos photos={topPhotos} videos={topVideos} totalViews={stats.totalPhotoViews} />
-          <SideNote side="right" accent="var(--color-vermilion)">
-            It makes me feel <b>AWESOME</b> to see so many of my pictures get so many views! I'm sharing useful pics! 📸
-          </SideNote>
         </section>
 
         {/* 1. Most viewed reviews (bilingual marquee) */}
-        <section id="reviews" className="relative scroll-mt-6">
+        <section id="reviews" className="scroll-mt-6">
           <MostViewed reviews={mostViewed} />
-          <SideNote side="left" accent="var(--color-indigo)">
-            Where I truly feel myself important! People are actually telling me they think my reviews are great! ✨
-          </SideNote>
         </section>
 
         {/* Most reacted reviews (marquee) */}
         <div id="impact" className="scroll-mt-6"><TopReacted reviews={mostReacted} /></div>
 
         {/* Businesses that personally replied */}
-        <section className="relative">
+        <section>
           <OwnerReplies replies={ownerReplies} />
-          <SideNote side="right" accent="var(--color-matcha)">
-            Even the store owners appreciate me for my detailed reviews! Helping them add useful info onto Google Maps — where so many potential customers look — is something I really enjoy. 💬
-          </SideNote>
         </section>
 
         {/* 3. Map with country tabs */}
-        <section id="map" className="relative scroll-mt-6">
+        <section id="map" className="scroll-mt-6">
           <MapView reviews={reviews} />
-          <SideNote side="left" accent="var(--color-sakura)">
-            Trying to impact more people around the world with my Google reviews! 🌏
-          </SideNote>
         </section>
 
         {/* 5. Favorite categories */}
-        <section id="categories" className="relative scroll-mt-6">
+        <section id="categories" className="scroll-mt-6">
           <Categories favorites={favorites} />
-          <SideNote side="right" accent="var(--color-vermilion)">
-            One of the best feelings is recommending a restaurant to my friends — they try it and love it too! 🍽️
-          </SideNote>
         </section>
 
         <footer className="text-center text-xs text-[var(--color-ink-soft)] pt-8">

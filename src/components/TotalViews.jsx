@@ -19,9 +19,9 @@ export default function TotalViews({ photoViews, reviewViews, updatedAt }) {
       <div className="font-display font-black tracking-tight text-[var(--color-vermilion)] tabular-nums leading-none text-5xl md:text-6xl">
         {total.toLocaleString('en-US')}
       </div>
-      <div className="text-xs text-[var(--color-ink-soft)] mt-1">photos + reviews</div>
+      <div className="text-base font-medium text-[var(--color-ink-soft)] mt-1">photos + reviews</div>
       {updated && (
-        <div className="text-[11px] text-[var(--color-ink-soft)] mt-0.5 tabular-nums">Updated {updated}</div>
+        <div className="text-base font-medium text-[var(--color-ink-soft)] mt-0.5 tabular-nums">Updated {updated}</div>
       )}
     </div>
   )

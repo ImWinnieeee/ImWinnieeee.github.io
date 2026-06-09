@@ -16,17 +16,18 @@ export default function TopPhotos({ photos, videos = [], totalViews }) {
     <div className="card p-6">
       <div className="flex items-end justify-between gap-4 mb-5 flex-wrap">
         <div>
-          <h2 className="font-display text-2xl font-bold flex items-center gap-2">
-            <span className="text-2xl">📸</span> Most Viewed Photos &amp; Videos
+          <h2 className="font-display text-3xl font-bold flex items-center gap-2">
+            <span className="text-3xl">📸</span> Most Viewed Photos &amp; Videos
           </h2>
-          <p className="text-sm text-[var(--color-ink-soft)] mt-1">
-            The food photos &amp; videos I’ve shared have been viewed{' '}
-            <span className="font-bold text-[var(--color-vermilion)]">{formatInt(totalViews)}</span> times.
+          <p className="text-lg md:text-xl font-semibold text-[var(--color-ink)]/85 mt-2">
+            Seen{' '}
+            <span className="font-black text-[var(--color-vermilion)]">{formatInt(totalViews)}</span>{' '}
+            times! I’ve helped millions of people find something delicious to eat 📸
           </p>
         </div>
         <div className="text-right">
           <div className="font-display text-3xl font-black text-[var(--color-vermilion)]">{formatViews(totalViews)}</div>
-          <div className="text-xs text-[var(--color-ink-soft)]">total photo views</div>
+          <div className="text-sm font-semibold text-[var(--color-ink)]/80">total photo views</div>
         </div>
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2.5">

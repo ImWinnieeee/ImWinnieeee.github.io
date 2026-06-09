@@ -6,17 +6,17 @@
     "profileUrl": "https://maps.app.goo.gl/e9HggWQj89SQqdSd8"
   },
   "stats": {
-    "totalReviews": 387,
+    "totalReviews": 388,
     "ratingsOnly": 21,
     "totalPhotoViews": 9250177,
     "totalReviewViews": 2564539,
-    "photoCount": 1687,
+    "photoCount": 1693,
     "points": 16991,
     "level": 8,
     "dateFrom": "2018-06",
     "dateTo": "2026-06",
     "isMockData": false,
-    "updatedAt": "2026-06-09T13:19:54.096Z"
+    "updatedAt": "2026-06-09T15:08:32.127Z"
   },
   "topPhotos": [
     {
@@ -93,8 +93,8 @@
     },
     {
       "id": "ph12",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuYffXnfCgAB_L9R8y1tFD9pGe60oCxf5Vo4DPtYmpYJYwBR3ihLkocsAAombrUEaOQHlMxACh2HNEvF7guexQlgHsbLaIBZOS-Zu9FB-4IMy7GRVbrcGo1dVryRE6aFbqJOk8eLqzR6xy4=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuYffXnfCgAB_L9R8y1tFD9pGe60oCxf5Vo4DPtYmpYJYwBR3ihLkocsAAombrUEaOQHlMxACh2HNEvF7guexQlgHsbLaIBZOS-Zu9FB-4IMy7GRVbrcGo1dVryRE6aFbqJOk8eLqzR6xy4=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvOyM9Sj8AuUyjW2iiDzWaROYpbXhPdfnytFmYg18cNljvZrIptH8D6dJs3vhiszhAXHRsZy3Fo-LadcEvdT_JrFq9hGlG-u6nbwfm3MXlqHa6sQJKjOuyMLgZptPXBLEl1Iluda0-gcNuU=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvOyM9Sj8AuUyjW2iiDzWaROYpbXhPdfnytFmYg18cNljvZrIptH8D6dJs3vhiszhAXHRsZy3Fo-LadcEvdT_JrFq9hGlG-u6nbwfm3MXlqHa6sQJKjOuyMLgZptPXBLEl1Iluda0-gcNuU=w1600",
       "views": 44005
     },
     {
@@ -194,7 +194,7 @@
       "region": "Tainan",
       "rating": 5,
       "views": 99824,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEXKSAI3PIyHd3ELfxmKpS-Pv6csbW92zehdsUKZ9tKdyQBjAmIFHpc2I3xpitMxbqrwz0LTRTq425Bs8MEjD_bRSdIzXitKsWhz7TToGJFL1Z5Ta_Iy_O0WGbUDP0gcD_v5hz7=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFKpVPh6mPOKs-671rY2nSjoT44pDM6QpxnYed-2SnpGZ9kbNm5DdeKMh726rCBXVRwBRgQrN3h1rfViva4LGn977AOlbUFTkLgMy_GUsnUUVqywKnnfgfIOZQb-Nnekr6XKPBg=w600",
       "url": "https://maps.app.goo.gl/sxsymCrknChfhkNH7",
       "en": "The Russian (borscht) bread comes out of the oven around 2pm but selling starts ~1:40. Fresh out, it's piping hot with a crisp shell — rich, buttery and incredibly fragrant, with a fluffy crumb. Glorious freshly-baked carbs 💓",
       "zh": "羅宋兩點出爐，但其實1:40就差不多會先開始賣，我1:15到是排第六個，但其實排後面也沒關係，羅宋會一直出爐，只是每一輪中間要多等15分鐘而已 排在我前面的阿姨們一次都是買一盤兩盤（一盤10個）覺得如果都排了至少買兩個起跳吧 剛出爐的羅宋麵包熱熱燙燙的，外殼酥酥的，捏著吃非常油也非常香，奶油加好加滿的結果就是很好吃！！！麵包體也非常蓬鬆，熱呼呼的精緻澱粉萬歲💓💓💓 0:04 0:06 0:09 +2 "
@@ -290,7 +290,7 @@
       "region": "Taipei",
       "rating": 5,
       "views": 36868,
-      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn1nowJKk2zDKd6HTy37l4MxISI4VUtniog9ZFmSsLYqFJAl48VRA9wkWGEAK4rrkPTUoKHT9nHmId7TCfe2435QrFP_iOWDNH7ZSqumB19uputjHkuDHC3FlryTDKeGxURPOfzo=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAECQZT5BQoscWL7ZOZZ4FFg853cpoY3lDfgXbQ_BLEhXH7rRK8MbQLypG-Sw9nRceR5-mAWNpiV7z4Q3FzLhmiJImGa61bF4bcCa8Lov5UIhvKvMo-_gLwK7qNnBBLMClpI7_iCLQ=w600",
       "url": "https://maps.app.goo.gl/UtkbTDajLiRLdzC97",
       "en": "Said to be a Jensen Huang favorite — always packed, you'll share tables at peak hours. Must-order: the scallion pancake and radish cake. The pancake is hand-rolled to order, so worth the wait.",
       "zh": "好像是黃仁勳愛店，人非常多，用餐時間要併桌 😍必須點：蔥油餅、蘿蔔糕 蔥油餅是所有餐點裡面等最久的一個，等到一度有點不耐煩，但是好像每一桌點的都等很久，出去才看到是廚房現桿的 +4 "
@@ -336,7 +336,7 @@
       "category": "Drinks",
       "country": "Japan",
       "reactions": 23,
-      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn3o5Z47BeDzhldkvXOJKZ3I50sWGEqTbjIeXR_99q7W0cg94Z8RfTTwYXD0dXhsQU7G6EU_hqkbv5DGYxy6mJ269W3zprloz5gQZavsLAcBaITPXJ_UDznQhyHO6U6-7hvsrD77=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH_IIwxQIMAqrasQaEGpPYWhHQRT6tsKpSQ13FCI6o8WtgFs8ERgfyeV08xlHiL3BD7pRFPIqTNuqRVgGV4iWU9cyFxJiyJ8bBj1vyDztBlBubByyMMsAvdpeCL2zePkTjgv4up_2DyAKb5=w600",
       "url": "https://maps.app.goo.gl/r9mBsiDVgK7YBZeE7",
       "en": "A huge range of different milks — I drank three bottles and every one was genuinely distinct! Tip: the ranking board is on the station wall to the left of the shop, not the tags at the entrance. The glass bottles are deposit-return — finish at the door and put them back.",
       "zh": "我是台灣遊客，2025.01月到訪 有巨量不同種類的牛奶，喝了三罐真的都很不一樣！看到大家說跟著排行榜點，喝了兩瓶才看到➡️排行榜貼在店的左邊的車站牆上，不是指門口掛著的店家推薦標籤 🥛這邊玻璃瓶都要還，站在門口喝完就把瓶子放回櫃檯上，有一些特別標可以帶走的 就是塑膠瓶，可以帶著慢慢喝 +2 ",
@@ -402,7 +402,7 @@
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
       "reactions": 12,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEXKSAI3PIyHd3ELfxmKpS-Pv6csbW92zehdsUKZ9tKdyQBjAmIFHpc2I3xpitMxbqrwz0LTRTq425Bs8MEjD_bRSdIzXitKsWhz7TToGJFL1Z5Ta_Iy_O0WGbUDP0gcD_v5hz7=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFKpVPh6mPOKs-671rY2nSjoT44pDM6QpxnYed-2SnpGZ9kbNm5DdeKMh726rCBXVRwBRgQrN3h1rfViva4LGn977AOlbUFTkLgMy_GUsnUUVqywKnnfgfIOZQb-Nnekr6XKPBg=w600",
       "url": "https://maps.app.goo.gl/sxsymCrknChfhkNH7",
       "en": "The Russian (borscht) bread comes out of the oven around 2pm but selling starts ~1:40. Fresh out, it's piping hot with a crisp shell — rich, buttery and incredibly fragrant, with a fluffy crumb. Glorious freshly-baked carbs 💓",
       "zh": "羅宋兩點出爐，但其實1:40就差不多會先開始賣，我1:15到是排第六個，但其實排後面也沒關係，羅宋會一直出爐，只是每一輪中間要多等15分鐘而已 排在我前面的阿姨們一次都是買一盤兩盤（一盤10個）覺得如果都排了至少買兩個起跳吧 剛出爐的羅宋麵包熱熱燙燙的，外殼酥酥的，捏著吃非常油也非常香，奶油加好加滿的結果就是很好吃！！！麵包體也非常蓬鬆，熱呼呼的精緻澱粉萬歲💓💓💓 0:04 0:06 0:09 +2 ",
@@ -448,7 +448,7 @@
       "category": "Other",
       "country": "Italy",
       "region": "Florence",
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHdM6NtgwFOVNMQfVjdAa_8rNWkypDKHgZHduO9OYKWRRVUnfS4I9mHIz9I1lmV9_wtABAdSEC-cn6YWeghwULNFmvrovCWzDclUe2-XGwHeh7rzTrDpdOH7ceRFcZQzICG53pI=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFWQOe8EsL7kLoexuPZqFw_vuSfXR0Hrp-3JwOAAguTVqxmriOZg1nBCgDXJpKP_ZM6WNvkeqO3XY5AZmhhzLKZYmlwpueqtrdeNtWrYGG5VCO977P5uMm6zya2XpeGA3D3Mvu5=w600",
       "url": "https://maps.app.goo.gl/cxW5HhWgef6woVno7?g_st=il",
       "en": "A leather shop run by a lovely husband-and-wife — everything handmade by their family, and it is all so charming! Backpacks and shoulder bags of every size, wallets, cardholders, book covers, charms, keyrings, belts, even golf bags. Go browse!",
       "zh": "我是台灣遊客🇹🇼2026.2月份到訪 一對夫妻開在很附近的皮件店，商品都是他們家族手作的，超級可愛！！！！！來逛！ 🛍️不管是大小後背側背包包、錢包、名片夾、書套、小吊飾、鑰匙盤、皮帶、高爾夫球袋 通通都有 ",
@@ -489,6 +489,22 @@
     }
   ],
   "reviews": [
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT21SS1ZVeENiMFpJYWxWS2QzVnpTMUZ0WTI5NFEwRRAB",
+      "place": "Dore French Bakehouse",
+      "category": "Taiwanese & Chinese",
+      "country": "Taiwan",
+      "region": "Taichung",
+      "rating": 5,
+      "date": null,
+      "blurb": "2026.6月份到訪 離台中歌劇院不遠，同事",
+      "photoCount": 1,
+      "lat": 24.16074,
+      "lng": 120.63516,
+      "googleRating": 4.3,
+      "googleReviews": 2258,
+      "url": "https://maps.app.goo.gl/2nd58KxfV9BBxizu5"
+    },
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21kamRWVmpVVVZWVTNadE5XdzRabHAxVms1V1pYYxAB",
       "place": "八米澤鐵板新料理 朝馬店",
@@ -1264,7 +1280,7 @@
       "country": "Italy",
       "region": "Milan",
       "rating": 5,
-      "date": "2026-04-04",
+      "date": "2026-03-05",
       "blurb": "要先在網路上預約，但其實前一個月內再處理也可",
       "photoCount": 2,
       "lat": 45.4641,

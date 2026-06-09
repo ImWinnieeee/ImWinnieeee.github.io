@@ -54,10 +54,11 @@ export default function MapView({ reviews }) {
 
   return (
     <div className="card p-6">
-      <h2 className="font-display text-2xl font-bold flex items-center gap-2 mb-4">
-        <span className="text-2xl">🗺️</span>
+      <h2 className="font-display text-3xl font-bold flex items-center gap-2 mb-1.5">
+        <span className="text-3xl">🗺️</span>
         Where I've Eaten Around the World
       </h2>
+      <p className="text-lg md:text-xl font-semibold text-[var(--color-ink)]/85 mb-4">Hoping to help travelers around the world with my honest and informative words! 🌏</p>
 
       {/* Country tabs */}
       <div className="flex flex-wrap gap-2.5 mb-3">
