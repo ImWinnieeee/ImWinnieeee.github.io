@@ -5,7 +5,12 @@
       "WebFetch(domain:www.google.com)",
       "WebSearch",
       "WebFetch(domain:restaurantguru.com)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(git -C /Users/winnie/Desktop/playwithai log --all --diff-filter=A --name-only -- 'scraper/')",
+      "Bash(git -C /Users/winnie/Desktop/playwithai ls-files)",
+      "Bash(git grep *)",
+      "Bash(git *)",
+      "Bash(grep *)"
     ]
   }
 }
