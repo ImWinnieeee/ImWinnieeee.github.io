@@ -318,10 +318,37 @@ const FAV_LIST = [
   ['Other', '鐵 F.f 小餐廳 (無菜單1F)', '鐵 F.f 小餐廳 (1F無菜單)', 'Taiwan'],
   ['Other', 'HI MATE!', 'HI MATE!', 'Taiwan'],
 ]
+// Winnie's short recommendation for each favorite (what to order + her verdict),
+// distilled from her own reviews. Keyed by the display name above. Shown as a
+// hover/tap tooltip on the store name in the "My Top Favorites" cards. A few
+// places have no usable review text yet, so their note is empty (no tooltip).
+const FAV_NOTES = {
+  '秦味館 Qin Wei Guan': "A well-known Shaanxi restaurant, and it's delicious. Six of us ordered ten dishes for under NT$600 each. Book ahead: even reserving about 4 days out for a Saturday dinner, we nearly missed a table.",
+  '犁園湯包館 Li Yuan': "Reportedly a Jensen Huang favorite, and always packed, so expect to share tables at peak times. Must-order: the scallion pancake and the radish cake. The pancake is hand-rolled to order, so it's worth the wait.",
+  '長白小館': "A classic pickled-cabbage-and-pork hotpot spot. The sour-cabbage broth is the most sour I've ever had; it almost makes your throat tighten. A must for sour lovers; everyone else should let it mellow over a few broth refills.",
+  '肉料理荒川 Arakawa': "Tabelog's #1 yakiniku in Kyoto, and it lives up to it. Lots of cuts, almost all Japanese diners, and genuinely delicious. The owner is lovely too.",
+  '河村食堂 Kawamura': "Cheap and seriously good: the hamburg steak, fried shrimp, croquette and omurice are all winners. It's tucked deep in a residential alley, with almost only Japanese locals eating there.",
+  '寶來軒 Bao Lai Xuan': "A huge variety of ramen. For a first visit, order the Hakata tonkotsu and the char siu rice. Around NT$200 to 250 a head, and worth it for any ramen hunter.",
+  'PEPPINO 培皮諾小館': "Friends who'd just been to Italy say this is the closest to real Italian pizza, and it's genuinely fantastic. Two of us had a starter, pizza, a meat main, dessert and a drink for NT$2,266 incl. service. Easier to book on weeknights.",
+  'Trattoria ZàZà': "A hugely famous spot that's surprisingly good value, with big portions for relatively little. Book ahead and come for the pasta; well worth it.",
+  '千層吧 The Lasagna Bar': "Tastes properly Italian, especially close to Roman flavors, and a few dishes even beat what I ate in Italy. Book at least a day ahead; no reservation, no seat.",
+  'Ristorante "Dallo Zio"': "Excellent and worth it: NT$2,000 for two, better than the other Venice restaurants I tried. The squid-ink risotto and the zucchini-and-shrimp tagliatelle were both superb.",
+  'La Mole': "Perfect for a date or a special dinner. An authentic Italian spot recommended by Italian influencers, and almost everything is great. The today's-special antipasto (cured ham with creamy burrata) was generous and full of texture.",
+  'VERO Gelateria Cremeria': "Out of 16 gelatos across four cities on my Italy trip, this was my number one. So good I immediately bought a second scoop on the spot; don't miss it.",
+  'Regoli Pasticceria': "The best cream-filled maritozzo of my whole Italy trip, even better than Gold Cup's, with cream that's among the best I've ever had. Go early; they can sell out.",
+  'CREM 奶油甜點': "I ordered a (pricey) birthday cake and everything was in a class of its own: service, packaging and the cake itself. It even came with stainless-steel cutlery sets and a custom photo card (send your custom print to their LINE in advance).",
+  'David la Gelateria': "The affogato is so good. It's quite different from the ones I've seen in Taiwan, but delicious.",
+  '坪林手 Pina tshiu': "For anyone who loves unsweetened tea and a clean, natural tea aroma, please come. The Four Seasons Spring (NT$60, large) is fresh, light and exactly how it should taste; happily worth the price.",
+  'Karun Thai Tea (CentralwOrld)': "I had more than one Thai tea a day in Bangkok, and this Thai-tea slush really stood out. Find it on the 3rd floor behind the escalator at Gaysorn Centre, next to CentralWorld.",
+  'Barista Ray': "My beloved spot from Tainan: I've had their guava coffee 10+ times and it beats every other guava coffee I've tried. So happy they opened in Taipei; even on a busy Saturday the queue moved in under 10 minutes.",
+  'Milk Shop 酪 (Akihabara)': "A huge range of different milks; I drank three and every one was genuinely distinct. Tip: the ranking board is on the station wall to the left of the shop (not the tags at the door), and the glass bottles are deposit-return, so finish at the door and put them back.",
+  '食堂チャコ': "Really delicious and worth it, with layered flavors full of pleasant surprises. We booked the course on Tabelog (¥5,500pp) and highly recommend it: lots of dishes plus free-flow drinks, so satisfying.",
+  'HI MATE!': "So good, and worth the slight wait. Having this in the morning puts me in a great mood all day. Not the cheapest, but compared with other Taipei spots at the same price it's far more generous and tastier, with rich, ample portions.",
+}
 const favorites = FAV_LIST.map(([category, key, display, country]) => {
   const g = ratingByName[key] || {}
   if (g.rating == null) console.log(`   ⚠️  no Google rating for favorite: ${key}`)
-  return { category, name: display, country, googleRating: g.rating ?? null, googleReviews: g.reviews ?? null, url: g.matchedUrl || null }
+  return { category, name: display, country, googleRating: g.rating ?? null, googleReviews: g.reviews ?? null, url: g.matchedUrl || null, note: FAV_NOTES[display] || '' }
 })
 
 // Prefer Google's own header count ("1,674 photos" = photos + videos) — it's the
