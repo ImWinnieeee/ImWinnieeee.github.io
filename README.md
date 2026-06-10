@@ -81,30 +81,42 @@ are gathered with a small Playwright scraper and a few build steps. The flow:
         src/data.json   →  the React app renders this
 ```
 
-### 🔄 Refreshing the site (the one command to remember)
+### 🔄 Refreshing the site
 
-After writing new Google reviews / uploading photos, refresh everything with **one**
-command:
+After writing new Google reviews / uploading photos, leave your logged-in Chrome
+window open and run **one** command. Which one depends on what you want:
+
+| Command | What it does | What it commits | Goes live? |
+|---------|--------------|-----------------|------------|
+| `npm run refresh` | **Pure data update.** scrape → parse → build:data, then auto-commits & pushes **only `src/data.json`** with message `<date> data update` | only `src/data.json` | ✅ yes (auto) |
+| `npm run update:site` | **Everything live.** Same scrape + a full `build`, then `git add -A` → commit → push (sweeps up **all** working-tree changes) | all changes (`git add -A`) | ✅ yes (auto) |
+| `npm run build:all` | scrape → parse → build:data → build, **local only** | nothing | ❌ no |
+
+**👉 If you just want to update the numbers (views, counts, ratings) — `npm run refresh` is all you need.**
+It fetches your latest Google Maps data, commits only `src/data.json`, pushes, and
+GitHub Actions auto-deploys. It deliberately leaves any other edits (components,
+styling, scraper tweaks) in your working tree — they will **not** be swept onto the
+live site. Use `npm run update:site` instead when you *do* want those other changes
+deployed too.
 
 ```bash
 npm run login     # ONLY the first time, or if the saved Chrome session expired —
-                  # leave that Chrome window open
-npm run refresh   # scrape → parse → build:data → build  (all four steps, in order)
+                  # leave that Chrome window open. (refresh / update:site will also
+                  # open it for you automatically if it isn't running.)
+npm run refresh   # pure data update → auto commit (src/data.json only) → push → deploy
 ```
 
-`npm run refresh` is just shorthand for:
+Under the hood `refresh` / `update:site` run these in order (chained so that if one
+fails — e.g. Chrome isn't open — the rest **stop**, never overwriting good data with
+a half-finished scrape):
 
 ```bash
 npm run scrape       # 1. harvest reviews, photos, photo + VIDEO view counts, store ratings
 npm run parse        # 2. raw reviews → structured records
 npm run build:data   # 3. assemble src/data.json (the numbers update HERE)
-npm run build        # 4. rebuild dist/ (the deployed static site)
+npm run build        # 4. rebuild dist/ — update:site only; the deploy CI rebuilds anyway,
+                     #    so refresh skips this (numbers already live after step 3)
 ```
-
-The steps are chained with `&&`, so if one fails (e.g. Chrome isn't open) the rest
-**stop** — it never overwrites good data with a half-finished scrape. The numbers on
-the site only change after step 3; step 4 is only needed if you serve the built
-`dist/` (the `npm run dev` server picks up `src/data.json` directly).
 
 > **What updates automatically:** photo view counts (per-photo + the multi-million
 > total), total photo/video count, total reviews, per-video view counts, Google
