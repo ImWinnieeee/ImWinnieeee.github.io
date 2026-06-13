@@ -103,7 +103,7 @@ deployed too.
 npm run login     # ONLY the first time, or if the saved Chrome session expired —
                   # leave that Chrome window open. (refresh / update:site will also
                   # open it for you automatically if it isn't running.)
-npm run refresh   # pure data update → auto commit (src/data.json only) → push → deploy
+   # pure data update → auto commit (src/data.json only) → push → deploy
 ```
 
 Under the hood `refresh` / `update:site` run these in order (chained so that if one

@@ -62,6 +62,8 @@ const REPLY_PICKS = ['Barroccino', 'Dallo Zio', 'Pelletterie', 'Gonnaeat', 'Ishi
 // per-review Share link captured during scraping, then a place-name search.
 const URL_OVERRIDE = {
   'FP Pelletterie - Flavio Leather Shop': 'https://maps.app.goo.gl/cxW5HhWgef6woVno7?g_st=il',
+  // scraped Share link pointed at the wrong place; this is Winnie's actual review permalink
+  'Men-ya Inoichi': 'https://maps.app.goo.gl/4P4nLdCUKAoDfd2aA?g_st=ic',
 }
 // pass the matched parsed review (has .id and .place)
 const reviewUrl = (r) => {
@@ -116,6 +118,7 @@ const EN = {
   'Toritsune Shizendo': 'A spot lots of YouTubers recommend. We arrived ~10 minutes after opening and it was already 80% full but with no queue yet — mostly Japanese diners, and locals were lining up by the time we left. It\'s tucked in a residential-looking area about a 5-minute walk from the Akihabara bustle.',
   Giolitti: 'Honestly, just okay — there are far better gelato spots in Italy than this famous one.',
   'FP Pelletterie - Flavio Leather Shop': 'A leather shop run by a lovely husband-and-wife — everything handmade by their family, and it is all so charming! Backpacks and shoulder bags of every size, wallets, cardholders, book covers, charms, keyrings, belts, even golf bags. Go browse!',
+  "La Casa del Caffè Tazza d'Oro": 'Got there at 8:30am — no queue at all, only about ten people inside. Had the cappuccino and the macchiato (both excellent) plus a cream bun, and liked the coffee enough to buy beans to take home.',
 }
 
 const imgOf = (r) => big((r.images || [])[0] || null)
@@ -140,6 +143,7 @@ const WHY = {
   'Toritsune Shizendo': 'The one tip that matters: arrive right at opening to beat the queue at this locals’ favorite — plus how to find the hidden entrance.',
   'Pu-Jei': 'Exact timing intel for a queue-heavy bakery — when the Russian bread comes out, and that it keeps coming so latecomers still get some.',
   Giolitti: 'A rare honest “it’s overhyped” verdict on a famous tourist gelateria — people value the contrarian heads-up.',
+  "La Casa del Caffè Tazza d'Oro": 'Beats the crowds at one of Rome’s most famous coffee bars — arrive by 8:30am for no queue, and the tip that the beans are worth taking home.',
 }
 
 // ---- most reacted (top 5) ----
