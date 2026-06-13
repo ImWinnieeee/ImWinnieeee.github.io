@@ -2,7 +2,7 @@
   "profile": {
     "name": "Winnie's Food Map",
     "level": "Local Guide · Level 8",
-    "points": 16991,
+    "points": 18029,
     "profileUrl": "https://maps.app.goo.gl/e9HggWQj89SQqdSd8"
   },
   "stats": {
@@ -11,12 +11,12 @@
     "totalPhotoViews": 9300520,
     "totalReviewViews": 2564539,
     "photoCount": 1755,
-    "points": 16991,
+    "points": 18029,
     "level": 8,
     "dateFrom": "2018-06",
     "dateTo": "2026-06",
     "isMockData": false,
-    "updatedAt": "2026-06-13T14:51:39.759Z"
+    "updatedAt": "2026-06-13T15:25:10.391Z"
   },
   "topPhotos": [
     {
@@ -1325,8 +1325,8 @@
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21SQ1IyUmtNVFZaVTFkVGFVWkdhRVpaYlRCUWEwRRAB",
       "place": "Saint Peter’s Basilica",
       "category": "Attraction",
-      "country": "Italy",
-      "region": "Vatican",
+      "country": "Vatican",
+      "region": "Vatican City",
       "rating": 5,
       "date": "2026-03-05",
       "blurb": "🎫12/14線上買了2/24的梵蒂岡博物館",
@@ -1341,8 +1341,8 @@
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2kxcmEzSTJibUpwUVV0U2NUQllWRTlQTkRNdFptYxAB",
       "place": "Vatican Museums",
       "category": "Attraction",
-      "country": "Italy",
-      "region": "Vatican",
+      "country": "Vatican",
+      "region": "Vatican City",
       "rating": 5,
       "date": "2026-03-05",
       "blurb": "⏰早上7:30爬聖彼得（無預約）、線上買票預",
@@ -6645,10 +6645,11 @@
       "date": "2019-06-05",
       "blurb": "",
       "photoCount": 0,
-      "lat": 33.61004,
-      "lng": 130.34618,
+      "lat": 33.15845,
+      "lng": 130.39606,
       "googleRating": null,
-      "googleReviews": null
+      "googleReviews": null,
+      "url": "https://maps.app.goo.gl/NPR83mtWKGQAGSAn8?g_st=ic"
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURJNzlpT1FBEAE",
@@ -6660,10 +6661,11 @@
       "date": "2019-06-05",
       "blurb": "",
       "photoCount": 0,
-      "lat": 33.60412,
-      "lng": 130.4201,
+      "lat": 33.26296,
+      "lng": 131.35567,
       "googleRating": null,
-      "googleReviews": null
+      "googleReviews": null,
+      "url": "https://maps.app.goo.gl/zeGx6NzX72vZVEfk8?g_st=ic"
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUN3djV5U1J3EAE",

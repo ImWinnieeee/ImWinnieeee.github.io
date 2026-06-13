@@ -41,4 +41,5 @@ export const COUNTRY_META = {
   Japan: { flag: '🇯🇵', label: 'Japan' },
   Italy: { flag: '🇮🇹', label: 'Italy' },
   Thailand: { flag: '🇹🇭', label: 'Thailand' },
+  Vatican: { flag: '🇻🇦', label: 'Vatican' },
 }

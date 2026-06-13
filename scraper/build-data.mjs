@@ -30,6 +30,19 @@ const geo = fs.existsSync(path.join(OUT, 'geocode-cache.json')) ? L('geocode-cac
 const reviewUrls = fs.existsSync(path.join(OUT, 'review-urls.json')) ? L('review-urls.json') : {}
 const PROFILE_URL = 'https://maps.app.goo.gl/e9HggWQj89SQqdSd8'
 
+// --- live Local Guide level + contribution points, scraped from the contributions
+// header by scrape.mjs → stats.json ({ level: "8", points: "18,029" }). We parse the
+// digits out (points come as a comma-grouped string). If a scrape misses them (header
+// DOM change), fall back to the last known values so the headline never zeroes out. ---
+const FALLBACK_POINTS = 16991
+const FALLBACK_LEVEL = 8
+const liveStats = fs.existsSync(path.join(OUT, 'stats.json')) ? L('stats.json') : {}
+const num = (v) => { const n = parseInt(String(v ?? '').replace(/[^\d]/g, ''), 10); return Number.isFinite(n) && n > 0 ? n : null }
+const points = num(liveStats.points) ?? FALLBACK_POINTS
+const level = num(liveStats.level) ?? FALLBACK_LEVEL
+if (num(liveStats.points) == null) console.log(`   ⚠️  no scraped points in stats.json — using fallback ${FALLBACK_POINTS}`)
+else console.log(`   level ${level} · points ${points.toLocaleString()} (from stats.json)`)
+
 // --- the hand-entered view/reaction counts: pick the NEWEST views_and_reactions*.csv ---
 const csvFile = fs.readdirSync(OUT)
   .filter((f) => /^views_and_reactions.*\.csv$/i.test(f))
@@ -64,6 +77,9 @@ const URL_OVERRIDE = {
   'FP Pelletterie - Flavio Leather Shop': 'https://maps.app.goo.gl/cxW5HhWgef6woVno7?g_st=il',
   // scraped Share link pointed at the wrong place; this is Winnie's actual review permalink
   'Men-ya Inoichi': 'https://maps.app.goo.gl/4P4nLdCUKAoDfd2aA?g_st=ic',
+  // correct Google Maps links Winnie supplied (pins were misplaced under Fukuoka)
+  'Wakamatsuya': 'https://maps.app.goo.gl/NPR83mtWKGQAGSAn8?g_st=ic',
+  'Yufu Mabushi "Shin" Yufuin Ekimae Branch': 'https://maps.app.goo.gl/zeGx6NzX72vZVEfk8?g_st=ic',
 }
 // pass the matched parsed review (has .id and .place)
 const reviewUrl = (r) => {
@@ -225,15 +241,15 @@ const CITY = {
   Nara: [34.6851, 135.8048], Kamakura: [35.3192, 139.5469], Fukuoka: [33.5902, 130.4017],
   Japan: [35.6, 138.0], Rome: [41.9028, 12.4964], Florence: [43.7696, 11.2558],
   Venice: [45.4408, 12.3155], Milan: [45.4642, 9.19], Napoli: [40.8518, 14.2681],
-  Vatican: [41.9029, 12.4534], Italy: [42.5, 12.5], Chiayi: [23.4801, 120.4491],
+  Vatican: [41.9029, 12.4534], 'Vatican City': [41.9029, 12.4534], Italy: [42.5, 12.5], Chiayi: [23.4801, 120.4491],
   Bangkok: [13.7563, 100.5018], Thailand: [13.75, 100.5],
 }
 // Manual country/region fixes for reviews the address-based auto-classifier left
 // in the generic "<country> / <country>" bucket (matched by a substring of the
 // place name). Each → { country, region }; coords then follow the new region.
 const GEOFIX = [
-  ['Vatican Museums', 'Italy', 'Vatican'],
-  ['Saint Peter', 'Italy', 'Vatican'],          // Saint Peter’s Basilica — same trip
+  ['Vatican Museums', 'Vatican', 'Vatican City'],   // its own country, not under Italy
+  ['Saint Peter', 'Vatican', 'Vatican City'],       // Saint Peter’s Basilica — same trip
   ['Ginza Kagari', 'Japan', 'Tokyo'],           // Narita Airport branch
   ['Enoshima Koya', 'Japan', 'Kamakura'],
   ['Giraffa Curry Pan', 'Japan', 'Kamakura'],
@@ -251,6 +267,16 @@ const geofix = (place) => {
   for (const [m, country, region] of GEOFIX) if (place && place.includes(m)) return { country, region }
   return null
 }
+// exact pin coordinates for places the geocoder/city-fallback misplaced (matched by
+// a substring of the place name). Resolved from Winnie's own Google Maps links.
+const COORDS_OVERRIDE = [
+  ['Wakamatsuya', 33.1584458, 130.3960606],   // 若松屋 — Yanagawa (was stuck at Fukuoka city centre)
+  ['Yufu Mabushi', 33.2629646, 131.3556746],  // 由布まぶし「心」— Yufuin station front
+]
+const coordsfix = (place) => {
+  for (const [m, lat, lng] of COORDS_OVERRIDE) if (place && place.includes(m)) return [lat, lng]
+  return null
+}
 // per-store Google rating + review count scraped by scrape.mjs ({ [id]: {rating, reviews, title} })
 const storeRatings = fs.existsSync(path.join(OUT, 'store-ratings.json')) ? L('store-ratings.json') : {}
 const jitter = (id) => { let h = 0; for (const c of id) h = (h * 31 + c.charCodeAt(0)) >>> 0; return [((h % 1000) / 1000 - 0.5) * 0.04, (((h >> 10) % 1000) / 1000 - 0.5) * 0.04] }
@@ -264,9 +290,10 @@ const reviews = parsed.map((r) => {
   // gone from Maps (defunct). Label that bucket clearly instead of a vague repeat.
   if (region === country) region = 'Permanently closed'
   let lat, lng
+  const cfix = coordsfix(r.place)
   // a manual fix re-homes the pin to the new region (the old geocode/fallback was
   // for the wrong place); otherwise keep the real geocoded point when we have one
-  if (geo[r.id] && !fx) { lat = geo[r.id].lat; lng = geo[r.id].lng } else {
+  if (cfix) { [lat, lng] = cfix } else if (geo[r.id] && !fx) { lat = geo[r.id].lat; lng = geo[r.id].lng } else {
     const c = CITY[region] || CITY[country] || CITY.Taiwan; const [dy, dx] = jitter(r.id)
     lat = c[0] + dy; lng = c[1] + dx
   }
@@ -385,10 +412,10 @@ const dateTo = allDates[allDates.length - 1] ? allDates[allDates.length - 1].sli
 const totalReviewViews = 11720000 - 9155461 // = 2,564,539, fixed
 
 const data = {
-  profile: { name: "Winnie's Food Map", level: 'Local Guide · Level 8', points: 16991, profileUrl: PROFILE_URL },
+  profile: { name: "Winnie's Food Map", level: `Local Guide · Level ${level}`, points, profileUrl: PROFILE_URL },
   stats: {
     totalReviews: parsed.length, ratingsOnly: 21, totalPhotoViews: photos.total || 9140043,
-    totalReviewViews, photoCount, points: 16991, level: 8, dateFrom, dateTo,
+    totalReviewViews, photoCount, points, level, dateFrom, dateTo,
     isMockData: false,
     // when this data was last (re)built — i.e. the last `npm run refresh` (or any
     // future automated update). Shown under the Total Views headline.

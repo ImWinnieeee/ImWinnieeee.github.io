@@ -22,7 +22,7 @@ export default function TopPhotos({ photos, videos = [], totalViews }) {
           <p className="text-lg md:text-xl font-semibold text-[var(--color-ink)]/85 mt-2">
             Seen{' '}
             <span className="font-black text-[var(--color-vermilion)]">{formatInt(totalViews)}</span>{' '}
-            times! I’ve helped millions of people find something delicious to eat 📸
+            times! I’ve helped millions of people find something delicious to eat. 📸
           </p>
         </div>
         <div className="text-right">

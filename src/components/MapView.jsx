@@ -129,13 +129,16 @@ export default function MapView({ reviews }) {
       </div>
 
       {/* Legend */}
-      <div className="mt-4 flex flex-wrap gap-3 text-xs text-[var(--color-ink-soft)]">
-        {Object.entries(CATEGORY_META).map(([name, m]) => (
-          <span key={name} className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-paper)]">
-            <span className="inline-block h-3 w-3 rounded-full" style={{ background: m.color }} />
-            {m.emoji} {name}
-          </span>
-        ))}
+      <div className="mt-4">
+        <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-ink-soft)] mb-1.5">Place type</div>
+        <div className="flex flex-wrap gap-3 text-xs text-[var(--color-ink-soft)]">
+          {Object.entries(CATEGORY_META).map(([name, m]) => (
+            <span key={name} className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-paper)]">
+              <span className="inline-block h-3 w-3 rounded-full" style={{ background: m.color }} />
+              {m.emoji} {name}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   )

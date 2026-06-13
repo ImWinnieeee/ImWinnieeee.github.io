@@ -143,7 +143,8 @@ const stats = await page.evaluate(() => {
   const grab = (rx) => { const m = body.match(rx); return m ? m[1] : null }
   return {
     level: grab(/Level (\d+)/i),
-    points: grab(/([\d,]+) ?\/ ?[\d,]+ points/i),
+    // accept both "18,029 / 20,000 points" and a bare "18,029 points"
+    points: grab(/([\d,]+)\s*(?:\/\s*[\d,]+\s*)?points/i),
   }
 })
 
