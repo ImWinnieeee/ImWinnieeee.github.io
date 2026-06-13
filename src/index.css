@@ -165,3 +165,6 @@ body {
   font-family: var(--font-body) !important;
   color: var(--color-ink) !important;
 }
+/* the tapped pin's preview is interactive so its "open my review" link can be
+   tapped on touch (Leaflet tooltips are click-through / pointer-events:none by default) */
+.leaflet-tooltip.pin-tip { pointer-events: auto; }

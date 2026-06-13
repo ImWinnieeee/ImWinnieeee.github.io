@@ -9,6 +9,7 @@ import OwnerReplies from './components/OwnerReplies.jsx'
 import MapView from './components/MapView.jsx'
 import Categories from './components/Categories.jsx'
 import BackToTop from './components/BackToTop.jsx'
+import DataSource from './components/DataSource.jsx'
 
 const NAV = [
   { id: 'photos', label: 'Photos' },
@@ -50,9 +51,7 @@ export default function App() {
           {profile.level} · {formatViews(stats.totalPhotoViews)} photo views across{' '}
           {new Set(reviews.map((r) => r.country)).size} countries · Updated from {stats.dateFrom} to {stats.dateTo}
         </p>
-        <p className="text-xs text-[var(--color-ink-soft)] mt-1.5 max-w-2xl">
-          The data on this site comes from Winnie’s personal Google Maps profile, built into this website by Winnie and her Claude Code.
-        </p>
+        <DataSource profileUrl={profile.profileUrl} />
 
         <div className="mt-5 flex flex-wrap gap-2.5">
           {NAV.map((n) => (

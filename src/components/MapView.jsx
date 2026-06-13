@@ -31,9 +31,14 @@ export default function MapView({ reviews }) {
 
   const [active, setActive] = useState(countries[0]?.country)
   const [activeRegion, setActiveRegion] = useState(null) // null = whole country
+  // a tapped pin (touch only). On touch there's no hover, so the 1st tap just
+  // previews (shows the tooltip); only a 2nd tap on the same pin opens the review.
+  const [activePin, setActivePin] = useState(null)
+  const [canHover, setCanHover] = useState(true)
+  useEffect(() => { setCanHover(window.matchMedia?.('(hover: hover)').matches ?? true) }, [])
 
-  // switching country always resets the city drill-down
-  const selectCountry = (country) => { setActive(country); setActiveRegion(null) }
+  // switching country always resets the city drill-down (and any tapped pin)
+  const selectCountry = (country) => { setActive(country); setActiveRegion(null); setActivePin(null) }
 
   const inCountry = useMemo(() => pts.filter((r) => r.country === active), [pts, active])
 
@@ -54,11 +59,11 @@ export default function MapView({ reviews }) {
 
   return (
     <div className="card p-6">
-      <h2 className="font-display text-3xl font-bold flex items-center gap-2 mb-1.5">
-        <span className="text-3xl">🗺️</span>
+      <h2 className="font-display text-lg md:text-3xl font-bold flex items-center gap-2 mb-1.5">
+        <span className="text-lg md:text-3xl">🗺️</span>
         Where I've Eaten Around the World
       </h2>
-      <p className="text-lg md:text-xl font-semibold text-[var(--color-ink)]/85 mb-4">Hoping to help travelers around the world with my honest and informative words! 🌏</p>
+      <p className="text-lg md:text-xl font-semibold text-[var(--color-ink)]/85 mb-4">Hoping to help travelers around the world with my honest and informative words!</p>
 
       {/* Country tabs */}
       <div className="flex flex-wrap gap-2.5 mb-3">
@@ -108,19 +113,33 @@ export default function MapView({ reviews }) {
           <FitBounds pts={shown} boundsKey={`${active}|${activeRegion || ''}`} />
           {shown.map((r) => {
             const meta = CATEGORY_META[r.category] || CATEGORY_META['Other']
+            const isActive = activePin === r.id
+            const open = () => r.url && window.open(r.url, '_blank', 'noopener')
             return (
               <CircleMarker
                 key={r.id}
                 center={[r.lat, r.lng]}
-                radius={9}
-                pathOptions={{ color: '#fff', fillColor: meta.color, fillOpacity: 0.9, weight: 2.5 }}
-                eventHandlers={r.url ? { click: () => window.open(r.url, '_blank', 'noopener') } : undefined}
+                radius={isActive ? 11 : 9}
+                pathOptions={{ color: '#fff', fillColor: meta.color, fillOpacity: 0.9, weight: isActive ? 3.5 : 2.5 }}
+                eventHandlers={{
+                  click: () => {
+                    // desktop (hover) opens right away; touch needs a 1st tap to
+                    // preview and a 2nd tap on the same pin to actually open.
+                    if (canHover) open()
+                    else if (isActive) open()
+                    else setActivePin(r.id)
+                  },
+                }}
               >
-                <Tooltip>
+                <Tooltip permanent={!canHover && isActive} className="pin-tip">
                   <strong>{meta.emoji} {r.place}</strong>
                   <br />
                   {r.region} · {'★'.repeat(r.rating || 0)}
-                  {r.url && <><br /><span style={{ color: 'var(--color-vermilion)' }}>click → my review</span></>}
+                  {r.url && <><br /><span
+                    onClick={(e) => { e.stopPropagation(); open() }}
+                    style={{ color: 'var(--color-vermilion)', fontWeight: 700, textDecoration: 'underline', cursor: 'pointer' }}>
+                    → open my review
+                  </span></>}
                 </Tooltip>
               </CircleMarker>
             )

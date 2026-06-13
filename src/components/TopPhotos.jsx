@@ -16,13 +16,13 @@ export default function TopPhotos({ photos, videos = [], totalViews }) {
     <div className="card p-6">
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2.5 sm:gap-4 mb-5">
         <div className="min-w-0">
-          <h2 className="font-display text-xl md:text-3xl font-bold tracking-tight flex items-center gap-2 whitespace-nowrap">
-            <span className="text-xl md:text-3xl">📸</span> Most Viewed Photos &amp; Videos
+          <h2 className="font-display text-lg md:text-3xl font-bold tracking-tight flex items-center gap-2 whitespace-nowrap">
+            <span className="text-lg md:text-3xl">📸</span> Most Viewed Photos &amp; Videos
           </h2>
           <p className="text-base md:text-xl font-semibold text-[var(--color-ink)]/85 mt-2 text-pretty">
             Seen{' '}
             <span className="font-black text-[var(--color-vermilion)]">{formatInt(totalViews)}</span>{' '}
-            times — I’ve helped millions of people find something delicious to eat. 📸
+            times — I’ve helped millions of people find something delicious to eat.
           </p>
         </div>
         <div className="shrink-0 text-left sm:text-right">

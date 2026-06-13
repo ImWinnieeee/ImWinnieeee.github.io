@@ -86,12 +86,12 @@ function FavRow({ f, color }) {
 export default function Categories({ favorites }) {
   return (
     <div>
-      <h2 className="font-display text-3xl font-bold mb-1.5 flex items-center gap-2">
-        <span className="text-3xl">🍽️</span> My Top Favorites
+      <h2 className="font-display text-lg md:text-3xl font-bold mb-1.5 flex items-center gap-2">
+        <span className="text-lg md:text-3xl">🍽️</span> My Top Favorites
       </h2>
       <p className="text-lg md:text-xl font-semibold text-[var(--color-ink)]/85 mb-5">
         I’m always the one who picks the restaurant when we eat out with friends. I love hunting down new
-        places and trying new food, and this is the pocket list I give to my friends. 🍽️
+        places and trying new food, and this is the pocket list I give to my friends.
       </p>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {FAVORITE_CARDS.map((card) => {
