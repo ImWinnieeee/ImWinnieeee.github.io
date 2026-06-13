@@ -34,15 +34,17 @@ export default function App() {
 
       {/* Header */}
       <header className="max-w-5xl mx-auto px-4 pt-12 pb-4">
-        <div className="flex items-start justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-5 md:gap-6">
           <div>
-            <div className="text-3xl tracking-widest mb-3">🍣 🍝 🍜 🍰 🧋</div>
+            <div className="text-2xl sm:text-3xl tracking-widest mb-3">🍣 🍝 🍜 🍰 🧋</div>
             <h1 className="font-display text-4xl md:text-5xl font-black tracking-tight leading-tight">
               {profile.name}
             </h1>
             <div className="h-1.5 w-16 rounded-full bg-[var(--color-vermilion)] my-3" />
           </div>
-          <TotalViews photoViews={stats.totalPhotoViews} reviewViews={stats.totalReviewViews} updatedAt={stats.updatedAt} />
+          <div className="border-t border-[var(--color-line)] pt-4 md:border-0 md:pt-0">
+            <TotalViews photoViews={stats.totalPhotoViews} reviewViews={stats.totalReviewViews} updatedAt={stats.updatedAt} />
+          </div>
         </div>
         <p className="text-base font-medium text-[var(--color-ink)]/85">
           {profile.level} · {formatViews(stats.totalPhotoViews)} photo views across{' '}

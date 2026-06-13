@@ -11,17 +11,17 @@ export default function TotalViews({ photoViews, reviewViews, updatedAt }) {
     : null
 
   return (
-    <div className="text-right shrink-0">
-      <div className="flex items-center justify-end gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-ink-soft)]">
+    <div className="text-left md:text-right shrink-0">
+      <div className="flex items-center justify-start md:justify-end gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-ink-soft)]">
         <span className="inline-flex h-2 w-2 rounded-full bg-[var(--color-vermilion)]" />
         Total Views
       </div>
       <div className="font-display font-black tracking-tight text-[var(--color-vermilion)] tabular-nums leading-none text-5xl md:text-6xl">
         {total.toLocaleString('en-US')}
       </div>
-      <div className="text-base font-medium text-[var(--color-ink-soft)] mt-1">photos + reviews</div>
+      <div className="text-sm md:text-base font-medium text-[var(--color-ink-soft)] mt-1">photos + reviews</div>
       {updated && (
-        <div className="text-base font-medium text-[var(--color-ink-soft)] mt-0.5 tabular-nums">Updated {updated}</div>
+        <div className="text-sm md:text-base font-medium text-[var(--color-ink-soft)] mt-0.5 tabular-nums">Updated {updated}</div>
       )}
     </div>
   )
