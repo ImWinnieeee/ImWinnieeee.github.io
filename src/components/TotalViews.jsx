@@ -14,7 +14,7 @@ export default function TotalViews({ photoViews, reviewViews, updatedAt }) {
     <div className="text-left md:text-right shrink-0">
       <div className="flex items-center justify-start md:justify-end gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-ink-soft)]">
         <span className="inline-flex h-2 w-2 rounded-full bg-[var(--color-vermilion)]" />
-        Total views of photos &amp; reviews
+        Total views
       </div>
       <div className="font-display font-black tracking-tight text-[var(--color-vermilion)] tabular-nums leading-none text-5xl md:text-6xl mt-1.5">
         {total.toLocaleString('en-US')}

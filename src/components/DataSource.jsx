@@ -1,10 +1,15 @@
 import { useState } from 'react'
 
+// Deep-link to the Photos tab of Winnie's Google Maps contributions (looks more
+// impressive than the plain profile). Used for the "Go to…" link in the popover.
+const PROFILE_PHOTOS_URL =
+  'https://www.google.com/maps/contrib/101678781544711902540/photos/@25.0538208,121.544514,16z/data=!4m3!8m2!3m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D'
+
 // The footnote about where the site's data comes from. Collapsed to a small,
 // underlined "(Data Source)" to keep the header light; the full sentence + a link
 // to Winnie's Google Maps profile appear in a popover on hover (desktop) or tap
 // (mobile).
-export default function DataSource({ profileUrl }) {
+export default function DataSource() {
   const [open, setOpen] = useState(false)
   return (
     <span className="group relative inline-block mt-2">
@@ -21,7 +26,7 @@ export default function DataSource({ profileUrl }) {
           The data on this site comes from Winnie’s personal Google Maps profile, built
           into this website by Winnie and her Claude Code.
         </span>
-        <a href={profileUrl} target="_blank" rel="noreferrer"
+        <a href={PROFILE_PHOTOS_URL} target="_blank" rel="noreferrer"
           className="mt-2 inline-block text-xs font-semibold text-[var(--color-vermilion)] hover:underline">
           → Go to Winnie’s Google Maps profile
         </a>

@@ -51,7 +51,7 @@ export default function App() {
           {profile.level} · {formatViews(stats.totalPhotoViews)} photo views across{' '}
           {new Set(reviews.map((r) => r.country)).size} countries · Updated from {stats.dateFrom} to {stats.dateTo}
         </p>
-        <DataSource profileUrl={profile.profileUrl} />
+        <DataSource />
 
         <div className="mt-5 flex flex-wrap gap-2.5">
           {NAV.map((n) => (

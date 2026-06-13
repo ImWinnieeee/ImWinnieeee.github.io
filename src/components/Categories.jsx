@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FAVORITE_CARDS, COUNTRY_META, formatInt } from '../lib.js'
 
 // Feature 5: my favorite places by category — 5 per category, NO ranking order.
@@ -6,8 +6,10 @@ import { FAVORITE_CARDS, COUNTRY_META, formatInt } from '../lib.js'
 // Maps), so the picks carry real-world weight, not just my own say-so.
 // Hovering (desktop) / tapping (mobile) a store name pops a little note with
 // what to order + my short verdict (from build-data.mjs → f.note).
-function FavRow({ f, color }) {
-  const [tapped, setTapped] = useState(false) // 手機點一下展開
+function FavRow({ f, color, isOpen, onToggle, canHover }) {
+  // `isOpen` (tap state) is owned by the parent so only ONE preview is open at a
+  // time. Hover is only honoured on hover-capable (desktop) devices — on touch we
+  // ignore it so a 2nd tap reliably closes the preview (no sticky-hover lingering).
   const [hovered, setHovered] = useState(false) // 桌機游標停留
   const hasNote = !!f.note
   const flag = COUNTRY_META[f.country]?.flag
@@ -45,16 +47,16 @@ function FavRow({ f, color }) {
     )
   }
 
-  const open = tapped || hovered
+  const open = isOpen || (canHover && hovered)
   return (
     <li
       className="relative"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={canHover ? () => setHovered(true) : undefined}
+      onMouseLeave={canHover ? () => setHovered(false) : undefined}
     >
       <button
         type="button"
-        onClick={() => setTapped((s) => !s)}
+        onClick={onToggle}
         aria-expanded={open}
         className="block w-full text-left cursor-help hover:opacity-70 transition-opacity"
       >
@@ -84,6 +86,10 @@ function FavRow({ f, color }) {
 }
 
 export default function Categories({ favorites }) {
+  // only one preview open at a time across all cards
+  const [openId, setOpenId] = useState(null)
+  const [canHover, setCanHover] = useState(false)
+  useEffect(() => { setCanHover(window.matchMedia?.('(hover: hover)').matches ?? false) }, [])
   return (
     <div>
       <h2 className="font-display text-lg md:text-3xl font-bold mb-1.5 flex items-center gap-2">
@@ -103,7 +109,12 @@ export default function Categories({ favorites }) {
                 <h3 className="font-display text-xl font-bold" style={{ color: card.color }}>{card.label}</h3>
               </div>
               <ul className="space-y-3">
-                {items.map((f) => <FavRow key={f.name} f={f} color={card.color} />)}
+                {items.map((f) => {
+                  const id = `${f.category}::${f.name}`
+                  return <FavRow key={id} f={f} color={card.color} canHover={canHover}
+                    isOpen={openId === id}
+                    onToggle={() => setOpenId((cur) => (cur === id ? null : id))} />
+                })}
                 {items.length === 0 && <li className="text-sm text-[var(--color-ink-soft)]">No picks yet</li>}
               </ul>
             </div>

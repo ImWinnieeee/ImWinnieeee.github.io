@@ -34,11 +34,12 @@ export default function MapView({ reviews }) {
   // a tapped pin (touch only). On touch there's no hover, so the 1st tap just
   // previews (shows the tooltip); only a 2nd tap on the same pin opens the review.
   const [activePin, setActivePin] = useState(null)
+  const [activeCat, setActiveCat] = useState(null) // place-type filter (null = show all, full colour)
   const [canHover, setCanHover] = useState(true)
   useEffect(() => { setCanHover(window.matchMedia?.('(hover: hover)').matches ?? true) }, [])
 
-  // switching country always resets the city drill-down (and any tapped pin)
-  const selectCountry = (country) => { setActive(country); setActiveRegion(null); setActivePin(null) }
+  // switching country always resets the city drill-down (and any tapped pin / filter)
+  const selectCountry = (country) => { setActive(country); setActiveRegion(null); setActivePin(null); setActiveCat(null) }
 
   const inCountry = useMemo(() => pts.filter((r) => r.country === active), [pts, active])
 
@@ -53,6 +54,12 @@ export default function MapView({ reviews }) {
   const shown = useMemo(
     () => (activeRegion ? inCountry.filter((r) => (r.region || '—') === activeRegion) : inCountry),
     [inCountry, activeRegion]
+  )
+
+  // the place types actually present in the current view — these become the filter chips
+  const catsPresent = useMemo(
+    () => Object.keys(CATEGORY_META).filter((name) => shown.some((r) => r.category === name)),
+    [shown]
   )
 
   const center = shown.length ? [shown[0].lat, shown[0].lng] : [25.04, 121.54]
@@ -89,7 +96,7 @@ export default function MapView({ reviews }) {
           const on = activeRegion === g
           return (
             <button key={g}
-              onClick={() => setActiveRegion(on ? null : g)}
+              onClick={() => { setActiveRegion(on ? null : g); setActiveCat(null) }}
               aria-pressed={on}
               className={`btn-round text-xs !py-1 !px-3 ${on ? 'is-active' : ''}`}>
               {g} <span className="opacity-70">· {n}</span>
@@ -114,13 +121,14 @@ export default function MapView({ reviews }) {
           {shown.map((r) => {
             const meta = CATEGORY_META[r.category] || CATEGORY_META['Other']
             const isActive = activePin === r.id
+            const dimmed = activeCat && r.category !== activeCat // faded when a different type is filtered
             const open = () => r.url && window.open(r.url, '_blank', 'noopener')
             return (
               <CircleMarker
                 key={r.id}
                 center={[r.lat, r.lng]}
-                radius={isActive ? 11 : 9}
-                pathOptions={{ color: '#fff', fillColor: meta.color, fillOpacity: 0.9, weight: isActive ? 3.5 : 2.5 }}
+                radius={isActive ? 11 : dimmed ? 6 : 9}
+                pathOptions={{ color: '#fff', fillColor: dimmed ? '#b3a896' : meta.color, fillOpacity: dimmed ? 0.3 : 0.9, weight: isActive ? 3.5 : 2.5, opacity: dimmed ? 0.5 : 1 }}
                 eventHandlers={{
                   click: () => {
                     // desktop (hover) opens right away; touch needs a 1st tap to
@@ -147,16 +155,33 @@ export default function MapView({ reviews }) {
         </MapContainer>
       </div>
 
-      {/* Legend */}
+      {/* Legend doubles as a place-type filter: tap a type to spotlight it
+          (other pins fade out); tap again / "show all" to reset. */}
       <div className="mt-4">
-        <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-ink-soft)] mb-1.5">Place type</div>
-        <div className="flex flex-wrap gap-3 text-xs text-[var(--color-ink-soft)]">
-          {Object.entries(CATEGORY_META).map(([name, m]) => (
-            <span key={name} className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-paper)]">
-              <span className="inline-block h-3 w-3 rounded-full" style={{ background: m.color }} />
-              {m.emoji} {name}
-            </span>
-          ))}
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-ink-soft)]">Place type</span>
+          {activeCat
+            ? <button onClick={() => setActiveCat(null)} className="text-[11px] text-[var(--color-vermilion)] underline underline-offset-2">show all</button>
+            : <span className="text-[11px] text-[var(--color-ink-soft)]/70">· tap to filter</span>}
+        </div>
+        <div className="flex flex-wrap gap-2 text-xs">
+          {catsPresent.map((name) => {
+            const m = CATEGORY_META[name]
+            const on = activeCat === name
+            const dim = activeCat && !on
+            return (
+              <button key={name}
+                onClick={() => setActiveCat(on ? null : name)}
+                aria-pressed={on}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border transition
+                  ${on ? 'border-transparent text-white shadow-sm' : 'border-[var(--color-line)] bg-[var(--color-paper)] text-[var(--color-ink-soft)]'}
+                  ${dim ? 'opacity-40' : ''}`}
+                style={on ? { background: m.color } : undefined}>
+                <span className="inline-block h-3 w-3 rounded-full" style={{ background: on ? '#fff' : m.color }} />
+                {m.emoji} {name}
+              </button>
+            )
+          })}
         </div>
       </div>
     </div>

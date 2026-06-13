@@ -375,6 +375,10 @@ const FAV_NOTES = {
   'Milk Shop 酪 (Akihabara)': "A huge range of different milks; I drank three and every one was genuinely distinct. Tip: the ranking board is on the station wall to the left of the shop (not the tags at the door), and the glass bottles are deposit-return, so finish at the door and put them back.",
   '食堂チャコ': "Really delicious and worth it, with layered flavors full of pleasant surprises. We booked the course on Tabelog (¥5,500pp) and highly recommend it: lots of dishes plus free-flow drinks, so satisfying.",
   'HI MATE!': "So good, and worth the slight wait. Having this in the morning puts me in a great mood all day. Not the cheapest, but compared with other Taipei spots at the same price it's far more generous and tastier, with rich, ample portions.",
+  // extracted from Winnie's own reviews (pending her accuracy check)
+  'どろまみれ 四谷本店': "A top-100 yakitori spot recommended by a Taiwanese friend who's lived in Japan for six years. Bottom line: everything is delicious, not a single miss — though it's more fun if someone in your group speaks Japanese.",
+  '壽壽木 とんかつ': "Tucked in the basement of Tokyo Station, right next to Kiwamiya. I arrived around 5:30pm with 3–4 groups ahead of me and waited about 20–30 minutes to get in.",
+  '通庵 熟成咖哩': "Opens at 11:30 — on a holiday I arrived at 11:40 to seven people already ahead and waited 25 minutes. To make the first seating, it's best to get there before it opens.",
 }
 const favorites = FAV_LIST.map(([category, key, display, country]) => {
   const g = ratingByName[key] || {}
