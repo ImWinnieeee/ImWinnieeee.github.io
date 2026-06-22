@@ -2,21 +2,21 @@
   "profile": {
     "name": "Winnie's Food Map",
     "level": "Local Guide · Level 8",
-    "points": 18280,
+    "points": 16991,
     "profileUrl": "https://maps.app.goo.gl/e9HggWQj89SQqdSd8"
   },
   "stats": {
-    "totalReviews": 398,
+    "totalReviews": 399,
     "ratingsOnly": 21,
-    "totalPhotoViews": 9438987,
+    "totalPhotoViews": 9472512,
     "totalReviewViews": 2587104,
-    "photoCount": 1783,
-    "points": 18280,
+    "photoCount": 1790,
+    "points": 16991,
     "level": 8,
     "dateFrom": "2018-06",
     "dateTo": "2026-06",
     "isMockData": false,
-    "updatedAt": "2026-06-21T12:47:14.400Z"
+    "updatedAt": "2026-06-22T14:44:45.731Z"
   },
   "topPhotos": [
     {
@@ -27,8 +27,8 @@
     },
     {
       "id": "ph1",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtP36MzHO92haBr_1X-7p_f_PsUcl6JiZw2atjLCpgk4z6e1SKM-EouJewTuMdzu7dTKygCuPPhvtvIXTtk1TxyFWDI_xSKrK01WmYTdQZblgmJPjuC2Nmh9pwBOpwt4N0I6RrsnQ=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtP36MzHO92haBr_1X-7p_f_PsUcl6JiZw2atjLCpgk4z6e1SKM-EouJewTuMdzu7dTKygCuPPhvtvIXTtk1TxyFWDI_xSKrK01WmYTdQZblgmJPjuC2Nmh9pwBOpwt4N0I6RrsnQ=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvql8LEe6Z0quPLBOCEIGNIqMXiyAUna4_oTMoeO7ZWLFhdW8J4aKdcIf_lJXKM54Z1xtd504WYcFhp1BVFjYodPqQBJNe41q4a1nsHGPCSAuvZd3GE4a9aL5Gh7rnr7Dpc5l_0Cg=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvql8LEe6Z0quPLBOCEIGNIqMXiyAUna4_oTMoeO7ZWLFhdW8J4aKdcIf_lJXKM54Z1xtd504WYcFhp1BVFjYodPqQBJNe41q4a1nsHGPCSAuvZd3GE4a9aL5Gh7rnr7Dpc5l_0Cg=w1600",
       "views": 169270
     },
     {
@@ -39,14 +39,14 @@
     },
     {
       "id": "ph3",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvkK_zg12udl47VsOQCqlKCvDgcec_kSPpSt-ngmqFn4AsXg8KlDBjEmDjaHr9zvh2TPglH4fpqnl9WjKjSk2Omwq2liNxMYzy6LNKDz2jOJBBsIDZ5EWvIRUUPXlrRadbPWOj3ZPy2-dk=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvkK_zg12udl47VsOQCqlKCvDgcec_kSPpSt-ngmqFn4AsXg8KlDBjEmDjaHr9zvh2TPglH4fpqnl9WjKjSk2Omwq2liNxMYzy6LNKDz2jOJBBsIDZ5EWvIRUUPXlrRadbPWOj3ZPy2-dk=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsfv3lqeTDWbEuIFPBaecWVzm-qOfFVhTxhLaLRJIXJthMRI6VmfLcWe-qBxv7pzGAUz5f6E8pengrrUy9Zcf7GAVqCYMenuvj83vB-tWvAekO45ee23rUgRqydzNFl8o1sBv_UCNwEjA0=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsfv3lqeTDWbEuIFPBaecWVzm-qOfFVhTxhLaLRJIXJthMRI6VmfLcWe-qBxv7pzGAUz5f6E8pengrrUy9Zcf7GAVqCYMenuvj83vB-tWvAekO45ee23rUgRqydzNFl8o1sBv_UCNwEjA0=w1600",
       "views": 87932
     },
     {
       "id": "ph4",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOu2NgiZhSujhH7Gs-Ak1wV_DXEwICL2dEr00EtHBhxft0POJimmnM_R54qKGWU9xKAIj-AYRgaZ7RMSIOPI-VzwC_EGyqlqsB9OTACIcxtA6Y8goM6JpTS8P9Lmk8Go1Ry06oOEeAYjUEAQ=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOu2NgiZhSujhH7Gs-Ak1wV_DXEwICL2dEr00EtHBhxft0POJimmnM_R54qKGWU9xKAIj-AYRgaZ7RMSIOPI-VzwC_EGyqlqsB9OTACIcxtA6Y8goM6JpTS8P9Lmk8Go1Ry06oOEeAYjUEAQ=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtMySyq3sW_mjH8V3C2lNCfCexUNiu7JhucYqqwNCcvapY5KljF41wXxXsoryrvamHTpAXQC1cJTv5fZ1SEfaqdTtl3iO1qd3donq8oV_zRsxr8nV6MqU7VON7avAFNzjJbCWJUAkW6wppI=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtMySyq3sW_mjH8V3C2lNCfCexUNiu7JhucYqqwNCcvapY5KljF41wXxXsoryrvamHTpAXQC1cJTv5fZ1SEfaqdTtl3iO1qd3donq8oV_zRsxr8nV6MqU7VON7avAFNzjJbCWJUAkW6wppI=w1600",
       "views": 83445
     },
     {
@@ -71,7 +71,7 @@
       "id": "ph8",
       "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOs2W73sA2SZiT4Db-tSsv9uQ-hrMXybW8cexEy-PJrb7F-KJRDSvruGVbDJK3Cv46D30D8zsYDIMvbTRlv6HaT1KLb9L2dbsJfdVQ_3BiYIu-20pxWTRrgjDWIzpt7YH7nfz7myUAVXUI2_=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOs2W73sA2SZiT4Db-tSsv9uQ-hrMXybW8cexEy-PJrb7F-KJRDSvruGVbDJK3Cv46D30D8zsYDIMvbTRlv6HaT1KLb9L2dbsJfdVQ_3BiYIu-20pxWTRrgjDWIzpt7YH7nfz7myUAVXUI2_=w1600",
-      "views": 57476
+      "views": 58121
     },
     {
       "id": "ph9",
@@ -81,14 +81,14 @@
     },
     {
       "id": "ph10",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtV2sC3_1Hbn9m9eg9W21qgUTRGyc7fbBO7PIqB9sSrxoU85RzHsb-Ntq4bnMHlpoiMFMGNis1GSaj3miv4yiZCAxxDV2byORCjH2LnEkG5q6IrV8UHu5fqRoMYW-kocawFXSMt-g=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtV2sC3_1Hbn9m9eg9W21qgUTRGyc7fbBO7PIqB9sSrxoU85RzHsb-Ntq4bnMHlpoiMFMGNis1GSaj3miv4yiZCAxxDV2byORCjH2LnEkG5q6IrV8UHu5fqRoMYW-kocawFXSMt-g=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOubNXKNakQOecxcJDt0TSmWpIAfn8LbSxFEi5gkvkW2_LT3O8GPpTRI6B6bCaqkzOclNRQ7TRn0vAYM3-ko0nLcwDSJQwwrXgr171wfvhfYuTc5es61lJKKARTpyrYjgsLRmMqY2g=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOubNXKNakQOecxcJDt0TSmWpIAfn8LbSxFEi5gkvkW2_LT3O8GPpTRI6B6bCaqkzOclNRQ7TRn0vAYM3-ko0nLcwDSJQwwrXgr171wfvhfYuTc5es61lJKKARTpyrYjgsLRmMqY2g=w1600",
       "views": 49751
     },
     {
       "id": "ph11",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsWpADF93lVG5pT6HSWFglAS_3Ab9QxMEFbdvLGTpgxAG7F6X64WVI46qllAMQTFW5cf71cC_bC4vIqXHcspx7_bVI-FLInl0HmV-lp6kfr18ZRRuLLNgm-yr2IE6szDThS1iT8vipKOVw=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsWpADF93lVG5pT6HSWFglAS_3Ab9QxMEFbdvLGTpgxAG7F6X64WVI46qllAMQTFW5cf71cC_bC4vIqXHcspx7_bVI-FLInl0HmV-lp6kfr18ZRRuLLNgm-yr2IE6szDThS1iT8vipKOVw=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOudyuYu0OicIBKBv3mB6ZBb2-8rr5CbsNaMoPDalvPPRUuItTLv7Wx0xjFA1cVUin0xhl-v5r-GRSiRI3E1J8jB6UQ21ptx1TEWjNXjswEo2j39EFpph2FeNvyDhWcVcmRW8gwPWWAp37s=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOudyuYu0OicIBKBv3mB6ZBb2-8rr5CbsNaMoPDalvPPRUuItTLv7Wx0xjFA1cVUin0xhl-v5r-GRSiRI3E1J8jB6UQ21ptx1TEWjNXjswEo2j39EFpph2FeNvyDhWcVcmRW8gwPWWAp37s=w1600",
       "views": 48282
     },
     {
@@ -99,14 +99,14 @@
     },
     {
       "id": "ph13",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuOYxuugmWDb_7iVEYOG4bPRoKvkJZygspmPxiDvfTYCH_l3Bk5Ym2YtGgD3fxI5DkEOkL9qxYS00mftQJKrtfjkxrKvXBETTuDfHviDAOuvmTal6hLjNtQIBUiZ05yWOoeP6IQoIu3An6X=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuOYxuugmWDb_7iVEYOG4bPRoKvkJZygspmPxiDvfTYCH_l3Bk5Ym2YtGgD3fxI5DkEOkL9qxYS00mftQJKrtfjkxrKvXBETTuDfHviDAOuvmTal6hLjNtQIBUiZ05yWOoeP6IQoIu3An6X=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOv26WIh1SMEpeY-Wfx6NvcQP1kWuE0jAzf1TKbY7P3qmDvr3Bpz2fT3Aqh9Tab8rwW1G4w6DOVNDl3LCowFEYtLFRkHU3EpoEFIMbXXOgUbqzQkOyvHpStrLlE0Zra8SPHrMpYsN88bvXqT=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOv26WIh1SMEpeY-Wfx6NvcQP1kWuE0jAzf1TKbY7P3qmDvr3Bpz2fT3Aqh9Tab8rwW1G4w6DOVNDl3LCowFEYtLFRkHU3EpoEFIMbXXOgUbqzQkOyvHpStrLlE0Zra8SPHrMpYsN88bvXqT=w1600",
       "views": 44448
     },
     {
       "id": "ph14",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtsSQxi7qN-cmnpVG-Jr17IynBfVTQxmWy-CMiwBEEVtYYxRXpfYjgVbpvilJtcmLBTVd0hHUMXUYH4GTdP7eBYXZp1Z0eiodHebJ07IQYA-ZkgQ0rRULR5aW5OVoMRfzcqkUmRW5jkcBA=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOtsSQxi7qN-cmnpVG-Jr17IynBfVTQxmWy-CMiwBEEVtYYxRXpfYjgVbpvilJtcmLBTVd0hHUMXUYH4GTdP7eBYXZp1Z0eiodHebJ07IQYA-ZkgQ0rRULR5aW5OVoMRfzcqkUmRW5jkcBA=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsVMIgqPaeXibnLvmflED9RtF6nzmjCj3MgATzFS2hry2ivumkNJGF127BEBxUa1XNJrAVSef_a5IlP-xgZ1EV6p2-WlaXuCU959hjShvB3dxIHj8UkyCQLszT4GXGOsEoGFjwER-03uss=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOsVMIgqPaeXibnLvmflED9RtF6nzmjCj3MgATzFS2hry2ivumkNJGF127BEBxUa1XNJrAVSef_a5IlP-xgZ1EV6p2-WlaXuCU959hjShvB3dxIHj8UkyCQLszT4GXGOsEoGFjwER-03uss=w1600",
       "views": 42374
     },
     {
@@ -117,14 +117,14 @@
     },
     {
       "id": "ph16",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOu2R_5jGvyhLqugVkYQoCdMi40pZHjtr9XPFfRw03hLslRiQPXFkusEBxUEaAsB1ZVAj6nuQKhRVxlsIhlg2n4c_sQ0Dytw3z9nqVLiXr9BbMN0noUQ5eE8IpKa3nvcdy0Z8XMhMT92xKk_=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOu2R_5jGvyhLqugVkYQoCdMi40pZHjtr9XPFfRw03hLslRiQPXFkusEBxUEaAsB1ZVAj6nuQKhRVxlsIhlg2n4c_sQ0Dytw3z9nqVLiXr9BbMN0noUQ5eE8IpKa3nvcdy0Z8XMhMT92xKk_=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvfeWBuZZNdf-acLQmvElcqDwu9QqJJugsO3qn9uhBVyZOzqsgNkHGztgZPML-HXB9FUlUIoQYz4bknxbL1fgM1f-9Py-Z3A3SH07009xEwRjDPZvFKUk6r_Rb5rw4GK5qLPNd5AsNUGJkT=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvfeWBuZZNdf-acLQmvElcqDwu9QqJJugsO3qn9uhBVyZOzqsgNkHGztgZPML-HXB9FUlUIoQYz4bknxbL1fgM1f-9Py-Z3A3SH07009xEwRjDPZvFKUk6r_Rb5rw4GK5qLPNd5AsNUGJkT=w1600",
       "views": 41752
     },
     {
       "id": "ph17",
-      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvwQAGErbZukS1DAa_7D3mfCr9DSSWxFA7ZEiy1nS_-hicVG1Fu4nq-VtHQ1upAt0Sqd3sBENOb4H7f4kAdR8nOpmW6hDitKRjm4D8HIcvX8XIwutmnmhssVBy2GS2iRRQRfzJ4=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOvwQAGErbZukS1DAa_7D3mfCr9DSSWxFA7ZEiy1nS_-hicVG1Fu4nq-VtHQ1upAt0Sqd3sBENOb4H7f4kAdR8nOpmW6hDitKRjm4D8HIcvX8XIwutmnmhssVBy2GS2iRRQRfzJ4=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOv250NNBFV7JI8AFH6yHLtLF97_PoeqARqf3ExZEGYwHrHgmfWFPW2SNRl6ByUHBOjNNWoSmpgy_cdY5YFRImSe5jIt4bnWf7mHUmO-l_1FEmapoppX4aF7Fj9Ulr_p0Pk0F-_Q=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/ACgwaOv250NNBFV7JI8AFH6yHLtLF97_PoeqARqf3ExZEGYwHrHgmfWFPW2SNRl6ByUHBOjNNWoSmpgy_cdY5YFRImSe5jIt4bnWf7mHUmO-l_1FEmapoppX4aF7Fj9Ulr_p0Pk0F-_Q=w1600",
       "views": 40330
     }
   ],
@@ -194,7 +194,7 @@
       "region": "Tainan",
       "rating": 5,
       "views": 99854,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUaCxPxxyjUsq-jOXhaie1lHDVgexSCp_FsBHmRAxuJheqnaQfDeZKkXNylRT7GqE5WhZUhM_hvSGqkAWyGgxkmKQyE8wLOk1OHly0JXioCumvjDdNzOX9Xq439QlBTlhFxBNm=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEXswH316qIXxRm_K7xTvZL9vBT8DZtLoRBYlocInTKziLcz94FDYiAHLoMDiLCLxHmv9-GM1aONYlfOwz6mqEA7AeHWeU1pwWmzGuuWB3FDsgT6v_hl1bkE6kHS5Rx01UQKMei=w600",
       "url": "https://maps.app.goo.gl/sxsymCrknChfhkNH7",
       "en": "The Russian (borscht) bread comes out of the oven around 2pm but selling starts ~1:40. Fresh out, it's piping hot with a crisp shell — rich, buttery and incredibly fragrant, with a fluffy crumb. Glorious freshly-baked carbs 💓",
       "zh": "羅宋兩點出爐，但其實1:40就差不多會先開始賣，我1:15到是排第六個，但其實排後面也沒關係，羅宋會一直出爐，只是每一輪中間要多等15分鐘而已 排在我前面的阿姨們一次都是買一盤兩盤（一盤10個）覺得如果都排了至少買兩個起跳吧 剛出爐的羅宋麵包熱熱燙燙的，外殼酥酥的，捏著吃非常油也非常香，奶油加好加滿的結果就是很好吃！！！麵包體也非常蓬鬆，熱呼呼的精緻澱粉萬歲💓💓💓 0:04 0:06 0:09 +2 "
@@ -218,7 +218,7 @@
       "region": "Taipei",
       "rating": 5,
       "views": 62973,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG4CV9jg7w4-V7Xexst0uzY8VtnBv5nKIw25TBIiPbIYXZyAc6_jHjS1M74i1Snv57APJSPn1CwYcoIeRgeWHtpMxsLF-C4rIORabVcoZX6LdiNYP4uqnNpTyK9nY_X3Y41mfQ=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGzI9KJ7wDF_axhxeNGnX1DtRXiMfFCFw5jG8mmaQxIHeuGLeAfUHRywCWnNe2CyWjWWZx4SLZdW-XAe4J-n2lJBw2mks44fSCHzQ7hlrLQJ_zQaqAou7M1a63fe6fP4fcVpoc=w600",
       "url": "https://maps.app.goo.gl/xwcguRm87rq7z5Fm9",
       "en": "The turkey-and-mushroom omelette set (NT$400) comes with the omelette, hash browns, yogurt, your pick of five breads, a juice, and free-refill coffee or tea. A pretty, generous brunch — reportedly a favorite of TV host Dee Hsu.",
       "zh": "火雞肉蘑菇蛋捲$400 包含蛋捲、薯絲煎餅、優格、麵包五選一、果汁一杯、咖啡或紅茶（可續杯） 算是漂亮豐盛的早午餐！似乎是小S愛店 0:13 0:09 +2 "
@@ -230,7 +230,7 @@
       "region": "Taipei",
       "rating": 5,
       "views": 58440,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH7wuqjby4qmnt1JnKh2QbZG4J-ajlG1zUxz14BXUyvXW6RaZQkFMtbCagn5cEP41nN7VdWZOBqUh_ZLFOSnabGSRnTbPb1gy4grDdMkntPu3aRbjifGVeTmiWn-HVez-bcyzxWnQ=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHz3L4E2NsIG_IgUxmjBTAjk7KJwSN2wmHfBVo_sXhnRy10oLIa-uYo5eLnr3m8E1PE2Xo9Flc3Z9sFUubY84Ur1_vv-gg0AAZlVd5Y5J5k_7iLhHt6np6nWFXNDWFoLDO-CDcqnw=w600",
       "url": "https://maps.app.goo.gl/Gp9d4hMEJeYoQ5oNA",
       "en": "Ordered a (very pricey) cake for a coworker's birthday. From service to packaging to the cake itself, everything was in a class of its own — even ten stainless-steel cutlery sets and a custom photo card.",
       "zh": "同事生日訂了好貴的蛋糕，從服務、包裝到蛋糕本身都尊絕不凡，甚至附上的十套餐具是不鏽鋼🍴還有一張客製化照片的硬卡片.. （客製化印上去的東西要提前傳LINE給他們的官方Line） +3 "
@@ -278,7 +278,7 @@
       "region": "Tokyo",
       "rating": 5,
       "views": 37436,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_ncryfGIMcGNhoxrhG6bpjrYj6PIcYOYtsi4-5MavhX-Bjzm0N1mtdukRDj9G04LPwM1cZQem5X56fE7BOheQuBJ0qcfgweLXOY9Rk2TvVXVLRoOMUjoStsPoqjGrhEIZyVrh=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE3cXkyFqSa_czIdGSDeinth0srvQ1h9C_QPrTU9uwWeSTPz1Y-b6xJv_aTmKZbTGyqktRkM3PZjlmrXylUWokv6zU60MIx8BKwihaTZhtgatsn88ytFTJtAtKtzItazd3WwWw5=w600",
       "url": "https://maps.app.goo.gl/16VhuvUPvptPGbJ27",
       "en": "Recommended by podcaster Ken (Bailingguo) as the best cream puff he's had — so plenty of Taiwanese visitors go now. We had the cream puff and the canelé, and both were excellent!",
       "zh": "看百靈果的ken 說是他覺得最好吃的泡芙，也因為他的介紹好像很多台灣遊客去吃XD當天去有3組台灣人左右 點了泡芙跟可麗露～都讚！以下分享！ 0:05 0:06 +3 "
@@ -290,7 +290,7 @@
       "region": "Taipei",
       "rating": 5,
       "views": 36939,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHwPS3boa1dKC2u4UNzyEYmZJcfoNXhSk53y79SL7N-xAdq9DAgezxd32itWE3uM1CjCYOM_Ab5n2QORUy_gvi7UkK2Aa560v8wrakaxCI6bXPWlolX0GMv90S2J43Qn2wV8m0IUg=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEWHGZBMbxzKXSFac0_qI4mSczInjgiCgHgoCvDOO9kJ_qGwA03C4F8X_Ac2CUig5MP1HDYs4nyR5VE0mMvcukCTzyFbHJQ2juK0lBhSICh5vI1duloQTHzfEv1PNzJEbfVDcDhHw=w600",
       "url": "https://maps.app.goo.gl/UtkbTDajLiRLdzC97",
       "en": "Said to be a Jensen Huang favorite — always packed, you'll share tables at peak hours. Must-order: the scallion pancake and radish cake. The pancake is hand-rolled to order, so worth the wait.",
       "zh": "好像是黃仁勳愛店，人非常多，用餐時間要併桌 😍必須點：蔥油餅、蘿蔔糕 蔥油餅是所有餐點裡面等最久的一個，等到一度有點不耐煩，但是好像每一桌點的都等很久，出去才看到是廚房現桿的 +4 "
@@ -314,7 +314,7 @@
       "category": "Dessert",
       "country": "Japan",
       "reactions": 41,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_ncryfGIMcGNhoxrhG6bpjrYj6PIcYOYtsi4-5MavhX-Bjzm0N1mtdukRDj9G04LPwM1cZQem5X56fE7BOheQuBJ0qcfgweLXOY9Rk2TvVXVLRoOMUjoStsPoqjGrhEIZyVrh=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE3cXkyFqSa_czIdGSDeinth0srvQ1h9C_QPrTU9uwWeSTPz1Y-b6xJv_aTmKZbTGyqktRkM3PZjlmrXylUWokv6zU60MIx8BKwihaTZhtgatsn88ytFTJtAtKtzItazd3WwWw5=w600",
       "url": "https://maps.app.goo.gl/16VhuvUPvptPGbJ27",
       "en": "Recommended by podcaster Ken (Bailingguo) as the best cream puff he's had — so plenty of Taiwanese visitors go now. We had the cream puff and the canelé, and both were excellent!",
       "zh": "看百靈果的ken 說是他覺得最好吃的泡芙，也因為他的介紹好像很多台灣遊客去吃XD當天去有3組台灣人左右 點了泡芙跟可麗露～都讚！以下分享！ 0:05 0:06 +3 ",
@@ -325,7 +325,7 @@
       "category": "Attraction",
       "country": "Japan",
       "reactions": 40,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF2Wx4jp3N6P2aoOBc1mUUIw67kyPcKzKHR9hrMgDYwwL5aMWjApw9RASn7soX0AsWrgi0TyUydUv2-O5SfsKDqwrIPHx8ffKnCt96J4QLSa8GfAk0bnCylScY5y0KwcfSxxDRs=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG9R_2yIBn-oGEPdgwSnf4BkA-sYgZuvZNheMfns4tqYvPiowvnA0OHugHvgQqjCJZZN3ylCS6MePIXL_4mf25cJaYyhnyX67y4R4xoEMr-TafDMjoxqkNwwm2sRQPtEfnnXOz-=w600",
       "url": "https://maps.app.goo.gl/2U3kBQysw9WzygwA7",
       "en": "There wasn't much information online, so here's my own little guide to visiting.",
       "zh": "我是台灣遊客🇹🇼2026.1月份到訪 網路上的說明不多所以來介紹一下 0:05 +8 ",
@@ -380,7 +380,7 @@
       "category": "Italian",
       "country": "Japan",
       "reactions": 13,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFIoJySom0Lon4h6vFQd6Lx9xWI_K5fDipn7kkJpeZdqnVGtU7lYtfPV6yLXQfrAhOh-i7k1C0tL_tACIzkS7hzS_uDf1T59o1MhEmLp_Y3bnTLrBviNIrf6zBuPAse_AYvuSjQz8NZooI=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEr4PwqaAcNbbRGTq09ZATYGII2Si0Wu0GbcenXJVgS4nc2jzuejqbJAusverOb-DHnlij2lu8USFRYiKDPAwXedIXVDCjXXwq9NYmfx5AR2fasEbPgQGhvruAXs5etytULM6tERCm4M4Y=w600",
       "url": "https://maps.app.goo.gl/KYrb2hAmebz4tvtu6",
       "en": "The only overseas branch of the famous Milan pizzeria. Food critics rave about it, so I came to try it myself — genuinely good 🍕.",
       "zh": "我是台灣遊客，2025.01月份到訪 米蘭知名披薩店的唯一海外分店，看各大美食評論家都說很好吃，就自己來吃吃看，真的不錯可以來吃🍕！ +5 ",
@@ -402,7 +402,7 @@
       "category": "Japanese",
       "country": "Japan",
       "reactions": 12,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFTc4ddSoQ3F5cpluKVtGhv5SAnQj77us8IhmCi-DAAs68w-V2glUaKi4iJvjDQxWHNH7zv5bPwT5mJM6OqYxEa2BVT2xl5GEdXZt5t2S7dWaXHkpCpThCnUaDkYoFUTLvDF5i2zDJWnqf6=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGG-WF_YSOIk9AffcC_sfPzSOga7NyZiFKADeP1eczWwDBvdnNFWlIe39qa5hkNbbcB3cEim7gnp_4icFtNXJGt6gb7G6WEBZaK0ze4w6sSf8sRz6LKf0Hm0GWKRZFZNPjhyTP-iJZk-q4r=w600",
       "url": "https://maps.app.goo.gl/nGmp4ZPWLpn77bkL7",
       "en": "A spot lots of YouTubers recommend. We arrived ~10 minutes after opening and it was already 80% full but with no queue yet — mostly Japanese diners, and locals were lining up by the time we left. It's tucked in a residential-looking area about a 5-minute walk from the Akihabara bustle.",
       "zh": "我是台灣遊客，2025.01月到訪 很多YouTuber推這間，我們在開店後大概10分鐘內到，店內已經8成滿了，還不用排隊 裡面很多日本人在吃，吃完出來甚至有看到日本人排隊，餐廳在一個很像民宅的地方，離秋葉原鬧區走大概5分鐘 ",
@@ -413,7 +413,7 @@
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
       "reactions": 12,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUaCxPxxyjUsq-jOXhaie1lHDVgexSCp_FsBHmRAxuJheqnaQfDeZKkXNylRT7GqE5WhZUhM_hvSGqkAWyGgxkmKQyE8wLOk1OHly0JXioCumvjDdNzOX9Xq439QlBTlhFxBNm=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEXswH316qIXxRm_K7xTvZL9vBT8DZtLoRBYlocInTKziLcz94FDYiAHLoMDiLCLxHmv9-GM1aONYlfOwz6mqEA7AeHWeU1pwWmzGuuWB3FDsgT6v_hl1bkE6kHS5Rx01UQKMei=w600",
       "url": "https://maps.app.goo.gl/sxsymCrknChfhkNH7",
       "en": "The Russian (borscht) bread comes out of the oven around 2pm but selling starts ~1:40. Fresh out, it's piping hot with a crisp shell — rich, buttery and incredibly fragrant, with a fluffy crumb. Glorious freshly-baked carbs 💓",
       "zh": "羅宋兩點出爐，但其實1:40就差不多會先開始賣，我1:15到是排第六個，但其實排後面也沒關係，羅宋會一直出爐，只是每一輪中間要多等15分鐘而已 排在我前面的阿姨們一次都是買一盤兩盤（一盤10個）覺得如果都排了至少買兩個起跳吧 剛出爐的羅宋麵包熱熱燙燙的，外殼酥酥的，捏著吃非常油也非常香，奶油加好加滿的結果就是很好吃！！！麵包體也非常蓬鬆，熱呼呼的精緻澱粉萬歲💓💓💓 0:04 0:06 0:09 +2 ",
@@ -426,7 +426,7 @@
       "category": "Dessert",
       "country": "Italy",
       "region": "Florence",
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF2AgadW0h6hxh48HK-n15sz8Hg6sisLRZredvT-tnjW6xhrGAsHijy-h4oiKgukMtzYcm3X416aT0-ucTIqSbJcOYP1YPTG3W1Ij0ppb-HQAd416nN7wYYNEuBYp-uO1teLomANIb-aJM=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGT4wBTCuuaQChVAt22yV2ZeToE7nHtpm2-A8ORcYQu57EBw5E7m5KD9dKwdBBf2rAk9WrFeEYIs4GICAKo1wwcSmgxi-hL1--oUgxMgzrSGZkEqIPfRPJY9Xv9Z_ONOUq1MDeixpH_0zw=w600",
       "url": "https://maps.app.goo.gl/j4xkNhofDihxD7GeA",
       "en": "Had the vanilla crème and a citrus flavor — the crème was the better of the two, with visible vanilla seeds.",
       "zh": "我是台灣遊客🇹🇼2026.2月份到訪 吃了香草Creme和某個柑橘類的口味 Creme比較好吃，裡面看得到香草籽 ",
@@ -448,7 +448,7 @@
       "category": "Other",
       "country": "Italy",
       "region": "Florence",
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE43EvUgb5PBNHbpLuyvzjsLzPwYNvl4822m5hMotKeHSiUrE19WPFxOb2SDM1jnOY29ehjDrdIt8U4h46V6LU7NEiIi1ExZr6QlyY9wLstcL6Toe1ra_weixsNCsHw86KwJS5F=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGFsAVsG3iuZQmEtj8uhJsBw3sgsVmB-bFJxAAQ2zi55g2xMC6EZI3G2oqUXMxnfnEqXkIofz6liVk3s_Gb2wsHnbiah5zELlkEE5rlKpCh415KyxIcLm7XA_rt6VBxDWUS7v5v=w600",
       "url": "https://maps.app.goo.gl/cxW5HhWgef6woVno7?g_st=il",
       "en": "A leather shop run by a lovely husband-and-wife — everything handmade by their family, and it is all so charming! Backpacks and shoulder bags of every size, wallets, cardholders, book covers, charms, keyrings, belts, even golf bags. Go browse!",
       "zh": "我是台灣遊客🇹🇼2026.2月份到訪 一對夫妻開在很附近的皮件店，商品都是他們家族手作的，超級可愛！！！！！來逛！ 🛍️不管是大小後背側背包包、錢包、名片夾、書套、小吊飾、鑰匙盤、皮帶、高爾夫球袋 通通都有 ",
@@ -470,7 +470,7 @@
       "category": "Japanese",
       "country": "Japan",
       "region": "Kobe",
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6LTviHcXx8D4iTx1zf3EnuQb0mjKhjm8Eir90FuY-JgTBl1L7jHzIlhl2TD8oliJeGX7DIJ41L1dQ9xDx_BSBjqvr-mSshHgaoKdB0zIJkAhNbjp_lTAE6yE067Rgs_K0z-VQ=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcWaSV7Pkd7bl9riJxVl8OocbPj7cU-2-iruoLcpzZ7BmU3Yafcw7mymH1ihP3-wedKLr9E3aqVuZSFVSlpzBDoFUDoBnx7kJrhrJofyUIioUeUt7GvoyiHS_9BIBdMZL30drG=w600",
       "url": "https://maps.app.goo.gl/sYS9vbdGpBoKHrnc8",
       "en": "Booked the lunch set on Tabelog — ¥16,500 for two. Everything was delicious, though the meat portion runs a little small (as Tabelog also notes).",
       "zh": "我是台灣遊客、2026.1月份到訪 我是在Tabelog上面預訂中午套餐的，兩個人16500日圓（一個人大約1650台幣） 所有東西都很好吃，不過肉的份量偏少（Tabelog上也有寫） 0:06 +10 ",
@@ -481,7 +481,7 @@
       "category": "Japanese",
       "country": "Japan",
       "region": "Tokyo",
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEllqttkLmgQ6rBu9CNWDEdsVO7a-Gajpnm2_-mBM55CeDnjLNu0qtu5m_oKRFmoUrqXjTwX-A36_QPxZVZsMlqNCHxJvHAuynASCNseuVuDZzXHW6VwAfnEh6wt8O2iJxGo1QWfgLH0yNW=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFTkZIHKod60BCpnZsZie6PIutPbKFC8JRmrDNWyM9e3N_6YB_IaTnn7I38eKqLq43iJPxUoVQUAZ0YiYMl_8wAnJDiF0z5tdBu4Gpo6osuakh0iio-BMbpOAkCj2DFilV-43Pxltutjjwm=w600",
       "url": "https://maps.app.goo.gl/2K9SLU5nrY7z8Egi9",
       "en": "A trendy, much-hyped spot that genuinely delivers. It opens at 11:00 — if you don't want to wait too long, get in line before 10:45.",
       "zh": "我是台灣遊客，2025.01月到訪 熱門網紅店、實際上味道也不錯，11:00開門，不想等太久的話務必10:45前就去排隊，當天10:45前面已經有三個人了，店內位子沒有到非常多，大概前20個有機會第一輪 0:29 +4 ",
@@ -490,13 +490,29 @@
   ],
   "reviews": [
     {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT21GME4xUmlaMDh3T1VORU4xcG5SVGxHUkZkNmRrRRAB",
+      "place": "MA CAFE",
+      "category": "Drinks",
+      "country": "Taiwan",
+      "region": "Taipei",
+      "rating": 5,
+      "date": "2026-06-03",
+      "blurb": "2026.6月份到訪 連假的週五早上11點到",
+      "photoCount": 3,
+      "lat": 25.02634,
+      "lng": 121.5543,
+      "googleRating": 4.4,
+      "googleReviews": 179,
+      "url": "https://maps.app.goo.gl/BvXm2soT6KCWZFnj7"
+    },
+    {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pVM1FXZGhMWFJXWTJGb1ZsSjJiVE5qYW05VE5rRRAB",
       "place": "Fuzhou Shizu Pepper Pork Bun",
       "category": "Taiwanese & Chinese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2026-06-03",
+      "date": "2026-06-01",
       "blurb": "2026.6月的週六到訪 台灣人和外國人都會",
       "photoCount": 2,
       "lat": 25.03906,
@@ -512,7 +528,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2026-06-03",
+      "date": "2026-06-01",
       "blurb": "2026.6月到訪 4:30開、我5:00去",
       "photoCount": 2,
       "lat": 25.0451,
@@ -528,7 +544,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2026-05-30",
+      "date": "2026-05-29",
       "blurb": "2026.6月到訪 在東門和師大中間的巷子內",
       "photoCount": 3,
       "lat": 25.04154,
@@ -544,7 +560,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2026-05-28",
+      "date": "2026-05-27",
       "blurb": "已經回訪兩次，都很滿意 💗珍珠奶茶冰、杏仁",
       "photoCount": 1,
       "lat": 25.0181,
@@ -880,7 +896,7 @@
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
-      "date": "2026-05-13",
+      "date": "2026-05-06",
       "blurb": "主打貝系拉麵的百名店，看評論很多人沒吃到限定",
       "photoCount": 0,
       "lat": 35.00978,
@@ -896,7 +912,7 @@
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
-      "date": "2026-05-13",
+      "date": "2026-05-06",
       "blurb": "獨旅友善安靜小店，最多人推法式吐司（甜）和厚",
       "photoCount": 0,
       "lat": 35.01417,
@@ -912,7 +928,7 @@
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
-      "date": "2026-05-13",
+      "date": "2026-05-06",
       "blurb": "短評：好吃不貴，漢堡排、炸蝦、可樂餅、蛋包飯",
       "photoCount": 2,
       "lat": 35.02828,
@@ -928,7 +944,7 @@
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
-      "date": "2026-05-13",
+      "date": "2026-05-06",
       "blurb": "只有一個菜色就是breakfast ¥108",
       "photoCount": 0,
       "lat": 35.01149,
@@ -944,7 +960,7 @@
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
-      "date": "2026-05-13",
+      "date": "2026-05-06",
       "blurb": "短評：位子很難找以外都不錯的一間鰻魚飯店，價",
       "photoCount": 1,
       "lat": 34.98604,
