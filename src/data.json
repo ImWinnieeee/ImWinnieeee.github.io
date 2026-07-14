@@ -8,7 +8,7 @@
   "stats": {
     "totalReviews": 406,
     "ratingsOnly": 21,
-    "totalPhotoViews": 9794628,
+    "totalPhotoViews": 9815520,
     "totalReviewViews": 2631084,
     "photoCount": 1822,
     "points": 18648,
@@ -16,7 +16,7 @@
     "dateFrom": "2018-06",
     "dateTo": "2026-05",
     "isMockData": false,
-    "updatedAt": "2026-07-13T16:11:44.109Z"
+    "updatedAt": "2026-07-14T14:33:54.525Z"
   },
   "topPhotos": [
     {
@@ -27,8 +27,8 @@
     },
     {
       "id": "ph1",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX96w7Tv1mc3vRWA0OCMyKug9aMJd5O0av_06bYDaWS91vLtRm2xnPHYBJO_I8Hz6fc0Jxow-rPiYn3i0vgU8Hj7jHuEtlvZaPexWdmg26FgmYbtXD5fMzkew1pOj8HtZTYK5P3nGQ=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX96w7Tv1mc3vRWA0OCMyKug9aMJd5O0av_06bYDaWS91vLtRm2xnPHYBJO_I8Hz6fc0Jxow-rPiYn3i0vgU8Hj7jHuEtlvZaPexWdmg26FgmYbtXD5fMzkew1pOj8HtZTYK5P3nGQ=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX8huHhPDzNuZSbNatO7hEHzulo3ZSarHbjA1914k9sgLPhGvqP864KNepEVAiJcHSTBzSKIY33w7cBDPu6jr-EsgFK6_AlE_KlqGKv4GmNpA4zaOWAJ0kRnSJZVv6x4G0wvQNIPYw=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX8huHhPDzNuZSbNatO7hEHzulo3ZSarHbjA1914k9sgLPhGvqP864KNepEVAiJcHSTBzSKIY33w7cBDPu6jr-EsgFK6_AlE_KlqGKv4GmNpA4zaOWAJ0kRnSJZVv6x4G0wvQNIPYw=w1600",
       "views": 174625
     },
     {
@@ -39,14 +39,14 @@
     },
     {
       "id": "ph3",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX9RTBLGkvU8T9hczbRs5KXr4JyB8Ph0RvRSdiwfKEhfv_RBduEuCfaFI7HlzhFNjNk3xPXo0Gbi5Kr4VR7itGMFu7nfnobwOLXmnlIWhxHw3jge5zhM9uOQb4Gu0Hn9xin83AsjyCrVl8c=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX9RTBLGkvU8T9hczbRs5KXr4JyB8Ph0RvRSdiwfKEhfv_RBduEuCfaFI7HlzhFNjNk3xPXo0Gbi5Kr4VR7itGMFu7nfnobwOLXmnlIWhxHw3jge5zhM9uOQb4Gu0Hn9xin83AsjyCrVl8c=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX-boDlXegQmf-0RD26pasDoL5NkKi3AmYD00G0LNWBXd-6WO96IxymM00ThmDk9GL5Tu2s0fInjJ5Dbgqrme2en5SvABM00dILH398UIhC8SKlYQUK3GtBMp7Sqhwq3Lw3V8jHZE4Rdyjo=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX-boDlXegQmf-0RD26pasDoL5NkKi3AmYD00G0LNWBXd-6WO96IxymM00ThmDk9GL5Tu2s0fInjJ5Dbgqrme2en5SvABM00dILH398UIhC8SKlYQUK3GtBMp7Sqhwq3Lw3V8jHZE4Rdyjo=w1600",
       "views": 90702
     },
     {
       "id": "ph4",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_i-BD1vHztIRNDT7wjX2hPUjacBhu8XP27r-K5yeRgxvCjZWtvDSZ20O3wOPXfC8Nal4YPcc0UP-tPvIvzWbOpWj99mD-pLyukZSOu0YkBmD01O_0JXS9s1T81OAwYagEGdsxQgIqQNRMG=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_i-BD1vHztIRNDT7wjX2hPUjacBhu8XP27r-K5yeRgxvCjZWtvDSZ20O3wOPXfC8Nal4YPcc0UP-tPvIvzWbOpWj99mD-pLyukZSOu0YkBmD01O_0JXS9s1T81OAwYagEGdsxQgIqQNRMG=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX8Dpj6TbwykynwQ__F0gDmO8BeHAguLupjFnn47CRLOt6-mIVIyz7wlcrl1ENPEPS2dYyVP39JLvRsmc282mMBxTTQ7rhI8IUr_NtAvJB6LcR_p1UmM0KkKYzs3Qsi4nOH3UUUVvP2jOaPR=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX8Dpj6TbwykynwQ__F0gDmO8BeHAguLupjFnn47CRLOt6-mIVIyz7wlcrl1ENPEPS2dYyVP39JLvRsmc282mMBxTTQ7rhI8IUr_NtAvJB6LcR_p1UmM0KkKYzs3Qsi4nOH3UUUVvP2jOaPR=w1600",
       "views": 84433
     },
     {
@@ -65,7 +65,7 @@
       "id": "ph7",
       "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_8Q8NPjAbCF6WLWin12orZ-4e2h_sS2zaJu6iGYeMoZRfkEnGgKNzQdYLuvbEsh9JUkjsaBXj2ODAHqQpi2CPb7tGRY1_tZMAL0veA7Dumcg1DjqoYOl9e_lP9a7ke0MVSqEmnhuoJ4p-q=w600",
       "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_8Q8NPjAbCF6WLWin12orZ-4e2h_sS2zaJu6iGYeMoZRfkEnGgKNzQdYLuvbEsh9JUkjsaBXj2ODAHqQpi2CPb7tGRY1_tZMAL0veA7Dumcg1DjqoYOl9e_lP9a7ke0MVSqEmnhuoJ4p-q=w1600",
-      "views": 61257
+      "views": 61912
     },
     {
       "id": "ph8",
@@ -81,14 +81,14 @@
     },
     {
       "id": "ph10",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX8bTDPcoXJlW9PGHxzVIHNGn4-mbKnxj_goDd_GT7m5MH00166_6hPmf5-tDooigH0TfNxxWrHvaAEnjzG6QH5Wbq8X3pZweceRD1RW_UP6d7f2MrAI-RjFIwNpegwmd8pGyACBmQ=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX8bTDPcoXJlW9PGHxzVIHNGn4-mbKnxj_goDd_GT7m5MH00166_6hPmf5-tDooigH0TfNxxWrHvaAEnjzG6QH5Wbq8X3pZweceRD1RW_UP6d7f2MrAI-RjFIwNpegwmd8pGyACBmQ=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX9Vr2v_30RN9H5RtZalFhQ16zO-HpSyMolGOVjh6V0ktcgBUi79RCbx5XaOcMIjgj9sxB9S8mob4cqIERiowYdp1HZj34lkDzo7sAX64u7N1L-ZVT6AU7hlk41xLr7X2OLOtTJG8g=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX9Vr2v_30RN9H5RtZalFhQ16zO-HpSyMolGOVjh6V0ktcgBUi79RCbx5XaOcMIjgj9sxB9S8mob4cqIERiowYdp1HZj34lkDzo7sAX64u7N1L-ZVT6AU7hlk41xLr7X2OLOtTJG8g=w1600",
       "views": 49751
     },
     {
       "id": "ph11",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_Hg_Lre83CfBayR28UbyTAhyiZ7FqKb2uVIJlwcfacVzsysC5fLD6uxdmN5A4PPFE8DSWjRjQ7uuPFjTjqrPyTrB2FDbrTYQ2sLKNbRvhY20JSBMAUGiquIdG_13UvSJrc8bgXCcUZ0zY=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_Hg_Lre83CfBayR28UbyTAhyiZ7FqKb2uVIJlwcfacVzsysC5fLD6uxdmN5A4PPFE8DSWjRjQ7uuPFjTjqrPyTrB2FDbrTYQ2sLKNbRvhY20JSBMAUGiquIdG_13UvSJrc8bgXCcUZ0zY=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX9wZ8Kq3AJ-d_AfTsNk21FUdB_HS7dPvbCY5v0i3J-JK1rFzAmz3btu051bDYH6-MofmFe8w6QHzaYhn_9TpkLudIP1TtdH6ckXEJo9TqTpFnKfLJGqjnLKmSg-PTK_uNQRmq7NreQRSno=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX9wZ8Kq3AJ-d_AfTsNk21FUdB_HS7dPvbCY5v0i3J-JK1rFzAmz3btu051bDYH6-MofmFe8w6QHzaYhn_9TpkLudIP1TtdH6ckXEJo9TqTpFnKfLJGqjnLKmSg-PTK_uNQRmq7NreQRSno=w1600",
       "views": 48772
     },
     {
@@ -105,20 +105,20 @@
     },
     {
       "id": "ph14",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_GCBnq--CFjvoJnEdLWPPNApH4qqUCmZDxdG6lMLI7OV0udsv-aK1lW1M5UXlmRYCqPcrgboq2xFcO8KIB1f15FYJctJka_Kh3aPXPaiYtE921wTCVbN5sS_lQhnqmm693ORyhiU8XSwY=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_GCBnq--CFjvoJnEdLWPPNApH4qqUCmZDxdG6lMLI7OV0udsv-aK1lW1M5UXlmRYCqPcrgboq2xFcO8KIB1f15FYJctJka_Kh3aPXPaiYtE921wTCVbN5sS_lQhnqmm693ORyhiU8XSwY=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_G32tz1Os7RJ3OMFGcZinAUW_B2ReKdnpu6ls8KxwjLQ93-NT4GWvbT68gk_6s_M4xk6op5wM8hirWS-xwws7nWC8HoxIBI-5eeZ17wz61wKkrvUgRIDDr1EpMnhV9ocexDsCcYJ2qMmE=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_G32tz1Os7RJ3OMFGcZinAUW_B2ReKdnpu6ls8KxwjLQ93-NT4GWvbT68gk_6s_M4xk6op5wM8hirWS-xwws7nWC8HoxIBI-5eeZ17wz61wKkrvUgRIDDr1EpMnhV9ocexDsCcYJ2qMmE=w1600",
       "views": 42802
     },
     {
       "id": "ph15",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX9i_p4IBPsBRMp03-RckPSIs1yzYXg9wunaHxq6fzozBm_g6gMTk58SfZ7qnmKeLG4btlEMsP_iFcd5OpdlPQ3NeZeRnp9Z5apWqCf6tc8ntEhgw2fI2qd3h0DrKdpOi6GC66m9yNt2jZEp=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX9i_p4IBPsBRMp03-RckPSIs1yzYXg9wunaHxq6fzozBm_g6gMTk58SfZ7qnmKeLG4btlEMsP_iFcd5OpdlPQ3NeZeRnp9Z5apWqCf6tc8ntEhgw2fI2qd3h0DrKdpOi6GC66m9yNt2jZEp=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_qbbJljvzhLKW4_hX6nHPcLpKp0wADSERHLnzFh2fb6tLMdhI2AhToznB7t4oSmGpSVii92LFXsFmOPMpoeK-2jhkmMHiYvfxztb5Q8uFDQwWiBy8S3RWP0ipjLbl_9NA23cedPOmDZyt5=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_qbbJljvzhLKW4_hX6nHPcLpKp0wADSERHLnzFh2fb6tLMdhI2AhToznB7t4oSmGpSVii92LFXsFmOPMpoeK-2jhkmMHiYvfxztb5Q8uFDQwWiBy8S3RWP0ipjLbl_9NA23cedPOmDZyt5=w1600",
       "views": 42172
     },
     {
       "id": "ph16",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX-sAi95OeTWcixfhA420kcNFYvklHIht8tVH4r7mhvHORVcVLxwHJSHdwS7WfqxnOmIpmvo66pjaMtHGJcS183qKxdoh4sDYtBl01F3TtnwWsWmXlzchzbsBi7p-jsVOke8KTYa=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX-sAi95OeTWcixfhA420kcNFYvklHIht8tVH4r7mhvHORVcVLxwHJSHdwS7WfqxnOmIpmvo66pjaMtHGJcS183qKxdoh4sDYtBl01F3TtnwWsWmXlzchzbsBi7p-jsVOke8KTYa=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_OMxa8AHl0qzhQfHORUZ5CgY6QoxADHldVAnCO3VLsz8VqdHDV16sFezOmePpLVai_EfZLrD7BQ_qiig18yFp3A6GPCHmhrcRQkVy1nsPBV1-RkzZIEHn2zewkwmLMv_1e54JU=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AH1DqX_OMxa8AHl0qzhQfHORUZ5CgY6QoxADHldVAnCO3VLsz8VqdHDV16sFezOmePpLVai_EfZLrD7BQ_qiig18yFp3A6GPCHmhrcRQkVy1nsPBV1-RkzZIEHn2zewkwmLMv_1e54JU=w1600",
       "views": 42078
     },
     {
@@ -133,7 +133,7 @@
       "id": "vid0",
       "place": "田中雞卵",
       "views": 195738,
-      "img": "https://lh3.googleusercontent.com/grass-cs/ANxoTn0VoO5PChaw8lrw6oTfZ6KMUT4uOP-ycqNbE4y_vVt4f77nH2BTLZINZlGNge-zIkTsInuEv7STTlWCj7sPwBldQJJqYyZsErElkgZfuQkt6kUC2gTybtJ8jYG7kNSoZ8TBghYWnA=w600",
+      "img": "https://lh3.googleusercontent.com/grass-cs/ACvplmO_1snoxhsm6-E4aGTAjBiaz221RqaPLsWI7PALIIlX8c9wusLhGPAR1V8QSLt4NP7KDLMc3IgbZV3IvGKc55_8y51FzMcmJ9RPigI5PrvNKuB6WyP2M7QYjC0KKYOAUUECsKMwJg=w600",
       "fallbackImg": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmOduyGQPmnQ91ulJjIM9NcsvHxxVcKtsmV5LkaCQSDYUMGhm6Irj_FBehJuDRaqVRG-AOuMzsSy7tXuCyG2y9NnZ3nYD9jp6yipxTefoR5Fvjq-Hbj3rogpYy3Ask4h5y6YH4HoA=w600",
       "link": "https://maps.app.goo.gl/tCnWNtfzkVZVfWSB8"
     },
@@ -142,14 +142,14 @@
       "place": "Patisserie TEN& · counter",
       "views": 158291,
       "img": "https://lh3.googleusercontent.com/grass-cs/ACvplmO7EQxMlfnFu8YFIsgzy5Wbw5-ZVkB4HdUsNluriGyjifyhjPCXiKPKcQittA_eESKlQoD9KHNYlfDWNTaTJhXaQSSacR6nVzjCy93RQ8EJuPeKoisUKUO0ctVXsefQqfyNrs-4=w600",
-      "fallbackImg": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkX0wV2w6k-OIAUXT5nA1Ua91Az1rWoJj0QdMndCfxmamDHsuvalSp6Xd5uu7SWt2yRt72xdmSNLRI07gXwtW-aU4J1rA52F0COFJPx6DcxSRLBHlB1wH8TstCkh1-LtCpkZ4uh=w600",
+      "fallbackImg": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnjSjas6PnS5vwfE58W9EAAAHVJen3v3JUYP8dF3IAa1p4rOAxaZF9AfjndClGDb8yuVnWI-gVgA-tulIO98ZxDjwWepudPPOJv3O0imuer_DerWbb1NymKq7j1-rpOd_bugvah=w600",
       "link": "https://maps.app.goo.gl/A4b15Z4hWHRcDViZ8"
     },
     {
       "id": "vid2",
       "place": "瑪黑家紅茶 Marais",
       "views": 151584,
-      "img": "https://lh3.googleusercontent.com/grass-cs/ACvplmOsyCgB2abeENFGARWlB_WTu6zMUByF_EJAGr0GIwcgGRiQIMXalK93WWbcpSaxylxfQcHjV0YEmKxwYxcAO_q8KL6cmZdjGXJni6juovXfWL_sPrc0s8S7Cyxo2YNhPNmED83C=w600",
+      "img": "https://lh3.googleusercontent.com/grass-cs/ACvplmPsQEKFQyKWYMnHxiVlccXLXAtGT_wdHNTMhccp9dn6IuMSJFSJ_vKMpyOkNrcj4hcIJLHaMy6fu6LyrNrK6uiyXt6YqrRjrQhAdVCuCoR7-nQO4hwfo7Dp1vmu4P5HN-zKWbKM=w600",
       "fallbackImg": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmfP9D6PZ_Sje52VMdHD0ZLl6VPQ_xzkvSWuVk9MbGCSe-2cNJX4ClwT9zEbF3CYCTXUm6jzk27NNVfIR1bAsiMuSOm3YXdMyOLLAOuIRfyM1RmbH7jYMCaZjqazOm5i1thASRv=w600",
       "link": "https://maps.app.goo.gl/opAD5Ca5XFnuAt3z5"
     },
@@ -173,7 +173,7 @@
       "id": "vid5",
       "place": "Pu-Jei 葡吉 · the sign",
       "views": 93540,
-      "img": "https://lh3.googleusercontent.com/grass-cs/ACvplmM6xcfUdgnGxxoyn9VsMeA1GQpkHg-2A91Go3PMwGl4Dm6gwPAP6TDqnkOmPHv7Zvcjz29DrCm73930ySYhoadU6RHqikbPXGOthn6-mFLAB7hEh-LS4FBVl3LWvCezKwDUzZ2c=w600",
+      "img": "https://lh3.googleusercontent.com/grass-cs/ACvplmO8BbtKOcwda3r2qQFgRaV0-mNB_t6hLx_8soU6Fj1odSkODSzZo2AlSeuPfxzbIJNRCfCo1ypNqSEEjovCMNEkQwlkvkgmKvVxedoHAyd9VmllmDJPc4ntJVlz6o5_88j9-UWZ=w600",
       "fallbackImg": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlbJ8y7zvNagJRMcOjMO69pf6Mtg8JxhcMi-xDljWsWHWPxOGP-CwRUrdDuAfxnh5ZXb6Uerbpfj0F4X3sYcAHQZUaCQZqMMvlHZ5bQlKgyEVzgmSt7jM_EIhLvhH9_FZAS4I_g=w600",
       "link": "https://maps.app.goo.gl/v1HraqCjJgR9t1Uc6"
     },
@@ -182,7 +182,7 @@
       "place": "La Mole Taipei",
       "views": 55356,
       "img": "https://lh3.googleusercontent.com/grass-cs/ACvplmM77VYJ3kuF5_ehHBfke6tgcMagCUOxtDzLXwr7L-f0B1pUAxHGDD5_rb0TBDv5RXFzS6VfYKe8ayO7Vk2KFoPxtugZ6DNe5PJPwWNzDFj8N8R7gWc8EHTHk0EZeR22ywm2c_Qk=w600",
-      "fallbackImg": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn7L7Y3jMmKb1KN3HHcxRn2OUTZ0EIXUGrCI3Xc38SPNn-Chqhx8PXIQQPhpx_o1-gVfDzCqcZIREX8zdS09y2hLK70tiKxt49fHD_p6j8D-m2KQTjoy5fWdrwg6LdNeHcXN7eRPg=w600",
+      "fallbackImg": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkK9bL_K6b3-Ca6JXuj63DNf7Sql0Xp6ZHcAZBAF4WGReFmhQT276ffbK5BmXBAW14RLOXvIiwK0vuJDQfYYSD0S339O3gamiRxMSrfBoGcch1CCaLsZTu2qjIbU8z-l8ly0H0I7Q=w600",
       "link": "https://maps.app.goo.gl/xgiPmsA5Qw1QfEE16"
     },
     {
@@ -190,7 +190,7 @@
       "place": "Patisserie TEN& · how to find it",
       "views": 41556,
       "img": "https://lh3.googleusercontent.com/grass-cs/ACvplmMkccHQmMB1aRfS0JDaNYVtvrFUt7SVCoSVmkXmVFuKmt5izmh1fiKUrxq3XpzLx0YrXb4AqfkxkRqWWoZlVNKouzXMCi9UwmOeqRx5vEA_dVqLyr2wi_qD4tHkhBOinhKDXrVrbQ=w600",
-      "fallbackImg": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkX0wV2w6k-OIAUXT5nA1Ua91Az1rWoJj0QdMndCfxmamDHsuvalSp6Xd5uu7SWt2yRt72xdmSNLRI07gXwtW-aU4J1rA52F0COFJPx6DcxSRLBHlB1wH8TstCkh1-LtCpkZ4uh=w600",
+      "fallbackImg": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnjSjas6PnS5vwfE58W9EAAAHVJen3v3JUYP8dF3IAa1p4rOAxaZF9AfjndClGDb8yuVnWI-gVgA-tulIO98ZxDjwWepudPPOJv3O0imuer_DerWbb1NymKq7j1-rpOd_bugvah=w600",
       "link": "https://maps.app.goo.gl/MP8qk1A51KipQodw5"
     }
   ],
@@ -226,7 +226,7 @@
       "region": "Taipei",
       "rating": 5,
       "views": 62973,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkVFgEuObfuAAUS2D_z8dUTV6Bw8Ln4mIvINlma8HxzGiSQoqnUOGdJxZVvKtXsPPuIAuYWBlGRCHCpQcq4oG6lH_S-uBMBGRbwpm-Sg71sEVquu3gCe9f5tz_XkZSBwuWlOkE=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmlYoPbY2RK8-JWrtSlyDnUAa7GCyp1KdgAp2QPy0uVNc1xSah5ecICzzRG-Fegnb-tSI7F5IDF7USUShpHCtrY7oSQDNqeTUk7HoLhKBd4XS6icfomJHaMEtVSWGQb9Dztwb0=w600",
       "url": "https://maps.app.goo.gl/xwcguRm87rq7z5Fm9",
       "en": "The turkey-and-mushroom omelette set (NT$400) comes with the omelette, hash browns, yogurt, your pick of five breads, a juice, and free-refill coffee or tea. A pretty, generous brunch — reportedly a favorite of TV host Dee Hsu.",
       "zh": "火雞肉蘑菇蛋捲$400 包含蛋捲、薯絲煎餅、優格、麵包五選一、果汁一杯、咖啡或紅茶（可續杯） 算是漂亮豐盛的早午餐！似乎是小S愛店 0:13 0:09 +2 "
@@ -238,7 +238,7 @@
       "region": "Taipei",
       "rating": 5,
       "views": 58440,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmh7adzOp1e599wNoQZ7nUgNI7I2jBgOhXx2cs1GPlDk9Xf0kZ0bTuDOe_BC6dyC8JFWUsCCkCqqFRnD6qe28t5E-HdAsDI8IRt8m-D-DxIjSuSYlB-bWQ_O_B1YTVkWwTCmlnhHA=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk6a_GZP6hGNqzd6eTPPvX_bBpVICvcCsY1dGjXlaITslJUUMPewYxHZSuckrJxw81cvgE8H7IM3vKjJ21J2y0sF5fC3Y37yAd8bXemYLcIXwnYebvRZ1EdtuPSCUAwnIekBCM1Gg=w600",
       "url": "https://maps.app.goo.gl/Gp9d4hMEJeYoQ5oNA",
       "en": "Ordered a (very pricey) cake for a coworker's birthday. From service to packaging to the cake itself, everything was in a class of its own — even ten stainless-steel cutlery sets and a custom photo card.",
       "zh": "同事生日訂了好貴的蛋糕，從服務、包裝到蛋糕本身都尊絕不凡，甚至附上的十套餐具是不鏽鋼🍴還有一張客製化照片的硬卡片.. （客製化印上去的東西要提前傳LINE給他們的官方Line） +3 "
@@ -286,7 +286,7 @@
       "region": "Tokyo",
       "rating": 5,
       "views": 37436,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkX0wV2w6k-OIAUXT5nA1Ua91Az1rWoJj0QdMndCfxmamDHsuvalSp6Xd5uu7SWt2yRt72xdmSNLRI07gXwtW-aU4J1rA52F0COFJPx6DcxSRLBHlB1wH8TstCkh1-LtCpkZ4uh=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnjSjas6PnS5vwfE58W9EAAAHVJen3v3JUYP8dF3IAa1p4rOAxaZF9AfjndClGDb8yuVnWI-gVgA-tulIO98ZxDjwWepudPPOJv3O0imuer_DerWbb1NymKq7j1-rpOd_bugvah=w600",
       "url": "https://maps.app.goo.gl/16VhuvUPvptPGbJ27",
       "en": "Recommended by podcaster Ken (Bailingguo) as the best cream puff he's had — so plenty of Taiwanese visitors go now. We had the cream puff and the canelé, and both were excellent!",
       "zh": "看百靈果的ken 說是他覺得最好吃的泡芙，也因為他的介紹好像很多台灣遊客去吃XD當天去有3組台灣人左右 點了泡芙跟可麗露～都讚！以下分享！ 0:05 0:06 +3 "
@@ -298,7 +298,7 @@
       "region": "Taipei",
       "rating": 5,
       "views": 36939,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn1aI7AVw4BJrHFsxCSjKWh5LEIfh8moEx8uCsmHboquXxF8z-2xsTWcEmnVjZNFGhX6Jmx6TiDNZbf9IjcyxKOh-cZqsw1y9RUJ7SmdZc4umuw1Ql4FYKcG00Cw4k-PnaetXbvJQ=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm4kG-fAoXS0ziXr1-H6FRLk5_y0RjReECCYux5wJwrtUpkezhMohI5ZdSrnd-IMJto-BHJXMHLbXLIujDOjA1QjVVNsK1_WL2ubeYoPgF0HWzG5zI1mlSa5U9MtzqPfwgcOzvpIg=w600",
       "url": "https://maps.app.goo.gl/UtkbTDajLiRLdzC97",
       "en": "Said to be a Jensen Huang favorite — always packed, you'll share tables at peak hours. Must-order: the scallion pancake and radish cake. The pancake is hand-rolled to order, so worth the wait.",
       "zh": "好像是黃仁勳愛店，人非常多，用餐時間要併桌 😍必須點：蔥油餅、蘿蔔糕 蔥油餅是所有餐點裡面等最久的一個，等到一度有點不耐煩，但是好像每一桌點的都等很久，出去才看到是廚房現桿的 +4 "
@@ -322,7 +322,7 @@
       "category": "Dessert",
       "country": "Japan",
       "reactions": 41,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkX0wV2w6k-OIAUXT5nA1Ua91Az1rWoJj0QdMndCfxmamDHsuvalSp6Xd5uu7SWt2yRt72xdmSNLRI07gXwtW-aU4J1rA52F0COFJPx6DcxSRLBHlB1wH8TstCkh1-LtCpkZ4uh=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnjSjas6PnS5vwfE58W9EAAAHVJen3v3JUYP8dF3IAa1p4rOAxaZF9AfjndClGDb8yuVnWI-gVgA-tulIO98ZxDjwWepudPPOJv3O0imuer_DerWbb1NymKq7j1-rpOd_bugvah=w600",
       "url": "https://maps.app.goo.gl/16VhuvUPvptPGbJ27",
       "en": "Recommended by podcaster Ken (Bailingguo) as the best cream puff he's had — so plenty of Taiwanese visitors go now. We had the cream puff and the canelé, and both were excellent!",
       "zh": "看百靈果的ken 說是他覺得最好吃的泡芙，也因為他的介紹好像很多台灣遊客去吃XD當天去有3組台灣人左右 點了泡芙跟可麗露～都讚！以下分享！ 0:05 0:06 +3 ",
@@ -388,7 +388,7 @@
       "category": "Italian",
       "country": "Japan",
       "reactions": 13,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlzY3hpFuemho12Jy5SlEBM9V_9kPWYmkbvsPqcmjCXTfLsOLxkGV2CNHEqHV8n_rRIURyp1ykE7OMYlrV0pzFiClAlaPyH-_BlrLrxqfitQh-VpyyrOr37NwfGwzdhdDvQ6PpLzPlNVycF=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmbV4MhZPcHE3H-eLaYUiFmSOTQKyejOSE-w1VihHWfx0DXubUUu2xAK_NbLqxj7mHUKUMT5t6g1ZJk25IYIm_Hk1k5pFMXrSPg6Y0ak7Hj-NcTU_oGlRO0Ygo61WgTCh2_B6z10fnNVdYy=w600",
       "url": "https://maps.app.goo.gl/KYrb2hAmebz4tvtu6",
       "en": "The only overseas branch of the famous Milan pizzeria. Food critics rave about it, so I came to try it myself — genuinely good 🍕.",
       "zh": "我是台灣遊客，2025.01月份到訪 米蘭知名披薩店的唯一海外分店，看各大美食評論家都說很好吃，就自己來吃吃看，真的不錯可以來吃🍕！ +5 ",
@@ -399,7 +399,7 @@
       "category": "Other",
       "country": "Thailand",
       "reactions": 13,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnPYhVu17FecgnwEljS1JLgfBIJUTFpcQzgRrJ9-by_YfWINxLb1t3RIV46cKMMNp_SvqstE7R1sPNDZoCbPjO5oq6BkUPrk-x4yZxrLPK_cY-_oJKwKWEmJjY_6sy68pkikhay3XkIpe8J=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWltVzOggbHPP_925p0zp-UmHVzZ5G6M7QwOTWhwnj9difeupis836cXwxsIrcvQTmot0URDs1HMaE7QokYWZLL-M-TIKDylDfSlsRgUW5uAwyuexPpfwqpmcrStvy8Tr_9GFgqPYlb7XNAi=w600",
       "url": "https://maps.app.goo.gl/9BcconT7hSbpp1TF6",
       "en": "Cannabis cookies, ฿450 for three. A friend's recommendation — lots of Westerners and tourists. The staff member who walked us through everything spoke the best English I met on my entire Bangkok trip, and was happy to answer anything.",
       "zh": "大麻餅乾450泰銖，三片入 朋友推薦的大麻店，洋人很多、觀光客也多，會有英文很好的店員（堪稱整趟曼谷旅遊，遇到英文最好的人）用心介紹，有問題都可以問 0:03 +2 ",
@@ -410,7 +410,7 @@
       "category": "Japanese",
       "country": "Japan",
       "reactions": 12,
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnZnQF4SGRUakr1r1NiiKR8XgHTzzCj9NnrpAM2O9yrB1_8d6Mg7SoqaLug-41cGKW1vVAyuQxpcOa61dN85CrTeQWhUdWw5ZLHmapenaHDGox627-mHyYCBM235xqFyLrZiW6RctwFCtEy=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk-pTSUIWLrJIuJ4ooQjseLxKB6MduHeOA8FT_j1MaJ98AHvYBH0h0jqH-OWs_i9crMIzUAx7APu7nFW3DKHtsotp04bypE8SPk1BVtdF2ImxzcWs1zEGHnhEFAtFWmH3zeamIU8mfz7mS2=w600",
       "url": "https://maps.app.goo.gl/nGmp4ZPWLpn77bkL7",
       "en": "A spot lots of YouTubers recommend. We arrived ~10 minutes after opening and it was already 80% full but with no queue yet — mostly Japanese diners, and locals were lining up by the time we left. It's tucked in a residential-looking area about a 5-minute walk from the Akihabara bustle.",
       "zh": "我是台灣遊客，2025.01月到訪 很多YouTuber推這間，我們在開店後大概10分鐘內到，店內已經8成滿了，還不用排隊 裡面很多日本人在吃，吃完出來甚至有看到日本人排隊，餐廳在一個很像民宅的地方，離秋葉原鬧區走大概5分鐘 ",
@@ -434,7 +434,7 @@
       "category": "Dessert",
       "country": "Italy",
       "region": "Florence",
-      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlbuZufLvmTRwTUuDQSZWsPfHNmN1S3EoEuxFcNd-c1CFF1eA4zxcNLYQ-zucwlu6V4mx07q0JpKPyxlffckovFPCN0cVBOckVaf8w6qRI9SJk19kKaWAIApIkYL-TX8vZYlMk_QubOlWoh=w600",
+      "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk1dVHBO36QLVcocZlnYSrRnZjmE4RXElwZgIwJvrsQ2bkQgEhzZCrinw3m48itM6bIO2eLebaR6rDMYkorrZtSs7Oe4YrOal2g-1oONlk_kaHrqDnbNMswpqSmHCi013MdeWN8VTwqyRBn=w600",
       "url": "https://maps.app.goo.gl/j4xkNhofDihxD7GeA",
       "en": "Had the vanilla crème and a citrus flavor — the crème was the better of the two, with visible vanilla seeds.",
       "zh": "我是台灣遊客🇹🇼2026.2月份到訪 吃了香草Creme和某個柑橘類的口味 Creme比較好吃，裡面看得到香草籽 ",
@@ -600,7 +600,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 4,
-      "date": "2026-05-20",
+      "date": "2026-05-13",
       "blurb": "2026.6月到訪 假日大約下午四點半～五點",
       "photoCount": 3,
       "lat": 25.03078,
@@ -696,7 +696,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 4,
-      "date": "2026-05-06",
+      "date": "2026-05-04",
       "blurb": "2026.6月份到訪 週五晚上7:30到現場",
       "photoCount": 1,
       "lat": 25.03014,
@@ -1416,7 +1416,7 @@
       "country": "Italy",
       "region": "Florence",
       "rating": 5,
-      "date": "2026-03-05",
+      "date": "2026-02-03",
       "blurb": "沒什麼期待的來看反而有被驚艷到，外面看起來都",
       "photoCount": 3,
       "lat": 43.77463,
@@ -2344,7 +2344,7 @@
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "從威尼斯火車站過來要先搭1號船到 Cador",
       "photoCount": 0,
       "lat": 45.44063,
@@ -2360,7 +2360,7 @@
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "非常好吃，值得一吃，兩個人吃2000台幣，但",
       "photoCount": 0,
       "lat": 45.43555,
@@ -2376,7 +2376,7 @@
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "看到脆上台灣人推薦才來吃的，吃完的感想是…好",
       "photoCount": 0,
       "lat": 45.43619,
@@ -2392,7 +2392,7 @@
       "country": "Italy",
       "region": "Venice",
       "rating": 4,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "感覺是吃粗飽的披薩店，好處是便宜、不用入座費",
       "photoCount": 3,
       "lat": 45.43835,
@@ -2408,7 +2408,7 @@
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "亞洲胃來義大利第三天就開始找中菜 內用只有站",
       "photoCount": 2,
       "lat": 45.43722,
@@ -2424,7 +2424,7 @@
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "朋友推薦的甜點店，當地人非常多、店內不大所以",
       "photoCount": 4,
       "lat": 45.43726,
@@ -2440,7 +2440,7 @@
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "有每個種類單點、也有盒裝綜合炸海鮮（直接在收",
       "photoCount": 2,
       "lat": 45.43731,
@@ -2456,7 +2456,7 @@
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "兩天吃了四種口味，推薦程度是 焦糖太妃糖=開",
       "photoCount": 2,
       "lat": 45.43899,
@@ -2472,7 +2472,7 @@
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "面具節的聖馬可廣場 非常熱鬧、有很多裝扮的人",
       "photoCount": 2,
       "lat": 45.43417,
@@ -2968,7 +2968,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2025-09-06",
+      "date": "2025-08-07",
       "blurb": "⏰週日下午17:05 剛開門後到，店內還有兩",
       "photoCount": 0,
       "lat": 25.01389,
@@ -2984,7 +2984,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2025-09-06",
+      "date": "2025-08-07",
       "blurb": "蠻好吃的！韓國人開的店！ 喜歡味噌的話推馬鈴",
       "photoCount": 0,
       "lat": 25.02215,
