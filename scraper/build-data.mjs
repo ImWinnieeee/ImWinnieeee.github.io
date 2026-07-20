@@ -6,6 +6,7 @@
 //  - real headline stats
 import fs from 'fs'
 import path from 'path'
+import readline from 'readline'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -13,18 +14,58 @@ const OUT = path.join(__dirname, 'output')
 const SRC = path.join(__dirname, '..', 'src')
 const L = (f) => JSON.parse(fs.readFileSync(path.join(OUT, f), 'utf8'))
 
+function parsePhoneTotal(value) {
+  if (!value) return null
+  let text = String(value).trim().toLowerCase().replace(/[,_\s]/g, '')
+  text = text.replace(/(?:瀏覽)?次(?:數)?$/, '').replace(/views?$/, '')
+  let multiplier = 1
+  if (/[萬万]$/.test(text)) { multiplier = 1e4; text = text.slice(0, -1) }
+  else if (text.endsWith('m')) { multiplier = 1e6; text = text.slice(0, -1) }
+  else if (text.endsWith('k')) { multiplier = 1e3; text = text.slice(0, -1) }
+  const number = Number(text)
+  return Number.isFinite(number) && number > 0 ? Math.round(number * multiplier) : null
+}
+
+function askGrandTotal(photoViews) {
+  if (process.env.PHONE_TOTAL_VIEWS) {
+    return Promise.resolve(parsePhoneTotal(process.env.PHONE_TOTAL_VIEWS))
+  }
+  if (!process.stdin.isTTY) return Promise.resolve(null)
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+  return new Promise((resolve) => {
+    rl.question(
+      `\n📱 本次照片＋影片瀏覽數：${photoViews.toLocaleString()}\n   手機目前顯示的總瀏覽數是多少？（例：1260萬；直接 Enter 沿用上次基準）：`,
+      (answer) => { rl.close(); resolve(parsePhoneTotal(answer)) }
+    )
+  })
+}
+
+const previousDataPath = path.join(SRC, 'data.json')
+let previousData = null
+try {
+  if (fs.existsSync(previousDataPath)) {
+    previousData = JSON.parse(fs.readFileSync(previousDataPath, 'utf8'))
+  }
+} catch { /* use built-in baseline only if the previous file cannot be read */ }
+
 const parsed = L('reviews-parsed.json')
-// Guard: if the reviews scrape came back empty (e.g. Google changed the reviews-tab
-// DOM and the selector found 0 cards), ABORT instead of overwriting src/data.json
-// with an empty site (no reviews → no map, favorites, most-viewed, etc.). The last
-// good data.json is left untouched. Re-run the scrape once the selector is fixed.
-if (!Array.isArray(parsed) || parsed.length === 0) {
-  console.error('\n❌ reviews-parsed.json is EMPTY — refusing to build (would wipe reviews/map/favorites).')
-  console.error('   The reviews scrape likely failed (DOM change?). src/data.json left unchanged.')
-  console.error('   Fix scraper/scrape.mjs reviews selector, then re-run `npm run scrape` → build:data.\n')
+const previousReviewCount = previousData?.reviews?.length
+  ?? previousData?.stats?.totalReviews
+  ?? 0
+const minimumReviewCount = previousReviewCount > 0
+  ? Math.max(1, Math.floor(previousReviewCount * 0.8))
+  : 1
+if (!Array.isArray(parsed) || parsed.length < minimumReviewCount) {
+  console.error(`\n❌ 評論抓取不完整：只抓到 ${Array.isArray(parsed) ? parsed.length : 0} 筆；上次 ${previousReviewCount} 筆，本次至少需 ${minimumReviewCount} 筆。`)
+  console.error('   已中止：不改寫 src/data.json，也不會 commit / push。\n')
   process.exit(1)
 }
 const photos = L('photos-raw.json')
+if (!Number.isFinite(photos?.total) || photos.total <= 0) {
+  console.error(`\n❌ 照片總瀏覽數抓取失敗：total = ${JSON.stringify(photos?.total)}。`)
+  console.error('   已中止：不使用舊 fallback，不改寫 src/data.json，也不會 commit / push。\n')
+  process.exit(1)
+}
 const geo = fs.existsSync(path.join(OUT, 'geocode-cache.json')) ? L('geocode-cache.json') : {}
 // per-review Share permalinks captured by scrape.mjs ({ [reviewId]: url|null })
 const reviewUrls = fs.existsSync(path.join(OUT, 'review-urls.json')) ? L('review-urls.json') : {}
@@ -407,19 +448,34 @@ const allDates = parsed.map((r) => r.date).filter(Boolean).sort()
 const dateFrom = allDates[0] ? allDates[0].slice(0, 7) : ''
 const dateTo = allDates[allDates.length - 1] ? allDates[allDates.length - 1].slice(0, 7) : ''
 
-// Review views aren't exposed on Google desktop. Winnie read the GRAND total
-// (photo + review) off her phone as 11.72M when the photo total was 9,155,461.
-// We keep the review-views slice CONSTANT at the difference, so the headline =
-// this fixed slice + the live photo total, which keeps climbing as photos rack
-// up views. (Re-deriving it from a fixed grand total each scrape would instead
-// pin the headline and cancel out real photo growth — not what we want.)
-const totalReviewViews = 11720000 - 9155461 // = 2,564,539, fixed
+// Google desktop only exposes photo views. Display this refresh using the review
+// slice calibrated last time:
+//   current headline = current scraped photo views + previous review baseline
+// A new phone grand total recalibrates the review slice for the NEXT refresh:
+//   next baseline = current phone grand total - current scraped photo views
+// This lets the headline follow real photo-view growth instead of displaying the
+// phone's rounded grand total verbatim.
+const totalPhotoViews = photos.total
+const totalReviewViews = Number.isFinite(previousData?.stats?.reviewViewsBaseline)
+  ? previousData.stats.reviewViewsBaseline
+  : Number.isFinite(previousData?.stats?.totalReviewViews)
+    ? previousData.stats.totalReviewViews
+    : 11720000 - 9155461
+const phoneGrandTotal = await askGrandTotal(totalPhotoViews)
+let reviewViewsBaseline = totalReviewViews
+if (phoneGrandTotal != null && phoneGrandTotal > totalPhotoViews) {
+  reviewViewsBaseline = phoneGrandTotal - totalPhotoViews
+  console.log(`📱 已儲存下次評論瀏覽基準：${reviewViewsBaseline.toLocaleString()}（本次手機回報 − 本次照片影片瀏覽）`)
+} else if (phoneGrandTotal != null) {
+  console.warn(`⚠️  手機總數 ${phoneGrandTotal.toLocaleString()} 不大於照片瀏覽數，已忽略並沿用上次基準。`)
+}
+console.log(`🌐 本次網站總數：${totalPhotoViews.toLocaleString()} + ${totalReviewViews.toLocaleString()} = ${(totalPhotoViews + totalReviewViews).toLocaleString()}`)
 
 const data = {
   profile: { name: "Winnie's Food Map", level: `Local Guide · Level ${level}`, points, profileUrl: PROFILE_URL },
   stats: {
-    totalReviews: parsed.length, ratingsOnly: 21, totalPhotoViews: photos.total || 9140043,
-    totalReviewViews, photoCount, points, level, dateFrom, dateTo,
+    totalReviews: parsed.length, ratingsOnly: 21, totalPhotoViews,
+    totalReviewViews, reviewViewsBaseline, photoCount, points, level, dateFrom, dateTo,
     isMockData: false,
     // when this data was last (re)built — i.e. the last `npm run refresh` (or any
     // future automated update). Shown under the Total Views headline.
