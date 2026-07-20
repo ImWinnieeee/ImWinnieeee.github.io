@@ -19,7 +19,6 @@ function FavRow({ f, color, isOpen, onToggle, canHover }) {
       <span className="font-medium truncate">
         {flag && <span className="mr-1">{flag}</span>}
         {f.name}
-        {hasNote && <span className="ml-1 align-middle text-xs text-[var(--color-ink-soft)]">ⓘ</span>}
       </span>
       {f.googleRating != null ? (
         <span className="shrink-0 text-xs whitespace-nowrap flex items-baseline gap-1">
