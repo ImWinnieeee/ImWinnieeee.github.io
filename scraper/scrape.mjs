@@ -20,8 +20,17 @@ const OUT_DIR = path.join(__dirname, 'output')
 const CONTRIB_ID = '101678781544711902540'
 const PORT = 9222
 const URLS_FILE = path.join(OUT_DIR, 'review-urls.json')
+const SITE_DATA_FILE = path.join(__dirname, '..', 'src', 'data.json')
+const CONTRIB_URL = `https://www.google.com/maps/contrib/${CONTRIB_ID}`
 
 async function openTab(page, name) {
+  // Direct routes are more reliable than Google's frequently-changing tab markup.
+  const directUrl = `${CONTRIB_URL}/${name}/`
+  await page.goto(directUrl, { waitUntil: 'domcontentloaded' }).catch(() => {})
+  await page.waitForTimeout(1800)
+  if (page.url().includes(`/${name}`)) return true
+
+  // Fallback for locales/accounts that redirect the direct contribution routes.
   const labels = { reviews: ['Reviews', '評論'], photos: ['Photos', '相片', '照片'] }[name]
   for (const l of labels) {
     const btn = page.getByRole('tab', { name: l }).first()
@@ -58,7 +67,7 @@ async function harvestWhileScrolling(page, { anchor, harvest, label, onBatch, ma
     // (e.g. open each visible review's Share dialog) BEFORE we scroll them away.
     // Gets ALL currently-visible items (not just new ones) so failed captures can
     // be retried as cards re-render across scroll steps.
-    if (onBatch) { try { await onBatch(batch, fresh) } catch (e) { console.log('   onBatch error:', e.message) } }
+    if (onBatch) await onBatch(batch, fresh)
     // Advance the virtualized feed. `scrollBy` on a guessed container proved
     // unreliable, so we (1) pull the LAST rendered card into view — this makes
     // the native scroller move and forces the next batch to render — and
@@ -134,7 +143,7 @@ await fs.mkdir(OUT_DIR, { recursive: true })
 const ctx = browser.contexts()[0]
 const page = ctx.pages().find((p) => p.url().includes('/maps/contrib/')) || ctx.pages()[0] || (await ctx.newPage())
 await page.bringToFront()
-await page.goto(`https://www.google.com/maps/contrib/${CONTRIB_ID}/`, { waitUntil: 'domcontentloaded' })
+await page.goto(`${CONTRIB_URL}/reviews/`, { waitUntil: 'domcontentloaded' })
 await page.waitForTimeout(3000)
 
 // ---- header stats ----------------------------------------------------------
@@ -154,22 +163,55 @@ const stats = await page.evaluate(() => {
 // review) but the only way to a real per-review permalink. Resumable: we load any
 // previously-captured links and skip those ids, and persist as we go.
 const reviewUrls = fsExists(URLS_FILE) ? JSON.parse(await fs.readFile(URLS_FILE, 'utf8')) : {}
+// Google occasionally regenerates every review ID. Reuse already-published
+// permalinks by place name so an ID rotation does not open ~400 Share dialogs;
+// genuinely new places still go through the Share flow below.
+const publishedData = fsExists(SITE_DATA_FILE) ? JSON.parse(await fs.readFile(SITE_DATA_FILE, 'utf8')) : {}
+const publishedReviewByPlace = new Map(
+  (publishedData.reviews || [])
+    .filter((review) => review.place)
+    .map((review) => [review.place.trim(), review])
+)
+const publishedUrlByPlace = new Map(
+  [...publishedReviewByPlace]
+    .filter(([, review]) => review.url)
+    .map(([place, review]) => [place, review.url])
+)
 const urlAttempts = new Map()           // id -> attempt count (this run), for bounded retries
 const MAX_ATTEMPTS = 3
 let urlCaptured = 0, urlLogged = 0
 async function saveUrls() { await fs.writeFile(URLS_FILE, JSON.stringify(reviewUrls, null, 2)) }
 const haveUrl = (id) => typeof reviewUrls[id] === 'string' && reviewUrls[id]
 
-// The live Share modal: the VISIBLE role=dialog containing a COPY LINK button.
-// (The page keeps several role=dialog nodes around, so we must filter — reading a
-// bare [role="dialog"] returns a stale/wrong one and yields duplicate links.)
-const shareModal = () =>
-  page.locator('[role="dialog"]:visible').filter({ has: page.locator('button[jsaction*=".copy"]') }).last()
-async function closeShareModal() {
-  const m = shareModal()
-  if (await m.count().catch(() => 0)) {
-    await m.locator('button[jsaction="modal.close"]').first().click({ timeout: 2000 }).catch(() => {})
-    await m.waitFor({ state: 'detached', timeout: 2500 }).catch(() => {})
+// Google changes both the Copy-link and close-button markup frequently. The last
+// visible dialog is the one just opened from the current review card.
+const shareModal = () => page.locator('[role="dialog"]:visible').last()
+async function closeShareModals() {
+  // A new ShareKit dialog can sit on top of an older Maps dialog. Close from the
+  // top down and re-query after every click; a dynamic `.last()` locator can
+  // otherwise jump to the dialog underneath and make a successful close look stuck.
+  for (let attempt = 0; attempt < 6; attempt++) {
+    const dialogs = page.locator('[role="dialog"]:visible')
+    if (await dialogs.count().catch(() => 0) === 0) return
+    const modal = dialogs.last()
+    const closeButtons = [
+      modal.locator('#header-close-button').first(),
+      modal.getByRole('button', { name: /^(close|關閉|关闭|閉じる)$/i }).first(),
+      modal.locator('button[jsaction*="modal.close"]').first(),
+      modal.locator('button[aria-label*="close" i], button[aria-label*="關閉"], button[aria-label*="关闭"]').first(),
+    ]
+    let clicked = false
+    for (const button of closeButtons) {
+      if (await button.isVisible().catch(() => false)) {
+        clicked = await button.click({ timeout: 2500 }).then(() => true).catch(() => false)
+        if (clicked) break
+      }
+    }
+    if (!clicked) await page.keyboard.press('Escape').catch(() => {})
+    await page.waitForTimeout(350)
+  }
+  if (await page.locator('[role="dialog"]:visible').count().catch(() => 0)) {
+    throw new Error('Share 視窗無法完全關閉，已停止抓取以避免卡住或寫入不完整資料。')
   }
 }
 
@@ -187,19 +229,29 @@ async function captureShareLink(id) {
   const shareBtn = page.locator(`div.jftiEf[data-review-id="${id}"] button[jsaction*="review.share"]`).first()
   if (!(await shareBtn.count().catch(() => 0))) return false
 
-  await closeShareModal()
+  await closeShareModals()
   await shareBtn.scrollIntoViewIfNeeded().catch(() => {})
   await shareBtn.click({ timeout: 4000 }).catch(() => {})
 
   const m = shareModal()
-  await m.waitFor({ state: 'visible', timeout: 4000 }).catch(() => {})
+  await m.waitFor({ state: 'visible', timeout: 5000 })
   let link = (await m.locator('input').first().inputValue().catch(() => '')) || null
+  if (!link) {
+    // New ShareKit UI hides the URL behind a real "Copy Link" control.
+    await page.context().grantPermissions(['clipboard-read', 'clipboard-write'], { origin: 'https://www.google.com' }).catch(() => {})
+    const copyLink = m.locator('#app-container-Copy\\ Link, [role="button"]:has-text("Copy Link")').first()
+    if (await copyLink.isVisible().catch(() => false)) {
+      await copyLink.click({ timeout: 3000 }).catch(() => {})
+      await page.waitForTimeout(250)
+      link = await page.evaluate(() => navigator.clipboard.readText()).catch(() => null)
+    }
+  }
   if (!link) { // fall back to scraping any maps link from the modal text
     const txt = (await m.innerText().catch(() => '')) || ''
     const mm = txt.match(/https?:\/\/(?:maps\.app\.goo\.gl|goo\.gl\/maps|www\.google\.com\/maps)\/\S+/)
     if (mm) link = mm[0]
   }
-  await closeShareModal()
+  await closeShareModals()
 
   if (link && /^https?:\/\//.test(link)) {
     reviewUrls[id] = link.trim()
@@ -212,7 +264,7 @@ async function captureShareLink(id) {
 
 // ---- reviews ---------------------------------------------------------------
 console.log('\n📂 Reviews — harvesting while scrolling (will take a few minutes for 359)…')
-console.log('   (also capturing each review\'s Share permalink — this makes it slower)')
+console.log('   (capturing missing Share permalinks; each dialog must close before scrolling continues)')
 await openTab(page, 'reviews')
 // Wait until the review cards actually render. The contributions page sometimes
 // hasn't finished loading when we get here (then [data-review-id] is briefly 0,
@@ -233,9 +285,16 @@ const reviews = await harvestWhileScrolling(page, {
   anchor: '[data-review-id]',
   onBatch: async (batch) => {
     // batch has ~10 nested nodes per review (same id repeated) — visit each once
-    const ids = [...new Set(batch.map((it) => it.id))]
-    for (const id of ids) {
+    const cards = [...new Map(batch.map((item) => [item.id, item])).values()]
+    for (const card of cards) {
+      const id = card.id
       if (haveUrl(id)) continue
+      const place = (card.text || '').split('\n')[0].trim()
+      const publishedUrl = publishedUrlByPlace.get(place)
+      if (publishedUrl) {
+        reviewUrls[id] = publishedUrl
+        continue
+      }
       const before = urlCaptured
       await captureShareLink(id)
       if (urlCaptured > before && urlCaptured % 10 === 0) await saveUrls()
@@ -345,6 +404,21 @@ const resolveCid = async (shortUrl) => {
 }
 
 console.log('\n📂 Store ratings — opening each STORE page (via CID) for its Google rating + review count…')
+// Review IDs can rotate even though the stores have not changed. Carry published
+// ratings forward by place name so only genuinely new stores require navigation.
+for (const review of reviews) {
+  if (storeRatings[review.id]?.rating != null) continue
+  const place = (review.text || '').split('\n')[0].trim()
+  const published = publishedReviewByPlace.get(place)
+  if (published?.googleRating != null) {
+    storeRatings[review.id] = {
+      rating: published.googleRating,
+      reviews: published.googleReviews ?? null,
+      title: place,
+      migratedByPlace: true,
+    }
+  }
+}
 let rDone = 0, rOk = 0
 for (const rv of reviews) {
   const id = rv.id
