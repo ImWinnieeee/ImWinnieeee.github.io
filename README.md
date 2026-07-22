@@ -121,7 +121,9 @@ npm run build        # 4. rebuild dist/ — update:site only; the deploy CI rebu
 > **What updates automatically:** photo view counts (per-photo + the multi-million
 > total), total photo/video count, total reviews, per-video view counts, Google
 > store ratings, and the photos + reviews headline number. The review-views slice
-> is a fixed constant (see below), so that headline grows only as photo/video views do.
+> is recalculated during every refresh: the phone total entered for that run minus
+> the photo/video views scraped during the same run. It is never treated as a fixed
+> number when a valid new phone total is supplied.
 
 **Optional / occasional steps** (not in `refresh`):
 
