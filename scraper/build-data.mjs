@@ -34,7 +34,7 @@ function askGrandTotal(photoViews) {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
   return new Promise((resolve) => {
     rl.question(
-      `\n📱 本次照片＋影片瀏覽數：${photoViews.toLocaleString()}\n   手機目前顯示的總瀏覽數是多少？（必填，例如：1278萬）：`,
+      `\n📱 本次照片＋影片瀏覽數：${photoViews.toLocaleString()}\n   手機目前顯示的約略總瀏覽數是多少？（例如：1278萬；直接 Enter 則不更新明天的評論瀏覽基準）：`,
       (answer) => { rl.close(); resolve(parsePhoneTotal(answer)) }
     )
   })
@@ -448,30 +448,38 @@ const allDates = parsed.map((r) => r.date).filter(Boolean).sort()
 const dateFrom = allDates[0] ? allDates[0].slice(0, 7) : ''
 const dateTo = allDates[allDates.length - 1] ? allDates[allDates.length - 1].slice(0, 7) : ''
 
-// Google desktop only exposes photo views. Recalculate review views on every
-// refresh from the phone grand total entered by Winnie and the photo/video count
-// scraped during this same refresh:
-//   review views = entered phone total - current scraped photo/video views
-// Never keep a fixed review-view slice when a valid new phone total is supplied.
+// Google desktop only exposes photo/video views; the phone's grand total is
+// rounded and therefore must never become today's headline verbatim.
+//
+// Today's headline uses the review-view baseline saved by the PREVIOUS refresh:
+//   today's headline = today's exact photo/video views + previous review baseline
+//
+// If Winnie supplies today's rounded phone total, use it only to prepare the
+// review slice for the NEXT refresh:
+//   next review baseline = today's phone total - today's photo/video views
 const totalPhotoViews = photos.total
+const totalReviewViews = Number.isFinite(previousData?.stats?.reviewViewsBaseline)
+  ? previousData.stats.reviewViewsBaseline
+  : Number.isFinite(previousData?.stats?.totalReviewViews)
+    ? previousData.stats.totalReviewViews
+    : 0
 const phoneGrandTotal = await askGrandTotal(totalPhotoViews)
-if (phoneGrandTotal == null) {
-  console.error('\n❌ 未輸入有效的手機總瀏覽數，已中止更新；不會沿用舊的評論瀏覽數。\n')
-  process.exit(1)
+let reviewViewsBaseline = totalReviewViews
+if (phoneGrandTotal != null && phoneGrandTotal > totalPhotoViews) {
+  reviewViewsBaseline = phoneGrandTotal - totalPhotoViews
+  console.log(`📱 已保存明天使用的評論瀏覽數下限：${reviewViewsBaseline.toLocaleString()}（今天手機約略總數 − 今天照片影片瀏覽數）`)
+} else if (phoneGrandTotal != null) {
+  console.warn(`⚠️  手機總數 ${phoneGrandTotal.toLocaleString()} 不大於照片影片瀏覽數，已忽略；明天仍沿用 ${reviewViewsBaseline.toLocaleString()}。`)
+} else {
+  console.log(`📱 今天未提供手機約略總數；明天仍沿用評論瀏覽數 ${reviewViewsBaseline.toLocaleString()}。`)
 }
-if (phoneGrandTotal <= totalPhotoViews) {
-  console.error(`\n❌ 手機總數 ${phoneGrandTotal.toLocaleString()} 不大於本次照片影片瀏覽數 ${totalPhotoViews.toLocaleString()}，已中止更新。\n`)
-  process.exit(1)
-}
-const totalReviewViews = phoneGrandTotal - totalPhotoViews
-console.log(`📱 本次評論瀏覽數：${totalReviewViews.toLocaleString()}（本次手機總數 − 本次照片影片瀏覽）`)
-console.log(`🌐 本次網站總數：${totalPhotoViews.toLocaleString()} + ${totalReviewViews.toLocaleString()} = ${(totalPhotoViews + totalReviewViews).toLocaleString()}`)
+console.log(`🌐 今天網站總數：${totalPhotoViews.toLocaleString()} + 昨天保存的評論瀏覽數 ${totalReviewViews.toLocaleString()} = ${(totalPhotoViews + totalReviewViews).toLocaleString()}`)
 
 const data = {
   profile: { name: "Winnie's Food Map", level: `Local Guide · Level ${level}`, points, profileUrl: PROFILE_URL },
   stats: {
     totalReviews: parsed.length, ratingsOnly: 21, totalPhotoViews,
-    totalReviewViews, reviewViewsBaseline: totalReviewViews, photoCount, points, level, dateFrom, dateTo,
+    totalReviewViews, reviewViewsBaseline, photoCount, points, level, dateFrom, dateTo,
     isMockData: false,
     // when this data was last (re)built — i.e. the last `npm run refresh` (or any
     // future automated update). Shown under the Total Views headline.
