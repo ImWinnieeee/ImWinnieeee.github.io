@@ -269,6 +269,10 @@ const topVideos = VIDEOS.map((v, i) => {
   return {
     id: 'vid' + i, place: v.label, views: live ?? v.views,
     img: videoFrames[v.label] || imgs[0] || null,
+    // Google video-frame (`grass-cs`) URLs expire more often than ordinary
+    // contribution photos. Keep a place photo as a durable fallback so the
+    // hero never ends up with a blank tile after a data refresh.
+    fallbackImg: imgs.find((img) => img !== videoFrames[v.label]) || null,
     link: v.url || (r && reviewUrls[r.id]) || null,
   }
 }).filter((v) => v.img)

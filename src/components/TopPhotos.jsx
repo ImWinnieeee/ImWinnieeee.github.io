@@ -6,7 +6,7 @@ import { formatViews, formatInt } from '../lib.js'
 export default function TopPhotos({ photos, videos = [], totalViews }) {
   const media = [
     ...photos.map((p) => ({ ...p, src: p.url, isVideo: false })),
-    ...videos.map((v) => ({ ...v, src: v.img, isVideo: true })),
+    ...videos.map((v) => ({ ...v, src: v.img, fallbackSrc: v.fallbackImg, isVideo: true })),
   ]
     .filter((m) => m.src)
     .sort((a, b) => (b.views || 0) - (a.views || 0))
@@ -38,6 +38,11 @@ export default function TopPhotos({ photos, videos = [], totalViews }) {
               src={m.src}
               alt={m.isVideo ? `My video: ${m.place}` : 'My Google Maps contribution'}
               loading="lazy"
+              onError={(event) => {
+                if (m.fallbackSrc && event.currentTarget.src !== m.fallbackSrc) {
+                  event.currentTarget.src = m.fallbackSrc
+                }
+              }}
               className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
             />
             {m.isVideo && (
