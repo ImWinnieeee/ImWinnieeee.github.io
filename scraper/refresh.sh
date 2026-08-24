@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
-# 純更新「數據」：登入 → 抓 Google Maps 資料 → 重建 src/data.json
-#                → 只 commit src/data.json → push。
+# 純更新「數據」：登入 → 擷取影片影格 → 抓 Google Maps 資料
+#                → 重建 src/data.json → commit 資料與影片縮圖 → push。
 #
 # 跟 update.sh 的差別：
-#   - 只動 src/data.json（瀏覽數、各種數量等純資料），
+#   - 只動 src/data.json 與 public/video-thumbnails（數據與自有影片影格），
 #     不會把其他改動（元件、樣式、腳本…）一起 commit 上去。
 #   - commit 訊息固定為「<日期> data update」。
 #
@@ -47,18 +47,22 @@ fi
 #    （任何一步失敗就停，不會用半套資料覆蓋掉好的 data.json）
 echo
 echo "🔄 開始抓資料並重建 src/data.json..."
+npm run scrape:videoframes
 npm run scrape
 npm run parse
 npm run build:data
 
-# 3) 只 commit src/data.json（其他改動一律不碰）
+# 3) 只 commit src/data.json 與自有影片縮圖（其他改動一律不碰）
 echo
-if git diff --quiet -- src/data.json && git diff --cached --quiet -- src/data.json; then
-  echo "ℹ️  src/data.json 沒有變動，不需要 commit / push。"
+if [ -z "$(git status --porcelain -- src/data.json public/video-thumbnails)" ]; then
+  echo "ℹ️  數據與影片縮圖沒有變動，不需要 commit / push。"
   exit 0
 fi
 
 git add src/data.json
+if [ -d public/video-thumbnails ]; then
+  git add public/video-thumbnails
+fi
 git commit -m "$(date '+%Y-%m-%d') data update"
 git push
 

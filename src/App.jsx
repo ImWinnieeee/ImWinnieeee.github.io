@@ -21,9 +21,6 @@ const NAV = [
 export default function App() {
   const { profile, stats, topPhotos, topVideos, mostViewed, mostReacted, ownerReplies, reviews, favorites } = data
   const countryCount = new Set(reviews.map((r) => r.country)).size
-  const sinceLabel = stats.dateFrom
-    ? new Date(`${stats.dateFrom}-01T00:00:00`).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
-    : null
 
   return (
     <div className="min-h-full">
@@ -47,15 +44,10 @@ export default function App() {
           </div>
 
           <div className="mt-3 md:mt-0 text-2xl sm:text-3xl tracking-widest">🍣 🍝 🍜 🍰 🧋</div>
-          <div className="mt-3 inline-flex flex-col items-center sm:relative sm:block">
+          <div className="mt-3">
             <h1 className="font-display text-4xl md:text-5xl font-black tracking-tight leading-tight">
               {profile.name}
             </h1>
-            {sinceLabel && (
-              <span className="mt-1 text-xs font-semibold text-[var(--color-ink-soft)] sm:absolute sm:left-full sm:bottom-1 sm:ml-3 sm:whitespace-nowrap">
-                Since {sinceLabel}
-              </span>
-            )}
           </div>
           <div className="h-1.5 w-16 rounded-full bg-[var(--color-vermilion)] mt-3 mb-5" />
 
@@ -64,12 +56,11 @@ export default function App() {
             reviewViews={stats.totalReviewViews}
             dateFrom={stats.dateFrom}
             updatedAt={stats.updatedAt}
-            countryCount={countryCount}
           />
         </div>
 
         <div className="mt-7 md:mt-9">
-          <StatsOverview stats={stats} />
+          <StatsOverview stats={stats} countryCount={countryCount} dateFrom={stats.dateFrom} />
         </div>
 
         <nav aria-label="Page sections" className="mt-5 flex flex-wrap justify-center gap-2.5">

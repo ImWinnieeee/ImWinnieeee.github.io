@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Video preview unavailable</title>
+  <desc id="desc">A neutral placeholder used when a contributed video's own frame cannot be loaded.</desc>
+  <rect width="600" height="600" fill="#eee6d6"/>
+  <circle cx="300" cy="300" r="86" fill="#cf4f3e" opacity=".16"/>
+  <path d="M278 250l78 50-78 50z" fill="#cf4f3e"/>
+</svg>

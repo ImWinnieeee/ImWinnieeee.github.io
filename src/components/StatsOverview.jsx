@@ -21,7 +21,11 @@ function StatCard({ label, value, sub, accent, emoji, delay }) {
   )
 }
 
-export default function StatsOverview({ stats }) {
+export default function StatsOverview({ stats, countryCount, dateFrom }) {
+  const since = dateFrom
+    ? new Date(`${dateFrom}-01T00:00:00`).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+    : null
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
       <StatCard label="Photo Views" value={formatViews(stats.totalPhotoViews)} sub="times my photos were seen"
@@ -30,8 +34,8 @@ export default function StatsOverview({ stats }) {
         accent="var(--color-indigo)" emoji="📝" delay={80} />
       <StatCard label="Photos Shared" value={formatInt(stats.photoCount)} sub="photos & videos uploaded"
         accent="var(--color-sakura)" emoji="📷" delay={160} />
-      <StatCard label="Local Guide" value={`Lv. ${stats.level}`} sub={`${formatInt(stats.points)} points`}
-        accent="var(--color-matcha)" emoji="🏅" delay={240} />
+      <StatCard label="Reviews across" value={`${countryCount} countries`} sub={since ? `Since ${since}` : null}
+        accent="var(--color-matcha)" emoji="🌎" delay={240} />
     </div>
   )
 }

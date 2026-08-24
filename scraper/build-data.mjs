@@ -239,8 +239,8 @@ const topPhotos = [...photos.items]
 // Each entry below is pinned to that id via `gpsId`, so `views` auto-updates on
 // every scrape; the baked-in number is just a fallback if the live scrape misses.
 // `match` finds the review (for a still + her permalink); `url` = the video's Share
-// link (click-through); thumbnails are real video stills scraped by video-frames.mjs
-// → video-frames.json keyed by `label` (we fall back to a place photo if missing).
+// link (click-through); thumbnails are local screenshots of Winnie's exact shared
+// videos, captured by video-frames.mjs and keyed by `label`.
 const VIDEOS = [
   { match: 'Tanaka Keiran', label: '田中雞卵', views: 195738, gpsId: 'ACgwaOuENoYztoiV1MF8n7f7nzFY', url: 'https://maps.app.goo.gl/tCnWNtfzkVZVfWSB8' },
   { match: 'PATISSERIE TEN&', label: 'Patisserie TEN& · counter', views: 158291, gpsId: 'ACgwaOsxjBNzbsUesnyMAF4AAghe', url: 'https://maps.app.goo.gl/A4b15Z4hWHRcDViZ8' },
@@ -252,6 +252,7 @@ const VIDEOS = [
   { match: 'PATISSERIE TEN&', label: 'Patisserie TEN& · how to find it', views: 41556, gpsId: 'ACgwaOtjNhca4l3MCb1zEEoWddo-', url: 'https://maps.app.goo.gl/MP8qk1A51KipQodw5' },
 ]
 const videoFrames = fs.existsSync(path.join(OUT, 'video-frames.json')) ? L('video-frames.json') : {}
+const VIDEO_PLACEHOLDER = '/video-thumbnail-placeholder.svg'
 // live view counts scraped from the grid; match a video's gpsId to a scraped tile
 // id (prefix match — the stored gpsId is a stable leading slice of the full id).
 const videoViews = fs.existsSync(path.join(OUT, 'video-views.json')) ? L('video-views.json').items || [] : []
@@ -263,19 +264,17 @@ const liveViews = (gpsId) => {
 const topVideos = VIDEOS.map((v, i) => {
   const r = findReview(v.match)
   if (!r) console.log(`   ⚠️  no review match for video: ${v.match}`)
-  const imgs = (r?.images || []).map(big)
   const live = liveViews(v.gpsId)
   if (live == null) console.log(`   ⚠️  no live view count for video "${v.label}" — using baked-in ${v.views}`)
   return {
     id: 'vid' + i, place: v.label, views: live ?? v.views,
-    img: videoFrames[v.label] || imgs[0] || null,
-    // Google video-frame (`grass-cs`) URLs expire more often than ordinary
-    // contribution photos. Keep a place photo as a durable fallback so the
-    // hero never ends up with a blank tile after a data refresh.
-    fallbackImg: imgs.find((img) => img !== videoFrames[v.label]) || null,
+    img: videoFrames[v.label] || VIDEO_PLACEHOLDER,
+    // Never represent Winnie's video with a place/review photo. If capture or
+    // loading fails, use an explicitly neutral video tile instead.
+    fallbackImg: VIDEO_PLACEHOLDER,
     link: v.url || (r && reviewUrls[r.id]) || null,
   }
-}).filter((v) => v.img)
+})
 
 // ---- all reviews for the map (+ favorites) ----
 const CITY = {
