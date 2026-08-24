@@ -1,27 +1,26 @@
-// The page's headline number, top-right: photo views + review views combined.
+// The page's headline number: photo views + review views combined.
 // STATIC — it shows the real total from the last data build and does NOT grow on
 // its own. It only changes when the scraper re-runs and rebuilds src/data.json
 // (photo views update from Google; the review-views slice is a fixed constant —
 // see build-data.mjs). No clock, no simulated tick. `updatedAt` = when the data was
 // last refreshed (build-data stamps it on every `npm run refresh`).
-export default function TotalViews({ photoViews, reviewViews, updatedAt }) {
+export default function TotalViews({ photoViews, reviewViews, dateFrom, updatedAt, countryCount }) {
   const total = (photoViews || 0) + (reviewViews || 0)
-  const updated = updatedAt
-    ? new Date(updatedAt).toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
-    : null
+  const startYear = Number.parseInt(dateFrom, 10)
+  const updatedYear = updatedAt ? new Date(updatedAt).getFullYear() : new Date().getFullYear()
+  const years = Number.isFinite(startYear) ? Math.max(1, updatedYear - startYear) : 8
 
   return (
-    <div className="text-left md:text-right shrink-0">
-      <div className="flex items-center justify-start md:justify-end gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-ink-soft)]">
-        <span className="inline-flex h-2 w-2 rounded-full bg-[var(--color-vermilion)]" />
-        Total views
+    <div className="grid w-full items-center gap-2 text-[var(--color-vermilion)] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-5">
+      <div className="text-sm sm:text-base md:text-right md:text-lg font-bold leading-tight">
+        My Google reviews got
       </div>
-      <div className="font-display font-black tracking-tight text-[var(--color-vermilion)] tabular-nums leading-none text-5xl md:text-6xl mt-1.5">
+      <div className="font-display font-black tracking-[-0.055em] tabular-nums leading-none text-[clamp(3.3rem,9vw,6.7rem)]">
         {total.toLocaleString('en-US')}
       </div>
-      {updated && (
-        <div className="text-sm md:text-base font-medium text-[var(--color-ink-soft)] mt-1.5 tabular-nums">Updated {updated}</div>
-      )}
+      <div className="text-sm sm:text-base md:text-left md:text-lg font-bold leading-tight">
+        In the past {years} years<br className="hidden md:block" /> across {countryCount} countries
+      </div>
     </div>
   )
 }

@@ -14,8 +14,8 @@ export default function TopPhotos({ photos, videos = [], totalViews }) {
 
   return (
     <div className="card p-6">
-      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2.5 sm:gap-4 mb-5">
-        <div className="min-w-0">
+      <div className="mb-5">
+        <div>
           <h2 className="font-display text-lg md:text-3xl font-bold tracking-tight flex items-center gap-2 whitespace-nowrap">
             <span className="text-lg md:text-3xl">📸</span> Most Viewed Photos &amp; Videos
           </h2>
@@ -24,10 +24,6 @@ export default function TopPhotos({ photos, videos = [], totalViews }) {
             <span className="font-black text-[var(--color-vermilion)]">{formatInt(totalViews)}</span>{' '}
             times — I’ve helped millions of people find something delicious to eat.
           </p>
-        </div>
-        <div className="shrink-0 text-left sm:text-right">
-          <div className="font-display text-2xl md:text-3xl font-black text-[var(--color-vermilion)] leading-none">{formatViews(totalViews)}</div>
-          <div className="text-sm font-semibold text-[var(--color-ink)]/80 mt-0.5">total photo views</div>
         </div>
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2.5">
