@@ -210,7 +210,7 @@
     },
     {
       "place": "Celebread",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -222,7 +222,7 @@
     },
     {
       "place": "M One Cafe Daan",
-      "category": "Drinks",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -234,7 +234,7 @@
     },
     {
       "place": "CREM 奶油甜點專門店",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -282,7 +282,7 @@
     },
     {
       "place": "PATISSERIE TEN&",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -320,7 +320,7 @@
   "mostReacted": [
     {
       "place": "PATISSERIE TEN&",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "reactions": 41,
       "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnAyj1IHq4TVVxv17DEkGrzTu0LLNr_9xtAZK5Sm5cNNsfRUmOz3oDmLQZIISDmikY43p6HOdD1LXc1CwPVRXPdZYLiYtfI6FjzCUYhjakZ8cBhnMSbq_Y_BGnpha3cNv1C5XBm=w600",
@@ -432,7 +432,7 @@
   "ownerReplies": [
     {
       "place": "Barroccino - L’ora del Gelato",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Florence",
       "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk5Ts23G54TBjLl3-Zb372JlG-PsPrUVXBbpyzobezIg-ggWgRIAU9z2nIaCca9qTOb7OexyRj9SJcKGOGOh1rmGAzUzGGgLawZ3zvhuMOYdGQxCdUAU_GK9YXxAQzlBbd8qOJvDdQydKyX=w600",
@@ -465,7 +465,7 @@
     },
     {
       "place": "Gonnaeat",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlFwscQG2pwzAutaZhg1z40QNvjexyMk1lYohg2eXiU-qEP722Vmm5N6EnNuwV8Wfp3vilTmjEC7OwuFa1FI6PK-gufHHqpJL-UiCfcjwSI3xrjs7TCzKlK7bB50SxMV-VlaB9pzw=w600",
@@ -501,7 +501,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2tOS1FqVm9ObGMyUmtOWFpVUjNWelk1U1hCZmRsRRAB",
       "place": "Stupidparticle escape room",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -661,7 +661,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pObk5YUnJVV3R2U3pKdFpXNU9OM2QxY2toc1VIYxAB",
       "place": "ChiaoDuo House巧哚洋房",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -677,7 +677,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21kdlgxUnlTMmxsUm1VM1kzcDJPR0ZrWVdFeVRuYxAB",
       "place": "Heritage Bakery & Cafe - Bellavita B1",
-      "category": "Drinks",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -693,7 +693,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2tsS2FFazRYelo1YkVWNFVGaDFTVUpHZVhOV1psRRAB",
       "place": "HANNA Pasta Café パスタ カフェ",
-      "category": "Drinks",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -885,7 +885,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xSSVQzSnhjSGhITlZvMFgwZHVhMDl5T0VwZlVGRRAB",
       "place": "KANG Artisan Bakery",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -901,7 +901,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2tsSk9UaDJWWFZuUjNwM1lVaHphRWRXWm5scVdIYxAB",
       "place": "FUGU Japanese Gastropub",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -917,7 +917,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xnMlYyNVhMWGRqYlZKQ1JYcG5WVkl0WHpNdFNFRRAB",
       "place": "Kinkaku-ji",
-      "category": "Japanese",
+      "category": "Attraction",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1045,7 +1045,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xZM2FHaHZiRFpVTjNKNE56VjJiRU01VlZodlUzYxAB",
       "place": "Flip up!",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1061,7 +1061,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pKWWFHSnhSVUozU21KVGRXcFlPREIxYjFCV01IYxAB",
       "place": "BREAD, ESPRESSO &",
-      "category": "Drinks",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1109,7 +1109,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2s4M01IRm1ObE5pYzBwc1VUSlFjUzF4WkVSWGFuYxAB",
       "place": "I’m donut？ 京都",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1141,7 +1141,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xoU2RtaElYemswVDE4elgyeGFRelJXVTBGdlkwRRAB",
       "place": "Naruto Taiyaki Honpo",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1237,7 +1237,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT25sYVMzZDRZblI1WWw4eFkwaDJha3hRWTJKc1dWRRAB",
       "place": "IMAYA Kyoto &COFFEE",
-      "category": "Drinks",
+      "category": "Brunch",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1269,7 +1269,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xWQ2FYVlJWa2gxY0ZWQmNXcFhWbXRtVVUxWVRIYxAB",
       "place": "Inari Saryo",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1301,7 +1301,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT25WMVdVaHhaV05vUVhScFdqUjVORVJVY2xWQmVIYxAB",
       "place": "fiveran",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1317,7 +1317,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2s1WE5HUjRjRzh6TkU5V1JFZHFXbVExV0ZoblMxRRAB",
       "place": "here Kyoto",
-      "category": "Japanese",
+      "category": "Drinks",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1557,7 +1557,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2tkTFdXSlBSWFIxUlhCbFprRk1hbXRwTTA5aFNVRRAB",
       "place": "The RomeHello",
-      "category": "Italian",
+      "category": "Other",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -1701,7 +1701,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xkTlJETlBSWEpCVEhkZk1YZFRja2RZWWw5cU9VRRAB",
       "place": "Pantheon",
-      "category": "Italian",
+      "category": "Attraction",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -1797,7 +1797,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21SbUxXMUJjRU5mYzJVd2JUTkRkbFYxYzFwUlEwRRAB",
       "place": "VERO ~ Gelateria Cremeria",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Milan",
       "rating": 5,
@@ -1877,7 +1877,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xSUmRDMUlhbWw1Yms5MVFrTk1XRVkzY0hNNGJYYxAB",
       "place": "Pavé",
-      "category": "Italian",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Milan",
       "rating": 5,
@@ -1973,7 +1973,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pCVFRrSjVRek15T1U1cGQzQlNTRTE1VVhaSlJXYxAB",
       "place": "Sant' Eustachio Caffè",
-      "category": "Italian",
+      "category": "Drinks",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2021,7 +2021,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT214b1kyeEhabFpRWjFKR1ZHRTFha1J5VlhnNVYwRRAB",
       "place": "Giolitti",
-      "category": "Italian",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2037,7 +2037,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21OWmFGUm9UWEkzV1ZSdlUycG9WVVZ1UlhCUmFFRRAB",
       "place": "Pompi",
-      "category": "Italian",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2069,7 +2069,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pSTWMwSjNTWE5TTFdWMlprZHhWa00zYkRZeGVsRRAB",
       "place": "Five Guys",
-      "category": "Italian",
+      "category": "Other",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2101,7 +2101,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2twMWQyNWtlRmRsUlRKaWQzSmhVMDFuYlRCeGVFRRAB",
       "place": "Roma Korean Market",
-      "category": "Italian",
+      "category": "Other",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2133,7 +2133,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT25ST05uZGphVXhZYjBaaWVsVnJXSFpEYmxSQ1ozYxAB",
       "place": "Flor Gelato",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2197,7 +2197,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xCRE5XdE1Vbk5YVVRCdFlsVndabGRNVm1vM2NFRRAB",
       "place": "Regoli Pasticceria",
-      "category": "Italian",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2213,7 +2213,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xKdk5FbDJla1ZsWjBOWVQwOVZRMnRmYXpCeGNFRRAB",
       "place": "Yangguofu Malatang",
-      "category": "Italian",
+      "category": "Taiwanese & Chinese",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2293,7 +2293,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21GaFZWQmpVME5GUzFKc2IzbG9TMUpVUkc5aGRFRRAB",
       "place": "Istanbul Doner Kebap",
-      "category": "Italian",
+      "category": "Southeast Asian",
       "country": "Italy",
       "region": "Florence",
       "rating": 5,
@@ -2341,7 +2341,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xwTlUzaFpVbEpsVm1OQlRXMDVMUzF3U1ZGdFIyYxAB",
       "place": "David la Gelateria",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Florence",
       "rating": 5,
@@ -2357,7 +2357,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2twWmRWWmZkR2hRVDNwUlJsOVZTR3hqTTJWd1dsRRAB",
       "place": "Burger King Risorgimento",
-      "category": "Italian",
+      "category": "Other",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2373,7 +2373,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2tGUlgwSllNSG96ZEhwRE1tVnljSE0yUTFoak0xRRAB",
       "place": "La Strega Nocciola Gelateria Artigianale - Firenze Duomo",
-      "category": "Attraction",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Florence",
       "rating": 5,
@@ -2453,7 +2453,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21ONldHWjVZVmhKYzNCQlkwbERWMXB2UjFwVVdsRRAB",
       "place": "Barroccino - L’ora del Gelato",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Florence",
       "rating": 5,
@@ -2501,7 +2501,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21FNE1HSm9MV05sUVdaa1MyNDBjVzFpVURkNE4xRRAB",
       "place": "Suso",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
@@ -2581,7 +2581,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xKbGJ6UlJWbkZLYlU1WUxXdEtXVTEzVWpnelZuYxAB",
       "place": "Ravioleria",
-      "category": "Italian",
+      "category": "Taiwanese & Chinese",
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
@@ -2597,7 +2597,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21WTVgzcFlNRTlCZDBwa2NsUnRjbmszVkV0MVNHYxAB",
       "place": "Pasticceria Rizzardini",
-      "category": "Italian",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
@@ -2629,7 +2629,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xwV1pURTBhMHd5Y2pkdVRUTnJWR1ZvT1VGM04xRRAB",
       "place": "Suso",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Italy",
       "region": "Venice",
       "rating": 5,
@@ -2661,7 +2661,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pWdVIwdEVkSEprTVVaV1NuSTRTSFZxYTJadU9VRRAB",
       "place": "Mahoroba Daibutsu Pudding (Yumekaze Square)",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Nara",
       "rating": 5,
@@ -2709,7 +2709,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2psTFZXTnJSbWQzVm1KdlltNU1RazlZT0hkMFFtYxAB",
       "place": "Nakamura Tokichi Byodo-in",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -2725,7 +2725,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21ocGFXTmtXamhtUWxKWExXaDNha0pzYkdkVlptYxAB",
       "place": "Nakamura Tokichi Main Branch",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -2773,7 +2773,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2tOUVpVOXdTMlphV0Y5UVZuTmtkM0JOYjFaYVozYxAB",
       "place": "イタリアンバル 食堂チャコ",
-      "category": "Attraction",
+      "category": "Italian",
       "country": "Japan",
       "region": "Osaka",
       "rating": 5,
@@ -2837,7 +2837,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xvM1VIWXdhV3RpZDNSQ1YxUkdYMXB0ZHpFNVUxRRAB",
       "place": "Saizeriya Uehonmachi",
-      "category": "Japanese",
+      "category": "Italian",
       "country": "Japan",
       "region": "Osaka",
       "rating": 5,
@@ -2869,7 +2869,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xWVlgwVlpTMWxCTjBodVlqQXRiMjF4VERVNFdrRRAB",
       "place": "Kakuozan Fruit Daifuku Benzaiten",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Osaka",
       "rating": 5,
@@ -2917,7 +2917,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT25CRllrNUVTa2RJT0RoU1Z5MUZhMWRmVW5admJuYxAB",
       "place": "MEOWHOUSE 喵好時早餐號（不定期公休，請看粉絲專頁）",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -2949,7 +2949,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2tWU1RWZFdaSFJPZVhaTlZXTjVSazB3V1VoZmFXYxAB",
       "place": "CREM 奶油甜點專門店",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -2981,7 +2981,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2toYWR6UklXbkJ5ZDNwcmJXZG9TalJ3TVRWRVJFRRAB",
       "place": "Celebread",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3029,7 +3029,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21OWU4wNXFZbWRUWW5kMVRpMVBUVkowTVcwd2FuYxAB",
       "place": "台韓民國 韓式燒肉店",
-      "category": "Japanese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3173,7 +3173,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2paSlUxaGpibTVuZW1oVFNtWmZhREJMVURWTlRrRRAB",
       "place": "Ponpie澎派 Dream Plaza 水果塔專門店 甜點 生日蛋糕",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3237,7 +3237,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2tnM2RqWnFWMHhwVDFVNE0xOWxOMVEwUWt0clRFRRAB",
       "place": "Yue Dao Japanese Pan-fried Batter",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3253,7 +3253,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJWEtzZXlqeXUtR05BEAE",
       "place": "Gonnaeat",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3429,7 +3429,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnTURnOTQ2Z05BEAE",
       "place": "Grow Life",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3476,7 +3476,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURfMmJDaGVnEAE",
       "place": "Cow Cow Kitchen Akihabara",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -3492,7 +3492,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURfMmNES3BBRRAB",
       "place": "Hills House Dining 33",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -3540,7 +3540,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNfNS02aVh3EAE",
       "place": "New York Perfect Cheese Keio Department Store Shinjuku",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -3556,7 +3556,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNfNS1iaS1BRRAB",
       "place": "Afternoon Tea Love & Table Shinjuku Lumine 1",
-      "category": "Drinks",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -3572,7 +3572,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNfNTRMVk9REAE",
       "place": "大角玉屋",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -3604,7 +3604,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNfaGV2MjZRRRAB",
       "place": "RINGO Ikebukuro",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -3652,7 +3652,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNfMHJUenh3RRAB",
       "place": "Shogun Burger",
-      "category": "Japanese",
+      "category": "Other",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -3668,7 +3668,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNfak9majJBRRAB",
       "place": "bricolage bread & co.",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -3700,7 +3700,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNfOU5QTnF3RRAB",
       "place": "Starbucks Reserve® Roastery Tokyo",
-      "category": "Japanese",
+      "category": "Drinks",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -3860,7 +3860,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUQzMmVUMFRnEAE",
       "place": "Johnny's 薔尼思（例假日採候位制）",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "New Taipei",
       "rating": 5,
@@ -3940,7 +3940,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNIdy02S2N3EAE",
       "place": "Arrival Brunch & Cafe",
-      "category": "Drinks",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4228,7 +4228,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURqOGZHOHNBRRAB",
       "place": "McDonald's Siam Paragon",
-      "category": "Southeast Asian",
+      "category": "Other",
       "country": "Thailand",
       "region": "Bangkok",
       "rating": 5,
@@ -4260,7 +4260,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURqMGFYUndRRRAB",
       "place": "ChaTraMue Terminal 21",
-      "category": "Southeast Asian",
+      "category": "Drinks",
       "country": "Thailand",
       "region": "Bangkok",
       "rating": 5,
@@ -4388,7 +4388,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUREME5uOThBRRAB",
       "place": "M One Cafe Daan",
-      "category": "Drinks",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4404,7 +4404,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNEaGZYd3hnRRAB",
       "place": "MAMA'S 鐵鍋早午餐 和平店",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4452,7 +4452,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNEdUtHY1NnEAE",
       "place": "Miacucina (My kitchen) Nanxi",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4468,7 +4468,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNEdU1iZ0x3EAE",
       "place": "夢鹿咖啡Café Moose 中山店｜訂位無額外保留時間",
-      "category": "Drinks",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4628,7 +4628,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURkNWEzZXJBRRAB",
       "place": "嘎哩奔 熟成咖哩 | 日式漢堡排",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4724,7 +4724,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUR0eDhpMW5RRRAB",
       "place": "Yancheng Wang's Handmade Tofu Pudding",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Kaohsiung",
       "rating": 5,
@@ -4756,7 +4756,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUN0cUstNndBRRAB",
       "place": "Matcha Stand Maruni TOKYO TSUKIJI",
-      "category": "Japanese",
+      "category": "Drinks",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -4804,7 +4804,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUN0a0xIT0NREAE",
       "place": "Tomoya Kamakura Komachi",
-      "category": "Japanese",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Kamakura",
       "rating": 5,
@@ -4820,7 +4820,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUN0a01HdkZnEAE",
       "place": "Giraffa Curry Pan",
-      "category": "Italian",
+      "category": "Japanese",
       "country": "Japan",
       "region": "Kamakura",
       "rating": 5,
@@ -4852,7 +4852,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUROOTRDbWZBEAE",
       "place": "McDonald's",
-      "category": "Japanese",
+      "category": "Other",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -4884,7 +4884,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUROeHJQaXVnRRAB",
       "place": "PATISSERIE TEN&",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -4900,7 +4900,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUQxbmRQYjlRRRAB",
       "place": "小黑碳鐵板漢堡Burger",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5076,7 +5076,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNscVBubHR3RRAB",
       "place": "青春漢堡・Aoharu Burger 新店裕隆城",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "New Taipei",
       "rating": 5,
@@ -5188,7 +5188,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUM1cEkzR1RnEAE",
       "place": "桔子早午餐",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5220,7 +5220,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNaOXRDVHl3RRAB",
       "place": "䇺點早午餐。館",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5316,7 +5316,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNwMzRUVHNBRRAB",
       "place": "夜店食堂",
-      "category": "Attraction",
+      "category": "Taiwanese & Chinese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5332,7 +5332,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNwMzhpUnN3RRAB",
       "place": "哆食樂新韓式料理 新店店",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "New Taipei",
       "rating": 5,
@@ -5364,7 +5364,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNwOTlxcGpRRRAB",
       "place": "Pinatshiu ChiFeng",
-      "category": "Taiwanese & Chinese",
+      "category": "Drinks",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5476,7 +5476,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURKMjlLY3l3RRAB",
       "place": "Xinxin Pot Roasted Pasta & Seafood Porridge",
-      "category": "Italian",
+      "category": "Taiwanese & Chinese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5524,7 +5524,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURKbEplYW9nRRAB",
       "place": "好ㄚ好ㄚ 韓式紫菜飯捲",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5556,7 +5556,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNKOHBhN0h3EAE",
       "place": "Norden Ruder Hostel",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taichung",
       "rating": 5,
@@ -5571,16 +5571,16 @@
     },
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNKOHBxNkN3EAE",
-      "place": "",
-      "category": "Taiwanese & Chinese",
+      "place": "Mitsui Shopping Park LaLaport Taichung",
+      "category": "Other",
       "country": "Taiwan",
-      "region": "Permanently closed",
+      "region": "Taichung",
       "rating": 5,
       "date": "2023-06-04",
       "blurb": "人極多，但南北館加起來混一天不是問題，很大很",
       "photoCount": 0,
-      "lat": 25.02661,
-      "lng": 121.54382,
+      "lat": 24.13364,
+      "lng": 120.68717,
       "googleRating": null,
       "googleReviews": null,
       "url": "https://maps.app.goo.gl/vY9Gxb2K63rTmJuf6"
@@ -5588,7 +5588,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNKOHZDblhREAE",
       "place": "蜜柑法式甜點麵包",
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taichung",
       "rating": 5,
@@ -5923,7 +5923,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNCbElYdjFnRRAB",
       "place": "CHECK inn Express - Taipei YongKang",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5939,7 +5939,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUQtbzZUYVZnEAE",
       "place": "Jin Fa Jia Xindian Zhongzheng Shop",
-      "category": "Southeast Asian",
+      "category": "Drinks",
       "country": "Taiwan",
       "region": "New Taipei",
       "rating": 5,
@@ -5955,7 +5955,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUQtMmRhNlFnEAE",
       "place": "甸記你",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5971,7 +5971,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUQtNnBIQVdnEAE",
       "place": "Nice Cream Da'an Forest Park",
-      "category": "Attraction",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5987,7 +5987,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUQtdE5fWDNRRRAB",
       "place": "GG 季吉韓國美食餐飲房-敦化北路店",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6066,7 +6066,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNleXJLandnRRAB",
       "place": "威廉泰爾鄉村料理餐坊",
-      "category": "Southeast Asian",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Kaohsiung",
       "rating": 5,
@@ -6210,7 +6210,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUN1d2EzMVl3EAE",
       "place": "Mia C'bon Tainan T.S. Mall Store",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Tainan",
       "rating": 5,
@@ -6290,7 +6290,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURXaDVMbmJBEAE",
       "place": "The Diner Ruian Branch",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6386,7 +6386,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURXaDVUYmdnRRAB",
       "place": "Post Restaurant Cafe",
-      "category": "Drinks",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6434,7 +6434,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURXaDdpZG93RRAB",
       "place": "realf 專業人體工學椅客製｜電腦椅 辦公椅 電動升降桌專賣店",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6482,7 +6482,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURXb0thYW9BRRAB",
       "place": "雲の咖哩屋",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6512,7 +6512,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNHcklxeVBBEAE",
       "place": "三井3C-台北三創二店（2F-GARMIN、EPSON）展售店",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6608,7 +6608,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURxdXNPaXp3RRAB",
       "place": "The House Breakfast",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6624,7 +6624,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURxdXIzMjFnRRAB",
       "place": "Tong'an Japanese Curry",
-      "category": "Southeast Asian",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6862,7 +6862,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNDMGJ6djdBRRAB",
       "place": "福嗑 Lucky eat 美式漢堡·古巴三明治·輕食·飲品",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6892,7 +6892,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURjckxISlB3EAE",
       "place": "4Fun Base(奪寶令)",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6970,7 +6970,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNZLU0zZ2FBEAE",
       "place": "半熟堂 Hanjyukudo Taiwan 拉麵 丼飯",
-      "category": "Attraction",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -7000,7 +7000,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURvNTdHem1nRRAB",
       "place": "城市草倉 C-tea loft",
-      "category": "Taiwanese & Chinese",
+      "category": "Drinks",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -7033,7 +7033,7 @@
       "place": "Wakamatsuya",
       "category": "Japanese",
       "country": "Japan",
-      "region": "Fukuoka",
+      "region": "Yanagawa",
       "rating": 5,
       "date": "2019-06-05",
       "blurb": "",
@@ -7049,7 +7049,7 @@
       "place": "Yufu Mabushi \"Shin\" Yufuin Ekimae Branch",
       "category": "Japanese",
       "country": "Japan",
-      "region": "Fukuoka",
+      "region": "Yufuin",
       "rating": 5,
       "date": "2019-06-05",
       "blurb": "",
@@ -7063,15 +7063,15 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUN3djV5U1J3EAE",
       "place": "流口水異式料理",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
-      "region": "Permanently closed",
+      "region": "Taipei",
       "rating": 5,
       "date": "2019-06-05",
       "blurb": "",
       "photoCount": 0,
-      "lat": 23.706,
-      "lng": 120.97836,
+      "lat": 25.0435,
+      "lng": 121.58206,
       "googleRating": null,
       "googleReviews": null
     },
@@ -7291,7 +7291,7 @@
       "note": "Perfect for a date or a special dinner. An authentic Italian spot recommended by Italian influencers, and almost everything is great. The today's-special antipasto (cured ham with creamy burrata) was generous and full of texture."
     },
     {
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "name": "VERO Gelateria Cremeria",
       "country": "Italy",
       "googleRating": 4.7,
@@ -7300,7 +7300,7 @@
       "note": "Out of 16 gelatos across four cities on my Italy trip, this was my number one. So good I immediately bought a second scoop on the spot; don't miss it."
     },
     {
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "name": "Regoli Pasticceria",
       "country": "Italy",
       "googleRating": 4.5,
@@ -7309,7 +7309,7 @@
       "note": "The best cream-filled maritozzo of my whole Italy trip, even better than Gold Cup's, with cream that's among the best I've ever had. Go early; they can sell out."
     },
     {
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "name": "CREM 奶油甜點",
       "country": "Taiwan",
       "googleRating": 4.8,
@@ -7318,7 +7318,7 @@
       "note": "I ordered a (pricey) birthday cake and everything was in a class of its own: service, packaging and the cake itself. It even came with stainless-steel cutlery sets and a custom photo card (send your custom print to their LINE in advance)."
     },
     {
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "name": "中村藤吉 平等院店",
       "country": "Japan",
       "googleRating": 4.3,
@@ -7327,7 +7327,7 @@
       "note": ""
     },
     {
-      "category": "Dessert",
+      "category": "Desserts & Cafe",
       "name": "David la Gelateria",
       "country": "Italy",
       "googleRating": 4.5,

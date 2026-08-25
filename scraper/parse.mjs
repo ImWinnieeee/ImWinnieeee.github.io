@@ -10,6 +10,10 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const OUT = path.join(__dirname, 'output')
 const raw = JSON.parse(fs.readFileSync(path.join(OUT, 'reviews-raw.json'), 'utf8'))
+// Small, intentionally manual escape hatch for places whose names and available
+// scrape data cannot classify reliably. Keys may be a stable review ID or exact
+// place name; ID wins. Leave uncertain venues out until Winnie has decided them.
+const CATEGORY_OVERRIDES = JSON.parse(fs.readFileSync(path.join(__dirname, 'category-overrides.json'), 'utf8'))
 
 const NOW = new Date('2026-06-03')
 function relToDate(s) {
@@ -53,20 +57,24 @@ function categorize(place, text, country) {
   const name = place.toLowerCase()
   const nameHas = (...kw) => kw.some((k) => name.includes(k.toLowerCase()))
 
-  // 0) non-food: sights vs. other (hotels/clinics/shops) — kept out of food cats
-  if (nameHas('tower', 'colosseum', 'shrine', 'temple', 'museum', 'teatro', 'fontana', 'fountain', 'castle', 'palazzo', 'duomo', 'basilica', 'cathedral', 'church', '大教堂', '教堂', '堂', 'embassy', '大使館', 'piazza', 'garden', 'old street', '稻荷', '神社', '寺', '老街', '博物館', '公園', '歌劇', '劇院', 'park', 'historical', 'relic')) return 'Attraction'
-  if (nameHas('hotel', 'apartment', 'clinic', '診所', '營養', 'cofit', 'leather', 'pelletterie', '選品', '香氛', 'salon', 'medical', 'prescription', 'cloud nine')) return 'Other'
+  // 0) clearly non-food businesses — kept out of food categories
+  if (nameHas('hotel', 'hostel', ' inn ', 'check inn', '民宿', 'apartment', 'clinic', '診所', '營養', 'cofit', 'leather', 'pelletterie', '選品', '香氛', 'salon', 'medical', 'prescription', 'cloud nine', 'escape room', 'mcdonald', 'burger king', 'five guys', '漢堡', 'supermarket', '人體工學椅', '3c-', '展售店')) return 'Other'
 
-  // 1) strong NAME signals (brand / dish) — these override location
-  if (nameHas('gong cha', '貢茶', 'koi', 'milk shop', 'milk tea', 'bubble', 'boba', 'thé', '手搖', '奶茶', 'touch tea')) return 'Drinks'
-  if (nameHas('coffee', '咖啡', 'café', 'cafe', 'latte', 'blue bottle', 'espresso', 'caffe', 'tazza', ' tea', 'tea·', '茶')) return 'Drinks'
-  if (nameHas('gelat', 'ice cream', 'nice cream', 'cremeria', 'donut', 'taiyaki', '鯛魚燒', '大福', 'daifuku', 'bakery', '麵包', 'bread', 'celebread', 'tart', '蛋糕', 'cake', 'pastry', 'crepe', '可麗餅', 'pancake', 'souffle', '舒芙蕾', '巧克力', 'chocolate', '甜點', 'dessert', '布丁', 'pudding', 'ringo', 'flor', 'vero', 'suso', 'crem', 'ponpie', '水果', 'fruit', 'pie')) return 'Dessert'
-  if (nameHas('pizza', 'pasta', 'trattoria', 'ristorante', 'pizzeria', 'osteria', 'lasagna', 'risotto', 'spontini', 'italiane', 'pinseria', 'nerbone', 'botega', 'gira', 'rosmarino', 'miscusi', 'spaghett', 'gnocch')) return 'Italian'
-  if (nameHas('ramen', '拉麵', 'sushi', '壽司', '鰻', 'unagi', '丼', 'udon', 'うどん', 'tempura', '天婦羅', 'yakitori', '燒肉', '串燒', 'sukiyaki', '壽喜', 'sashimi', '刺身', 'menya', 'men-ya', '麵屋', 'soba', '蕎麦', 'izakaya', '居酒屋', 'tonkatsu', '豬排', 'shabu', '和牛', 'kobe beef', 'wagyu', 'ishida', 'mishima', 'donburi', 'teishoku', '定食')) return 'Japanese'
+  // 1) strong FOOD NAME signals (brand / dish) — these override a landmark word
+  // that merely describes the branch location, e.g. "Gelateria ... Duomo".
+  if (nameHas('gelat', 'ice cream', 'nice cream', 'cremeria', 'donut', 'taiyaki', '鯛魚燒', '大福', 'daifuku', 'bakery', '麵包', 'bread', 'celebread', 'tart', '蛋糕', 'cake', 'pastry', 'pasticceria', 'tiramisu', 'crepe', '可麗餅', 'pancake', 'souffle', '舒芙蕾', '巧克力', 'chocolate', '甜點', 'dessert', '布丁', 'pudding', 'ringo', 'flor', 'vero', 'suso', 'crem', 'ponpie', '水果', 'fruit', 'pie')) return 'Desserts & Cafe'
+  if (nameHas('pizza', 'pasta', 'trattoria', 'ristorante', 'pizzeria', 'osteria', 'lasagna', 'risotto', 'spontini', 'italiane', 'italian', 'イタリアン', 'saizeriya', 'pinseria', 'nerbone', 'botega', 'rosmarino', 'miscusi', 'spaghett', 'gnocch')) return 'Italian'
+  if (nameHas('japanese', 'curry pan', 'ramen', '拉麵', 'sushi', '壽司', '鰻', 'unagi', '丼', 'udon', 'うどん', 'tempura', '天婦羅', 'yakitori', '燒肉', '串燒', 'sukiyaki', '壽喜', 'sashimi', '刺身', 'menya', 'men-ya', '麵屋', 'soba', '蕎麦', 'izakaya', '居酒屋', 'tonkatsu', '豬排', 'shabu', '和牛', 'kobe beef', 'wagyu', 'ishida', 'mishima', 'donburi', 'teishoku', '定食')) return 'Japanese'
+  if (nameHas('gong cha', '貢茶', 'koi', 'milk shop', 'milk tea', 'thai tea', 'bubble', 'boba', 'thé', '手搖', '奶茶', 'touch tea')) return 'Drinks'
+  if (nameHas('coffee', '咖啡', 'café', 'cafe', 'caffè', 'latte', 'blue bottle', 'starbucks', 'espresso', 'caffe', 'tazza', ' tea', 'tea·', 'c-tea', '茶')) return 'Drinks'
   if (nameHas('thai', '泰', 'pad', '船麵', 'tom yum', 'kanokwan', '越南', 'pho', 'phở', 'vietnam', 'indian', '印度', 'naan', 'kashmir', 'halal', 'curry', 'mexico', '墨西哥', 'turkish', '土耳其')) return 'Southeast Asian'
-  if (nameHas('dumpling', '水餃', '小籠包', '湯包', '蛋餅', '地瓜', '粥', '牛肉麵', 'beef noodle', '滷', 'xiao long', 'xinjiang', '新疆', 'san tung', '廣東', '滷味', '鹽酥', '蔥油餅', '魯肉', '臭豆腐')) return 'Taiwanese & Chinese'
+  if (nameHas('dumpling', 'ravioleria', 'malatang', '麻辣燙', '水餃', '小籠包', '湯包', '蛋餅', '地瓜', '粥', '牛肉麵', 'beef noodle', '滷', 'xiao long', 'xinjiang', '新疆', 'san tung', '廣東', '滷味', '鹽酥', '蔥油餅', '魯肉', '臭豆腐')) return 'Taiwanese & Chinese'
 
-  // 2) fall back to COUNTRY prior
+  // 2) sights. Avoid single broad substrings such as 堂 / park: they caused
+  // restaurants like 夜店食堂 and Nice Cream ... Forest Park to become sights.
+  if (nameHas('tower', 'colosseum', 'shrine', 'temple', 'museum', 'teatro', 'fontana', 'fountain', 'castle', 'palazzo', 'pantheon', 'kinkaku-ji', 'duomo', 'basilica', 'cathedral', 'church', '大教堂', '教堂', '聖依納爵堂', 'embassy', '大使館', 'piazza', 'garden', 'old street', '稻荷', '神社', '老街', '博物館', '公園', '歌劇', '劇院', 'historical', 'relic')) return 'Attraction'
+
+  // 3) fall back to COUNTRY prior
   if (country === 'Italy') return 'Italian'
   if (country === 'Japan') return 'Japanese'
   if (country === 'Thailand') return 'Southeast Asian'
@@ -103,7 +111,7 @@ const parsed = raw.map((r) => {
       .replace(/Translated by Google.*$/is, '').replace(/… More/g, '').replace(/\s+/g, ' ').trim()
   }
   const photoCount = (r.ariaLabels || []).filter((a) => /^Photo \d+ on /i.test(a)).length
-  const category = categorize(place, text, country)
+  const category = CATEGORY_OVERRIDES[r.id] || CATEGORY_OVERRIDES[place] || categorize(place, text, country)
   return { id: r.id, place, address, country, region, category, rating, date, text, ownerReply, photoCount, images: r.imgs || [] }
 })
 

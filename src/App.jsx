@@ -13,7 +13,7 @@ import DataSource from './components/DataSource.jsx'
 const NAV = [
   { id: 'photos', label: 'Photos' },
   { id: 'reviews', label: 'Top Reviews' },
-  { id: 'impact', label: 'Impact' },
+  { id: 'impact', label: 'Impact', to: 'reviews' },
   { id: 'map', label: 'Map' },
   { id: 'categories', label: 'Favorites' },
 ]
@@ -65,7 +65,7 @@ export default function App() {
 
         <nav aria-label="Page sections" className="mt-5 flex flex-wrap justify-center gap-2.5">
           {NAV.map((n) => (
-            <a key={n.id} href={`#${n.id}`} className="btn-round text-sm">{n.label}</a>
+            <a key={n.id} href={`#${n.to || n.id}`} className="btn-round text-sm">{n.label}</a>
           ))}
           <a href={profile.profileUrl} target="_blank" rel="noreferrer" className="btn-round is-active text-sm">
             See my Google reviews →

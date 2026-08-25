@@ -18,11 +18,12 @@ export const CATEGORY_META = {
   Japanese: { color: '#cf4f3e', emoji: '🍣' },                  // 朱 vermilion
   Italian: { color: '#8a9a5b', emoji: '🍝' },                   // 抹茶 matcha
   'Taiwanese & Chinese': { color: '#3c5a72', emoji: '🍜' },     // 藍 indigo
-  Dessert: { color: '#d98c9d', emoji: '🍰' },                   // 桜 sakura
+  'Desserts & Cafe': { color: '#d98c9d', emoji: '🍰' },         // 桜 sakura
+  Brunch: { color: '#e49a24', emoji: '🍳' },                    // warm golden orange
   Drinks: { color: '#a9743f', emoji: '🧋' },                    // 焦茶 tea brown
   Attraction: { color: '#3f8f86', emoji: '⛩️' },               // 青緑 teal
   'Southeast Asian': { color: '#8a6fae', emoji: '🍛' },         // 藤 wisteria
-  Other: { color: '#9b8e7e', emoji: '📍' },                     // 利休 neutral
+  Other: { color: '#2468bd', emoji: '📍' },                     // saturated royal blue
 }
 
 // "My Top Favorites" cards (6). "Other" groups the non-food / regional buckets.
@@ -30,7 +31,7 @@ export const FAVORITE_CARDS = [
   { label: 'Taiwanese & Chinese', cats: ['Taiwanese & Chinese'], color: '#3c5a72', emoji: '🍜' },
   { label: 'Japanese', cats: ['Japanese'], color: '#cf4f3e', emoji: '🍣' },
   { label: 'Italian', cats: ['Italian'], color: '#8a9a5b', emoji: '🍝' },
-  { label: 'Dessert', cats: ['Dessert'], color: '#d98c9d', emoji: '🍰' },
+  { label: 'Desserts & Cafe', cats: ['Desserts & Cafe'], color: '#d98c9d', emoji: '🍰' },
   { label: 'Drinks', cats: ['Drinks'], color: '#a9743f', emoji: '🧋' },
   { label: 'Other', cats: ['Attraction', 'Southeast Asian', 'Other'], color: '#3f8f86', emoji: '✨' },
 ]

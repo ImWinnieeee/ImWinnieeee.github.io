@@ -18,6 +18,90 @@ function FitBounds({ pts, boundsKey }) {
   return null
 }
 
+// Browsers expose a Mac trackpad pinch either as ctrl+wheel (Chromium/Firefox)
+// or Safari gesture events. Handle only those signals inside Leaflet's container;
+// ordinary two-finger wheel scrolling remains page scrolling.
+function TrackpadPinchZoom() {
+  const map = useMap()
+  useEffect(() => {
+    const container = map.getContainer()
+    let anchor = [container.clientWidth / 2, container.clientHeight / 2]
+    let targetZoom = map.getZoom()
+    let zoomFrame = null
+    let wheelEndTimer = null
+    let safariStartZoom = map.getZoom()
+    let safariActive = false
+
+    const pointFrom = (event) => {
+      const rect = container.getBoundingClientRect()
+      const x = event.clientX - rect.left
+      const y = event.clientY - rect.top
+      return Number.isFinite(x) && Number.isFinite(y) && x >= 0 && x <= rect.width && y >= 0 && y <= rect.height
+        ? [x, y]
+        : anchor
+    }
+    const applyLatestZoom = () => {
+      // setZoomAround treats a plain [x, y] array as a geographic [lat, lng].
+      // Convert our container-pixel anchor explicitly so Leaflet keeps the
+      // location beneath the cursor stationary instead of flying elsewhere.
+      const anchorLatLng = map.containerPointToLatLng(anchor)
+      map.setZoomAround(anchorLatLng, targetZoom, { animate: false })
+      zoomFrame = null
+    }
+    const moveToward = (zoom) => {
+      targetZoom = Math.max(map.getMinZoom(), Math.min(map.getMaxZoom(), zoom))
+      // Coalesce all gesture events received during one display frame and apply
+      // only the newest value. An extra easing loop made Leaflet redraw tiles
+      // repeatedly after the fingers had moved, which felt stepped and laggy.
+      if (!zoomFrame) zoomFrame = requestAnimationFrame(applyLatestZoom)
+    }
+    const onPointerMove = (event) => {
+      // Remember the actual cursor position. Safari gesture events frequently
+      // report 0/0, which previously made the map zoom toward a random corner.
+      anchor = pointFrom(event)
+    }
+    const onWheel = (event) => {
+      if (!event.ctrlKey || safariActive) return
+      event.preventDefault()
+      if (!wheelEndTimer) {
+        anchor = pointFrom(event)
+        targetZoom = map.getZoom()
+      }
+      moveToward(targetZoom - event.deltaY * 0.012)
+      clearTimeout(wheelEndTimer)
+      wheelEndTimer = setTimeout(() => { wheelEndTimer = null }, 140)
+    }
+    const onGestureStart = (event) => {
+      event.preventDefault()
+      safariActive = true
+      safariStartZoom = map.getZoom()
+      targetZoom = safariStartZoom
+      // Deliberately retain the last real pointer position as a stable anchor.
+    }
+    const onGestureChange = (event) => {
+      event.preventDefault()
+      moveToward(safariStartZoom + Math.log2(event.scale))
+    }
+    const onGestureEnd = (event) => { event.preventDefault(); safariActive = false }
+
+    container.addEventListener('pointermove', onPointerMove)
+    container.addEventListener('wheel', onWheel, { passive: false })
+    container.addEventListener('gesturestart', onGestureStart, { passive: false })
+    container.addEventListener('gesturechange', onGestureChange, { passive: false })
+    container.addEventListener('gestureend', onGestureEnd, { passive: false })
+    return () => {
+      if (zoomFrame) cancelAnimationFrame(zoomFrame)
+      clearTimeout(wheelEndTimer)
+      container.removeEventListener('pointermove', onPointerMove)
+      container.removeEventListener('wheel', onWheel)
+      container.removeEventListener('gesturestart', onGestureStart)
+      container.removeEventListener('gesturechange', onGestureChange)
+      container.removeEventListener('gestureend', onGestureEnd)
+    }
+  }, [map])
+  return null
+}
+
 // Feature 3 (+ country tabs): a map of everywhere I've reviewed, split by country
 export default function MapView({ reviews }) {
   const pts = useMemo(() => reviews.filter((r) => r.lat && r.lng), [reviews])
@@ -112,12 +196,13 @@ export default function MapView({ reviews }) {
       </div>
 
       <div className="overflow-hidden rounded-2xl ring-1 ring-[var(--color-line)]" style={{ height: 420 }}>
-        <MapContainer center={center} zoom={12} style={{ height: '100%', width: '100%' }} scrollWheelZoom={false}>
+        <MapContainer center={center} zoom={12} zoomSnap={0} style={{ height: '100%', width: '100%' }} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; OpenStreetMap, &copy; CARTO'
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           />
           <FitBounds pts={shown} boundsKey={`${active}|${activeRegion || ''}`} />
+          <TrackpadPinchZoom />
           {shown.map((r) => {
             const meta = CATEGORY_META[r.category] || CATEGORY_META['Other']
             const isActive = activePin === r.id

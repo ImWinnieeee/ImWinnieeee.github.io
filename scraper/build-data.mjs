@@ -135,15 +135,13 @@ const big = (u) => (u ? u.replace(/=w\d+.*$/, '=w600') : u)
 // tidy the scraped Chinese body (drop trailing photo/video markers)
 const zhClean = (t) => (t || '').replace(/\s*(\+\d+|\d:\d\d|-)\s*$/g, '').replace(/\s+/g, ' ').trim()
 
-// fix a few obvious auto-category misses on featured items
-const CATFIX = { 'Bao Lai Xuan': 'Japanese', Tuga: 'Other', 'Li Jia Restaurant': 'Other', 'PATISSERIE TEN&': 'Dessert' }
 // cleaner display names for messy ones
 const NAMEFIX = {
   'CREM奶油甜點專門店 ( 週一至週日468吋蛋糕均可取貨 )': 'CREM 奶油甜點專門店',
   '福太郎本店': '福太郎本店 Fukutaro',
 }
 const disp = (p) => NAMEFIX[p] || p
-const fixCat = (p, c) => CATFIX[p] || c
+const fixCat = (_p, c) => c
 
 // ---- English translations I authored for the featured reviews ----
 const EN = {
@@ -298,14 +296,15 @@ const GEOFIX = [
   ['Enoshima Koya', 'Japan', 'Kamakura'],
   ['Giraffa Curry Pan', 'Japan', 'Kamakura'],
   ['Tomoya Kamakura', 'Japan', 'Kamakura'],     // Tomoya Kamakura Komachi — clearly Kamakura
-  ['Wakamatsuya', 'Japan', 'Fukuoka'],
-  ['Yufu Mabushi', 'Japan', 'Fukuoka'],         // Yufuin (grouped under Fukuoka per Winnie)
+  ['Wakamatsuya', 'Japan', 'Yanagawa'],
+  ['Yufu Mabushi', 'Japan', 'Yufuin'],          // Yufuin, Oita Prefecture
   ['Sole Mio', 'Italy', 'Napoli'],              // O’ Sole Mio Pizza & More
   ['Duli Pizza', 'Taiwan', 'Chiayi'],
   ['Chiayi City Historical', 'Taiwan', 'Chiayi'],
   ['大麦小麦', 'Taiwan', 'Chiayi'],
   ['Democracy Turkey', 'Taiwan', 'Chiayi'],
   ['桃城豆花', 'Taiwan', 'Chiayi'],
+  ['流口水異式料理', 'Taiwan', 'Taipei'],
 ]
 const geofix = (place) => {
   for (const [m, country, region] of GEOFIX) if (place && place.includes(m)) return { country, region }
@@ -321,15 +320,24 @@ const coordsfix = (place) => {
   for (const [m, lat, lng] of COORDS_OVERRIDE) if (place && place.includes(m)) return [lat, lng]
   return null
 }
+// Record-level recovery for deleted Google listings whose scraped card no longer
+// contains a place name or address. The stable review ID is still available.
+const RECORD_FIX = {
+  ChZDSUhNMG9nS0VJQ0FnSUNKOHBxNkN3EAE: {
+    place: 'Mitsui Shopping Park LaLaport Taichung', country: 'Taiwan', region: 'Taichung',
+    lat: 24.13364, lng: 120.68717,
+  },
+}
 // per-store Google rating + review count scraped by scrape.mjs ({ [id]: {rating, reviews, title} })
 const storeRatings = fs.existsSync(path.join(OUT, 'store-ratings.json')) ? L('store-ratings.json') : {}
 const jitter = (id) => { let h = 0; for (const c of id) h = (h * 31 + c.charCodeAt(0)) >>> 0; return [((h % 1000) / 1000 - 0.5) * 0.04, (((h >> 10) % 1000) / 1000 - 0.5) * 0.04] }
 const blurb = (t) => { const s = zhClean(t).replace(/^我是台灣.*?(到訪|來訪|份到訪)\s*/, ''); return s.slice(0, 22) }
 
 const reviews = parsed.map((r) => {
+  const recordFix = RECORD_FIX[r.id]
   const fx = geofix(r.place)
-  const country = fx ? fx.country : r.country
-  let region = fx ? fx.region : r.region
+  const country = recordFix?.country || (fx ? fx.country : r.country)
+  let region = recordFix?.region || (fx ? fx.region : r.region)
   // places that fell back to "<country>/<country>" couldn't be geolocated — they're
   // gone from Maps (defunct). Label that bucket clearly instead of a vague repeat.
   if (region === country) region = 'Permanently closed'
@@ -337,7 +345,8 @@ const reviews = parsed.map((r) => {
   const cfix = coordsfix(r.place)
   // a manual fix re-homes the pin to the new region (the old geocode/fallback was
   // for the wrong place); otherwise keep the real geocoded point when we have one
-  if (cfix) { [lat, lng] = cfix } else if (geo[r.id] && !fx) { lat = geo[r.id].lat; lng = geo[r.id].lng } else {
+  if (recordFix?.lat && recordFix?.lng) { lat = recordFix.lat; lng = recordFix.lng }
+  else if (cfix) { [lat, lng] = cfix } else if (geo[r.id] && !fx) { lat = geo[r.id].lat; lng = geo[r.id].lng } else {
     const c = CITY[region] || CITY[country] || CITY.Taiwan; const [dy, dx] = jitter(r.id)
     lat = c[0] + dy; lng = c[1] + dx
   }
@@ -346,7 +355,7 @@ const reviews = parsed.map((r) => {
   const url = URL_OVERRIDE[r.place] || reviewUrls[r.id] || null
   const gr = storeRatings[r.id] || {}
   return {
-    id: r.id, place: disp(r.place), category: fixCat(r.place, r.category), country,
+    id: r.id, place: recordFix?.place || disp(r.place), category: fixCat(r.place, r.category), country,
     region, rating: r.rating, date: r.date, blurb: blurb(r.text),
     photoCount: r.photoCount, lat: +lat.toFixed(5), lng: +lng.toFixed(5),
     googleRating: gr.rating ?? null, googleReviews: gr.reviews ?? null,
@@ -377,11 +386,11 @@ const FAV_LIST = [
   ['Italian', '千層吧', '千層吧 The Lasagna Bar', 'Taiwan'],
   ['Italian', 'Ristorante "Dallo Zio" San Marco', 'Ristorante "Dallo Zio"', 'Italy'],
   ['Italian', 'La Mole', 'La Mole', 'Taiwan'],
-  ['Dessert', 'VERO ~ Gelateria Cremeria', 'VERO Gelateria Cremeria', 'Italy'],
-  ['Dessert', 'Regoli Pasticceria', 'Regoli Pasticceria', 'Italy'],
-  ['Dessert', 'CREM 奶油甜點專賣店', 'CREM 奶油甜點', 'Taiwan'],
-  ['Dessert', '中村藤吉平等院店', '中村藤吉 平等院店', 'Japan'],
-  ['Dessert', 'David la Gelateria', 'David la Gelateria', 'Italy'],
+  ['Desserts & Cafe', 'VERO ~ Gelateria Cremeria', 'VERO Gelateria Cremeria', 'Italy'],
+  ['Desserts & Cafe', 'Regoli Pasticceria', 'Regoli Pasticceria', 'Italy'],
+  ['Desserts & Cafe', 'CREM 奶油甜點專賣店', 'CREM 奶油甜點', 'Taiwan'],
+  ['Desserts & Cafe', '中村藤吉平等院店', '中村藤吉 平等院店', 'Japan'],
+  ['Desserts & Cafe', 'David la Gelateria', 'David la Gelateria', 'Italy'],
   ['Drinks', '坪林手', '坪林手 Pina tshiu', 'Taiwan'],
   ['Drinks', '60+ Tea Shop 中山店', '60+ Tea Shop 中山店', 'Taiwan'],
   ['Drinks', 'Karun Thai Tea Central wOrld ชาไทยการัน', 'Karun Thai Tea (CentralwOrld)', 'Thailand'],
