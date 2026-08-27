@@ -86,4 +86,7 @@ for (const { label, file, url } of LINKS) {
 await fs.writeFile(OUT, JSON.stringify(out, null, 2))
 console.log('\nsaved → scraper/output/video-frames.json')
 // Do not close the logged-in Chrome: refresh.sh uses the same session for the
-// contribution scrape immediately after this capture step.
+// contribution scrape immediately after this capture step. The live CDP socket
+// otherwise keeps Node's event loop open forever, so explicitly end only this
+// helper process after every pending file write above has completed.
+process.exit(0)
