@@ -9,7 +9,7 @@
     "totalReviews": 419,
     "ratingsOnly": 21,
     "totalPhotoViews": 10666062,
-    "totalReviewViews": 2993982,
+    "totalReviewViews": 3003938,
     "reviewViewsBaseline": 3003938,
     "photoCount": 1921,
     "points": 19478,
@@ -17,7 +17,7 @@
     "dateFrom": "2018-06",
     "dateTo": "2026-06",
     "isMockData": false,
-    "updatedAt": "2026-08-30T04:36:27.943Z"
+    "updatedAt": "2026-08-30T08:03:41.938Z"
   },
   "topPhotos": [
     {
@@ -198,7 +198,7 @@
   "mostViewed": [
     {
       "place": "Pu-Jei",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Tainan",
       "rating": 5,
@@ -419,7 +419,7 @@
     },
     {
       "place": "Pu-Jei",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "reactions": 12,
       "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnmhCbJg9oC8-8G371WXSfCWnCinFbPMkviqEb4T8cMiLD-KAoYmvh1I0IsaHMmvgrva21BD4dmIoQYqnuPRqh9zuVTiCY88jepdpxtivREF5ZNKh2kdthIzlZ5CPnw79nNdFEu=w600",
@@ -501,7 +501,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xscFUycFpNbTUzY20xVVoybG1jREpoWkZOMllsRRAB",
       "place": "Kitchen Island 中島｜日式家庭料理・漢堡排・咖哩飯",
-      "category": "Other",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -645,7 +645,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21RM1kzcEtSRXRsTFcxWFRYTjJjMFZJWVVWWFYxRRAB",
       "place": "阿爸の芋圓 樂華店",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "New Taipei",
       "rating": 5,
@@ -821,7 +821,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21GME4xUmlaMDh3T1VORU4xcG5SVGxHUkZkNmRrRRAB",
       "place": "MA CAFE",
-      "category": "Drinks",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -853,7 +853,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT25kbmFuZFFiamRLV1haeE5VOVllWGQ2Ym1OVmVWRRAB",
       "place": "安師傅冰火菠蘿",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -869,7 +869,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pJM1NGQmZORE5tU1doRlFrOW5SR1pWVEdKWVdHYxAB",
       "place": "CAT.jpg cafe",
-      "category": "Drinks",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -885,7 +885,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pGUFIycFFZM1EzZWxabVFXSXRMV1k1VFRkVkxVRRAB",
       "place": "Chun Mei Ice Shop",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -997,7 +997,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21SS1ZVeENiMFpJYWxWS2QzVnpTMUZ0WTI5NFEwRRAB",
       "place": "Dore French Bakehouse",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taichung",
       "rating": 5,
@@ -1093,7 +1093,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pKWWFHSnhSVUozU21KVGRXcFlPREIxYjFCV01IYxAB",
       "place": "BREAD, ESPRESSO &",
-      "category": "Desserts & Cafe",
+      "category": "Brunch",
       "country": "Japan",
       "region": "Kyoto",
       "rating": 5,
@@ -1429,7 +1429,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2tWd2VERk1SMFZMY1ROdVdWVnNTRkpaVGxOQ2NXYxAB",
       "place": "Wanxiao Lab",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taichung",
       "rating": 5,
@@ -1493,7 +1493,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2xOMU5VMDNiMEY2UWpVMFpqbFJibEZ6VkVkUVFrRRAB",
       "place": "5.TUNG",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -1509,7 +1509,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT201dVNtNXpaVWxSU1ZadVMzVXhkRUUwYVdwQ1prRRAB",
       "place": "HI MATE ！( LO 15:30 )",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -1605,7 +1605,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT25Wc1dFOHlRalpGV0RJMFRFZHZVRkpYZVhOaFJtYxAB",
       "place": "Chiesa di Sant'Ignazio di Loyola",
-      "category": "Italian",
+      "category": "Attraction",
       "country": "Italy",
       "region": "Rome",
       "rating": 5,
@@ -2965,7 +2965,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2sxMlJGTlNZV1IwYUdkVWFqbEVYMGxxVERGRWFIYxAB",
       "place": "Mosaic Art & Cafe 馬賽克土耳其餐廳",
-      "category": "Drinks",
+      "category": "Southeast Asian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -2997,7 +2997,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT2pVNFIzTm1abW95ZVZNemJ6ZEdUekl3YmxGRGRrRRAB",
       "place": "Ikura Taipei",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3349,7 +3349,7 @@
     {
       "id": "ChZDSUhNMG9nS0VLbXB6TXZ5czhpR0VBEAE",
       "place": "ROMARO羅馬脆皮豬腩卷（8:00 PM以後微醺小酒館採預約制）",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3413,7 +3413,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnTUR3eHB2SW13RRAB",
       "place": "Gustave & Henri",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3924,7 +3924,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNIazczNGl3RRAB",
       "place": "PEPPINO 培皮諾小館",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4036,7 +4036,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUQ3aVlMcDBBRRAB",
       "place": "阿洋義式冰淇淋",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4068,7 +4068,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURyMF9mWHBnRRAB",
       "place": "博彩美術社（博彩美工專業器材）",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4116,7 +4116,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNyNWN1YVRREAE",
       "place": "金獅樓-港式飲茶",
-      "category": "Drinks",
+      "category": "Taiwanese & Chinese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4388,7 +4388,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUREck1EbWtBRRAB",
       "place": "On The Road",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4404,7 +4404,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURELUlxeUp3EAE",
       "place": "角屋關東煮",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4548,7 +4548,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUM5bzctd1FBEAE",
       "place": "Does Art 都是藝術中山店・台北手作地毯Tufting 文化幣適用",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4596,7 +4596,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUM5MkluM0VnEAE",
       "place": "MUVIE CINEMAS 台北松仁",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4628,7 +4628,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUM5Mko2X19BRRAB",
       "place": "桃城豆花-光華路",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Chiayi",
       "rating": 5,
@@ -4644,7 +4644,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURkbDlickJ3EAE",
       "place": "別處咖啡 Away cafe",
-      "category": "Drinks",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4692,7 +4692,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURkOFlPcWFREAE",
       "place": "Leisure Time Cafe",
-      "category": "Drinks",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4724,7 +4724,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNkNk5mYUh3EAE",
       "place": "堯平布朗尼二店",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Tainan",
       "rating": 5,
@@ -4740,7 +4740,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNkNk9hbk5REAE",
       "place": "Pu-Jei",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Tainan",
       "rating": 5,
@@ -4948,7 +4948,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUQxbmMya093EAE",
       "place": "鴨箱｜日式炙燒鴨肉飯",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4964,7 +4964,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUMxNGJxYmNREAE",
       "place": "La Mole Taipei",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5012,7 +5012,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNWdGZEcy1nRRAB",
       "place": "大麦小麦日式酒食（公休及模式詳見IG）",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Chiayi",
       "rating": 5,
@@ -5092,7 +5092,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNwLU11ZU1BEAE",
       "place": "MUSKOX Caf'e Bistro",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "New Taipei",
       "rating": 5,
@@ -5188,7 +5188,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUQ1NGRtaFh3EAE",
       "place": "日穗咖哩",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5204,7 +5204,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUM1cEoyT0F3EAE",
       "place": "蓮REN Taipei",
-      "category": "Taiwanese & Chinese",
+      "category": "Southeast Asian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5236,7 +5236,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURad3BEWHZBRRAB",
       "place": "Fireweeds",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5300,7 +5300,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURwdW9uSHJRRRAB",
       "place": "Ruby's",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5316,7 +5316,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNwMzZ6T2pRRRAB",
       "place": "仁王家",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5332,7 +5332,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNwMzVTbFNREAE",
       "place": "RICO",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5428,7 +5428,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNwLWQyNlB3EAE",
       "place": "Supreme Salmon",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "New Taipei",
       "rating": 5,
@@ -5444,7 +5444,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNwLWUzYnNnRRAB",
       "place": "印渡風情Out of India 慶城店",
-      "category": "Taiwanese & Chinese",
+      "category": "Southeast Asian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5540,7 +5540,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURKMXBMTnRnRRAB",
       "place": "Cui Lian Kitchen 淬煉廚房",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5572,7 +5572,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURKME5HRTR3RRAB",
       "place": "ConfitRémi 黑米",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5652,7 +5652,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNKc3RyMzhBRRAB",
       "place": "山下公園 ラーメン",
-      "category": "Attraction",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taichung",
       "rating": 5,
@@ -5875,7 +5875,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURCcVpIMEVnEAE",
       "place": "捲耳喵 日式菓子燒",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Tainan",
       "rating": 5,
@@ -5923,7 +5923,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURlcHJmdDlRRRAB",
       "place": "寶島曼波義大利麵",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5939,7 +5939,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNCNnVTclBnEAE",
       "place": "悄悄好食永康店舖",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6050,7 +6050,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURleXJuTTl3RRAB",
       "place": "Out of India Shida Branch",
-      "category": "Taiwanese & Chinese",
+      "category": "Southeast Asian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6066,7 +6066,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNlci1IcDN3RRAB",
       "place": "聚 日式鍋物 新店民權店",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "New Taipei",
       "rating": 5,
@@ -6082,7 +6082,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNlMmFuUllnEAE",
       "place": "【烘焙DIY】吳寶春自己做(台北遠百信義A13店)",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6114,7 +6114,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNleXJMY0lBEAE",
       "place": "鄭老牌木瓜牛奶",
-      "category": "Taiwanese & Chinese",
+      "category": "Drinks",
       "country": "Taiwan",
       "region": "Kaohsiung",
       "rating": 5,
@@ -6162,7 +6162,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUR1NlB2NFBBEAE",
       "place": "菜良拉麺(二郎系インスパイア)",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Tainan",
       "rating": 5,
@@ -6258,7 +6258,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURPdVlhd2xRRRAB",
       "place": "壹合冰品湯圓甜品-政大店",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6274,7 +6274,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURPeXJ5amZREAE",
       "place": "大溪甘單樸宿-包棟",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taoyuan",
       "rating": 5,
@@ -6290,7 +6290,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUQyenB1NG13RRAB",
       "place": "A Nice Holiday",
-      "category": "Taiwanese & Chinese",
+      "category": "Drinks",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6386,7 +6386,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURXaDZ5OXlRRRAB",
       "place": "CHI YUAN Taipei Arena Shop",
-      "category": "Taiwanese & Chinese",
+      "category": "Drinks",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6482,7 +6482,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURXMW9YN0tREAE",
       "place": "ANTICO FORNO",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6624,7 +6624,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURxdXFQdmtBRRAB",
       "place": "山焙 SUNBAY LAB: BLUE LINE- 和平臥龍",
-      "category": "Taiwanese & Chinese",
+      "category": "Drinks",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6688,7 +6688,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURxdXUzYk5nEAE",
       "place": "MyCROissant By Guillaume",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -6704,7 +6704,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSURLbF95V1dBEAE",
       "place": "P&P HOUSE 義式鄉村料理",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "New Taipei",
       "rating": 5,
@@ -6799,7 +6799,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUN5OWNUazFnRRAB",
       "place": "LUHO Home of Puff Shenji Store",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taichung",
       "rating": 5,
@@ -6956,7 +6956,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURzN09LaXNBRRAB",
       "place": "Dragon Horn Taipower Building",
-      "category": "Taiwanese & Chinese",
+      "category": "Drinks",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,

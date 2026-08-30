@@ -9,6 +9,9 @@ import MapView from './components/MapView.jsx'
 import Categories from './components/Categories.jsx'
 import BackToTop from './components/BackToTop.jsx'
 import DataSource from './components/DataSource.jsx'
+import SiteNav from './components/SiteNav.jsx'
+import { ActivitiesPage, WorkPage } from './components/PortfolioPages.jsx'
+import { useEffect, useState } from 'react'
 
 const NAV = [
   { id: 'photos', label: 'Photos' },
@@ -18,13 +21,12 @@ const NAV = [
   { id: 'categories', label: 'Favorites' },
 ]
 
-export default function App() {
+function FoodMap() {
   const { profile, stats, topPhotos, topVideos, mostViewed, mostReacted, ownerReplies, reviews, favorites } = data
   const countryCount = new Set(reviews.map((r) => r.country)).size
 
   return (
     <div className="min-h-full">
-      <div className="grain" />
       <BackToTop />
 
       {stats.isMockData && (
@@ -109,4 +111,31 @@ export default function App() {
       </main>
     </div>
   )
+}
+
+const routeFromHash = () => {
+  const route = window.location.hash.replace(/^#\/?/, '').split('/')[0]
+  return ['work', 'activities'].includes(route) ? route : 'food-map'
+}
+
+export default function App() {
+  const [page, setPage] = useState(routeFromHash)
+
+  useEffect(() => {
+    const onHashChange = () => setPage(routeFromHash())
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
+
+  const navigate = (next) => {
+    window.location.hash = next === 'food-map' ? '#/' : `#/${next}`
+    setPage(next)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  return <div className="site-shell">
+    <div className="grain" />
+    <SiteNav active={page} onChange={navigate} />
+    {page === 'work' ? <WorkPage /> : page === 'activities' ? <ActivitiesPage /> : <FoodMap />}
+  </div>
 }
