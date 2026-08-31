@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
+import IconAttribution from './IconAttribution.jsx'
 
-const campaignMain = '/portfolio/work/campaign-review.jpg'
-const campaignDetail = '/portfolio/work/campaign-detail.jpg'
+const campaignReviewMedia = Array.from({ length: 3 }, (_, i) => `/portfolio/work/campaign-review-${i + 1}.png`)
 const productVideo = '/portfolio/work/product-features.mp4'
 
 const JOURNEY = [
@@ -19,7 +19,7 @@ const WORK = [
     paragraphs: [
       "For the first four years of Dark Grocery, the team had never conducted a systematic campaign review. Campaign planning often relied on experience, memory, and assumptions. When I was tasked with planning the following year's marketing calendar, I believed we first needed to understand what had actually worked in the past.",
       "I brought together a data analyst and a senior buyer, consolidated four years of historical data, established consistent evaluation criteria, and combined their expertise to build the team's first campaign review framework. The analysis shaped our 2026 campaign strategy and calendar. Since implementing the changes, campaign sales have grown by 40%+ on average, compared with typically no more than 15% previously. The team continues to use the framework to review and improve each campaign.",
-    ], summary: 'Built the team’s first four-year campaign review framework, lifting average campaign sales growth to 40%+.', media: [campaignMain, campaignDetail, '/portfolio/work/campaign-review-2.jpg'],
+    ], summary: 'Built the team’s first four-year campaign review framework, lifting average campaign sales growth to 40%+.', media: campaignReviewMedia,
   },
   {
     number: '02', eyebrow: 'Product · Go-to-market', title: 'Launching New Product Features', stat: '10+', statLabel: 'Features launched', statSecondary: '10%', statSecondaryLabel: 'Contribution to annual ads revenue target',
@@ -46,7 +46,7 @@ const ACTIVITIES = [
     "I’m the unofficial “Minister of Beverages” and afternoon tea specialist at work. To make everyone’s workday a little happier, I’ve somehow taken on the daily responsibility of organizing our drink orders—from deciding what to get and inviting everyone to the group order, to placing the order, picking up the drinks, and collecting payments.",
     "I’m happy to handle all these little logistics as soon as I get to the office, because I believe everyone deserves their daily dose of happiness. And whenever I’m craving an afternoon snack, I’ll usually rally the team to join me—just to make sure everyone has enough calories and blood sugar to survive the rest of the workday.",
   ]},
-  { number: '02', title: 'Birthday Captain', tag: 'Making people feel remembered', images: mediaRange('birthday', 9), paragraphs: [
+  { number: '02', title: 'Birthday Captain', tag: 'Making people feel remembered', images: [3, 1, 2, 4, 5, 6, 7, 8, 9].map((i) => `/portfolio/activities/birthday/${i}.jpg`), paragraphs: [
     "Passionate about creating joy, I have tracked classmates’ birthdays since middle school, organized surprises, and made sure even overlooked peers felt remembered. A bullied classmate once thanked me, noting that her birthday was the one day she felt truly seen by the class.",
     "I’ve carried the same tradition into the workplace. I keep track of my colleagues’ birthdays, plan surprises in advance, order cakes, and block time on everyone’s calendars so we can celebrate together. It’s a small thing, but I love making sure the people around me feel remembered—and giving everyone an excuse to share a little happiness together.",
   ]},
@@ -78,11 +78,7 @@ export function WorkPage() {
   return <main className="portfolio-page work-hub">
     <section className="journey" aria-labelledby="journey-title">
       <div className="journey-heading"><p>My journey so far</p></div>
-      <div className="journey-track">{JOURNEY.map((stop) => <article className={`journey-stop ${stop.future ? 'is-future' : ''}`} key={stop.title}>
-        <div className="journey-period"><span>{stop.icon}</span>{stop.period}</div>
-        <div className="journey-card"><div className="journey-name">{stop.title}</div>{stop.image ? <img src={stop.image} alt={`${stop.title} chapter`} /> : <div className="journey-question">The next chapter<br/>is waiting.</div>}</div>
-        {stop.description && <p className="journey-description">{Array.isArray(stop.description) ? stop.description.map((line) => <span key={line}>{line}</span>) : stop.description}</p>}
-      </article>)}</div>
+      <div className="journey-track">{JOURNEY.map((stop) => <JourneyStop stop={stop} key={stop.title} />)}</div>
     </section>
 
     <ProjectRail title="Creating Impact at Work" subtitle="Tap a project to see the full story" items={WORK} onSelect={setSelected} />
@@ -95,6 +91,18 @@ export function WorkPage() {
     {selected && <ProjectOverlay item={selected} onClose={() => setSelected(null)} />}
     <PortfolioFooter />
   </main>
+}
+
+function JourneyStop({ stop }) {
+  const [expanded, setExpanded] = useState(false)
+  const content = <>
+    <div className="journey-period"><span>{stop.icon}</span>{stop.period}</div>
+    <div className="journey-card"><div className="journey-name">{stop.title}</div>{stop.image ? <img src={stop.image} alt={`${stop.title} chapter`} /> : <div className="journey-question">The next chapter<br/>is waiting.</div>}</div>
+    {stop.description && <p className="journey-description">{Array.isArray(stop.description) ? stop.description.map((line) => <span key={line}>{line}</span>) : stop.description}</p>}
+  </>
+  return stop.future
+    ? <article className="journey-stop is-future">{content}</article>
+    : <button className={`journey-stop ${expanded ? 'is-expanded' : ''}`} onClick={() => setExpanded((value) => !value)} aria-expanded={expanded}>{content}</button>
 }
 
 function ProjectRail({ title, subtitle, items, onSelect, placeholder = false }) {
@@ -145,5 +153,5 @@ export function ActivitiesPage() {
 }
 
 function PortfolioFooter() {
-  return <footer className="portfolio-footer"><span>Curious by nature.</span><span>Playful on purpose.</span><span>Built with care.</span></footer>
+  return <footer className="portfolio-footer"><span>Curious by nature.</span><span>Playful on purpose.</span><span>Built with care.</span><IconAttribution /></footer>
 }
