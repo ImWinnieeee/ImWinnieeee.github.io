@@ -11,7 +11,7 @@
     "scrape": "node scraper/scrape.mjs",
     "scrape:videoviews": "node scraper/video-views.mjs",
     "refresh": "bash scraper/refresh.sh",
-    "build:all": "npm run scrape:videoframes && npm run scrape && npm run parse && npm run build:data && npm run build",
+    "build:all": "npm run scrape:videoframes && npm run scrape && npm run scrape:photos && npm run parse && npm run build:data && npm run build",
     "scrape:ratings": "node scraper/place-ratings.mjs",
     "scrape:ratings:all": "node scraper/store-ratings.mjs",
     "scrape:photos": "node scraper/photos.mjs",

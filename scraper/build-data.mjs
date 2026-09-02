@@ -222,7 +222,7 @@ const ownerReplies = REPLY_PICKS.map((name) => findReview(name)).filter(Boolean)
 // url fragment so it survives re-scrapes.
 const PHOTO_EXCLUDE = ['6gO5RaoBYhqKmOUng_-iTYeRwH0Kx1TN_z9', 'uoDh5buhlEdelk0bKvvYYuLRxlsqK0WKp3x']
 const seen = new Set()
-const topPhotos = [...photos.items]
+const scrapedTopPhotos = [...photos.items]
   .filter((p) => p.url && p.url.includes('googleusercontent'))
   .filter((p) => !PHOTO_EXCLUDE.some((k) => p.url.includes(k)))
   .sort((a, b) => b.views - a.views)
@@ -447,12 +447,35 @@ let photoCount = photos.headerCount ?? new Set(photos.items.filter((p) => p.url)
 // Guard: a partial scrape can leave photos-raw.json with only `total` and no
 // `items`. Don't clobber a previously-built topPhotos/photoCount in that case —
 // keep whatever the existing src/data.json already has.
-let topPhotosOut = topPhotos
-if (topPhotosOut.length === 0 && fs.existsSync(path.join(SRC, 'data.json'))) {
-  const prev = JSON.parse(fs.readFileSync(path.join(SRC, 'data.json'), 'utf8'))
-  if (prev.topPhotos && prev.topPhotos.length) {
-    topPhotosOut = prev.topPhotos
-    if (photos.headerCount == null) photoCount = prev.stats?.photoCount || photoCount
+let topPhotosOut = scrapedTopPhotos
+const previousTopPhotos = Array.isArray(previousData?.topPhotos) ? previousData.topPhotos : []
+const previousTopView = Math.max(0, ...previousTopPhotos.map((p) => Number(p.views) || 0))
+const scrapedTopView = Math.max(0, ...scrapedTopPhotos.map((p) => Number(p.views) || 0))
+// Photo view counts are cumulative. A new scrape whose best photo is dramatically
+// below the already-published best photo is not a real ranking change: Google only
+// rendered a partial/recent subset of the virtualized grid. Never let that partial
+// harvest replace a known-good all-time leaderboard. A 20% tolerance allows for a
+// manually deleted photo while still catching the Sep 2 failure (190K → 31K).
+const ranksToCompare = Math.min(10, previousTopPhotos.length, scrapedTopPhotos.length)
+const regressedRanks = Array.from({ length: ranksToCompare }, (_, i) => {
+  const previousViews = Number(previousTopPhotos[i]?.views) || 0
+  const scrapedViews = Number(scrapedTopPhotos[i]?.views) || 0
+  return previousViews > 0 && scrapedViews < previousViews * 0.8
+}).filter(Boolean).length
+const rankRegressionLimit = Math.max(2, Math.ceil(ranksToCompare * 0.3))
+const requiredPhotoRanks = Math.min(15, previousTopPhotos.length)
+const missingPhotoRanks = previousTopPhotos.length > 0 && scrapedTopPhotos.length < requiredPhotoRanks
+const topPhotoRegression = previousTopView > 0 && (
+  scrapedTopView < previousTopView * 0.8
+  || regressedRanks >= rankRegressionLimit
+  || missingPhotoRanks
+)
+if ((topPhotosOut.length === 0 || topPhotoRegression) && previousTopPhotos.length) {
+  topPhotosOut = previousTopPhotos
+  if (photos.headerCount == null) photoCount = previousData?.stats?.photoCount || photoCount
+  if (topPhotoRegression) {
+    console.log(`   ⚠️  incomplete photo leaderboard (${scrapedTopView.toLocaleString()} max vs previous ${previousTopView.toLocaleString()}; ${regressedRanks}/${ranksToCompare} top ranks regressed; ${scrapedTopPhotos.length}/${requiredPhotoRanks} required ranks) — kept previous topPhotos`)
+  } else {
     console.log('   ⚠️  photos-raw.json had no items — kept previous topPhotos' + (photos.headerCount == null ? '/photoCount' : ''))
   }
 }
@@ -502,5 +525,5 @@ const data = {
 
 fs.writeFileSync(path.join(SRC, 'data.json'), JSON.stringify(data, null, 2))
 console.log('✅ wrote src/data.json')
-console.log(`   reviews ${reviews.length} | topPhotos ${topPhotos.length} | viewed ${mostViewed.length} | reacted ${mostReacted.length} | replies ${ownerReplies.length}`)
+console.log(`   reviews ${reviews.length} | topPhotos ${topPhotosOut.length} | viewed ${mostViewed.length} | reacted ${mostReacted.length} | replies ${ownerReplies.length}`)
 console.log(`   stats: ${data.stats.totalReviews} reviews, ${data.stats.totalPhotoViews.toLocaleString()} photo views, ${photoCount} photos`)

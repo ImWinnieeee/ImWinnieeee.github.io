@@ -43,7 +43,8 @@ else
 fi
 
 # 2) 抓資料 → 解析 → 組 src/data.json → build
-#    （build:all = scrape && parse && build:data && build，任何一步失敗就停，
+#    （build:all = video frames && scrape && full photo sweep && parse &&
+#     build:data && build；任何一步失敗就停，
 #     不會用半套資料覆蓋掉好的 data.json）
 echo
 echo "🔄 開始抓資料並重建網站資料..."

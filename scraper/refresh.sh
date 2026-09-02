@@ -49,6 +49,7 @@ echo
 echo "🔄 開始抓資料並重建 src/data.json..."
 npm run scrape:videoframes
 npm run scrape
+npm run scrape:photos
 npm run parse
 npm run build:data
 
