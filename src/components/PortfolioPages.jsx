@@ -12,6 +12,11 @@ const JOURNEY = [
 ]
 
 const mediaRange = (folder, count) => Array.from({ length: count }, (_, i) => `/portfolio/activities/${folder}/${i + 1}.jpg`)
+const numberedActivityMedia = (folder, count, videos = [], pngs = []) => Array.from({ length: count }, (_, i) => {
+  const number = String(i + 1).padStart(2, '0')
+  const extension = videos.includes(i + 1) ? 'm4v' : (pngs.includes(i + 1) ? 'png' : 'jpg')
+  return { type: videos.includes(i + 1) ? 'video' : 'image', src: `/portfolio/activities/${folder}/${number}.${extension}` }
+})
 
 const WORK = [
   {
@@ -41,7 +46,7 @@ const WORK = [
   },
 ]
 
-const ACTIVITIES = [
+const ACTIVITY_ITEMS = [
   { number: '01', title: 'Beverage & Snacks Minister', tag: 'Daily joy, delivered', images: mediaRange('drinks', 5), paragraphs: [
     "I’m the unofficial “Minister of Beverages” and afternoon tea specialist at work. To make everyone’s workday a little happier, I’ve somehow taken on the daily responsibility of organizing our drink orders—from deciding what to get and inviting everyone to the group order, to placing the order, picking up the drinks, and collecting payments.",
     "I’m happy to handle all these little logistics as soon as I get to the office, because I believe everyone deserves their daily dose of happiness. And whenever I’m craving an afternoon snack, I’ll usually rally the team to join me—just to make sure everyone has enough calories and blood sugar to survive the rest of the workday.",
@@ -57,7 +62,64 @@ const ACTIVITIES = [
     "I’ve always loved doodling—on textbooks as a student, on office whiteboards after I started working, and occasionally even in my colleagues’ notebooks. Surprisingly, keeping my hands busy helps me focus and gives my mind more space to think. So whenever there’s a pen and a blank piece of paper nearby, chances are I’ll start sketching whatever random thing catches my eye.",
     "Doodling is also one of the ways I document my life. I’ve drawn portraits of teammates as farewell gifts, sketched the medieval magic and adventures I encountered while playing LARP, and illustrated desserts that were simply too good not to remember. I love adding drawings and splashes of color alongside plain words—making everyday memories a little more vivid, playful, and uniquely mine.",
   ]},
+  { number: '05', title: 'I Eat, and I Share', tag: 'Food radar since 2017', sources: numberedActivityMedia('eat-share', 7), paragraphs: [
+    "I really love food—and I enjoy sharing my thoughts about it just as much, whether that means recommending a hidden gem to a friend or giving a very honest review when something doesn't live up to the hype.",
+    "I've been regularly sharing food reviews through Instagram Stories since 2017, with more than 1,300 stories and counting. Among my friends, I've somehow become the designated “food radar,” which also means that whenever we go out together, I'm usually the one deciding where we're going to eat.",
+    'Here are some recent screenshots of my food sharing stories!',
+  ]},
+  { number: '06', title: 'Board Games, Escape Rooms & LARP', tag: 'Puzzles that bring people together', sources: [
+    ...numberedActivityMedia('board-games', 12, [7]).slice(0, 2),
+    { type: 'image', src: '/portfolio/activities/board-games/03-fixed.jpg' },
+    ...numberedActivityMedia('board-games', 12, [7]).slice(3, 8),
+    ...numberedActivityMedia('board-games', 12, [7]).slice(9),
+  ], paragraphs: [
+    "I'm a longtime fan of anything that involves puzzles, strategy, deduction, or role-playing. From board games and escape rooms to murder mysteries and LARP.",
+    "I have three different groups of friends that I regularly play with, with friendships spanning from university to work. I've also joined games and escape rooms with groups of 6–10 complete strangers. I love the challenge of figuring things out together, but even more than that, I love how games give me a reason to stay close to old friends—and an unusually easy way to turn strangers into new ones.",
+  ]},
+  { number: '07', title: 'Musicals', tag: 'One show every season', sources: [
+    ...numberedActivityMedia('musicals', 19, [2, 6, 8, 19]),
+  ], mediaNotes: [
+    'The Phantom of the Opera', 'The Phantom of the Opera', 'The Phantom of the Opera', 'The Phantom of the Opera',
+    'Notre-Dame de Paris', 'Notre-Dame de Paris', 'Les Misérables', 'Les Misérables',
+    'Romeo and Juliet', 'Romeo and Juliet', 'Sunset Boulevard', 'Sunset Boulevard',
+    'Don Juan', 'Chicago', 'Sunset Boulevard', 'The Phantom of the Opera', 'Chicago', 'Don Juan', 'Don Juan',
+  ].map((title) => ({ title })), paragraphs: [
+    "I fell into the musical rabbit hole about two years ago, and there has apparently been no way back. Since then, I've seen almost every major musical production that has come to Taiwan, averaging about one show every season, including Notre-Dame de Paris, The Phantom of the Opera, Romeo and Juliet, Chicago, Sunset Boulevard, Don Juan, and Les Misérables.",
+    "The tickets have also been getting progressively more expensive, which is probably the clearest evidence that I'm in too deep. This April, I even made a same-day round trip to Taichung—two hours by train each way—just to experience The Phantom of the Opera in a concert hall with better acoustics.",
+  ]},
+  { number: '08', title: 'Exhibitions, Museums & Art', tag: 'A museum at least once a month', sources: numberedActivityMedia('exhibitions', 11), mediaNotes: [
+    { title: 'Tainan Chimei Museum', text: 'From Raphael to Van Gogh — Masterpieces from the National Gallery, London.' },
+    { title: 'National Palace Museum, Taipei', text: 'From Impressionism to Modernism — Masterpieces from the Metropolitan Museum of Art.' },
+    { title: 'National Railway Museum', text: 'A visit exploring Taiwan’s railway history and culture.' },
+    { title: 'National Chiang Kai-shek Memorial Hall', text: 'The Art of Disney: The Magic of Animation.' },
+    { title: 'Museum of Contemporary Art Taipei', text: 'Banksy – Love Is in the Bin' },
+    { title: 'Taipei Fine Arts Museum', text: 'Modern Life: Taiwan Architecture 1949–1983.' },
+    { title: 'Taipei Fubon Art Museum', text: 'Van Gogh: Journey of Light.' },
+    { title: 'Vatican City', text: 'The School of Athens.' },
+    { title: 'Florence', text: 'Michelangelo’s statue of David.' },
+    { title: 'Florence', text: 'Botticelli’s Spring (Primavera).' },
+    { title: 'Milan', text: 'Leonardo da Vinci’s The Last Supper.' },
+  ], paragraphs: [
+    "I love exhibitions of almost every kind. Renaissance paintings, contemporary art, ancient artifacts, Disney, railways, science, Japanese manga, exhibitions exploring specific social issues—you name it, I'll probably go. I visit a museum, gallery, or exhibition at least once a month.",
+    "Whenever I come across an exhibition I really enjoy, I tend to write very long Instagram Stories about it—documenting what I saw, what caught my attention, and my thoughts along the way. It has become my way of keeping a personal record of what I've experienced while also sharing exhibitions I love with friends.",
+    "I'm particularly fascinated by Renaissance art and architecture. On an 18-day trip to Italy in February 2026, I spent literally EVERY SINGLE DAY looking at paintings, walking through museums, or wandering around churches. For me, that was a perfectly reasonable vacation.",
+  ]},
+  { number: '09', title: 'Making Travel Plans', tag: 'The spreadsheet is part of the trip', sources: numberedActivityMedia('travel-plans', 5), mediaNotes: [
+    'Part of Bangkok Schedule',
+    'Part of Italy Schedule',
+    'More Parts of Italy Schedule',
+    'Part of Osaka Schedule',
+    'Tokyo trip food preparation',
+  ].map((title) => ({ title })), paragraphs: [
+    "I enjoy planning a trip almost as much as taking one. Before traveling, I'll build an hour-by-hour itinerary in Google Sheets, factor in buffer time, research transportation, and book practically every ticket and restaurant that can be reserved in advance.",
+    "And yes, I actually follow the spreadsheet. About 95% of the trip usually goes according to plan. The remaining 5% is where all those carefully planned buffers—and my ability to improvise when something inevitably goes wrong—come in handy.",
+  ]},
 ]
+
+const ACTIVITIES = [1, 4, 0, 5, 7, 2, 8, 3, 6].map((itemIndex, position) => ({
+  ...ACTIVITY_ITEMS[itemIndex],
+  number: String(position + 1).padStart(2, '0'),
+}))
 
 function PageIntro({ kicker, title, children }) {
   return <header className="portfolio-intro fade-up"><p>{kicker}</p><h1>{title}</h1><div className="intro-copy">{children}</div></header>
@@ -109,7 +171,7 @@ function ProjectRail({ title, subtitle, items, onSelect, placeholder = false }) 
   return <section className="project-rail-section">
     {(title || subtitle) && <div className="rail-heading">{title && <h2>{title}</h2>}{subtitle && <p>{subtitle}</p>}</div>}
     <div className="project-rail">{items.map((item) => {
-      const cover = item.media?.[0] || item.images?.[0] || item.extraMedia?.[0]
+      const cover = item.sources?.find((source) => source.type === 'image')?.src || item.media?.[0] || item.images?.[0] || item.extraMedia?.[0]
       const content = <><div className={`rail-cover ${placeholder ? 'is-placeholder' : ''}`}>{cover ? <img src={cover} alt="" /> : <span>{item.number}</span>}</div><div className="rail-copy"><span>{item.eyebrow || item.tag}</span><h3>{item.title}</h3>{item.stat && <div className="tile-stat"><div><strong>{item.stat}</strong><span>{item.statLabel}</span></div>{item.statSecondary && <div><strong>{item.statSecondary}</strong><span>{item.statSecondaryLabel}</span></div>}</div>}<p>{placeholder ? 'Details to be added.' : (item.summary || item.paragraphs[0])}</p>{!placeholder && <b>View project <span>↗</span></b>}</div></>
       return placeholder ? <article className="project-tile is-coming" key={item.number}>{content}</article> : <button className="project-tile" onClick={() => onSelect(item)} key={item.number}>{content}</button>
     })}</div>
@@ -117,20 +179,20 @@ function ProjectRail({ title, subtitle, items, onSelect, placeholder = false }) 
 }
 
 function ProjectOverlay({ item, onClose }) {
-  const sources = [
+  const sources = item.sources || [
     ...(item.video ? [{ type: 'video', src: item.video }] : []),
     ...[...(item.media || item.images || []), ...(item.extraMedia || [])].map((src) => ({ type: 'image', src })),
   ]
   const [active, setActive] = useState(0)
   const current = sources[active]
   return <div className="project-overlay" role="dialog" aria-modal="true" aria-labelledby="expanded-project-title" onMouseDown={(e) => { if (e.target === e.currentTarget) onClose() }}>
-    <article className="expanded-project">
+    <article className={`expanded-project ${sources.length ? '' : 'has-no-media'}`}>
       <button className="overlay-close" onClick={onClose} aria-label="Close project">×</button>
-      <div className="expanded-gallery">
+      {sources.length > 0 && <div className="expanded-gallery">
         <div className="gallery-thumbs">{sources.map((source, i) => <button key={source.src} className={active === i ? 'is-active' : ''} onClick={() => setActive(i)} aria-label={`Show project visual ${i + 1}`}>{source.type === 'video' ? <video src={source.src} muted preload="metadata" /> : <img src={source.src} alt="" />}{source.type === 'video' && <span>▶</span>}</button>)}</div>
         <div className="gallery-main">{current?.type === 'video' ? <video key={current.src} src={current.src} controls muted playsInline autoPlay aria-label={`${item.title} screen recording`} /> : <img src={current?.src} alt={`${item.title} selected project visual`} />}</div>
-      </div>
-      <div className="expanded-copy"><div className="project-rule"><span>{item.number}</span><span>{item.eyebrow || item.tag}</span></div><h2 id="expanded-project-title">{item.title}</h2>{item.stat && <div className="project-stat"><div><strong>{item.stat}</strong><span>{item.statLabel}</span></div>{item.statSecondary && <div><strong>{item.statSecondary}</strong><span>{item.statSecondaryLabel}</span></div>}</div>}{item.mediaNotes?.[active] && <div className="media-note"><strong>{item.mediaNotes[active].title}</strong><p>{item.mediaNotes[active].text}</p></div>}{item.paragraphs.map((p) => <p key={p}>{p}</p>)}</div>
+      </div>}
+      <div className="expanded-copy"><div className="project-rule"><span>{item.number}</span><span>{item.eyebrow || item.tag}</span></div><h2 id="expanded-project-title">{item.title}</h2>{item.stat && <div className="project-stat"><div><strong>{item.stat}</strong><span>{item.statLabel}</span></div>{item.statSecondary && <div><strong>{item.statSecondary}</strong><span>{item.statSecondaryLabel}</span></div>}</div>}{item.mediaNotes?.[active] && <div className="media-note"><strong>{item.mediaNotes[active].title}</strong>{item.mediaNotes[active].text && <p>{item.mediaNotes[active].text}</p>}</div>}{item.paragraphs.map((p) => <p key={p}>{p}</p>)}</div>
     </article>
   </div>
 }

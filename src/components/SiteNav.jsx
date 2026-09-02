@@ -1,7 +1,7 @@
 const TABS = [
   { id: 'food-map', label: "Winnie's Food Map" },
+  { id: 'activities', label: 'Community & Activities' },
   { id: 'work', label: 'Work & Education' },
-  { id: 'activities', label: 'Activities' },
 ]
 
 export default function SiteNav({ active, onChange }) {

@@ -360,6 +360,18 @@ body {
 .activities-hub .expanded-copy { padding: 2.8rem 3.25rem 2.25rem; }
 .activities-hub .expanded-copy h2 { margin: 1.15rem 0; font-size: clamp(2.45rem, 3.7vw, 3.65rem); }
 .activities-hub .expanded-copy p { font-size: 1rem; line-height: 1.65; }
+.activities-hub .expanded-project.has-no-media { width: min(720px, 100%); grid-template-columns: 1fr; }
+.activities-hub .expanded-project.has-no-media .expanded-copy { padding: clamp(4rem, 8vw, 6rem); }
+.activities-hub .expanded-project.has-no-media .project-rule { padding-right: 3rem; }
+.activities-hub .project-tile:has(.rail-cover:not(:has(img))) .rail-cover {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 72% 24%, rgba(217,140,157,.34), transparent 25%),
+    linear-gradient(145deg, #f5eadc, #e7d8c8);
+  color: rgba(58,50,44,.32);
+  font: 400 5rem/1 var(--font-display);
+}
 
 /* Match the portfolio tabs to Food Map's font family and semantic type scale. */
 .portfolio-page,

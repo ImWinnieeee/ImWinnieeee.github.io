@@ -1,3 +1,5 @@
+
+
 - Me being wacky (in a good way)
   - beverage & snacks minister
     - I’m the unofficial “Minister of Beverages” and afternoon tea specialist at work. To make everyone’s workday a little happier, I’ve somehow taken on the daily responsibility of organizing our drink orders—from deciding what to get and inviting everyone to the group order, to placing the order, picking up the drinks, and collecting payments.
@@ -10,6 +12,23 @@
   - doodle everywhere
     - I’ve always loved doodling—on textbooks as a student, on office whiteboards after I started working, and occasionally even in my colleagues’ notebooks. Surprisingly, keeping my hands busy helps me focus and gives my mind more space to think. So whenever there’s a pen and a blank piece of paper nearby, chances are I’ll start sketching whatever random thing catches my eye.
     - Doodling is also one of the ways I document my life. I’ve drawn portraits of teammates as farewell gifts, sketched the medieval magic and adventures I encountered while playing LARP, and illustrated desserts that were simply too good not to remember. I love adding drawings and splashes of color alongside plain words—making everyday memories a little more vivid, playful, and uniquely mine.
+  - I Eat, and I Share
+    - I really love food—and I enjoy sharing my thoughts about it just as much, whether that means recommending a hidden gem to a friend or giving a very honest review when something doesn't live up to the hype.
+    - I've been regularly sharing food reviews through Instagram Stories since 2017, with more than 1,300 stories and counting. Among my friends, I've somehow become the designated “food radar,” which also means that whenever we go out together, I'm usually the one deciding where we're going to eat.
+    - Here are some recent screenshots of my food sharing stories!
+  - Board Games, Escape Rooms & LARP
+    - I'm a longtime fan of anything that involves puzzles, strategy, deduction, or role-playing. From board games and escape rooms to murder mysteries and LARP.
+    - I have three different groups of friends that I regularly play with, with friendships spanning from university to work. I've also joined games and escape rooms with groups of 6–10 complete strangers. I love the challenge of figuring things out together, but even more than that, I love how games give me a reason to stay close to old friends—and an unusually easy way to turn strangers into new ones.
+  - Musicals
+    - I fell into the musical rabbit hole about two years ago, and there has apparently been no way back. Since then, I've seen almost every major musical production that has come to Taiwan, averaging about one show every season, including Notre-Dame de Paris, The Phantom of the Opera, Romeo and Juliet, Chicago, Sunset Boulevard, Don Juan, and Les Misérables.
+    - The tickets have also been getting progressively more expensive, which is probably the clearest evidence that I'm in too deep. This April, I even made a same-day round trip to Taichung—two hours by train each way—just to experience The Phantom of the Opera in a concert hall with better acoustics.
+  - Exhibitions, Museums & Art
+    - I love exhibitions of almost every kind. Renaissance paintings, contemporary art, ancient artifacts, Disney, railways, science, Japanese manga, exhibitions exploring specific social issues—you name it, I'll probably go. I visit a museum, gallery, or exhibition at least once a month.
+    - Whenever I come across an exhibition I really enjoy, I tend to write very long Instagram Stories about it—documenting what I saw, what caught my attention, and my thoughts along the way. It has become my way of keeping a personal record of what I've experienced while also sharing exhibitions I love with friends.
+    - I'm particularly fascinated by Renaissance art and architecture. On an 18-day trip to Italy in February 2026, I spent literally EVERY SINGLE DAY looking at paintings, walking through museums, or wandering around churches. For me, that was a perfectly reasonable vacation.
+  - Making Travel Plans
+    - I enjoy planning a trip almost as much as taking one. Before traveling, I'll build an hour-by-hour itinerary in Google Sheets, factor in buffer time, research transportation, and book practically every ticket and restaurant that can be reserved in advance.
+    - And yes, I actually follow the spreadsheet. About 95% of the trip usually goes according to plan. The remaining 5% is where all those carefully planned buffers—and my ability to improvise when something inevitably goes wrong—come in handy.
 - Professional / Undergraduate
   - Campaign Review Framework
     - For the first four years of Dark Grocery, the team had never conducted a systematic campaign review. Campaign planning often relied on experience, memory, and assumptions. When I was tasked with planning the following year's marketing calendar, I believed we first needed to understand what had actually worked in the past.
@@ -20,3 +39,4 @@
   - campagin & marketing
     - This is just one of the 100+ campaigns I've worked on over the past two years. For this campaign, we turned Dark Grocery's unexpected product selection into a gifting story—because who would expect that you could order a Jellycat, Nintendo Switch 2, PS5, or Diptyque through Uber Eats?
     - As a Jellycat fan myself, I posted “What! You can buy Jellycat on Uber Eats!” on Threads to promote the campaign. The post reached 500K views within two days—and the Jellycat inventory sold out on the same day I posted it.
+
