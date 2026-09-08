@@ -276,9 +276,9 @@ body {
 .journey-track::before { content: ''; position: absolute; left: -2rem; right: 0; top: 53%; height: 18px; background: #d9cfb9; z-index: -1; }
 .journey-track::after { content: ''; position: absolute; right: -1.85rem; top: calc(53% - 14px); border-left: 30px solid #d9cfb9; border-top: 23px solid transparent; border-bottom: 23px solid transparent; z-index: -1; }
 .journey-period { min-height: 2.8rem; display: flex; align-items: center; gap: .5rem; margin: 0 0 .65rem .7rem; font-size: clamp(1rem, 1.8vw, 1.35rem); font-weight: 700; }
-.journey-card { height: 205px; display: grid; grid-template-columns: .9fr 1.1fr; overflow: hidden; background: #f5ead5; border: 1px solid var(--color-line); border-radius: 22px; box-shadow: 0 10px 20px -15px rgba(58,50,44,.7); }
-.journey-name { padding: 1.35rem; display: flex; align-items: center; font-size: 1rem; font-weight: 700; line-height: 1.2; }
-.journey-card img { width: 100%; height: 100%; object-fit: cover; }
+.journey-card { height: 205px; display: grid; grid-template-columns: .9fr 1.1fr; grid-template-rows: minmax(0, 1fr); overflow: hidden; background: #f5ead5; border: 1px solid var(--color-line); border-radius: 22px; box-shadow: 0 10px 20px -15px rgba(58,50,44,.7); }
+.journey-name { min-height: 0; padding: 1.35rem; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 1rem; font-weight: 700; line-height: 1.2; }
+.journey-card img { min-height: 0; width: 100%; height: 100%; object-fit: cover; }
 .journey-stop.is-future .journey-card { display: flex; align-items: center; }
 .journey-stop.is-future .journey-name { width: 42%; }
 .journey-question { padding: 1rem; color: var(--color-ink-soft); font-family: Georgia, serif; font-style: italic; line-height: 1.45; }
@@ -599,3 +599,12 @@ button.journey-stop {
   .rail-copy b { padding-top: .8rem; }
   .project-tile.is-coming { min-height: 145px; }
 }
+
+.project-links { display: flex; flex-wrap: wrap; gap: .8rem 1.25rem; margin-top: 1.5rem; }
+.project-links a { color: var(--color-vermilion); text-decoration: underline; text-underline-offset: .2em; font-size: .9rem; }
+
+.tile-stat > div:only-child,
+.project-stat > div:only-child { align-items: center; }
+
+.tile-stat strong,
+.project-stat strong { white-space: nowrap; flex-shrink: 0; }

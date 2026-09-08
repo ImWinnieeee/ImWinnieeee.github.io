@@ -44,6 +44,22 @@ const WORK = [
       "As a Jellycat fan myself, I posted “What! You can buy Jellycat on Uber Eats!” on Threads to promote the campaign. The post reached 500K views within two days—and the Jellycat inventory sold out on the same day I posted it.",
     ], summary: 'Turned an unexpected product range into a gifting campaign—earning 500K views and selling out Jellycat in one day.', media: Array.from({ length: 5 }, (_, i) => `/portfolio/work/campaign-${i + 1}.jpg`), portrait: true,
   },
+  {
+    number: '04', eyebrow: 'KAO · Laurier', title: 'CPG Digital Marketing', stat: '50%', statLabel: 'of the projected time to reach target market share',
+    paragraphs: [
+      'Executed a digital go-to-market strategy for a new feminine care product, achieving target market share in half the projected time through precise consumer positioning and an integrated media strategy.',
+    ], summary: 'Reached target market share in half the projected time.',
+    media: ['laurier-1.png', 'laurier-2.jpg', 'laurier-3.png', 'laurier-4.jpg', 'laurier-5.jpg', 'laurier-6.jpg', 'laurier-7.jpg'].map((file) => `/portfolio/work/${file}`),
+    mediaNotes: [
+      'New Product Launch - Feather like sanitary pad - Influencer',
+      'New Product Launch - Feather like sanitary pad - Influencer',
+      'Night sanitary pad - Digital Marketing strategy',
+      "Kanahei's small animals special design sanitary pad - kanahei's fans posts",
+      "Kanahei's small animals special design sanitary pad - offer ads",
+      'Double 11 - sanitary pad discount',
+      'Cool sanitary pad - social media post',
+    ].map((title) => ({ title })),
+  },
 ]
 
 const ACTIVITY_ITEMS = [
@@ -144,11 +160,22 @@ export function WorkPage() {
     </section>
 
     <ProjectRail title="Creating Impact at Work" subtitle="Tap a project to see the full story" items={WORK} onSelect={setSelected} />
-    <ProjectRail title="Exploring Opportunities at School" subtitle="More stories coming soon" items={[
-      { number: '01', title: 'University Project', eyebrow: 'Exploration · Collaboration' },
-      { number: '02', title: 'Campus Experience', eyebrow: 'Leadership · Community' },
-      { number: '03', title: 'The Next Opportunity', eyebrow: 'Coming soon' },
-    ]} placeholder />
+    <ProjectRail title="Exploring Opportunities at School" subtitle="Tap a project to see the full story" items={[
+      {
+        number: '01', title: 'NTU Seed Project - Volunteer English Teacher', eyebrow: 'Volunteering · Education',
+        stat: '6 hrs', statLabel: 'per week for 2 semesters',
+        summary: 'Committed 6 hours per week for 2 semesters to supporting underprivileged high school seniors.',
+        paragraphs: ['Served as a volunteer English tutor for underprivileged high school seniors. Recognizing my own educational privilege, I committed six hours per week for two semesters to answering questions, reviewing essays, and ensuring that marginalized students—who often traveled for hours to reach the venue—received critical academic support before their college entrance exams.'],
+        media: ['seed-project-1.jpg', 'seed-project-2.jpg', 'seed-project-3.png', 'seed-project-4.png'].map((file) => `/portfolio/school/${file}`),
+        links: [
+          { label: 'News Report · ETtoday', href: 'https://www.ettoday.net/news/20190626/1475876.htm' },
+          { label: 'Facebook', href: 'https://www.facebook.com/ntututorteam/?locale=zh_TW' },
+          { label: 'Instagram', href: 'https://www.instagram.com/ntututorteam/' },
+        ],
+      },
+      { number: '02', title: 'Campus Experience', eyebrow: 'Leadership · Community', placeholder: true },
+      { number: '03', title: 'The Next Opportunity', eyebrow: 'Coming soon', placeholder: true },
+    ]} onSelect={setSelected} />
 
     {selected && <ProjectOverlay item={selected} onClose={() => setSelected(null)} />}
     <PortfolioFooter />
@@ -167,10 +194,11 @@ function JourneyStop({ stop }) {
     : <button className={`journey-stop ${expanded ? 'is-expanded' : ''}`} onClick={() => setExpanded((value) => !value)} aria-expanded={expanded}>{content}</button>
 }
 
-function ProjectRail({ title, subtitle, items, onSelect, placeholder = false }) {
+function ProjectRail({ title, subtitle, items, onSelect }) {
   return <section className="project-rail-section">
     {(title || subtitle) && <div className="rail-heading">{title && <h2>{title}</h2>}{subtitle && <p>{subtitle}</p>}</div>}
     <div className="project-rail">{items.map((item) => {
+      const placeholder = item.placeholder
       const cover = item.sources?.find((source) => source.type === 'image')?.src || item.media?.[0] || item.images?.[0] || item.extraMedia?.[0]
       const content = <><div className={`rail-cover ${placeholder ? 'is-placeholder' : ''}`}>{cover ? <img src={cover} alt="" /> : <span>{item.number}</span>}</div><div className="rail-copy"><span>{item.eyebrow || item.tag}</span><h3>{item.title}</h3>{item.stat && <div className="tile-stat"><div><strong>{item.stat}</strong><span>{item.statLabel}</span></div>{item.statSecondary && <div><strong>{item.statSecondary}</strong><span>{item.statSecondaryLabel}</span></div>}</div>}<p>{placeholder ? 'Details to be added.' : (item.summary || item.paragraphs[0])}</p>{!placeholder && <b>View project <span>↗</span></b>}</div></>
       return placeholder ? <article className="project-tile is-coming" key={item.number}>{content}</article> : <button className="project-tile" onClick={() => onSelect(item)} key={item.number}>{content}</button>
@@ -192,7 +220,7 @@ function ProjectOverlay({ item, onClose }) {
         <div className="gallery-thumbs">{sources.map((source, i) => <button key={source.src} className={active === i ? 'is-active' : ''} onClick={() => setActive(i)} aria-label={`Show project visual ${i + 1}`}>{source.type === 'video' ? <video src={source.src} muted preload="metadata" /> : <img src={source.src} alt="" />}{source.type === 'video' && <span>▶</span>}</button>)}</div>
         <div className="gallery-main">{current?.type === 'video' ? <video key={current.src} src={current.src} controls muted playsInline autoPlay aria-label={`${item.title} screen recording`} /> : <img src={current?.src} alt={`${item.title} selected project visual`} />}</div>
       </div>}
-      <div className="expanded-copy"><div className="project-rule"><span>{item.number}</span><span>{item.eyebrow || item.tag}</span></div><h2 id="expanded-project-title">{item.title}</h2>{item.stat && <div className="project-stat"><div><strong>{item.stat}</strong><span>{item.statLabel}</span></div>{item.statSecondary && <div><strong>{item.statSecondary}</strong><span>{item.statSecondaryLabel}</span></div>}</div>}{item.mediaNotes?.[active] && <div className="media-note"><strong>{item.mediaNotes[active].title}</strong>{item.mediaNotes[active].text && <p>{item.mediaNotes[active].text}</p>}</div>}{item.paragraphs.map((p) => <p key={p}>{p}</p>)}</div>
+      <div className="expanded-copy"><div className="project-rule"><span>{item.number}</span><span>{item.eyebrow || item.tag}</span></div><h2 id="expanded-project-title">{item.title}</h2>{item.stat && <div className="project-stat"><div><strong>{item.stat}</strong><span>{item.statLabel}</span></div>{item.statSecondary && <div><strong>{item.statSecondary}</strong><span>{item.statSecondaryLabel}</span></div>}</div>}{item.mediaNotes?.[active] && <div className="media-note"><strong>{item.mediaNotes[active].title}</strong>{item.mediaNotes[active].text && <p>{item.mediaNotes[active].text}</p>}</div>}{item.paragraphs.map((p) => <p key={p}>{p}</p>)}{item.links?.length > 0 && <nav className="project-links" aria-label="Project links">{item.links.map((link) => <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}</nav>}</div>
     </article>
   </div>
 }
