@@ -1,3 +1,4 @@
+import { trackProject } from '../analytics.js'
 import { useEffect, useState } from 'react'
 import IconAttribution from './IconAttribution.jsx'
 
@@ -145,7 +146,7 @@ export function WorkPage() {
   const [selected, setSelected] = useState(null)
   useEffect(() => {
     document.body.style.overflow = selected ? 'hidden' : ''
-    const closeOnEscape = (event) => { if (event.key === 'Escape') setSelected(null) }
+    const closeOnEscape = (event) => { if (event.key === 'Escape') (trackProject(null), setSelected(null)) }
     window.addEventListener('keydown', closeOnEscape)
     return () => {
       document.body.style.overflow = ''
@@ -159,7 +160,7 @@ export function WorkPage() {
       <div className="journey-track">{JOURNEY.map((stop) => <JourneyStop stop={stop} key={stop.title} />)}</div>
     </section>
 
-    <ProjectRail title="Creating Impact at Work" subtitle="Tap a project to see the full story" items={WORK} onSelect={setSelected} />
+    <ProjectRail title="Creating Impact at Work" subtitle="Tap a project to see the full story" items={WORK} onSelect={(item) => { trackProject(item.title); setSelected(item) }} />
     <ProjectRail title="Exploring Opportunities at School" subtitle="Tap a project to see the full story" items={[
       {
         number: '01', title: 'NTU Seed Project - Volunteer English Teacher', eyebrow: 'Volunteering · Education',
@@ -175,9 +176,9 @@ export function WorkPage() {
       },
       { number: '02', title: 'Campus Experience', eyebrow: 'Leadership · Community', placeholder: true },
       { number: '03', title: 'The Next Opportunity', eyebrow: 'Coming soon', placeholder: true },
-    ]} onSelect={setSelected} />
+    ]} onSelect={(item) => { trackProject(item.title); setSelected(item) }} />
 
-    {selected && <ProjectOverlay item={selected} onClose={() => setSelected(null)} />}
+    {selected && <ProjectOverlay item={selected} onClose={() => (trackProject(null), setSelected(null))} />}
     <PortfolioFooter />
   </main>
 }
@@ -229,15 +230,15 @@ export function ActivitiesPage() {
   const [selected, setSelected] = useState(null)
   useEffect(() => {
     document.body.style.overflow = selected ? 'hidden' : ''
-    const closeOnEscape = (event) => { if (event.key === 'Escape') setSelected(null) }
+    const closeOnEscape = (event) => { if (event.key === 'Escape') (trackProject(null), setSelected(null)) }
     window.addEventListener('keydown', closeOnEscape)
     return () => { document.body.style.overflow = ''; window.removeEventListener('keydown', closeOnEscape) }
   }, [selected])
 
   return <main className="portfolio-page activities-page activities-hub">
     <section className="activities-title"><h1>Spreading Happiness <em>and doing random things.</em></h1><p>Swipe through the stories</p></section>
-    <ProjectRail items={ACTIVITIES} onSelect={setSelected} />
-    {selected && <ProjectOverlay item={selected} onClose={() => setSelected(null)} />}
+    <ProjectRail items={ACTIVITIES} onSelect={(item) => { trackProject(item.title); setSelected(item) }} />
+    {selected && <ProjectOverlay item={selected} onClose={() => (trackProject(null), setSelected(null))} />}
     <PortfolioFooter />
   </main>
 }

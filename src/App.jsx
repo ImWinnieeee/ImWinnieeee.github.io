@@ -1,3 +1,4 @@
+import { trackPage } from './analytics.js'
 import data from './data.json'
 import StatsOverview from './components/StatsOverview.jsx'
 import TotalViews from './components/TotalViews.jsx'
@@ -122,6 +123,8 @@ const routeFromHash = () => {
 
 export default function App() {
   const [page, setPage] = useState(routeFromHash)
+
+  useEffect(() => { trackPage(page) }, [page])
 
   useEffect(() => {
     const onHashChange = () => setPage(routeFromHash())
