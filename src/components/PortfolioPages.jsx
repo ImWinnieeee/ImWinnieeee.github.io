@@ -138,6 +138,13 @@ const ACTIVITIES = [1, 4, 0, 5, 7, 2, 8, 3, 6].map((itemIndex, position) => ({
   number: String(position + 1).padStart(2, '0'),
 }))
 
+// Keep numeric plus signs compact in cards, headings, and expanded stories.
+function compactPlus(text) {
+  return typeof text === 'string' ? text.split(/([+＋])/).map((part, index) =>
+    /[+＋]/.test(part) ? <span className="numeric-plus" key={index}>+</span> : part
+  ) : text
+}
+
 function PageIntro({ kicker, title, children }) {
   return <header className="portfolio-intro fade-up"><p>{kicker}</p><h1>{title}</h1><div className="intro-copy">{children}</div></header>
 }
@@ -201,7 +208,7 @@ function ProjectRail({ title, subtitle, items, onSelect }) {
     <div className="project-rail">{items.map((item) => {
       const placeholder = item.placeholder
       const cover = item.sources?.find((source) => source.type === 'image')?.src || item.media?.[0] || item.images?.[0] || item.extraMedia?.[0]
-      const content = <><div className={`rail-cover ${placeholder ? 'is-placeholder' : ''}`}>{cover ? <img src={cover} alt="" /> : <span>{item.number}</span>}</div><div className="rail-copy"><span>{item.eyebrow || item.tag}</span><h3>{item.title}</h3>{item.stat && <div className="tile-stat"><div><strong>{item.stat}</strong><span>{item.statLabel}</span></div>{item.statSecondary && <div><strong>{item.statSecondary}</strong><span>{item.statSecondaryLabel}</span></div>}</div>}<p>{placeholder ? 'Details to be added.' : (item.summary || item.paragraphs[0])}</p>{!placeholder && <b>View project <span>↗</span></b>}</div></>
+      const content = <><div className={`rail-cover ${placeholder ? 'is-placeholder' : ''}`}>{cover ? <img src={cover} alt="" /> : <span>{item.number}</span>}</div><div className="rail-copy"><span>{item.eyebrow || item.tag}</span><h3>{compactPlus(item.title)}</h3>{item.stat && <div className="tile-stat"><div><strong>{compactPlus(item.stat)}</strong><span>{compactPlus(item.statLabel)}</span></div>{item.statSecondary && <div><strong>{compactPlus(item.statSecondary)}</strong><span>{compactPlus(item.statSecondaryLabel)}</span></div>}</div>}<p>{compactPlus(placeholder ? 'Details to be added.' : (item.summary || item.paragraphs[0]))}</p>{!placeholder && <b>View project <span>↗</span></b>}</div></>
       return placeholder ? <article className="project-tile is-coming" key={item.number}>{content}</article> : <button className="project-tile" onClick={() => onSelect(item)} key={item.number}>{content}</button>
     })}</div>
   </section>
@@ -221,7 +228,7 @@ function ProjectOverlay({ item, onClose }) {
         <div className="gallery-thumbs">{sources.map((source, i) => <button key={source.src} className={active === i ? 'is-active' : ''} onClick={() => setActive(i)} aria-label={`Show project visual ${i + 1}`}>{source.type === 'video' ? <video src={source.src} muted preload="metadata" /> : <img src={source.src} alt="" />}{source.type === 'video' && <span>▶</span>}</button>)}</div>
         <div className="gallery-main">{current?.type === 'video' ? <video key={current.src} src={current.src} controls muted playsInline autoPlay aria-label={`${item.title} screen recording`} /> : <img src={current?.src} alt={`${item.title} selected project visual`} />}</div>
       </div>}
-      <div className="expanded-copy"><div className="project-rule"><span>{item.number}</span><span>{item.eyebrow || item.tag}</span></div><h2 id="expanded-project-title">{item.title}</h2>{item.stat && <div className="project-stat"><div><strong>{item.stat}</strong><span>{item.statLabel}</span></div>{item.statSecondary && <div><strong>{item.statSecondary}</strong><span>{item.statSecondaryLabel}</span></div>}</div>}{item.mediaNotes?.[active] && <div className="media-note"><strong>{item.mediaNotes[active].title}</strong>{item.mediaNotes[active].text && <p>{item.mediaNotes[active].text}</p>}</div>}{item.paragraphs.map((p) => <p key={p}>{p}</p>)}{item.links?.length > 0 && <nav className="project-links" aria-label="Project links">{item.links.map((link) => <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}</nav>}</div>
+      <div className="expanded-copy"><div className="project-rule"><span>{item.number}</span><span>{item.eyebrow || item.tag}</span></div><h2 id="expanded-project-title">{compactPlus(item.title)}</h2>{item.stat && <div className="project-stat"><div><strong>{compactPlus(item.stat)}</strong><span>{compactPlus(item.statLabel)}</span></div>{item.statSecondary && <div><strong>{compactPlus(item.statSecondary)}</strong><span>{compactPlus(item.statSecondaryLabel)}</span></div>}</div>}{item.mediaNotes?.[active] && <div className="media-note"><strong>{item.mediaNotes[active].title}</strong>{item.mediaNotes[active].text && <p>{item.mediaNotes[active].text}</p>}</div>}{item.paragraphs.map((p) => <p key={p}>{compactPlus(p)}</p>)}{item.links?.length > 0 && <nav className="project-links" aria-label="Project links">{item.links.map((link) => <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}</nav>}</div>
     </article>
   </div>
 }

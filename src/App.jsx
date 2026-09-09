@@ -79,17 +79,17 @@ function FoodMap() {
 
       <main className="max-w-5xl mx-auto px-4 pb-24 space-y-10">
         {/* 2. Hero: most viewed photos (9M+ views) */}
-        <section id="photos" className="scroll-mt-6">
+        <section id="photos" className="food-section">
           <TopPhotos photos={topPhotos} videos={topVideos} totalViews={stats.totalPhotoViews} />
         </section>
 
         {/* 1. Most viewed reviews (bilingual marquee) */}
-        <section id="reviews" className="scroll-mt-6">
+        <section id="reviews" className="food-section">
           <MostViewed reviews={mostViewed} />
         </section>
 
         {/* Most reacted reviews (marquee) */}
-        <div id="impact" className="scroll-mt-6"><TopReacted reviews={mostReacted} /></div>
+        <div id="impact" className="food-section"><TopReacted reviews={mostReacted} /></div>
 
         {/* Businesses that personally replied */}
         <section>
@@ -97,12 +97,12 @@ function FoodMap() {
         </section>
 
         {/* 3. Map with country tabs */}
-        <section id="map" className="scroll-mt-6">
+        <section id="map" className="food-section">
           <MapView reviews={reviews} />
         </section>
 
         {/* 5. Favorite categories */}
-        <section id="categories" className="scroll-mt-6">
+        <section id="categories" className="food-section">
           <Categories favorites={favorites} />
         </section>
 

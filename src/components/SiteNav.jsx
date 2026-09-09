@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react'
+
 const TABS = [
   { id: 'food-map', label: "Winnie's Food Map" },
   { id: 'activities', label: 'Community & Activities' },
@@ -5,8 +7,16 @@ const TABS = [
 ]
 
 export default function SiteNav({ active, onChange }) {
+  const navRef = useRef(null)
+  useEffect(() => {
+    const updateHeight = () => document.documentElement.style.setProperty('--site-nav-height', `${navRef.current.getBoundingClientRect().height}px`)
+    updateHeight()
+    const observer = new ResizeObserver(updateHeight)
+    observer.observe(navRef.current)
+    return () => observer.disconnect()
+  }, [])
   return (
-    <div className="site-nav-wrap">
+    <div ref={navRef} className="site-nav-wrap">
       <nav className="site-nav" aria-label="Portfolio sections">
         <div className="site-tabs">
           {TABS.map((tab) => (

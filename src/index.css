@@ -323,7 +323,7 @@ body {
 .tile-stat { display: grid; gap: .45rem; width: 100%; margin: 0 0 .9rem; padding-bottom: .8rem; border-bottom: 1px solid var(--color-line); }
 .tile-stat > div { display: flex; align-items: end; gap: .6rem; }
 .tile-stat strong { color: var(--color-vermilion); font-size: 1.75rem; line-height: .85; letter-spacing: -.05em; }
-.tile-stat span { max-width: 145px; color: var(--color-ink-soft); font-size: .56rem; line-height: 1.2; letter-spacing: .05em; text-transform: uppercase; }
+.tile-stat > div > span { max-width: 145px; color: var(--color-ink-soft); font-size: .56rem; line-height: 1.2; letter-spacing: .05em; text-transform: uppercase; }
 
 .project-stat { display: grid; gap: .7rem; }
 .project-stat > div { display: flex; align-items: end; gap: 1rem; }
@@ -608,3 +608,17 @@ button.journey-stop {
 
 .tile-stat strong,
 .project-stat strong { white-space: nowrap; flex-shrink: 0; }
+
+/* Keep Leaflet's internal panes below the sticky portfolio navigation. */
+.map-frame { position: relative; isolation: isolate; z-index: 0; }
+.food-section { scroll-margin-top: calc(var(--site-nav-height, 80px) + 20px); }
+.journey-card img[src="/portfolio/journey/ntu.jpg"] { object-position: center top; }
+.portfolio-page .numeric-plus {
+  font-family: Arial, sans-serif;
+  font-size: .72em;
+  font-weight: inherit;
+  line-height: 1;
+  letter-spacing: 0;
+  display: inline;
+  vertical-align: .08em;
+}

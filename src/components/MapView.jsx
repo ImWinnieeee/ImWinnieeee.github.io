@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Tooltip, useMap } from 'react-leaflet'
 import { CATEGORY_META, COUNTRY_META, formatViews } from '../lib.js'
 
@@ -146,6 +146,14 @@ export default function MapView({ reviews }) {
     [shown]
   )
 
+  const markerRefs = useRef(new Map())
+  useEffect(() => {
+    // Restore source order first, then lift the selected category above all others.
+    shown.forEach((review) => markerRefs.current.get(review.id)?.bringToFront())
+    if (activeCat) shown.filter((review) => review.category === activeCat)
+      .forEach((review) => markerRefs.current.get(review.id)?.bringToFront())
+  }, [shown, activeCat])
+
   const center = shown.length ? [shown[0].lat, shown[0].lng] : [25.04, 121.54]
 
   return (
@@ -195,7 +203,7 @@ export default function MapView({ reviews }) {
         )}
       </div>
 
-      <div className="overflow-hidden rounded-2xl ring-1 ring-[var(--color-line)]" style={{ height: 420 }}>
+      <div className="map-frame overflow-hidden rounded-2xl ring-1 ring-[var(--color-line)]" style={{ height: 420 }}>
         <MapContainer center={center} zoom={12} zoomSnap={0} style={{ height: '100%', width: '100%' }} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; OpenStreetMap, &copy; CARTO'
@@ -211,6 +219,10 @@ export default function MapView({ reviews }) {
             return (
               <CircleMarker
                 key={r.id}
+                ref={(marker) => {
+                  if (marker) markerRefs.current.set(r.id, marker)
+                  else markerRefs.current.delete(r.id)
+                }}
                 center={[r.lat, r.lng]}
                 radius={isActive ? 11 : dimmed ? 6 : 9}
                 pathOptions={{ color: '#fff', fillColor: dimmed ? '#b3a896' : meta.color, fillOpacity: dimmed ? 0.3 : 0.9, weight: isActive ? 3.5 : 2.5, opacity: dimmed ? 0.5 : 1 }}
