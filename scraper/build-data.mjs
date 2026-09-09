@@ -91,10 +91,26 @@ const csvFile = fs.readdirSync(OUT)
   .sort((a, b) => b.t - a.t)[0]?.f
 if (!csvFile) throw new Error('No views_and_reactions*.csv found in scraper/output/')
 console.log('using CSV:', csvFile)
-const csvRows = fs.readFileSync(path.join(OUT, csvFile), 'utf8').trim().split('\n').slice(1)
+// Respect quoted commas and escaped quotes in exported store names.
+function parseCsv(text) {
+  const rows = []
+  let row = [], field = '', quoted = false
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i]
+    if (char === '"') {
+      if (quoted && text[i + 1] === '"') { field += '"'; i++ }
+      else quoted = !quoted
+    } else if (!quoted && (char === ',' || char === '\n')) {
+      row.push(field.replace(/\r$/, '')); field = ''
+      if (char === '\n') { rows.push(row); row = [] }
+    } else field += char
+  }
+  if (field || row.length) { row.push(field.replace(/\r$/, '')); rows.push(row) }
+  return rows
+}
+const csvRows = parseCsv(fs.readFileSync(path.join(OUT, csvFile), 'utf8')).slice(1)
 const viewsCsv = [], reactsCsv = []
-for (const line of csvRows) {
-  const c = line.split(',')
+for (const c of csvRows) {
   if (c[0] && c[1] && !isNaN(+c[1])) viewsCsv.push([c[0].trim(), +c[1]])
   if (c[3] && c[4] && !isNaN(+c[4])) reactsCsv.push([c[3].trim(), +c[4]])
 }
@@ -102,9 +118,10 @@ viewsCsv.sort((a, b) => b[1] - a[1])
 reactsCsv.sort((a, b) => b[1] - a[1])
 
 // match a CSV store name to a scraped review
-const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9一-鿿]/g, '')
+const norm = (s) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9一-鿿]/g, '')
 const findReview = (name) => {
-  const t = norm(name)
+  const aliases = { 'HI MATE!': 'HI MATE ！( LO 15:30 )' }
+  const t = norm(aliases[name] || name)
   return parsed.find((x) => norm(x.place) === t)
     || parsed.find((x) => norm(x.place) && (norm(x.place).includes(t) || t.includes(norm(x.place))) && Math.min(norm(x.place).length, t.length) > 4)
     || null
@@ -208,6 +225,17 @@ const mostReacted = reactsCsv.map(([name, v]) => { const r = findReview(name); r
     reactions, img: imgOf(r), url: reviewUrl(r), en: EN[r.place] || '', zh: zhClean(r.text),
     why: WHY[r.place] || '',
   }))
+
+// Refresh the manually supplied leaderboards without rebuilding scraped data.
+if (process.argv.includes('--review-numbers-only')) {
+  if (!previousData) throw new Error('Existing site data is required for a numbers-only update')
+  fs.writeFileSync(previousDataPath, JSON.stringify({
+    ...previousData, mostViewed, mostReacted,
+    stats: { ...previousData.stats, updatedAt: new Date().toISOString() },
+  }, null, 2))
+  console.log(`Updated ${mostViewed.length} viewed and ${mostReacted.length} reacted reviews`)
+  process.exit(0)
+}
 
 // ---- businesses replied to (5 hand-picked) ----
 const ownerReplies = REPLY_PICKS.map((name) => findReview(name)).filter(Boolean).map((r) => ({
