@@ -43,8 +43,8 @@ function FoodMap() {
           <div className="self-end text-right text-[10px] sm:text-xs font-medium leading-snug text-[var(--color-ink-soft)] tabular-nums md:absolute md:right-0 md:top-0">
             <div>Number Updated at</div>
             <div className="mt-0.5">{new Date(stats.updatedAt).toLocaleString('en-US', {
-              year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
-            })}</div>
+              year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Taipei',
+            })} (UTC+8)</div>
           </div>
 
           <div className="mt-3 md:mt-0 text-2xl sm:text-3xl tracking-widest">🍣 🍝 🍜 🍰 🧋</div>

@@ -13,6 +13,7 @@ function Card({ r, i }) {
         bg-[var(--color-vermilion)] text-white font-display text-sm font-black shadow-md">#{i + 1}</span>
       <div className="flex gap-3">
         {r.img && <img src={r.img} alt={r.place} loading="lazy"
+          style={{ objectPosition: r.imgPosition || '50% 50%' }}
           className="h-16 w-16 shrink-0 rounded-xl object-cover ring-1 ring-[var(--color-line)]" />}
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1.5">

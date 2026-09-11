@@ -7,6 +7,7 @@
 import fs from 'fs'
 import path from 'path'
 import readline from 'readline'
+import { reviewImage, reviewImagePosition } from './review-image.mjs'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -162,6 +163,8 @@ const fixCat = (_p, c) => c
 
 // ---- English translations I authored for the featured reviews ----
 const EN = {
+  "HI MATE ！( LO 15:30 )": "Delicious brunch and worth the wait. Not the cheapest, but compared with similarly priced places in Taipei, the portions are generous and every part of the meal tastes great. A lovely way to start the day.",
+  "MENYA INOICHI #3": "Found the Uji branch of Kyoto’s Inoichi ramen after struggling to get into the main shop. Arriving around 1:30pm on a Saturday, both indoor waiting areas were full, with roughly 20 people ahead of us; we were the first group waiting outside.",
   Celebread: 'Snagged the very last miso-edamame sourdough loaf. Genuinely sour with every bite, with a bread aroma that lingers after you swallow. Pricey but worth it — a true sourdough institution.',
   'CREM奶油甜點專門店 ( 週一至週日468吋蛋糕均可取貨 )': "Ordered a (very pricey) cake for a coworker's birthday. From service to packaging to the cake itself, everything was in a class of its own — even ten stainless-steel cutlery sets and a custom photo card.",
   'Botega del Vin': 'Lives up to the unanimous praise. Today I especially loved the mixed antipasti and the lasagna. About NT$2,200 for two (a starter, two mains, a dessert, a latte).',
@@ -199,11 +202,13 @@ const imgOf = (r) => big((r.images || [])[0] || null)
 const mostViewed = viewsCsv.map(([name, v]) => { const r = findReview(name); return r ? [r, v] : null })
   .filter(Boolean).slice(0, 10).map(([r, views]) => ({
     place: disp(r.place), category: fixCat(r.place, r.category), country: r.country, region: r.region,
-    rating: r.rating, views, img: imgOf(r), url: reviewUrl(r), en: EN[r.place] || '', zh: zhClean(r.text),
+    rating: r.rating, views, img: reviewImage(r), imgPosition: reviewImagePosition(r), url: reviewUrl(r), en: EN[r.place] || '', zh: zhClean(r.text),
   }))
 
 // why each most-reacted review resonated — what useful thing it gave readers
 const WHY = {
+  "MENYA INOICHI #3": "Gives a concrete queue snapshot for the Uji branch: roughly 20 people ahead at 1:30pm on a Saturday.",
+  "福太郎本店": "Shares a Japanese dining companion’s positive verdict alongside an observation that many fellow diners were Taiwanese or Korean.",
   'PATISSERIE TEN&': 'Names exactly what to order — the cream puff and the canelé — at a spot Taiwanese travelers were already buzzing about.',
   'Kobe Port Tower': 'There were almost no guides online, so she wrote the one visitors were missing.',
   'Milk Shop Luck Akihabara': 'Insider mechanics most people miss — where the real ranking board is, and how the bottle-deposit system works.',
@@ -222,7 +227,7 @@ const WHY = {
 const mostReacted = reactsCsv.map(([name, v]) => { const r = findReview(name); return r ? [r, v] : null })
   .filter(Boolean).slice(0, 10).map(([r, reactions]) => ({
     place: disp(r.place), category: fixCat(r.place, r.category), country: r.country,
-    reactions, img: imgOf(r), url: reviewUrl(r), en: EN[r.place] || '', zh: zhClean(r.text),
+    reactions, img: reviewImage(r), imgPosition: reviewImagePosition(r), url: reviewUrl(r), en: EN[r.place] || '', zh: zhClean(r.text),
     why: WHY[r.place] || '',
   }))
 
