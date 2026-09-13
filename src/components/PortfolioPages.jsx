@@ -75,7 +75,7 @@ const ACTIVITY_ITEMS = [
   { number: '03', title: 'Inadvertent Social Media Sensation', tag: 'A very serious dating analysis', images: mediaRange('viral', 3), paragraphs: [
     "I once unexpectedly went viral after appearing in a street interview by HahaTai, a Taiwanese YouTube channel with over 1 million subscribers. The topic was “Dating a Player vs. Someone Who’s Been Single Their Whole Life,” and I gave a very serious analysis of why someone with zero dating experience might actually make a great partner. My candid and slightly contrarian take ended up reaching over 1 million views on YouTube and 600K+ plays on Instagram—probably one of the most unexpected viral moments of my life.",
   ]},
-  { number: '04', title: 'Doodle Everywhere', tag: 'Thinking with a pen in hand', images: mediaRange('doodles', 12), paragraphs: [
+  { number: '04', title: 'Doodle Everywhere', tag: 'Thinking with a pen in hand', images: [1, 2, 5, 6, 7, 'IMG_2397', 8, 9, 10, 11, 12, 'IMG_2395', 3, 4, 'IMG_2396'].map((file) => `/portfolio/activities/doodles/${file}.jpg`), paragraphs: [
     "I’ve always loved doodling—on textbooks as a student, on office whiteboards after I started working, and occasionally even in my colleagues’ notebooks. Surprisingly, keeping my hands busy helps me focus and gives my mind more space to think. So whenever there’s a pen and a blank piece of paper nearby, chances are I’ll start sketching whatever random thing catches my eye.",
     "Doodling is also one of the ways I document my life. I’ve drawn portraits of teammates as farewell gifts, sketched the medieval magic and adventures I encountered while playing LARP, and illustrated desserts that were simply too good not to remember. I love adding drawings and splashes of color alongside plain words—making everyday memories a little more vivid, playful, and uniquely mine.",
   ]},
@@ -87,8 +87,9 @@ const ACTIVITY_ITEMS = [
   { number: '06', title: 'Board Games, Escape Rooms & LARP', tag: 'Puzzles that bring people together', sources: [
     ...numberedActivityMedia('board-games', 12, [7]).slice(0, 2),
     { type: 'image', src: '/portfolio/activities/board-games/03-fixed.jpg' },
-    ...numberedActivityMedia('board-games', 12, [7]).slice(3, 8),
-    ...numberedActivityMedia('board-games', 12, [7]).slice(9),
+    ...numberedActivityMedia('board-games', 12, [7]).slice(3, -1),
+    { type: 'image', src: '/portfolio/activities/board-games/13.jpg' },
+    ...numberedActivityMedia('board-games', 12, [7]).slice(-1),
   ], paragraphs: [
     "I'm a longtime fan of anything that involves puzzles, strategy, deduction, or role-playing. From board games and escape rooms to murder mysteries and LARP.",
     "I have three different groups of friends that I regularly play with, with friendships spanning from university to work. I've also joined games and escape rooms with groups of 6–10 complete strangers. I love the challenge of figuring things out together, but even more than that, I love how games give me a reason to stay close to old friends—and an unusually easy way to turn strangers into new ones.",
@@ -181,8 +182,36 @@ export function WorkPage() {
           { label: 'Instagram', href: 'https://www.instagram.com/ntututorteam/' },
         ],
       },
-      { number: '02', title: 'Campus Experience', eyebrow: 'Leadership · Community', placeholder: true },
-      { number: '03', title: 'The Next Opportunity', eyebrow: 'Coming soon', placeholder: true },
+      {
+        number: '02', title: 'Curious about everything', eyebrow: 'Learning · Exploration',
+        summary: 'Explored subjects far beyond my major through hands-on electives and a curiosity for how the world works.',
+        paragraphs: ['Expanded my intellectual boundaries through diverse electives. From urban farming, stargazing (for 6 months straight), and entomology (raising swallowtail butterflies from egg to emergence) to forensics, criminology, and human-computer interaction, I sought hands-on learning to cultivate a multidisciplinary worldview.'],
+        media: [2, 1, 3, 4, 5, 7, 6, 10, 9, 8].map((i) => `/portfolio/school/curiosity-${String(i).padStart(2, '0')}.jpg`),
+        mediaNotes: [
+          'Hand-on Experience of Modern Agriculture - Tilling the soli',
+          'Hand-on Experience of Modern Agriculture - Built plant trellis',
+          'Hand-on Experience of Modern Agriculture - baby cabbage',
+          'Hand-on Experience of Modern Agriculture - baby green pepper',
+          'Hand-on Experience of Modern Agriculture - tomatoes',
+          'Insects and the Life of Mankind - My Caterpillar',
+          'Insects and the Life of Mankind - Became Butterfly!',
+          'Stargazing - Summer Triangle',
+          'Stargazing - Mars',
+          'NTU Azalea Festival Ambassador',
+        ].map((title) => ({ title })),
+      },
+      {
+        number: '03', title: 'Saddle (NTU Marketing Entrepreneurship Project)', eyebrow: 'Entrepreneurship · Marketing',
+        summary: 'Led a 9-member team to launch Saddle, selling 1,000+ covers in 2 months and ranking #1 in course sales.',
+        paragraphs: ['Led a 9-member cross-functional team to develop and launch a waterproof bicycle-seat cover, overseeing end-to-end R&D, supply chain management, marketing, and service. Achieved #1 course sales rank by selling 1,000+ units in 2 months, creating a lasting product presence on campus long after graduation.'],
+        media: [2, 3, 4, 1].map((i) => `/portfolio/school/saddle-${String(i).padStart(2, '0')}.jpg`),
+        mediaNotes: [
+          'Entrepreneurship - Saddle Bicycle Seat Waterproof Cover Product 1 (Dec 2018)',
+          'Entrepreneurship - Saddle Bicycle Seat Waterproof Cover Product 2 (Dec 2018)',
+          'Entrepreneurship - Saddle Bicycle Seat Waterproof Cover Product 3 (Dec 2018)',
+          'Entrepreneurship - Saddle Bicycle Seat Waterproof Cover - Still can be seen on Apr 2022',
+        ].map((title) => ({ title, ...(title.includes('Apr 2022') ? { text: 'A NTU campus facebook post from April 2022 showed our Saddle cover still on campus, four years after the project ended.' } : {}) })),
+      },
     ]} onSelect={(item) => { trackProject(item.title); setSelected(item) }} />
 
     {selected && <ProjectOverlay item={selected} onClose={() => (trackProject(null), setSelected(null))} />}
