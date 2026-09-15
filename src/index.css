@@ -241,6 +241,11 @@ body {
 .activities-page .portfolio-intro h1 em { color: var(--color-sakura); }
 .activities-page .portfolio-intro > p { color: var(--color-sakura); }
 .portfolio-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 4rem 0 0; color: var(--color-ink-soft); font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; }
+.contact-links { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .4rem .85rem; position: relative; margin: 0 0 1.5rem; font-size: .9rem; letter-spacing: normal; text-transform: none; }
+.portfolio-footer .contact-links { flex-basis: 100%; margin: .25rem 0 0; }
+.contact-links a { color: var(--color-vermilion); text-decoration: underline; text-underline-offset: .2em; }
+.contact-links a:hover { color: var(--color-ink); }
+.contact-feedback { position: absolute; top: 100%; left: 0; right: 0; padding-top: .35rem; text-align: center; color: var(--color-ink-soft); font-size: .75rem; }
 .portfolio-footer .icon-attribution { flex-basis: 100%; margin-top: .5rem; text-align: center; text-transform: none; letter-spacing: 0; }
 
 @media (max-width: 720px) {

@@ -1,6 +1,7 @@
 import { trackProject } from '../analytics.js'
 import { useEffect, useState } from 'react'
 import IconAttribution from './IconAttribution.jsx'
+import ContactLinks from './ContactLinks.jsx'
 
 const campaignReviewMedia = Array.from({ length: 3 }, (_, i) => `/portfolio/work/campaign-review-${i + 1}.png`)
 const productVideo = '/portfolio/work/product-features.mp4'
@@ -280,5 +281,5 @@ export function ActivitiesPage() {
 }
 
 function PortfolioFooter() {
-  return <footer className="portfolio-footer"><span>Curious by nature.</span><span>Playful on purpose.</span><span>Built with care.</span><IconAttribution /></footer>
+  return <footer className="portfolio-footer"><span>Curious by nature.</span><span>Playful on purpose.</span><span>Built with care.</span><ContactLinks /><IconAttribution /></footer>
 }

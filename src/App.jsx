@@ -12,6 +12,7 @@ import BackToTop from './components/BackToTop.jsx'
 import DataSource from './components/DataSource.jsx'
 import SiteNav from './components/SiteNav.jsx'
 import IconAttribution from './components/IconAttribution.jsx'
+import ContactLinks from './components/ContactLinks.jsx'
 import { ActivitiesPage, WorkPage } from './components/PortfolioPages.jsx'
 import { useEffect, useState } from 'react'
 
@@ -107,6 +108,7 @@ function FoodMap() {
         </section>
 
         <footer className="text-center text-xs text-[var(--color-ink-soft)] pt-8">
+          <ContactLinks />
           <div>Handcrafted with React + Vite + Tailwind · Data scraped from my Google Maps Local Guide contributions</div>
           <DataSource />
           <div><IconAttribution /></div>
