@@ -163,6 +163,7 @@ const fixCat = (_p, c) => c
 
 // ---- English translations I authored for the featured reviews ----
 const EN = {
+  'La Nuova Piazzetta': 'Near the Colosseum — we waited just over 30 minutes with about four groups ahead. Three of us shared two lasagnas and a carbonara for €19 per person.',
   "HI MATE ！( LO 15:30 )": "Delicious brunch and worth the wait. Not the cheapest, but compared with similarly priced places in Taipei, the portions are generous and every part of the meal tastes great. A lovely way to start the day.",
   "MENYA INOICHI #3": "Found the Uji branch of Kyoto’s Inoichi ramen after struggling to get into the main shop. Arriving around 1:30pm on a Saturday, both indoor waiting areas were full, with roughly 20 people ahead of us; we were the first group waiting outside.",
   Celebread: 'Snagged the very last miso-edamame sourdough loaf. Genuinely sour with every bite, with a bread aroma that lingers after you swallow. Pricey but worth it — a true sourdough institution.',
@@ -207,6 +208,7 @@ const mostViewed = viewsCsv.map(([name, v]) => { const r = findReview(name); ret
 
 // why each most-reacted review resonated — what useful thing it gave readers
 const WHY = {
+  'La Nuova Piazzetta': 'Helps travelers plan a meal near the Colosseum with a firsthand queue estimate, the dishes ordered, and a clear €19-per-person cost.',
   "MENYA INOICHI #3": "Gives a concrete queue snapshot for the Uji branch: roughly 20 people ahead at 1:30pm on a Saturday.",
   "福太郎本店": "Shares a Japanese dining companion’s positive verdict alongside an observation that many fellow diners were Taiwanese or Korean.",
   'PATISSERIE TEN&': 'Names exactly what to order — the cream puff and the canelé — at a spot Taiwanese travelers were already buzzing about.',
