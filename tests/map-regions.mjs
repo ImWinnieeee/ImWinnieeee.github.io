@@ -16,7 +16,7 @@ try {
     const page = await browser.newPage({ viewport })
     const errors = []
     page.on('pageerror', error => errors.push(error.message))
-    await page.route('https://tile.openstreetmap.org/**', route => route.fulfill({
+    await page.route('https://basemaps.cartocdn.com/**', route => route.fulfill({
       contentType: 'image/png',
       body: Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aWZkAAAAASUVORK5CYII=', 'base64'),
     }))
@@ -32,10 +32,13 @@ try {
       })
       const urls = await card.locator('.leaflet-tile').evaluateAll(imgs => imgs.map(i => i.src))
       for (const url of urls) {
-        const match = url.match(/^https:\/\/tile\.openstreetmap\.org\/(\d+)\/(\d+)\/(\d+)\.png$/)
-        assert(match, url)
+        const tile = new URL(url)
+        assert.equal(tile.hostname, 'basemaps.cartocdn.com')
+        assert(tile.searchParams.get('key'), 'CARTO key is required')
+        const match = tile.pathname.match(/^\/light_all\/(\d+)\/(\d+)\/(\d+)\.png$/)
+        assert(match, tile.pathname)
         const [z, x, y] = match.slice(1).map(Number)
-        assert(z >= 2 && z <= 19 && x < 2 ** z && y < 2 ** z, url)
+        assert(z >= 2 && z <= 19 && x < 2 ** z && y < 2 ** z, tile.pathname)
       }
       checks++
       console.log(`${viewport.width}px ${label}: ${count} pins, valid tiles`)

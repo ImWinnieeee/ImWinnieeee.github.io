@@ -206,8 +206,8 @@ export default function MapView({ reviews }) {
       <div className="map-frame overflow-hidden rounded-2xl ring-1 ring-[var(--color-line)]" style={{ height: 420 }}>
         <MapContainer center={center} zoom={12} minZoom={2} maxZoom={19} zoomSnap={0} style={{ height: '100%', width: '100%' }} scrollWheelZoom={false}>
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>'
+            url="https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png?key=cb1_41xv_1_6cf38e4d965db6af75b6d7b7"
             maxZoom={19}
           />
           <FitBounds pts={shown} boundsKey={`${active}|${activeRegion || ''}`} />
