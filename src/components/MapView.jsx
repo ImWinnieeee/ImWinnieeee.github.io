@@ -11,7 +11,7 @@ function FitBounds({ pts, boundsKey }) {
     if (pts.length === 1) {
       map.setView([pts[0].lat, pts[0].lng], 16)
     } else {
-      map.fitBounds(pts.map((p) => [p.lat, p.lng]), { padding: [40, 40] })
+      map.fitBounds(pts.map((p) => [p.lat, p.lng]), { padding: [40, 40], maxZoom: 16 })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [boundsKey])
@@ -204,10 +204,11 @@ export default function MapView({ reviews }) {
       </div>
 
       <div className="map-frame overflow-hidden rounded-2xl ring-1 ring-[var(--color-line)]" style={{ height: 420 }}>
-        <MapContainer center={center} zoom={12} zoomSnap={0} style={{ height: '100%', width: '100%' }} scrollWheelZoom={false}>
+        <MapContainer center={center} zoom={12} minZoom={2} maxZoom={19} zoomSnap={0} style={{ height: '100%', width: '100%' }} scrollWheelZoom={false}>
           <TileLayer
-            attribution='&copy; OpenStreetMap, &copy; CARTO'
-            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+            maxZoom={19}
           />
           <FitBounds pts={shown} boundsKey={`${active}|${activeRegion || ''}`} />
           <TrackpadPinchZoom />
