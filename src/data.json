@@ -1769,7 +1769,7 @@
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT25CZlpFVnplRTVsTkZnNVh6SXRWMnhrTW5wV1EzYxAB",
       "place": "Ebisu Curry",
-      "category": "Southeast Asian",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3561,7 +3561,7 @@
     {
       "id": "ChdDSUhNMG9nS0VKTE03ZHZPa2RHUW9nRRAB",
       "place": "彩豚屋 CAI TUN WU 八德店",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3673,7 +3673,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnTUN3Xy1YcnlBRRAB",
       "place": "莓圃草莓園",
-      "category": "Taiwanese & Chinese",
+      "category": "Attraction",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -3896,7 +3896,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNfeFpERWVBEAE",
       "place": "Backlot Cafe",
-      "category": "Drinks",
+      "category": "Japanese",
       "country": "Japan",
       "region": "Tokyo",
       "rating": 5,
@@ -4328,7 +4328,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURyMDVlSi13RRAB",
       "place": "豆豆里 DODOLI（永康旗艦店）",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4424,7 +4424,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUR6bVlEVGFREAE",
       "place": "GumGum Beer & Wings",
-      "category": "Taiwanese & Chinese",
+      "category": "Italian",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -4952,7 +4952,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUNkdU82TVFBEAE",
       "place": "Bula Kaya Toast (Tainan)",
-      "category": "Taiwanese & Chinese",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Tainan",
       "rating": 5,
@@ -5416,7 +5416,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNGMmVhNW9BRRAB",
       "place": "PRESS BUTTER SAND 新光三越Diamond Towers",
-      "category": "Attraction",
+      "category": "Desserts & Cafe",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5592,7 +5592,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUNwMzRUVHNBRRAB",
       "place": "夜店食堂",
-      "category": "Taiwanese & Chinese",
+      "category": "Japanese",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -5944,7 +5944,7 @@
     {
       "id": "ChZDSUhNMG9nS0VJQ0FnSUR4Z3JiYWFBEAE",
       "place": "曉陽明2·奇岩欣境",
-      "category": "Taiwanese & Chinese",
+      "category": "Other",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -7027,7 +7027,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSUR5eW82aGhRRRAB",
       "place": "倆倆號 22KEBAB公館汀洲店",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
@@ -7153,7 +7153,7 @@
     {
       "id": "ChdDSUhNMG9nS0VJQ0FnSURjNXR1djVBRRAB",
       "place": "小旺號 - 公館店",
-      "category": "Taiwanese & Chinese",
+      "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,

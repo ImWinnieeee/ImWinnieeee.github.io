@@ -51,6 +51,10 @@ const todo = Object.keys(reviewUrls).filter((id) => reviewUrls[id] && !(cache[id
 const already = Object.values(cache).filter((v) => v.fromLink).length
 console.log(`resolving ${todo.length} share links → coordinates (${CONCURRENCY} parallel headless tabs)…`)
 if (already) console.log(`   (${already} already resolved on a previous run — skipping)`)
+if (todo.length === 0) {
+  console.log('✅ No new coordinates to resolve — continuing to the next step.')
+  process.exit(0)
+}
 
 const browser = await chromium.launch({ headless: true })
 let resolved = 0, kept = 0, done = 0

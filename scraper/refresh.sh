@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # 純更新「數據」：登入 → 擷取影片影格 → 抓 Google Maps 資料
-#                → 重建 src/data.json → commit 資料與影片縮圖 → push。
+#                → 補齊評論座標 → 重建 src/data.json → commit 資料與影片縮圖 → push。
 #
 # 跟 update.sh 的差別：
 #   - 只動 src/data.json 與 public/video-thumbnails（數據與自有影片影格），
@@ -43,7 +43,7 @@ else
   read -r -p "   準備好了就按 Enter 繼續（Ctrl+C 取消）..." _
 fi
 
-# 2) 抓資料 → 解析 → 重建 src/data.json
+# 2) 抓資料 → 解析 → 補齊座標 → 重建 src/data.json
 #    （任何一步失敗就停，不會用半套資料覆蓋掉好的 data.json）
 echo
 echo "🔄 開始抓資料並重建 src/data.json..."
@@ -51,6 +51,7 @@ npm run scrape:videoframes
 npm run scrape
 npm run scrape:photos
 npm run parse
+npm run resolve:coords
 npm run build:data
 
 # 3) 只 commit src/data.json 與自有影片縮圖（其他改動一律不碰）
