@@ -10,6 +10,7 @@ export function reviewImagePosition(review) {
 // Only accept full-size media thumbnails from the review; never use that avatar.
 export function reviewImage(review) {
   // Saved selections were visually checked against this exact review's media.
+  if (picks[review?.id]?.local && fs.existsSync(new URL('../public' + picks[review.id].local, import.meta.url))) return picks[review.id].local
   if (picks[review?.id]) return picks[review.id].url
   const image = (review?.images || []).find((url) =>
     /^https:\/\/lh\d+\.googleusercontent\.com\//.test(url)

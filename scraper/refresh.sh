@@ -56,12 +56,13 @@ npm run build:data
 
 # 3) 只 commit src/data.json 與自有影片縮圖（其他改動一律不碰）
 echo
-if [ -z "$(git status --porcelain -- src/data.json public/video-thumbnails)" ]; then
+if [ -z "$(git status --porcelain -- src/data.json public/video-thumbnails public/review-images scraper/review-image-picks.json)" ]; then
   echo "ℹ️  數據與影片縮圖沒有變動，不需要 commit / push。"
   exit 0
 fi
 
 git add src/data.json
+git add public/review-images scraper/review-image-picks.json
 if [ -d public/video-thumbnails ]; then
   git add public/video-thumbnails
 fi

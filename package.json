@@ -19,8 +19,8 @@
     "parse": "node scraper/parse.mjs",
     "geocode": "node scraper/geocode.mjs",
     "resolve:coords": "node scraper/resolve-coords.mjs",
-    "build:data": "node scraper/build-data.mjs",
-    "update:numbers": "node scraper/build-data.mjs",
+    "build:data": "node scraper/build-data.mjs && node scraper/cache-review-images.mjs",
+    "update:numbers": "node scraper/build-data.mjs && node scraper/cache-review-images.mjs",
     "update:site": "bash scraper/update.sh"
   },
   "dependencies": {
