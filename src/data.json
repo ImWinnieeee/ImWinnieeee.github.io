@@ -2,34 +2,34 @@
   "profile": {
     "name": "Winnie's Food Map",
     "level": "Local Guide · Level 8",
-    "points": 21049,
+    "points": 21056,
     "profileUrl": "https://maps.app.goo.gl/e9HggWQj89SQqdSd8"
   },
   "stats": {
     "totalReviews": 444,
     "ratingsOnly": 21,
-    "totalPhotoViews": 12081939,
-    "totalReviewViews": 3402180,
-    "reviewViewsBaseline": 3408061,
+    "totalPhotoViews": 12111089,
+    "totalReviewViews": 3408061,
+    "reviewViewsBaseline": 3418911,
     "photoCount": 2098,
-    "points": 21049,
+    "points": 21056,
     "level": 8,
     "dateFrom": "2018-06",
     "dateTo": "2026-06",
     "isMockData": false,
-    "updatedAt": "2026-11-09T15:41:50.253Z"
+    "updatedAt": "2026-11-10T13:28:00.397Z"
   },
   "topPhotos": [
     {
       "id": "ph0",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CPW_nF-wD_AaC1rU9hdahHok1fVGO4gAtuei02EMkkUPSbrJN2sPVw4eyBGBMzsWYq8u03f4UMsM5BMhKgO6NW_ihI9f9zRJFHAWDxBxe5YFgzpnfAwHP5jc15H4lHFKHBmKp_8ng=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CPW_nF-wD_AaC1rU9hdahHok1fVGO4gAtuei02EMkkUPSbrJN2sPVw4eyBGBMzsWYq8u03f4UMsM5BMhKgO6NW_ihI9f9zRJFHAWDxBxe5YFgzpnfAwHP5jc15H4lHFKHBmKp_8ng=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CM2pahQ1LfI7kQ1h2xMKf8Ln-W2VMWLHu2ahKWybUu89QjAfrUJsWvk7P428DthF-XBo8fU0xSgN9-omMA5RbsNMNQ72qwiDlYlzKthglvWdo-n13rjq8ZTamvK3qMZjQxzDj6vEQ=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CM2pahQ1LfI7kQ1h2xMKf8Ln-W2VMWLHu2ahKWybUu89QjAfrUJsWvk7P428DthF-XBo8fU0xSgN9-omMA5RbsNMNQ72qwiDlYlzKthglvWdo-n13rjq8ZTamvK3qMZjQxzDj6vEQ=w1600",
       "views": 227729
     },
     {
       "id": "ph1",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CNLtkaeDmr419dRv7zqFAc8K6Ij5NGvjtI2tD2w6ELlfuXK68MV-CriU6-LlxWQgBIHPhVUyons_2DztCpInha0z9bpy3FJh_7lJfNzzemNDCgWKeRCJ8aeS32oBBAm740V16fa=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CNLtkaeDmr419dRv7zqFAc8K6Ij5NGvjtI2tD2w6ELlfuXK68MV-CriU6-LlxWQgBIHPhVUyons_2DztCpInha0z9bpy3FJh_7lJfNzzemNDCgWKeRCJ8aeS32oBBAm740V16fa=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-COwvMmh917hKK7euB93wmhIZ3WpfhIz6bnKUvwsKuIfJD0vY3I2s8h64l3HEaQXKVo2iWlIO-g87dB71UibIZrgFQbw0sUmtl9p9jK8Vh9jA5cd7e-TLMTe1rIv2Gv_NQWPulnh=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-COwvMmh917hKK7euB93wmhIZ3WpfhIz6bnKUvwsKuIfJD0vY3I2s8h64l3HEaQXKVo2iWlIO-g87dB71UibIZrgFQbw0sUmtl9p9jK8Vh9jA5cd7e-TLMTe1rIv2Gv_NQWPulnh=w1600",
       "views": 211815
     },
     {
@@ -40,8 +40,8 @@
     },
     {
       "id": "ph3",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-COPyAxWznPSkO0yd9wA3iFXJ_1MTrLkpp1aTSvd4jbpLCO9cv0sPC3vKPrs6AIO0ftwidhQfzU6BWqwdPb3XU3vOctYYFm6GMVgAOQjq-wlnGtC_AXYhXOGXpby7JMBT3nGBZZr=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-COPyAxWznPSkO0yd9wA3iFXJ_1MTrLkpp1aTSvd4jbpLCO9cv0sPC3vKPrs6AIO0ftwidhQfzU6BWqwdPb3XU3vOctYYFm6GMVgAOQjq-wlnGtC_AXYhXOGXpby7JMBT3nGBZZr=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CNyABA-QeSvPebIxPK3IfYmcNYUYStHkz5MMNJHvIdUupkUa6wCW3_n6gfdqahgfgLhCIPRUMnVgmnTdMkDZu_eIDhAFaRsmwxXn6RTqdtiESSxUC7QCNQ-wAHQ92bJmRP1WXLy=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CNyABA-QeSvPebIxPK3IfYmcNYUYStHkz5MMNJHvIdUupkUa6wCW3_n6gfdqahgfgLhCIPRUMnVgmnTdMkDZu_eIDhAFaRsmwxXn6RTqdtiESSxUC7QCNQ-wAHQ92bJmRP1WXLy=w1600",
       "views": 188902
     },
     {
@@ -58,8 +58,8 @@
     },
     {
       "id": "ph6",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-COhHBjA7SZZzyYspMIibnl0io75S1mPxm6JhhKoM0n78MqweuMCuZFacIjpTYM1TFeRGMKQXVb1vUkVuWUyW_gFjw2P7KGDEfzrhXcUaK5CEPWqsUx5hj9vgMT2ZSHjXFJ3ibjA=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-COhHBjA7SZZzyYspMIibnl0io75S1mPxm6JhhKoM0n78MqweuMCuZFacIjpTYM1TFeRGMKQXVb1vUkVuWUyW_gFjw2P7KGDEfzrhXcUaK5CEPWqsUx5hj9vgMT2ZSHjXFJ3ibjA=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CNGCZLZ15hXQUFD0mrbawoJI4dvs9NcIUaeJ7xel-N9ChxL6EwGe2O5-0-kC6CDLfPnyJX6rUzGkHilrWIBNecQ7SDTLQDMfoFLRiC7L_L5Js0RCevQmxqjKse1UOYF39YHVTTh=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CNGCZLZ15hXQUFD0mrbawoJI4dvs9NcIUaeJ7xel-N9ChxL6EwGe2O5-0-kC6CDLfPnyJX6rUzGkHilrWIBNecQ7SDTLQDMfoFLRiC7L_L5Js0RCevQmxqjKse1UOYF39YHVTTh=w1600",
       "views": 115681
     },
     {
@@ -70,8 +70,8 @@
     },
     {
       "id": "ph8",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMYk7ug7Obu6_IqTKbgLdxfmBiOYzlLguBPheKstKQPbFsCt2eH4X_WLrwKRcmiiB30knxUtUFXPzfDpKQtewMKZyVNlhoHeytG-ewEj9DXfbUdVSm8Nvmy5ki_lguSTJb5tNij-A=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMYk7ug7Obu6_IqTKbgLdxfmBiOYzlLguBPheKstKQPbFsCt2eH4X_WLrwKRcmiiB30knxUtUFXPzfDpKQtewMKZyVNlhoHeytG-ewEj9DXfbUdVSm8Nvmy5ki_lguSTJb5tNij-A=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMEd8CxnRHSHJRDSl5VzI5QgOapZugal9prV0r1TY7ahbh9P1NaakRFocxHzLEb-T75SESd34mXsFFJJwmaSy0UxOUzAvxycPjzh6XJ4NnSC36eqPhOgNq0yM0PiNxZOR7dATFhdw=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMEd8CxnRHSHJRDSl5VzI5QgOapZugal9prV0r1TY7ahbh9P1NaakRFocxHzLEb-T75SESd34mXsFFJJwmaSy0UxOUzAvxycPjzh6XJ4NnSC36eqPhOgNq0yM0PiNxZOR7dATFhdw=w1600",
       "views": 102199
     },
     {
@@ -88,14 +88,14 @@
     },
     {
       "id": "ph11",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CP5cThAKARkb-bh_5IkGF5lHcMDxoMWWyc-GtGZ2irpUHnbx-5LAver_K7dAQX1OXIiHBDjJeGcbwZ0YlhIBVVIbwcoCUlT0ZnbxashX2qpKwuz7jbu5imStBpSnAyDztah4GQ-4dPJYErb=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CP5cThAKARkb-bh_5IkGF5lHcMDxoMWWyc-GtGZ2irpUHnbx-5LAver_K7dAQX1OXIiHBDjJeGcbwZ0YlhIBVVIbwcoCUlT0ZnbxashX2qpKwuz7jbu5imStBpSnAyDztah4GQ-4dPJYErb=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CN0JU9QZKXfaxO6DWgTBK2lKzruY3DXptrZs3Pi-znLhzexRBHHHwMkEWOAJVjunzSKtGAEp84etWama2RLQ4sKnVK-hOiKjuWo37lk8szR_-Vw9P0xZHNTWzSmX0Rntg20uyajiJWrSVEh=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CN0JU9QZKXfaxO6DWgTBK2lKzruY3DXptrZs3Pi-znLhzexRBHHHwMkEWOAJVjunzSKtGAEp84etWama2RLQ4sKnVK-hOiKjuWo37lk8szR_-Vw9P0xZHNTWzSmX0Rntg20uyajiJWrSVEh=w1600",
       "views": 84459
     },
     {
       "id": "ph12",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CPxQ3t604jdthRPxREZgbxBdT-rbktmsmVsX35moXDBkdz2_K2tSFd36YJG7C6dNB77bJ2DWmJcPWYcCFNRI9ImhRymjHDQRBN1v1NhsrAu0EE3b-1Tt8n7SuZ2EEQEjrajFxYqV20AfOe7=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CPxQ3t604jdthRPxREZgbxBdT-rbktmsmVsX35moXDBkdz2_K2tSFd36YJG7C6dNB77bJ2DWmJcPWYcCFNRI9ImhRymjHDQRBN1v1NhsrAu0EE3b-1Tt8n7SuZ2EEQEjrajFxYqV20AfOe7=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CNOL2HUTbj_lfrgA9Wg-3DNqoQAsHIRnM9TS8EZ2SKD2aJQj06PB_wrBXVFgwm-OATvob6ImUhcFP7NK8SThomeo4rONzdiXwP3YP4SAtDmnBHjdKn_1c7SVVHm2ITjnL9hGmGJeBbC3C-t=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CNOL2HUTbj_lfrgA9Wg-3DNqoQAsHIRnM9TS8EZ2SKD2aJQj06PB_wrBXVFgwm-OATvob6ImUhcFP7NK8SThomeo4rONzdiXwP3YP4SAtDmnBHjdKn_1c7SVVHm2ITjnL9hGmGJeBbC3C-t=w1600",
       "views": 63299
     },
     {
@@ -106,20 +106,20 @@
     },
     {
       "id": "ph14",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMkdW2RrJIsdiqauW61FkwD9cjLEiX3Ury6Qg0HMycSSmbpjBIqVEMOcV1LrnacqAxOM9I_Xv1ynq7JiBd_MYAP2PihPyZno1Oa0WTPwnP3-TK7R7-I4Rb3moMo-xIZkShhxV79Mg=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMkdW2RrJIsdiqauW61FkwD9cjLEiX3Ury6Qg0HMycSSmbpjBIqVEMOcV1LrnacqAxOM9I_Xv1ynq7JiBd_MYAP2PihPyZno1Oa0WTPwnP3-TK7R7-I4Rb3moMo-xIZkShhxV79Mg=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CObk286_vQEzez39G9EWY20TrYkoQlgBM32FdJEjfUl1AQmfkdUIn1ubFOGHaJfiWqfK0eVohS4C81_CeztU_RI3mVo9idD4D3Fo9W_-XNPPSaHYLlsSi-bCdjIy9RJoGOJkdMdtg=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CObk286_vQEzez39G9EWY20TrYkoQlgBM32FdJEjfUl1AQmfkdUIn1ubFOGHaJfiWqfK0eVohS4C81_CeztU_RI3mVo9idD4D3Fo9W_-XNPPSaHYLlsSi-bCdjIy9RJoGOJkdMdtg=w1600",
       "views": 62588
     },
     {
       "id": "ph15",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMyLOT7tx_XBVeXqDgG4wJ-xyTw5Pu0hw2pwLMJnom-o7wElL9YfAJeAkylr5GqWgxS6ru1-0KAjq0hbzwWQe13paRn_Am39FKIjeyPUu9HmPXuqqM1wSpeueiI7nEMX3xAW_yg=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMyLOT7tx_XBVeXqDgG4wJ-xyTw5Pu0hw2pwLMJnom-o7wElL9YfAJeAkylr5GqWgxS6ru1-0KAjq0hbzwWQe13paRn_Am39FKIjeyPUu9HmPXuqqM1wSpeueiI7nEMX3xAW_yg=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CM5nDYctTJRqWLwGCpznIvUwZl-JfkjDf_0u6vJTfK9pCeHiFy5vdmsFyAvMYXyVCCMaOw_TJwJtGZGWHNpsl3qlNZkLcEOzTBMg_cEhaabYszll-qz-QQwwWZ2e0sVBBp_Ng8v=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CM5nDYctTJRqWLwGCpznIvUwZl-JfkjDf_0u6vJTfK9pCeHiFy5vdmsFyAvMYXyVCCMaOw_TJwJtGZGWHNpsl3qlNZkLcEOzTBMg_cEhaabYszll-qz-QQwwWZ2e0sVBBp_Ng8v=w1600",
       "views": 55356
     },
     {
       "id": "ph16",
-      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMNlAeJPQShLMukREIJQvjX5jX3Gyg5QPMqusgEb1F5nH1lDnyuj8TM0Fa9qFY-r84xf0gTokGsIxLA5ZNbmiatmH70DTTJoEPAvOf7mVb6Yig-oLsSjwVfHYWIetdWbnTa41wT=w600",
-      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMNlAeJPQShLMukREIJQvjX5jX3Gyg5QPMqusgEb1F5nH1lDnyuj8TM0Fa9qFY-r84xf0gTokGsIxLA5ZNbmiatmH70DTTJoEPAvOf7mVb6Yig-oLsSjwVfHYWIetdWbnTa41wT=w1600",
+      "url": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMA1pGOhkRnPgarj4gwEXaYBIK_R-5Ns8qEgx1nv4nyuxVm0u406QCw8JPOo5sNPrztZqWQevJxWRfZyYxsxBl5Io_dur560JRn52nqAKNEezqVvxQaZakk6fLzG2c9Uvo_CXtV=w600",
+      "link": "https://lh3.googleusercontent.com/gps-cs/AAjk-CMA1pGOhkRnPgarj4gwEXaYBIK_R-5Ns8qEgx1nv4nyuxVm0u406QCw8JPOo5sNPrztZqWQevJxWRfZyYxsxBl5Io_dur560JRn52nqAKNEezqVvxQaZakk6fLzG2c9Uvo_CXtV=w1600",
       "views": 55146
     },
     {
@@ -466,7 +466,7 @@
       "category": "Italian",
       "country": "Italy",
       "region": "Venice",
-      "img": "https://lh3.googleusercontent.com/grass-cs/AABkmLeCYXm6TrJnr34TyYWlhZtu4BEReH1d-DgysQnVyP6DPVsDmM7AY5jXYXIrgA5Hg1LPVN_aCwVImINjuGb5RzTb0eJryCycJf6nBNz9LhSKrDZRdZ04CQzkxUkZ5XVHqfYoY_j2Vp6rZLyD=w600",
+      "img": "https://lh3.googleusercontent.com/grass-cs/AABkmLcZiGk8OeGJ96eQ5-MAcYlf0NmXYlK7c35j7xyDCRpqkTYJl1e7lTljHtQCRGTmbfmTBxDz5TNdMjDjsfojcL0MPTfElP3m86oS5S0WI7S5aEEhYRgOJingsSyqSsqaj1pE34oBM0_WRNTp=w600",
       "url": "https://maps.app.goo.gl/oGqS73cBMjN69XVXA",
       "en": "Excellent and worth it — NT$2,000 for two, better than the other Venice restaurants I tried. We had the squid ink risotto and the zucchini-and-shrimp tagliatelle, both superb.",
       "zh": "我是台灣遊客🇹🇼2026.2月份到訪 非常好吃，值得一吃，兩個人吃2000台幣，但比我吃的其他威尼斯餐廳都還好吃 點了一個墨魚燉飯，一個櫛瓜鮮蝦細扁麵，兩個都很棒… ",
@@ -488,7 +488,7 @@
       "category": "Brunch",
       "country": "Taiwan",
       "region": "Taipei",
-      "img": "https://lh3.googleusercontent.com/grass-cs/AABkmLewae90zGA83laTKHCV6_QcrQfnBn4B1xYBIHqQ-z4GjapJZIhpKUUqgynDPD82bNWn9y-gptunBk0JpAabdnYsEZdwfAZ3tZhuS1EQHboDFKrWtHcWwR8bHpaajiBvjEgo9ham4Q=w600",
+      "img": "https://lh3.googleusercontent.com/grass-cs/AABkmLccfB83PvPNvNRcJfh0ZhGySy9VPDhPEtaoXvRPKDArWaIzi-rKPQhfdYJ7QzMjpRNtZlGUQaPB9vKPrB0Z8Znpw37ojkS2JPpYXvKo9-dQ18gbyKJY_moWR5Z4VvKkGpYhUIJlQg=w600",
       "url": "https://maps.app.goo.gl/tgHGZgxPPJbAJVyP8",
       "en": "The quintessential Taipei brunch spot — big windows, roomy comfy seats, and a generous plate of bacon, sausage, egg and toast. Reserve at least a day ahead for the brunch slot.",
       "zh": "想到台北早午餐最typical會想到的店 大落地窗、寬敞舒服的座位、大餐盤裡面有培根、香腸、蛋、吐司，食物味道不錯又可以坐著聊天，一個人發呆也很開心，非常適合週末早上的一間店！儘量提前至少一天訂位才吃得到早午餐時段 0:04 ",
@@ -525,7 +525,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": null,
+      "date": "2026-06-03",
       "blurb": "2026.10 週末早上約10:40到訪 \ud83e",
       "photoCount": 0,
       "lat": 25.03922,
@@ -541,7 +541,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": null,
+      "date": "2026-06-03",
       "blurb": "2026.10月週末下午約15:30到訪 茶",
       "photoCount": 0,
       "lat": 25.05371,
@@ -557,7 +557,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": null,
+      "date": "2026-06-03",
       "blurb": "2026.10月平日晚上約晚上7:30到訪 ",
       "photoCount": 0,
       "lat": 25.02458,
@@ -621,7 +621,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2026-05-27",
+      "date": "2026-05-20",
       "blurb": "2026.10月連假傍晚四點左右到訪，居然沒",
       "photoCount": 0,
       "lat": 25.04424,
@@ -1389,7 +1389,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "2026.5-6月都有吃 ➡️好吃、已經回訪",
       "photoCount": 1,
       "lat": 25.02653,
@@ -1405,7 +1405,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "2026.6月到訪 比我印象中好吃欸！ 💰",
       "photoCount": 0,
       "lat": 25.04739,
@@ -1421,7 +1421,7 @@
       "country": "Taiwan",
       "region": "Taichung",
       "rating": 5,
-      "date": "2026-02-03",
+      "date": "2026-01-04",
       "blurb": "2026.6月份到訪 離台中歌劇院不遠，同事",
       "photoCount": 1,
       "lat": 24.15531,
@@ -1949,7 +1949,7 @@
       "country": "Taiwan",
       "region": "Taipei",
       "rating": 5,
-      "date": "2025-12-05",
+      "date": "2025-11-05",
       "blurb": "2026.4月到訪 建中校友帶吃，以現在的物",
       "photoCount": 2,
       "lat": 25.02994,
